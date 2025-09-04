@@ -1,2 +1,2 @@
 
-(123)[/integrations/folder1/app1]
+[123](/integrations/folder1/app1)
