@@ -1,3 +1,8 @@
+---
+sidebar_position: 1
+title: Overview
+---
+
 ## Overview
 
 Latenode can be embedded into your frontend and styled to look like part of your application.
