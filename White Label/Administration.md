@@ -36,7 +36,16 @@ List of configurable characteristics and quotas for your organization:
 - **Minimum Trigger Interval (Seconds)**
 - **Execution History Availability Period (Minutes)**
 
-https://app.arcade.software/share/BCAAvZfetsHHgBzDsxaX
+<div style={{position: 'relative', paddingTop: '62.5%'}}>
+  <iframe
+    src="https://app.arcade.software/embeds/BCAAvZfetsHHgBzDsxaX"
+    title="Arcade demo 1"
+    loading="lazy"
+    style={{position:'absolute', inset:0, width:'100%', height:'100%', border:0}}
+    allow="clipboard-write; fullscreen"
+    allowFullScreen
+  />
+</div>
 
 ### Creating a Plan
 
@@ -56,7 +65,16 @@ After clicking the "OK" button, a new entry will appear in the plans table. You 
 
 Below is an interactive video showing how to create a plan.
 
-https://app.arcade.software/share/1z23Oq8QAglI8kmnWUOp
+<div style={{position: 'relative', paddingTop: '62.5%'}}>
+  <iframe
+    src="https://app.arcade.software/embeds/1z23Oq8QAglI8kmnWUOp"
+    title="Arcade demo 2"
+    loading="lazy"
+    style={{position:'absolute', inset:0, width:'100%', height:'100%', border:0}}
+    allow="clipboard-write; fullscreen"
+    allowFullScreen
+  />
+</div>
 
 ## Subscription Management and Resource Usage Monitoring
 
