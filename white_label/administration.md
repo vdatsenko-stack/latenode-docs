@@ -1,8 +1,10 @@
-# Administration
+---
+title: Administration
+description: Instructions about authorization process for your organization and the capabilities of the administrator panel within the Latenode platform
+sidebar_position: 2
+---
 
-Article Description: Instructions about authorization process for your organization and the capabilities of the administrator panel within the Latenode platform
-Published: Yes
-Suggested: No
+# Administration
 
 This article describes the user authorization process for your organization and capabilities of the administrator panel within the Latenode platform.
 
@@ -54,15 +56,12 @@ To create a plan:
 3. Click the "Create Plan" button
 4. Fill in the plan name, its quotas, and click the "OK" button
 
-<aside>
-💡
-
-After clicking the "OK" button, a new entry will appear in the plans table. You will need the ID of the created plan later. Its value can be found in the "ID" column.
-
-</aside>
+:::tip[Tip]
+After clicking the "OK" button, a new entry will appear in the plans table.  
+You will need the ID of the created plan later. Its value can be found in the "ID" column.
+:::
 
 Below is an interactive video showing how to create a plan.
-
 
 <iframe 
   src="https://app.arcade.software/share/1z23Oq8QAglI8kmnWUOp" 
@@ -93,15 +92,14 @@ To add a subscription for a user, click the “Add Subscription” button:
 In the modal window, select the user and the subscription plan to assign:
 
 ![image.png](./administration/image_4.png)
+
 ## Managing the User List
 
 To view the user list, go to the “Users” section. On this page, you can see the list of users along with their assigned subscriptions. The subscription assignment functionality is also available here:
 
 ![image.png](./administration/image_5.png)
 
-<aside>
-💡
-
-Users are not limited in the number of subscriptions. When a user has more than one subscription, the best quotas will be applied.
-
-</aside>
+:::tip[Tip]
+Users are not limited in the number of subscriptions.  
+When a user has more than one subscription, the best quotas will be applied.
+:::
