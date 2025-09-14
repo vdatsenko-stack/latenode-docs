@@ -51,4 +51,4 @@ Once the JWT token is generated, go to the “White Label” section. Paste the 
 
 Then click the “Init” button. After that, an embedded version of the Latenode platform will appear on the right side of the screen, with the new user already authorized, in this case with ID = `tu_2` 
 
-![image.png](Sandbox%201f957d45a0678052a8abdd84af13685d/15edf138-346d-44a9-ac12-f812928c4a2d.png)
+![image.png](./sandbox/15edf138346d44a9ac12f812928c4a2d.png)
