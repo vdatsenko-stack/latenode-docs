@@ -1,8 +1,8 @@
-# User Authorization
-
-Article Description: Instructions for tenant user auth
-Published: Yes
-Suggested: No
+---
+title: User Authentication
+description: Instructions for tenant user auth
+sidebar_position: 4
+---
 
 ## **User Authentication**
 
