@@ -1,8 +1,8 @@
-# Overview
-
-Article Description: General info about White Label
-Published: Yes
-Suggested: No
+---
+title: Overview
+description: General info about White Label
+sidebar_position: 1
+---
 
 ## Overview
 
