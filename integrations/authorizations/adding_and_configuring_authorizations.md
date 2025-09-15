@@ -8,7 +8,7 @@ Suggested: No
 
 To add a new  authorizations, you need to click on the **New authorization** button on the page with the list of authorizations.
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled.png)
+![Untitled](.adding_and_configuring_authorizations/Untitled.png)
 
 After clicking the add authorization button, you should choose the desired service from the provided list in the **Choose a service** window**.**
 
