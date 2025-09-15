@@ -1,8 +1,10 @@
 # Sandbox
 
-Article Description: Here is an example of how to generate a JWT and use it.
-Published: Yes
-Suggested: No
+---
+title: User Sandbox
+description: Here is an example of how to generate a JWT and use it.
+sidebar_position: 5
+---
 
 ## User Authorization in the Platform
 
