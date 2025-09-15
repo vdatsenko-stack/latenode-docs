@@ -1,8 +1,8 @@
-# API Usage
-
-Article Description: Instructions about capabilities for managing subscription plans, subscriptions, and users via the API.
-Published: Yes
-Suggested: No
+---
+title: API Usage
+description: Instructions about capabilities for managing subscription plans, subscriptions, and users via the API.
+sidebar_position: 6
+---
 
 This article describes the capabilities for managing subscription plans, subscriptions, and users via the API.
 
