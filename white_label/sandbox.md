@@ -1,5 +1,3 @@
-# Sandbox
-
 ---
 title: User Sandbox
 description: Here is an example of how to generate a JWT and use it.
