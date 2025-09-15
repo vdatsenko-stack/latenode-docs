@@ -18,14 +18,12 @@ To use the API, you need to create an API token in your personal dashboard. This
 
 [https://app.arcade.software/share/HW6WcGIIO5sgXz4qyLRM](https://app.arcade.software/share/HW6WcGIIO5sgXz4qyLRM)
 
-<aside>
-💡
+:::tip[💡 Important]
+This token is not stored on the platform’s servers.  
+After clicking the “Done” button, you will no longer be able to access it.  
+Be sure to copy and store the token in a safe place.
+:::
 
-Important!
-
-This token is not stored on the platform’s servers. After clicking the “Done” button, you will no longer be able to access it. Be sure to copy and store the token in a safe place.
-
-</aside>
 
 ## Using the API Token in Requests
 
@@ -678,14 +676,11 @@ None
 
 **Body Parameters:**
 
-<aside>
-💡
+:::tip[💡 Important]
+This API does not support partial updates.  
+The `name` and `features` fields are required and must contain the complete new (or old, if no changes are needed) values.
+:::
 
-Important!
-
-This API does not support partial updates. The `name` and `features` fields are required and must contain the complete new (or old, if no changes are needed) values.
-
-</aside>
 
 ```json
 - Field:        plan_id
