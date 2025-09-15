@@ -1,3 +1,9 @@
+---
+title: Installing the embedded SDK
+description: Instructions for integrating and configuring the embedded iFrame mode, enabling seamless embedding of content across platforms
+sidebar_position: 3
+---
+
 # Installing the embedded SDK
 
 Article Description: Instructions for integrating and configuring the embedded iFrame mode, enabling seamless embedding of content across platforms.
