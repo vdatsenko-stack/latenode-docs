@@ -498,10 +498,6 @@ Learn more about all available options here: [Request New App](https://latenode.
 - [Zoho Zeptomail](https://latenode.com/integrations/zoho-zeptomail)  
 - [Zoom](https://latenode.com/integrations/zoom)  
 
-## Misc
-- [iLovePDF](https://latenode.com/integrations/ilovepdf)  
-- [icombooster](https://latenode.com/integrations/icombooster)  
-- [pdfFiller](https://latenode.com/integrations/pdffiller)  
-- [tl;dv](https://latenode.com/integrations/tl-dv)  
+
 
 
