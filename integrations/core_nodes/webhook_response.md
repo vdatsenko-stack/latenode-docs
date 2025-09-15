@@ -4,7 +4,7 @@ Article Description: Handling responses from webhooks in workflows.
 Published: Yes
 Suggested: No
 
-![Untitled](Webhook%20response%2019757d45a06780c1a04ec689116c3885/Untitled.png)
+![Untitled](./webhook_response/untitled.png)
 
 ## **Node Description**
 
@@ -18,7 +18,7 @@ The only required***** field is:
 
 - **Status**.
 
-![brave_hICYGQL3mf.png](Webhook%20response%2019757d45a06780c1a04ec689116c3885/brave_hICYGQL3mf.png)
+![brave_hICYGQL3mf.png](./webhook_response/brave_hicygql3mf.png)
 
 ### Status
 
@@ -42,4 +42,4 @@ A section of fields for filling in response headers:
 
 To add a new Key-Value pair, you can use the **Add a header** button (**1**). To remove a Key-Value pair, you can use the **Remove** button (**2**).  
 
-![brave_DyXe7VPN4a.png](Webhook%20response%2019757d45a06780c1a04ec689116c3885/brave_DyXe7VPN4a.png)
+![brave_DyXe7VPN4a.png](./webhook_response/brave_dyxe7vpn4a.png)
