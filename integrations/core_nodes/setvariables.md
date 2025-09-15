@@ -4,7 +4,7 @@ Article Description: Storing and retrieving variables within a scenario.
 Published: Yes
 Suggested: No
 
-![Untitled](SetVariables%2019757d45a06780cd8977f294d22b57a7/Untitled.png)
+![Untitled](./setvariables/untitled.png)
 
 ## **Node Description**
 
@@ -24,8 +24,8 @@ To configure the **SetVariables** node, you need to fill in pairs of Key-Value f
 - **(1)** **Key** - the field for entering the variable name;
 - **(2) Value** - the field for entering the variable's value.
 
-![chrome_fMOSSV3jL6.png](SetVariables%2019757d45a06780cd8977f294d22b57a7/chrome_fMOSSV3jL6.png)
+![chrome_fMOSSV3jL6.png](./setvariables/chrome_fmossv3jl6.png)
 
 If a **SetVariables** node is connected to an **Iterator** node and is executed multiple times sequentially, the node's output is displayed with an indication of **Iterations**. Each iteration corresponds to its own output data.
 
-![Untitled](SetVariables%2019757d45a06780cd8977f294d22b57a7/Untitled%201.png)
+![Untitled](./setvariables/untitled_1.png)
