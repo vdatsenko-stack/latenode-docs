@@ -8,7 +8,7 @@ Suggested: No
 
 To add a new  authorizations, you need to click on the **New authorization** button on the page with the list of authorizations.
 
-![Untitled](.adding_and_configuring_authorizations/Untitled.png)
+![Untitled](.adding_and_configuring_authorizations/untitled.png)
 
 After clicking the add authorization button, you should choose the desired service from the provided list in the **Choose a service** window**.**
 
@@ -17,7 +17,7 @@ After clicking the add authorization button, you should choose the desired servi
 
 </aside>
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled%201.png)
+![Untitled](.adding_and_configuring_authorizations/untitled1.png)
 
 ## Authorization Setup
 
@@ -25,19 +25,19 @@ To configure a authorization, for example, to Google Sheets, you need to:
 
 1. Select the appropriate service in the **Choose a Service** window**:**
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled%202.png)
+![Untitled](.adding_and_configuring_authorizations/untitled2.png)
 
 2. Choose the required authorization and click on the **Sign in with Google** button:
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled%203.png)
+![Untitled](.adding_and_configuring_authorizations/untitled3.png)
 
 3. Authenticate using your Google account;
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled%204.png)
+![Untitled](.adding_and_configuring_authorizations/untitled4.png)
 
 4. Confirm that you have the necessary rights for Latenode and click on the **Continue** button:
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled%205.png)
+![Untitled](.adding_and_configuring_authorizations/untitled5.png)
 
 ## Using the authorization
 
@@ -45,7 +45,7 @@ To utilize the added authorization when configuring script nodes, follow these s
 
 1. Choose and add a specialized node that corresponds to the configured authorization. For example, **Add Quick Event:**
 
-![chrome_lgzmem6vTX.png](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/chrome_lgzmem6vTX.png)
+![chrome_lgzmem6vTX.png](.adding_and_configuring_authorizations/chrome_lgzmem6vtx.png)
 
 2. Click the **Create an authorization** button **(1)** and choose the corresponding authorization from the list **(2).**
 
@@ -54,15 +54,15 @@ To utilize the added authorization when configuring script nodes, follow these s
 
 </aside>
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled%206.png)
+![Untitled](.adding_and_configuring_authorizations/untitled6.png)
 
 1. Review the value in the **Connection** field and fill in the other node configuration fields;
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled%207.png)
+![Untitled](.adding_and_configuring_authorizations/untitled7.png)
 
 4. To modify authorization, click on the edit icon **(1)** and select a new authorization **(2)**. The current authorization is marked in blue **(3)**.
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled%208.png)
+![Untitled](.adding_and_configuring_authorizations/untitled8.png)
 
 ## All Authorizations
 
@@ -76,7 +76,7 @@ You can view the main attributes of a authorization in the respective columns of
 - (**2**) Service authorization - in the **Service** column. For example, Google Sheets;
 - (**3**) Authorization creation Date - in the **Created Date** column. Using the gear icon, you can reconfigure the column to display the date of modification instead of the creation date;
     
-    ![chrome_cpJgGy49kq.png](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/chrome_cpJgGy49kq.png)
+    ![chrome_cpJgGy49kq.png](.adding_and_configuring_authorizations/chrome_cpJgGy49kq.png)
     
 - Menu (**4**) available for each row and allowing you to:
 
@@ -84,7 +84,7 @@ You can view the main attributes of a authorization in the respective columns of
 
 **Delete** the authorization. 
 
-![Untitled](Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7/Untitled%2010.png)
+![Untitled](.adding_and_configuring_authorizations/untitled10.png)
 
 <aside>
 ⚠️ After clicking the **Delete** button and confirming the action in the modal window, the authorization will be permanently deleted.
