@@ -4,7 +4,7 @@ Article Description: Processing multiple data items sequentially.
 Published: Yes
 Suggested: No
 
-![Untitled](Iterator%2019757d45a0678002af19f016659880aa/Untitled.png)
+![Untitled](./iterator/untitled.png)
 
 ## **Node Description**
 
@@ -14,7 +14,7 @@ Suggested: No
 - JSON arrays: In this case, each array element will participate in the iteration.
 
 <aside>
-💡 You can watch a training video [here](https://www.youtube.com/watch?v=q5lNoPncj5g).
+💡 You can watch a training video [here](https://www.youtube.com/watch?v=q5lNoPncj5g)
 
 </aside>
 
@@ -22,7 +22,7 @@ Suggested: No
 
 To configure the **Iterator** node, you need to fill in the **Data to iterate** field. The data can be either input values or the output data and parameters from previous nodes.
 
-![chrome_acEpFcX9Ie.png](Iterator%2019757d45a0678002af19f016659880aa/chrome_acEpFcX9Ie.png)
+![chrome_acEpFcX9Ie.png](./iterator/chrome_acepfcx9ie.png)
 
 The top connection point of the **Iterator** node is used to attach the node(s) whose execution will be repeated as many times as there are elements in the array or parameters. After completing the iterations, the scenario execution will continue through the right lateral connection of the **Iterator** node.
 
