@@ -4,7 +4,7 @@ Article Description: Configuring outputs and responses in custom nodes.
 Published: Yes
 Suggested: No
 
-![Untitled](NodulOutput%2019157d45a06780b6a3f5dd60142ca892/Untitled.png)
+![Untitled](./noduloutput/untitled.png)
 
 ## **Node Description**
 
@@ -19,7 +19,7 @@ Suggested: No
 
 To configure the **NodulOutput** node, it is necessary to fill in the optional fields.
 
-![Untitled](NodulOutput%2019157d45a06780b6a3f5dd60142ca892/Untitled%201.png)
+![Untitled](./noduloutput/untitled_1.png)
 
 ### Output Type
 
