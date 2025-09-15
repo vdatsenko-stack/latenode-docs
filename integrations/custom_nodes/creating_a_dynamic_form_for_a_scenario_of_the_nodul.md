@@ -12,23 +12,23 @@ Let's create a custom node with dynamic field rendering. To do this, you need to
 
 1. Create a scenario of type **Nodul**:
 
-![QuickLook_wF6XcMuw0b.png](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/QuickLook_wF6XcMuw0b.png)
+![QuickLook](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/quicklook_wf6xcmuw0b.png)
 
 - Add a **NodulInput** node with configured parameters:
 
-![QuickLook_ieAHi2fWbH.png](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/QuickLook_ieAHi2fWbH.png)
+![QuickLook](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/quicklook_ieahi2fwbh.png)
 
 **URL** - a mandatory parameter of type String;
 
-![Untitled](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/Untitled.png)
+![URL Param](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/untitled.png)
 
 **Method** - a mandatory parameter of type Select with the option for a single choice and a list of values to choose from: GET, POST, PUT, DELETE. You can choose GET as the default value;
 
-![Untitled](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/Untitled%201.png)
+![Method Param](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/untitled_1.png)
 
 **Body type** - an optional parameter of type Select with the option for a single choice and a list of values to choose from: Raw, form-data, x-www-form-urlencoded. Fill in the **Fetch events** characteristic with the value **Change** to trigger the update of the entire node form when selecting a parameter value.
 
-![Untitled](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/Untitled%202.png)
+![Body Type Param](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/untitled_2.png)
 
 - Add a node to perform the scenario function, for example, an **Java Script** node to send requests to an external application.
 - Add a **NodulOutput** node to receive the response from the Nodul type scenario.
@@ -37,7 +37,7 @@ Let's create a custom node with dynamic field rendering. To do this, you need to
 
 3. On the same page, create a scenario using the **Nodul Form Input** and **Nodul Form Output** nodes. This scenario will ensure dynamic display of a **Nodul** type scenario form based on the selected parameters:
 
-![QuickLook_7lMHjGBuLG.png](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/QuickLook_7lMHjGBuLG.png)
+![QuickLook](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/quicklook_7lmhjgbulg.png)
 
 - Add a **Nodul Form Input** node to retrieve parameters from the **Nodul** type scenario form;
 - Add a **JavaScript** node with the following code:
@@ -121,20 +121,20 @@ To check the result of the created scenarios, you need to:
 
 For example, if the scenario name is **Al Tools/Action/Nodul3** then the node will be placed in the **Al Tools** group, under the **Action** subgroup, and named **Nodul3**.
 
-![Untitled](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/Untitled%203.png)
+![Untitled](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/untitled_3.png)
 
 3. The added node will display fields corresponding to the parameters of the **NodulInput** node**:**
 
-![Untitled](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/Untitled%204.png)
+![Untitled](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/untitled_4.png)
 
 - When selecting the "Raw" parameter in the **Body type** field, the node's form will be updated, and a mandatory **Row** field will be added to the existing fields**;**
 
-![Untitled](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/Untitled%205.png)
+![Untitled](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/untitled_5.png)
 
 - When selecting the "form-data" or "x-www-form-urlencoded" parameter in the **Body type** field, the node's form will be updated, and pairs of Key-Value fields will be added to the existing fields.
 
-![Untitled](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/Untitled%206.png)
+![Untitled](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/untitled_6.png)
 
 4. Each time the node is updated, an auxiliary scenario is triggered. The history and results of the execution are displayed in the **History** section on the scenario page.
 
-![Untitled](Creating%20a%20dynamic%20form%20for%20a%20scenario%20of%20the%20Nodu%2019157d45a0678068803ce0110cd26527/Untitled%207.png)
+![Untitled](./creating_a_dynamic_form_for_a_scenario_of_the_nodu/untitled_7.png)
