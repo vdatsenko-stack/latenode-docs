@@ -4,13 +4,13 @@ Article Description: Executing a one-time automation scenario.
 Published: Yes
 Suggested: No
 
-![Untitled](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/Untitled.png)
+![Untitled](./trigger_on_run_once/untitled.png)
 
 ## Node Description
 
 **Trigger on Run once** is an trigger-type node that allows manually starting a scenario by clicking the **Run once** button. Unlike other triggers, it does not require external requests or specific events to activate. The node allows passing input parameters (text or files) into the scenario.
 
-![Untitled](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/Untitled%201.png)
+![Untitled 1](./trigger_on_run_once/untitled_1.png)
 
 ## **Example of Node Usage**
 
@@ -32,11 +32,11 @@ In this example, the user inputs text, the scenario processes it using JavaScrip
 - Specify a name for the variable (e.g., `input_text`).
 - Enter a sample text value for testing.
     
-    ![brave_Qyymm7pVG9.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_Qyymm7pVG9.png)
+![brave_Qyymm7pVG9](./trigger_on_run_once/brave_qyymm7pvg9.png)
     
 - Click **Save** and **Run once** to pass the data into the scenario.
     
-    ![brave_adWork9YBa.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_adWork9YBa.png)
+![brave_adWork9YBa](./trigger_on_run_once/brave_adwork9yba.png)
     
 
 ### **2. Processing Data with JavaScript**
@@ -70,12 +70,12 @@ export default async function run({ data }) {
 
 - Pass the input variable containing text.
     
-    ![brave_fNDpJbftqJ.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_fNDpJbftqJ.png)
+![brave_fNDpJbftqJ](./trigger_on_run_once/brave_fndpjbftqj.png)
     
 - Run the scenario.
 - The output will be the formatted text.
     
-    ![brave_cZ7vEmRyUD.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_cZ7vEmRyUD.png)
+![brave_cZ7vEmRyUD](./trigger_on_run_once/brave_cz7vemryud.png)
     
 
 ---
@@ -97,21 +97,21 @@ In this example, an image is uploaded and sent to an AI service for content reco
 - In the **Params** section, add a **File** parameter.
 - Specify a name for the variable (e.g., `input_image`).
     
-    ![brave_8iSm9mn9tu.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_8iSm9mn9tu.png)
+![brave_8iSm9mn9tu](./trigger_on_run_once/brave_8ism9mn9tu.png)
     
 - Upload a sample image for testing.
     
-    ![brave_xVkNOX2qIo.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_xVkNOX2qIo.png)
+![brave_xVkNOX2qIo](./trigger_on_run_once/brave_xvknox2qio.png)
     
 - Click **Save** and **Run once** to pass the data into the scenario.
     
-    ![brave_Cfbabb8YTM.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_Cfbabb8YTM.png)
+![brave_Cfbabb8YTM](./trigger_on_run_once/brave_cfbabb8ytm.png)
     
 
 <aside>
 💡 Also you can see quick image preview
 
-![brave_CKLWXBscvK.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_CKLWXBscvK.png)
+![brave_CKLWXBscvK](./trigger_on_run_once/brave_cklwxbscvk.png)
 
 </aside>
 
@@ -119,15 +119,15 @@ In this example, an image is uploaded and sent to an AI service for content reco
 
 - Add an AI-based image recognition node (e.g., GPT or another service).
     
-    ![brave_C6ZQnoBLMn.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_C6ZQnoBLMn.png)
+![brave_C6ZQnoBLMn](./trigger_on_run_once/brave_c6zqnoblmn.png)
     
 - Pass the **file content**, **filename**, and **prompt for analysis** into the corresponding fields.
     
-    ![brave_jbhVsoO1w3.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_jbhVsoO1w3.png)
+![brave_jbhVsoO1w3](./trigger_on_run_once/brave_jbhvsoo1w3.png)
     
 - Run the scenario to receive the recognized result.
     
-    ![brave_vrDWVtYYk8.png](Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9/brave_vrDWVtYYk8.png)
+![brave_vrDWVtYYk8](./trigger_on_run_once/brave_vrdwvtyyk8.png)
     
 
 ---
