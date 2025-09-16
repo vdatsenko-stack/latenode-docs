@@ -10,7 +10,7 @@ sidebar_position: 1
 
 **Trigger on Webhook** is a trigger node type that serves as the entry point into the scenario. Requests are sent to the URL of the **Trigger on Webhook** node, initiating the execution of the scenario.
 
-## **Node Configuration**
+## **Node Configuration** 
 
 After adding the **Trigger on Webhook** node, two versions of its URL are automatically generated. Both URL versions are displayed in the **Path** field:
 
