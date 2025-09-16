@@ -30,8 +30,13 @@ Token generation is done locally without network requests. This ensures your pri
 </aside>
 
 Below is an interactive video showing token generation
-
-[https://app.arcade.software/share/euGSV7RHF9Z9KI5NWXgo](https://app.arcade.software/share/euGSV7RHF9Z9KI5NWXgo)
+<iframe 
+  src="https://app.arcade.software/share/euGSV7RHF9Z9KI5NWXgo" 
+  width="100%" 
+  height="600" 
+  frameBorder="0" 
+  allowFullScreen
+></iframe>
 
 ### Using token
 
