@@ -1,8 +1,9 @@
-# HTTP Request
+---
+title: HTTP Request
+description: Sending and receiving HTTP requests for API communication
+sidebar_position: 4
+---
 
-Article Description: Sending and receiving HTTP requests for API communication.  
-Published: Yes  
-Suggested: No  
 
 ![Untitled](./http_request/untitled.png)
 
