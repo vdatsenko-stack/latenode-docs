@@ -104,12 +104,11 @@ Additional logic for data concealment can be configured in the field that appear
 ## **Quick node configuration**
 
 Applications that provide APIs may specify HTTP request examples in CURL format. For example:  
-
-```bash
+```
 curl -X GET https://api.test.com/v1/email/balance \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer $API_TOKEN'
-
+```
 
 To quickly configure an **HTTP Request** node, follow these steps:
 
