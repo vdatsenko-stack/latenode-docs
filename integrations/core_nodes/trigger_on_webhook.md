@@ -23,9 +23,8 @@ The generated URL can be either partially modified (**1**) or copied (**2**), fo
 
 ![Untitled](./trigger_on_webhook/untitled_2.png)
 
-<aside>
+:::tip
 💡 You can send requests to the **Trigger on Webhook** node's address using the **POST** method (if data needs to be transmitted to the node) or the **GET** method (if a simple node triggering is required).
-
-</aside>
+:::
 
 *building js code is failed: Node build fatal error*
