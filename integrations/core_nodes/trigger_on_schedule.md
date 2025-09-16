@@ -1,14 +1,14 @@
-# Trigger on Schedule
-
-Article Description: Automating actions based on predefined time intervals.
-Published: Yes
-Suggested: No
+---
+title: Trigger on Schedule
+description: Automating actions based on predefined time intervals
+sidebar_position: 6
+---
 
 ![Untitled](./trigger_on_schedule/untitled.png)
 
 ## **Node Description**
 
-**Trigger on Schedule -** a trigger-type node, used to initiate a script based on a schedul.
+**Trigger on Schedule** - a trigger-type node, used to initiate a script based on a schedule.
 
 ## **Node Configuration**
 
@@ -18,7 +18,7 @@ To configure the **Trigger on Schedule** node, you need to fill in the mandatory
 
 ### Schedule
 
-This field is necessary for setting up a schedule. Using мdropdown menus, configure the frequency for: 
+This field is necessary for setting up a schedule. Using dropdown menus, configure the frequency for: 
 
 - Year;
 - Month;
@@ -31,17 +31,15 @@ You don't need to fill in all the listed time parameters; it's sufficient to fil
 
 ![chrome_IqxzxcgogZ.png](./trigger_on_schedule/chrome_iqxzxcgogz.png)
 
-<aside>
-💡 The CRON expression field is automatically populated in accordance with the configured parameters.
+:::tip
+The CRON expression field is automatically populated in accordance with the configured parameters.
+:::
 
-</aside>
-
-<aside>
-⚠️ The scenario will operate based on the corresponding CRON expression if the scenario itself is **active** and deployed in the **Production** branch.
+:::warning
+The scenario will operate based on the corresponding CRON expression if the scenario itself is **active** and deployed in the **Production** branch.  
 
 To disable the scenario from running on a schedule, you can either set it to an inactive state (**Paused** status) using the **Activity** toggle or remove the **Trigger on Schedule** node from the scenario.
-
-</aside>
+:::
 
 ### Timezone
 
