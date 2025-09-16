@@ -14,7 +14,7 @@ sidebar_position: 4
 - JSON arrays: In this case, each array element will participate in the iteration.
 
 :::tip
-💡 You can watch a training video [here](https://www.youtube.com/watch?v=q5lNoPncj5g)
+You can watch a training video [here](https://www.youtube.com/watch?v=q5lNoPncj5g)
 :::
 
 ## **Node Configuration**
@@ -26,7 +26,7 @@ To configure the **Iterator** node, you need to fill in the **Data to iterate** 
 The top connection point of the **Iterator** node is used to attach the node(s) whose execution will be repeated as many times as there are elements in the array or parameters. After completing the iterations, the scenario execution will continue through the right lateral connection of the **Iterator** node.
 
 :::warning
-⚠️ The node attached to the **Iterator** node via the lateral connection point will be executed only once.
+The node attached to the **Iterator** node via the lateral connection point will be executed only once.
 :::
 
 ## Simple iterator example
