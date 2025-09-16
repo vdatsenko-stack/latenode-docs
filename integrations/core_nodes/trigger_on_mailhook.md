@@ -1,8 +1,8 @@
-# Trigger on Mailhook
-
-Article Description: Configuring a mailhook trigger to initiate automation.
-Published: Yes
-Suggested: No
+---
+title: Trigger on Mailhook
+description: Configuring a mailhook trigger to initiate automation
+sidebar_position: 7
+---
 
 ![brave_lIUpzZvnKA.png](./trigger_on_mailhook/brave_liupzzvnka.png)
 
@@ -20,8 +20,8 @@ Once the Mailhook node is added, two email addresses are automatically generated
 
 ![brave_Wv5zPto3w4.png](./trigger_on_mailhook/brave_wv5zpto3w4.png)
 
-- **Production Email** — used in a published scenario. The scenario is triggered every time an email is received. It remains active as long as the scenario is running.
-- **Development Email** — used for testing. The scenario is triggered once upon receiving an email, and then it automatically stops.
+- **Production Email** — used in a published scenario. The scenario is triggered every time an email is received. It remains active as long as the scenario is running.  
+- **Development Email** — used for testing. The scenario is triggered once upon receiving an email, and then it automatically stops.  
 
 Both email addresses are shown in the `Path` field of the node and can be copied for use.
 
@@ -33,8 +33,8 @@ To trigger the scenario, simply send an email to one of the Mailhook addresses.
 
 Examples:
 
-- Manually sending an email from a client like Gmail or Outlook;
-- Receiving automated email notifications from third-party services;
+- Manually sending an email from a client like Gmail or Outlook;  
+- Receiving automated email notifications from third-party services;  
 - Using Mailhook as an entry point for client communications.
 
 ---
@@ -92,29 +92,28 @@ The Mailhook node returns a structured JSON object containing the full details o
     }
   ]
 }
-
-```
+````
 
 ### Fields explained:
 
-- `headers` — array of all original email headers (`key`/`value` pairs).
-- `from` — sender’s name and email address.
-- `to` — list of recipients (usually just your Mailhook address).
-- `subject` — email subject line.
-- `messageId` — unique identifier of the email.
-- `date` — date and time the email was sent (ISO format).
-- `html` — HTML version of the email body.
-- `text` — plain text version of the email body.
-- `attachments` — array of file objects attached to the email.
+* `headers` — array of all original email headers (`key`/`value` pairs).
+* `from` — sender’s name and email address.
+* `to` — list of recipients (usually just your Mailhook address).
+* `subject` — email subject line.
+* `messageId` — unique identifier of the email.
+* `date` — date and time the email was sent (ISO format).
+* `html` — HTML version of the email body.
+* `text` — plain text version of the email body.
+* `attachments` — array of file objects attached to the email.
 
 ### Attachment object fields:
 
-- `filename` — name of the attached file.
-- `mimeType` — MIME type of the file.
-- `disposition` — usually `"attachment"`, may also be `"inline"`.
-- `related` — `true` if it's part of the email content (e.g., embedded image).
-- `contentId` — identifier for inline referencing (e.g. `<image1@cid>`).
-- `content` —  file content
+* `filename` — name of the attached file.
+* `mimeType` — MIME type of the file.
+* `disposition` — usually `"attachment"`, may also be `"inline"`.
+* `related` — `true` if it's part of the email content (e.g., embedded image).
+* `contentId` — identifier for inline referencing (e.g. `<image1@cid>`).
+* `content` — file content
 
 ---
 
