@@ -1,6 +1,6 @@
 ---
 title: Trigger on Webhook
-description: Description: Configuring a webhook trigger to initiate automation
+description: Configuring a webhook trigger to initiate automation
 sidebar_position: 1
 ---
 
