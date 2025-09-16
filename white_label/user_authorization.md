@@ -12,12 +12,10 @@ A key advantage of Latenode integration is its authentication simplicity. Users 
 
 Before you can generate a JWT, you will need a valid **signature key** from Latenode. Contact support to obtain the key.
 
-<aside>
-💡
+:::tip
+💡 Keep this key in a secure location – it will be used to verify user authentication in your application.
+:::
 
-Keep this key in a secure location - it will be used to verify user authentication in your application.
-
-</aside>
 
 ## **Creating and Signing JWT**
 
