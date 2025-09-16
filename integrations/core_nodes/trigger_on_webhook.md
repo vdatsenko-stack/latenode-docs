@@ -1,8 +1,8 @@
-# Trigger on Webhook
-
-Article Description: Configuring a webhook trigger to initiate automation.
-Published: Yes
-Suggested: No
+---
+title: Trigger on Webhook
+description: Description: Configuring a webhook trigger to initiate automation
+sidebar_position: 1
+---
 
 ![Untitled](./trigger_on_webhook/untitled.png)
 
