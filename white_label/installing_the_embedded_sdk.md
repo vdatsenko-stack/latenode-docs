@@ -4,11 +4,7 @@ description: Instructions for integrating and configuring the embedded iFrame mo
 sidebar_position: 3
 ---
 
-# Installing the embedded SDK
 
-Article Description: Instructions for integrating and configuring the embedded iFrame mode, enabling seamless embedding of content across platforms.
-Published: Yes
-Suggested: No
 
 This article describes how to integrate the Latenode platform into your project using the SDK.
 

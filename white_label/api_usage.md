@@ -4,8 +4,6 @@ description: Instructions about capabilities for managing subscription plans, su
 sidebar_position: 6
 ---
 
-This article describes the capabilities for managing subscription plans, subscriptions, and users via the API.
-
 ## Creating an API Token
 
 To use the API, you need to create an API token in your personal dashboard. This can be done in the “Access Tokens” section:
