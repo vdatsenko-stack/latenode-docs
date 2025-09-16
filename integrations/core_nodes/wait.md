@@ -1,7 +1,7 @@
 ---
 title: Wait
 description: Introducing delays in scenario execution
-sidebar_position: 4
+sidebar_position: 5
 ---
 
 ![Untitled](./wait/untitled.png)
