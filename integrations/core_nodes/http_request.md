@@ -28,7 +28,10 @@ The required **fields** are:
 
 The **URL** field is where you input the URL of the external application's API that you want to send a request to.  
 
-> 💡 Variables and parameters from other nodes can be inserted into the URL using the "?" symbol
+:::tip
+Variables and parameters from other nodes can be inserted into the URL using the "?" symbol
+:::
+
 
 ### **Method**
 
