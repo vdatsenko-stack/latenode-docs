@@ -1,8 +1,8 @@
-# Iterator
-
-Article Description: Processing multiple data items sequentially.
-Published: Yes
-Suggested: No
+---
+title: Iterator
+description: Processing multiple data items sequentially
+sidebar_position: 4
+---
 
 ![Untitled](./iterator/untitled.png)
 
@@ -13,10 +13,9 @@ Suggested: No
 - JSON objects: In this case, each Key-Value pair will participate in the iteration;
 - JSON arrays: In this case, each array element will participate in the iteration.
 
-<aside>
+:::tip
 💡 You can watch a training video [here](https://www.youtube.com/watch?v=q5lNoPncj5g)
-
-</aside>
+:::
 
 ## **Node Configuration**
 
@@ -26,10 +25,9 @@ To configure the **Iterator** node, you need to fill in the **Data to iterate** 
 
 The top connection point of the **Iterator** node is used to attach the node(s) whose execution will be repeated as many times as there are elements in the array or parameters. After completing the iterations, the scenario execution will continue through the right lateral connection of the **Iterator** node.
 
-<aside>
+:::warning
 ⚠️ The node attached to the **Iterator** node via the lateral connection point will be executed only once.
-
-</aside>
+:::
 
 ## Simple iterator example
 
@@ -392,4 +390,3 @@ The top connection point of the **Iterator** node is used to attach the node(s) 
     }
   ]
 }
-```
