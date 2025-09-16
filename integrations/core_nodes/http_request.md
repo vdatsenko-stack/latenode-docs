@@ -108,7 +108,7 @@ Applications that provide APIs may specify HTTP request examples in CURL format.
 curl -X GET https://api.test.com/v1/email/balance \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer $API_TOKEN'
-
+```
 
 To quickly configure an **HTTP Request** node, follow these steps:
 
