@@ -1,8 +1,8 @@
-# JSON Parse
-
-Article Description: Extracting and processing JSON data.
-Published: Yes
-Suggested: No
+---
+title: JSON Parse
+description: Extracting and processing JSON data
+sidebar_position: 8
+---
 
 ![Untitled](./json_parse/untitled.png)
 
@@ -20,10 +20,9 @@ To configure the JSON Parse node, it is necessary to fill in the mandatory field
 
 This field is required for entering the string that needs to be converted into JSON format.
 
-<aside>
-💡 In the **JSON string** field, you can input text, variables from other nodes, or parameters from responses of other nodes.
-
-</aside>
+:::tip
+In the **JSON string** field, you can input text, variables from other nodes, or parameters from responses of other nodes.
+:::
 
 ## **Example of Node Usage**
 
@@ -54,4 +53,3 @@ The result of executing this scenario is a JSON object.
 	"Fruit": "Apple",
 	"Sum": 10
 }
-```
