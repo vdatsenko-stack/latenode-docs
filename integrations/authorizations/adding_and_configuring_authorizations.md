@@ -1,8 +1,8 @@
-# Adding and configuring authorizations
-
-Article Description: Setting up authentication for third-party integrations.
-Published: Yes
-Suggested: No
+---
+title: Adding and configuring authorizations
+description: Adding and configuring authorizations
+sidebar_position: 1
+---
 
 ## New authorization
 
@@ -12,10 +12,10 @@ To add a new  authorizations, you need to click on the **New authorization** but
 
 After clicking the add authorization button, you should choose the desired service from the provided list in the **Choose a service** window**.**
 
-<aside>
-⚠️ It is possible to add authorization after creating a node by clicking the **New authorization** button **(1)**. When adding authorization from the node, there is **no need to select a service**, it is determined automatically **(2)**.
+:::tip
+💡 It is possible to add authorization after creating a node by clicking the **New authorization** button **(1)**. When adding authorization from the node, there is **no need to select a service**, it is determined automatically **(2)**.
+:::
 
-</aside>
 
 ![Untitled](./adding_and_configuring_authorizations/untitled_1.png)
 
@@ -49,10 +49,11 @@ To utilize the added authorization when configuring script nodes, follow these s
 
 2. Click the **Create an authorization** button **(1)** and choose the corresponding authorization from the list **(2).**
 
-<aside>
-⚠️ Only authorizations that correspond to the node are displayed in the list. For example, only **Google Calendar** authorizations will be displayed for **Google Calendar** group nodes.
 
-</aside>
+:::tip
+Only authorizations that correspond to the node are displayed in the list. For example, only **Google Calendar** authorizations will be displayed for **Google Calendar** group nodes.
+:::
+
 
 ![Untitled](./adding_and_configuring_authorizations/untitled_6.png)
 
@@ -86,10 +87,9 @@ You can view the main attributes of a authorization in the respective columns of
 
 ![Untitled](./adding_and_configuring_authorizations/untitled_10.png)
 
-<aside>
+:::tip
 ⚠️ After clicking the **Delete** button and confirming the action in the modal window, the authorization will be permanently deleted.
-
-</aside>
+:::
 
 ![Untitled](./adding_and_configuring_authorizations/untitled_11.png)
 
