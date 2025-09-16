@@ -1,8 +1,9 @@
-# HTTP Request
+---
+title: HTTP Request
+description: Sending and receiving HTTP requests for API communication
+sidebar_position: 4
+---
 
-Article Description: Sending and receiving HTTP requests for API communication.  
-Published: Yes  
-Suggested: No  
 
 ![Untitled](./http_request/untitled.png)
 
@@ -103,8 +104,7 @@ Additional logic for data concealment can be configured in the field that appear
 ## **Quick node configuration**
 
 Applications that provide APIs may specify HTTP request examples in CURL format. For example:  
-
-```bash
+```
 curl -X GET https://api.test.com/v1/email/balance \
      -H 'Content-Type: application/json' \
      -H 'Authorization: Bearer $API_TOKEN'
