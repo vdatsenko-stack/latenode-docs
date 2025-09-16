@@ -1,8 +1,8 @@
-# Comparisons
-
-Article Description: Performing logical comparisons for decision-making in automation.
-Published: Yes
-Suggested: No
+---
+title: Comparisons
+description: Performing logical comparisons for decision-making in automation.
+sidebar_position: 1
+---
 
 <aside>
 💡 You can use our GPT Assistant for help with **Latenode operators**:

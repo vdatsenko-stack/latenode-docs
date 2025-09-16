@@ -1,8 +1,8 @@
-# Writing Effective Instructions (Prompting guide)
-
-Article Description: Best practices for writing agent instructions that are clear, safe, and task-focused.
-Published: Yes
-Suggested: No
+---
+title: Writing Effective Instructions (Prompting guide)
+description: Best practices for writing agent instructions that are clear, safe, and task-focused.
+sidebar_position: 1
+---
 
 The **System Message** field in the AI Agent node on **Latenode** defines the agent’s role, behavior, and decision-making. These instructions are written directly inside the **System Message** section in the agent’s settings. This field determines how the agent responds to user input, when it calls tools, and how it handles ambiguity or missing data.
 

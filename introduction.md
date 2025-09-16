@@ -1,4 +1,8 @@
-# Welcome to Latenode Documentation
+---
+title: Welcome to Latenode Documentation
+description: Welcome to Latenode Documentation
+sidebar_position: 1
+---
 
 Latenode is a powerful low-code automation platform designed for professionals. Whether you're looking to connect APIs, process large datasets, or build your own back-end logic, our visual canvas gives you the freedom to build without limits.
 

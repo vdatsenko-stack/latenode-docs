@@ -1,8 +1,8 @@
-# RAG Search Node
-
-Article Description: Search documents via vector similarity using natural language queries within scenarios.
-Published: Yes
-Suggested: No
+---
+title: RAG Search Node
+description: Search documents via vector similarity using natural language queries within scenarios.
+sidebar_position: 1
+---
 
 ![image.png](RAG%20Search%20Node%2024657d45a067804381ace2f23febc1cd/image.png)
 

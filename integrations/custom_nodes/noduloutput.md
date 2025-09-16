@@ -1,8 +1,8 @@
-# NodulOutput
-
-Article Description: Configuring outputs and responses in custom nodes.
-Published: Yes
-Suggested: No
+---
+title: NodulOutput
+description: Configuring outputs and responses in custom nodes.
+sidebar_position: 1
+---
 
 ![Untitled](./noduloutput/untitled.png)
 

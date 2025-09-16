@@ -1,8 +1,8 @@
-# Array Functions
-
-Article Description: Processing and modifying arrays dynamically within workflows.
-Published: Yes
-Suggested: No
+---
+title: Array Functions
+description: Processing and modifying arrays dynamically within workflows.
+sidebar_position: 1
+---
 
 <aside>
 💡 You can use our GPT Assistant for help with **Latenode operators**:

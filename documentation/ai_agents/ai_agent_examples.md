@@ -1,10 +1,9 @@
-# AI Agent Examples
+---
+title: AI Agent Examples
+description: Examples of how AI agents can be used in real-world scenarios, including task automation, decision-making support, and multi-step workflows.
+sidebar_position: 1
+---
 
-Article Description: Examples of how AI agents can be used in real-world scenarios, including task automation, decision-making support, and multi-step workflows.
-
-
-Published: Yes
-Suggested: No
 
 Latenode's **AI Agent** is flexible enough to support multiple architectures: from a single dynamic assistant to modular multi-agent systems and external knowledge integration.
 

@@ -1,8 +1,8 @@
-# Key Fields
-
-Article Description: Understanding key fields and how they impact automation logic.
-Published: Yes
-Suggested: No
+---
+title: Key Fields
+description: Understanding key fields and how they impact automation logic.
+sidebar_position: 1
+---
 
 <aside>
 💡 You can use our GPT Assistant for help with **Latenode operators**:

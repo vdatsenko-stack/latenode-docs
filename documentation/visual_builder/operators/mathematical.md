@@ -1,8 +1,8 @@
-# Mathematical
-
-Article Description: Executing arithmetic operations inside automation workflows.
-Published: Yes
-Suggested: No
+---
+title: Mathematical
+description: Executing arithmetic operations inside automation workflows.
+sidebar_position: 1
+---
 
 <aside>
 💡 You can use our GPT Assistant for help with **Latenode operators**:

@@ -1,8 +1,8 @@
-# Multi-Agent Systems
-
-Article Description: Organizing workflows using multiple agents with clear roles and data routing.
-Published: Yes
-Suggested: No
+---
+title: Multi-Agent Systems
+description: Organizing workflows using multiple agents with clear roles and data routing.
+sidebar_position: 1
+---
 
 ## Overview
 

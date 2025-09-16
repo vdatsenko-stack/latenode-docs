@@ -1,8 +1,8 @@
-# How to create your own nodes
-
-Article Description: Step-by-step guide for building custom Latenode nodes.
-Published: Yes
-Suggested: No
+---
+title: How to create your own nodes
+description: Step-by-step guide for building custom Latenode nodes.
+sidebar_position: 1
+---
 
 **Scenario** type “**Nodul”** is often used for quickly integrating into another scenario that involves preconfigured and repetitive actions. 
 

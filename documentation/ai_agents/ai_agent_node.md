@@ -1,8 +1,8 @@
-# AI Agent Node
-
-Article Description: Core component for building LLM-based automations using instructions, tool calls, and contextual memory.
-Published: Yes
-Suggested: No
+---
+title: AI Agent Node
+description: Core component for building LLM-based automations using instructions, tool calls, and contextual memory.
+sidebar_position: 1
+---
 
 ![CleanShot 2025-05-16 at 18.38.18.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/CleanShot_2025-05-16_at_18.38.18.png)
 

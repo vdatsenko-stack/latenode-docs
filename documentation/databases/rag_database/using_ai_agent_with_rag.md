@@ -1,8 +1,8 @@
-# Using AI Agent with RAG
-
-Article Description: Connect AI Agent to RAG Search to build smart, document-aware automation flows.
-Published: Yes
-Suggested: No
+---
+title: Using AI Agent with RAG
+description: Connect AI Agent to RAG Search to build smart, document-aware automation flows.
+sidebar_position: 1
+---
 
 ![brave_gM7qog41yj.png](Using%20AI%20Agent%20with%20RAG%2024657d45a067803fbe6ccd311ef0dd97/brave_gM7qog41yj.png)
 

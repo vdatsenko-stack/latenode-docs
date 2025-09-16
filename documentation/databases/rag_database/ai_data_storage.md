@@ -1,8 +1,8 @@
-# AI Data Storage
-
-Article Description: Store, manage, and index documents with chunking and embedding for semantic search.
-Published: Yes
-Suggested: No
+---
+title: AI Data Storage
+description: Store, manage, and index documents with chunking and embedding for semantic search.
+sidebar_position: 1
+---
 
 ![brave_gM7qog41yj.png](Using%20AI%20Agent%20with%20RAG%2024657d45a067803fbe6ccd311ef0dd97/brave_gM7qog41yj.png)
 

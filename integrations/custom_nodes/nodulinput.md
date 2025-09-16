@@ -1,8 +1,8 @@
-# NodulInput
-
-Article Description: Handling input parameters for custom nodes.
-Published: Yes
-Suggested: No
+---
+title: NodulInput
+description: Handling input parameters for custom nodes.
+sidebar_position: 1
+---
 
 ![Untitled](./nodulinput/untitled.png)
 

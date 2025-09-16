@@ -1,8 +1,8 @@
-# Guardrails for AI Agents
-
-Article Description: Strategies to control agent behavior, validate inputs and outputs, and ensure safe, predictable automation flows.
-Published: Yes
-Suggested: No
+---
+title: Guardrails for AI Agents
+description: Strategies to control agent behavior, validate inputs and outputs, and ensure safe, predictable automation flows.
+sidebar_position: 1
+---
 
 ## Overview
 

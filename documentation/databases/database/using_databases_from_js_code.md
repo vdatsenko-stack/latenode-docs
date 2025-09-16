@@ -1,8 +1,8 @@
-# Using Databases from JS Code
-
-Article Description: Accessing and interacting with database using JavaScript.
-Published: Yes
-Suggested: No
+---
+title: Using Databases from JS Code
+description: Accessing and interacting with database using JavaScript.
+sidebar_position: 1
+---
 
 From JavaScript node code, you can work with databases, collections, and objects.
 

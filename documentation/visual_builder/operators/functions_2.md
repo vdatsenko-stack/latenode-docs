@@ -1,8 +1,8 @@
-# Functions 2
-
-Article Description: Advanced function usage for handling complex automation scenarios.
-Published: Yes
-Suggested: No
+---
+title: Functions 2
+description: Advanced function usage for handling complex automation scenarios.
+sidebar_position: 1
+---
 
 <aside>
 💡 You can use our GPT Assistant for help with **Latenode operators**:

@@ -1,8 +1,8 @@
-# Functions (date, time)
-
-Article Description: Working with date and time functions for scheduling and time-sensitive operations.
-Published: Yes
-Suggested: No
+---
+title: Functions (date, time)
+description: Working with date and time functions for scheduling and time-sensitive operations.
+sidebar_position: 1
+---
 
 <aside>
 💡 You can use our GPT Assistant for help with **Latenode operators**:

@@ -1,8 +1,8 @@
-# Functions
-
-Article Description: Overview of built-in functions available in Latenode.
-Published: Yes
-Suggested: No
+---
+title: Functions
+description: Overview of built-in functions available in Latenode.
+sidebar_position: 1
+---
 
 <aside>
 💡 You can use our GPT Assistant for help with **Latenode operators**:

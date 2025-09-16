@@ -1,8 +1,8 @@
-# Tool Design for AI Agents
-
-Article Description: Guidelines for building and naming tools agents can reliably use in automation flows.
-Published: Yes
-Suggested: No
+---
+title: Tool Design for AI Agents
+description: Guidelines for building and naming tools agents can reliably use in automation flows.
+sidebar_position: 1
+---
 
 ## Overview
 

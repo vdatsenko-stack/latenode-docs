@@ -1,8 +1,8 @@
-# Modifying data in a collection
-
-Article Description: Inserting, updating, and deleting records in database collections.
-Published: Yes
-Suggested: No
+---
+title: Modifying data in a collection
+description: Inserting, updating, and deleting records in database collections.
+sidebar_position: 1
+---
 
 When you want to modify data in a collection, you need to select objects and apply a set of modifiers to them.
 

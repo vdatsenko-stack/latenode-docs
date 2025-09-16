@@ -1,8 +1,8 @@
-# Agent Design Foundations
-
-Article Description: Structuring agents using instructions and tools for consistent logic and behavior.
-Published: No
-Suggested: No
+---
+title: Agent Design Foundations
+description: Structuring agents using instructions and tools for consistent logic and behavior.
+sidebar_position: 1
+---
 
 ## Overview
 

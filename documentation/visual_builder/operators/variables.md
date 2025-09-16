@@ -1,8 +1,8 @@
-# Variables
-
-Article Description: Managing and manipulating variables effectively.
-Published: Yes
-Suggested: No
+---
+title: Variables
+description: Managing and manipulating variables effectively.
+sidebar_position: 1
+---
 
 <aside>
 💡 You can use our GPT Assistant for help with **Latenode operators**:

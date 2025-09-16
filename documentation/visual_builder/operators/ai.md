@@ -1,8 +1,8 @@
-# AI
-
-Article Description: Using AI-driven logic within automation workflows.
-Published: Yes
-Suggested: No
+---
+title: AI
+description: Using AI-driven logic within automation workflows.
+sidebar_position: 1
+---
 
 The AI operators include a single operator - **askAI()**. The operand should be the user's request to the AI.
 

@@ -1,8 +1,8 @@
-# Querying Collection
-
-Article Description: Retrieving and analyzing data from database collections.
-Published: Yes
-Suggested: No
+---
+title: Querying Collection
+description: Retrieving and analyzing data from database collections.
+sidebar_position: 1
+---
 
 When querying data from a collection, you can use a set of constraints to filter objects.
 

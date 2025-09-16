@@ -1,8 +1,8 @@
-# Creating a dynamic form for a scenario of the Nodul type
-
-Article Description: Developing dynamic forms for custom automation workflows.
-Published: Yes
-Suggested: No
+---
+title: Creating a dynamic form for a scenario of the Nodul type
+description: Developing dynamic forms for custom automation workflows.
+sidebar_position: 1
+---
 
 To meet business needs, it may be necessary to dynamically display fields in a scenario node of the **Nodul** type.
 
