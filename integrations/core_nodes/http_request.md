@@ -1,7 +1,7 @@
 ---
 title: HTTP Request
 description: Sending and receiving HTTP requests for API communication
-sidebar_position: 4
+sidebar_position: 3
 ---
 
 
