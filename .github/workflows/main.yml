@@ -5,18 +5,21 @@ on:
     branches:
       - main
 
+# --- ДОБАВЛЕННЫЙ БЛОК ---
+# Явно предоставляем воркфлоу права на запись в репозиторий.
+# Это необходимо для того, чтобы экшен auto-commit мог сделать push.
+permissions:
+  contents: write
+
 jobs:
   # --- ЗАДАЧА 1: Форматирование и проверка кода ---
   lint-and-format:
-    # Не запускаем эту задачу для коммитов, которые делает сам бот, чтобы избежать бесконечного цикла
     if: "!contains(github.event.head_commit.message, 'chore: auto-format')"
-
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
-          # Токен нужен для того, чтобы следующий шаг мог сделать коммит обратно в репозиторий
           token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
@@ -38,10 +41,6 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: auto-format markdown files"
-          # -------------------------------------------------------------------
-          # Строка 'skip_empty_commit' была удалена, так как это поведение
-          # теперь является стандартным для v5 этого экшена.
-          # -------------------------------------------------------------------
 
   # --- ЗАДАЧA 2: Развертывание на сервере ---
   deploy:
@@ -57,4 +56,4 @@ jobs:
       - name: Connect and run the deploy script
         run: |
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "bash /var/www/my-docusaurus-site/deploy.sh"
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "bash /var/www/my-datsaurus-site/deploy.sh"
