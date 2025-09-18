@@ -24,7 +24,6 @@ jobs:
         with:
           node-version: '18'
 
-      # --- ИЗМЕНЕНО ---
       - name: Install Tools and Dependencies
         run: |
           # Устанавливаем командные утилиты глобально
@@ -61,4 +60,11 @@ jobs:
       - name: Connect and run the deploy script
         run: |
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "bash /var/www/my-docusaurus-site/deploy.sh"
+          
+          # --- ИЗМЕНЕННАЯ КОМАНДА ЗАПУСКА СКРИПТА ---
+          # Запускаем скрипт в фоновом режиме с помощью 'nohup' и '&'.
+          # Это предотвращает "зависание" GitHub Action, так как SSH-сессия
+          # завершится сразу после отправки команды, не дожидаясь
+          # окончания выполнения скрипта на сервере.
+          # Весь вывод скрипта будет записываться в лог-файл /tmp/deploy.log на сервере.
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "nohup bash /var/www/my-docusaurus-site/deploy.sh > /tmp/deploy.log 2>&1 < /dev/null &"
