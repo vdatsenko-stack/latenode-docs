@@ -1,4 +1,4 @@
-name: Build and Deploy Documentation
+name: Lint, Format, and Deploy Documentation
 
 on:
   push:
@@ -9,71 +9,76 @@ permissions:
   contents: write
 
 jobs:
-  # --- ЗАДАЧА 1: Сборка проекта ---
-  build:
-    # Эта задача будет выполняться всегда, но деплой - только по условию
+  lint-and-format:
+    if: "!contains(github.event.head_commit.message, 'chore: auto-format')"
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Docusaurus Project
+      - name: Checkout code
         uses: actions/checkout@v4
-        # Указываем путь, куда клонировать основной проект Docusaurus
         with:
-          repository: 'YOUR_GITHUB_USERNAME/my-docusaurus-site' # <--- ЗАМЕНИТЕ НА ВАШ РЕПОЗИТОРИЙ С КОДОМ
-          token: ${{ secrets.PAT_FOR_CHECKOUT }} # <--- НУЖЕН Personal Access Token
-          path: my-docusaurus-site
-
-      - name: Checkout Content Repository
-        uses: actions/checkout@v4
-        # Указываем путь, куда клонировать репозиторий с контентом
-        with:
-          path: content
+          token: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
-          cache: 'npm'
-          cache-dependency-path: 'my-docusaurus-site/package-lock.json'
 
-      - name: Sync Content
+      - name: Install Tools and Dependencies
         run: |
-          # Простая синхронизация контента в папку сборки
-          rsync -a --delete content/documentation/ my-docusaurus-site/platform-documentation/
-          rsync -a --delete content/integrations/ my-docusaurus-site/integrations/
-          # ... и так далее для всех ваших папок
+          npm install -g prettier markdownlint-cli
+          npm install glob
 
-      - name: Install Dependencies
-        working-directory: ./my-docusaurus-site
-        run: npm install
+      - name: Fix Content Issues
+        run: node .github/scripts/fix-content.js # Переименовал для ясности
 
-      - name: Build Docusaurus Site
-        working-directory: ./my-docusaurus-site
-        run: npm run build
+      - name: Auto-fix and Format Markdown Files
+        run: |
+          markdownlint --fix ./**/*.md || true
+          prettier --write ./**/*.md
 
-      - name: Upload Build Artifact
-        uses: actions/upload-artifact@v4
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
-          name: docusaurus-build
-          path: my-docusaurus-site/build
+          commit_message: "chore: auto-format markdown files"
 
-  # --- ЗАДАЧА 2: Развертывание артефакта ---
   deploy:
-    needs: build
-    if: "contains(github.event.head_commit.message, '[deploy]')"
+    needs: lint-and-format
+    if: "contains(github.event.head_commit.message, '[deploy]') && !contains(github.event.head_commit.message, 'chore: auto-format')"
     runs-on: ubuntu-latest
     steps:
-      - name: Download Build Artifact
-        uses: actions/download-artifact@v4
+      - name: Setup SSH
+        uses: webfactory/ssh-agent@v0.9.0
         with:
-          name: docusaurus-build
-          path: build
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
 
-      - name: Deploy to Server via rsync
-        uses: easingthemes/ssh-deploy@v5
+      - name: Add SSH host
+        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Trigger Deploy on Server
+        id: deploy_step
+        # Запускаем скрипт, передавая хеш коммита, и продолжаем даже если он упадет
+        continue-on-error: true
+        run: |
+          ssh -T ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "bash /var/www/my-docusaurus-site/deploy.sh ${{ github.sha }}"
+
+      - name: Download Build Log from Server
+        # Этот шаг выполняется всегда
+        if: always()
+        run: |
+          # Скачиваем лог-файл с сервера в текущую директорию Actions
+          scp -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/my-docusaurus-site/deploy_logs/build_log_${{ github.sha }}.log ./build_log.log
+
+      - name: Upload Build Log as Artifact
+        # Этот шаг выполняется всегда
+        if: always()
+        uses: actions/upload-artifact@v4
         with:
-          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
-          ARGS: "-rlgoDziv --delete"
-          SOURCE: "build/"
-          REMOTE_HOST: ${{ secrets.SSH_HOST }}
-          REMOTE_USER: ${{ secrets.SSH_USER }}
-          TARGET: "/var/www/my-docusaurus-site/current" # <--- Упрощенный деплой
+          name: build-log-${{ github.sha }}
+          path: ./build_log.log
+
+      - name: Check Deploy Status
+        # Проверяем, упал ли шаг деплоя, и если да - тоже падаем
+        if: steps.deploy_step.outcome == 'failure'
+        run: |
+          echo "Сборка на сервере не удалась. Смотрите лог в артефактах."
+          exit 1
