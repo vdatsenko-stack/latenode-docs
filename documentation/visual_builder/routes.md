@@ -11,7 +11,7 @@ If a node is added through the **route point** of an existing node, a route betw
 
 If a node is added through the **Add Node** button, you should set up the route manually by connecting the two route points of the desired nodes in the correct direction.
 
-![Untitled](./untitled.png)
+![Untitled](./routes/untitled.png)
 
 ## Route Configuration, Conditions
 
@@ -19,7 +19,7 @@ If a node is added through the **Add Node** button, you should set up the route 
  When there are multiple routes through which the scenario can proceed, the route with a value of **TRUE** in the **Condition** field will be chosen.
 :::
 
-![Untitled](./untitled_1.png)
+![Untitled](./routes/untitled_1.png)
 
 **Example of a route** with a **Condition** value of **TRUE**:
 
@@ -28,7 +28,7 @@ If a node is added through the **Add Node** button, you should set up the route 
 
 After adding the **route**, you can access its settings by clicking the **Setup a filter** button.
 
-![Untitled](./untitled_2.png)
+![Untitled](./routes/untitled_2.png)
 
 In the **route** configuration window, you can:
 
@@ -36,7 +36,7 @@ In the **route** configuration window, you can:
 - Enter filter conditions in the **Condition** field (**2**), selecting logical operators for expressions in the **Operators** window (**3**) and values/parameters from previous nodes in the **Data** window (**4**)  
 - Save the changes by clicking the **Save** button (**5**)  
 
-![Untitled](./untitled_3.png)
+![Untitled](./routes/untitled_3.png)
 
 :::tip
  See also [Scenario example using conditions in routes](../../Examples%20&%20Tutorials%201c257d45a06780a9886cf7408c3a350e/%F0%9F%93%9D%20Scenario%20Examples%2019157d45a0678101a860c354d339b123/Using%20conditional%20filtering%20routes%2019157d45a06780a19c6cff87c38fd751.md)
