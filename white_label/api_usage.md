@@ -22,6 +22,7 @@ After clicking the “Done” button, you will no longer be able to access it.
 Be sure to copy and store the token in a safe place.
 :::
 
+
 ## Using the API Token in Requests
 
 To authenticate, add a `query` parameter named `AUTH_TOKEN` with the value of your created token from the “Access Tokens” section to each request. For example, to retrieve the list of created subscription plans, the request URL would look like this:
@@ -38,11 +39,12 @@ Each request described in this article returns a standard response format:
 
 ```json
 {
-  "success": true,
-  "request_id": "Spawv468Km1GW7ljPqGR",
-  "data": {},
-  "errors": []
+    "success": true,
+    "request_id": "Spawv468Km1GW7ljPqGR",
+    "data": {},
+    "errors": []
 }
+
 ```
 
 The `data` field contains the data related to the specific endpoint. This `data` field will be described as the response format for each endpoint.
@@ -59,16 +61,17 @@ The general format of an error response looks like this:
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "errors": [
-    {
-      "message": "error message",
-      "code": "error.code"
-    }
-  ],
-  "request_id": "IvqOBSrwjaIozf2afu98"
+    "success": false,
+    "data": null,
+    "errors": [
+        {
+            "message": "error message",
+            "code": "error.code"
+        }
+    ],
+    "request_id": "IvqOBSrwjaIozf2afu98"
 }
+
 ```
 
 To retrieve the error code, always refer to index `0` of the `errors` array. This index is reserved and always used to transmit the error code to the client.
@@ -77,16 +80,17 @@ For example, for unauthorized access to the API, you will receive the following 
 
 ```json
 {
-  "success": false,
-  "data": null,
-  "errors": [
-    {
-      "message": "Unauthorized",
-      "code": "auth.Unauthorized"
-    }
-  ],
-  "request_id": "xbpvv24sh4m3mALFhyZk"
+    "success": false,
+    "data": null,
+    "errors": [
+        {
+            "message": "Unauthorized",
+            "code": "auth.Unauthorized"
+        }
+    ],
+    "request_id": "xbpvv24sh4m3mALFhyZk"
 }
+
 ```
 
 ## Retrieve the List of Quotas for Your Organization
@@ -149,76 +153,76 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/quotas?AUTH_TOK
 
 ```json
 {
-  "success": true,
-  "request_id": "UrUNdGscccEE3TJViSL0",
-  "data": {
-    "quotas": [
-      {
-        "alias": "min_execution_charging_period_in_mcs",
-        "value": {
-          "int64": "3000000",
-          "bool": false
-        }
-      },
-      {
-        "alias": "ai_assistant_request_limit",
-        "value": {
-          "int64": "5000",
-          "bool": false
-        }
-      },
-      {
-        "alias": "parallel_executions_limit",
-        "value": {
-          "int64": "5000",
-          "bool": false
-        }
-      },
-      {
-        "alias": "exec_history_availability_period_in_min",
-        "value": {
-          "int64": "6000",
-          "bool": false
-        }
-      },
-      {
-        "alias": "plug_and_play_microcredits",
-        "value": {
-          "int64": "5000000000000",
-          "bool": false
-        }
-      },
-      {
-        "alias": "active_scenarios_limit",
-        "value": {
-          "int64": "5000",
-          "bool": false
-        }
-      },
-      {
-        "alias": "min_triggering_interval_in_seconds",
-        "value": {
-          "int64": "20",
-          "bool": false
-        }
-      },
-      {
-        "alias": "connected_accounts_limit",
-        "value": {
-          "int64": "5000",
-          "bool": false
-        }
-      },
-      {
-        "alias": "regular_microcredits",
-        "value": {
-          "int64": "10000000",
-          "bool": false
-        }
-      }
-    ]
-  },
-  "errors": []
+    "success": true,
+    "request_id": "UrUNdGscccEE3TJViSL0",
+    "data": {
+        "quotas": [
+            {
+                "alias": "min_execution_charging_period_in_mcs",
+                "value": {
+                    "int64": "3000000",
+                    "bool": false
+                }
+            },
+            {
+                "alias": "ai_assistant_request_limit",
+                "value": {
+                    "int64": "5000",
+                    "bool": false
+                }
+            },
+            {
+                "alias": "parallel_executions_limit",
+                "value": {
+                    "int64": "5000",
+                    "bool": false
+                }
+            },
+            {
+                "alias": "exec_history_availability_period_in_min",
+                "value": {
+                    "int64": "6000",
+                    "bool": false
+                }
+            },
+            {
+                "alias": "plug_and_play_microcredits",
+                "value": {
+                    "int64": "5000000000000",
+                    "bool": false
+                }
+            },
+            {
+                "alias": "active_scenarios_limit",
+                "value": {
+                    "int64": "5000",
+                    "bool": false
+                }
+            },
+            {
+                "alias": "min_triggering_interval_in_seconds",
+                "value": {
+                    "int64": "20",
+                    "bool": false
+                }
+            },
+            {
+                "alias": "connected_accounts_limit",
+                "value": {
+                    "int64": "5000",
+                    "bool": false
+                }
+            },
+            {
+                "alias": "regular_microcredits",
+                "value": {
+                    "int64": "10000000",
+                    "bool": false
+                }
+            }
+        ]
+    },
+    "errors": []
 }
 ```
 
@@ -309,85 +313,85 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/plans?AUTH_TOKE
 
 ```json
 {
-  "success": true,
-  "request_id": "dPuN9LQBj1GUG805x27B",
-  "data": {
-    "plans": [
-      {
-        "id": "0",
-        "name": "Demo Test Plan",
-        "status": "plan_status_active",
-        "features": [
-          {
-            "alias": "min_execution_charging_period_in_mcs",
-            "value": {
-              "int64": "3000000",
-              "bool": false
+    "success": true,
+    "request_id": "dPuN9LQBj1GUG805x27B",
+    "data": {
+        "plans": [
+            {
+                "id": "0",
+                "name": "Demo Test Plan",
+                "status": "plan_status_active",
+                "features": [
+                    {
+                        "alias": "min_execution_charging_period_in_mcs",
+                        "value": {
+                            "int64": "3000000",
+                            "bool": false
+                        }
+                    },
+                    {
+                        "alias": "regular_microcredits",
+                        "value": {
+                            "int64": "10000000000",
+                            "bool": false
+                        }
+                    },
+                    {
+                        "alias": "connected_accounts_limit",
+                        "value": {
+                            "int64": "100",
+                            "bool": false
+                        }
+                    },
+                    {
+                        "alias": "parallel_executions_limit",
+                        "value": {
+                            "int64": "10",
+                            "bool": false
+                        }
+                    },
+                    {
+                        "alias": "ai_assistant_request_limit",
+                        "value": {
+                            "int64": "500",
+                            "bool": false
+                        }
+                    },
+                    {
+                        "alias": "plug_and_play_microcredits",
+                        "value": {
+                            "int64": "10000000",
+                            "bool": false
+                        }
+                    },
+                    {
+                        "alias": "min_triggering_interval_in_seconds",
+                        "value": {
+                            "int64": "120",
+                            "bool": false
+                        }
+                    },
+                    {
+                        "alias": "active_scenarios_limit",
+                        "value": {
+                            "int64": "100",
+                            "bool": false
+                        }
+                    },
+                    {
+                        "alias": "exec_history_availability_period_in_min",
+                        "value": {
+                            "int64": "1440",
+                            "bool": false
+                        }
+                    }
+                ],
+                "created_at": "2025-04-29T13:00:15Z",
+                "updated_at": "2025-04-29T13:00:15Z"
             }
-          },
-          {
-            "alias": "regular_microcredits",
-            "value": {
-              "int64": "10000000000",
-              "bool": false
-            }
-          },
-          {
-            "alias": "connected_accounts_limit",
-            "value": {
-              "int64": "100",
-              "bool": false
-            }
-          },
-          {
-            "alias": "parallel_executions_limit",
-            "value": {
-              "int64": "10",
-              "bool": false
-            }
-          },
-          {
-            "alias": "ai_assistant_request_limit",
-            "value": {
-              "int64": "500",
-              "bool": false
-            }
-          },
-          {
-            "alias": "plug_and_play_microcredits",
-            "value": {
-              "int64": "10000000",
-              "bool": false
-            }
-          },
-          {
-            "alias": "min_triggering_interval_in_seconds",
-            "value": {
-              "int64": "120",
-              "bool": false
-            }
-          },
-          {
-            "alias": "active_scenarios_limit",
-            "value": {
-              "int64": "100",
-              "bool": false
-            }
-          },
-          {
-            "alias": "exec_history_availability_period_in_min",
-            "value": {
-              "int64": "1440",
-              "bool": false
-            }
-          }
-        ],
-        "created_at": "2025-04-29T13:00:15Z",
-        "updated_at": "2025-04-29T13:00:15Z"
-      }
-    ]
-  },
-  "errors": []
+        ]
+    },
+    "errors": []
 }
 ```
 
@@ -572,83 +576,83 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/plans?AUTH_TOKE
 
 ```json
 {
-  "success": true,
-  "request_id": "Iit8HDuiyKSO6CuGGHzW",
-  "data": {
-    "plan": {
-      "id": "0",
-      "name": "Plan Name",
-      "status": "plan_status_active",
-      "features": [
-        {
-          "alias": "plug_and_play_microcredits",
-          "value": {
-            "int64": "1000000",
-            "bool": false
-          }
-        },
-        {
-          "alias": "min_execution_charging_period_in_mcs",
-          "value": {
-            "int64": "3000000",
-            "bool": false
-          }
-        },
-        {
-          "alias": "parallel_executions_limit",
-          "value": {
-            "int64": "1",
-            "bool": false
-          }
-        },
-        {
-          "alias": "ai_assistant_request_limit",
-          "value": {
-            "int64": "1",
-            "bool": false
-          }
-        },
-        {
-          "alias": "active_scenarios_limit",
-          "value": {
-            "int64": "1",
-            "bool": false
-          }
-        },
-        {
-          "alias": "connected_accounts_limit",
-          "value": {
-            "int64": "1",
-            "bool": false
-          }
-        },
-        {
-          "alias": "min_triggering_interval_in_seconds",
-          "value": {
-            "int64": "120",
-            "bool": false
-          }
-        },
-        {
-          "alias": "exec_history_availability_period_in_min",
-          "value": {
-            "int64": "1",
-            "bool": false
-          }
-        },
-        {
-          "alias": "regular_microcredits",
-          "value": {
-            "int64": "1000000",
-            "bool": false
-          }
+    "success": true,
+    "request_id": "Iit8HDuiyKSO6CuGGHzW",
+    "data": {
+        "plan": {
+            "id": "0",
+            "name": "Plan Name",
+            "status": "plan_status_active",
+            "features": [
+                {
+                    "alias": "plug_and_play_microcredits",
+                    "value": {
+                        "int64": "1000000",
+                        "bool": false
+                    }
+                },
+                {
+                    "alias": "min_execution_charging_period_in_mcs",
+                    "value": {
+                        "int64": "3000000",
+                        "bool": false
+                    }
+                },
+                {
+                    "alias": "parallel_executions_limit",
+                    "value": {
+                        "int64": "1",
+                        "bool": false
+                    }
+                },
+                {
+                    "alias": "ai_assistant_request_limit",
+                    "value": {
+                        "int64": "1",
+                        "bool": false
+                    }
+                },
+                {
+                    "alias": "active_scenarios_limit",
+                    "value": {
+                        "int64": "1",
+                        "bool": false
+                    }
+                },
+                {
+                    "alias": "connected_accounts_limit",
+                    "value": {
+                        "int64": "1",
+                        "bool": false
+                    }
+                },
+                {
+                    "alias": "min_triggering_interval_in_seconds",
+                    "value": {
+                        "int64": "120",
+                        "bool": false
+                    }
+                },
+                {
+                    "alias": "exec_history_availability_period_in_min",
+                    "value": {
+                        "int64": "1",
+                        "bool": false
+                    }
+                },
+                {
+                    "alias": "regular_microcredits",
+                    "value": {
+                        "int64": "1000000",
+                        "bool": false
+                    }
+                }
+            ],
+            "created_at": "2025-05-05T14:57:47.716Z",
+            "updated_at": "2025-05-05T14:57:47.716Z"
         }
-      ],
-      "created_at": "2025-05-05T14:57:47.716Z",
-      "updated_at": "2025-05-05T14:57:47.716Z"
-    }
-  },
-  "errors": []
+    },
+    "errors": []
 }
 ```
 
@@ -674,6 +678,7 @@ None
 This API does not support partial updates.  
 The `name` and `features` fields are required and must contain the complete new (or old, if no changes are needed) values.
 :::
+
 
 ```json
 - Field:        plan_id
@@ -801,10 +806,10 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/plans/update?AU
 
 ```json
 {
-  "success": true,
-  "request_id": "Spawv468Km1GW7ljPqGR",
-  "data": {},
-  "errors": []
+    "success": true,
+    "request_id": "Spawv468Km1GW7ljPqGR",
+    "data": {},
+    "errors": []
 }
 ```
 
@@ -850,10 +855,10 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/plans/archive?A
 
 ```json
 {
-  "success": true,
-  "request_id": "rG0F38nQ4aE8Gy0TDh3C",
-  "data": {},
-  "errors": []
+    "success": true,
+    "request_id": "rG0F38nQ4aE8Gy0TDh3C",
+    "data": {},
+    "errors": []
 }
 ```
 
@@ -998,27 +1003,27 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/subscriptions/l
 
 ```json
 {
-  "success": true,
-  "request_id": "HMI8jfzAIiuGH8bB2J1F",
-  "data": {
-    "subscriptions": [
-      {
-        "id": "0",
-        "plan_id": "0",
-        "user_id": "my_test_user_1",
-        "status": "subscription_status_active",
-        "consumption": {
-          "execution_credits": {
-            "total": "1"
-          },
-          "plug_and_play_credits": null
-        },
-        "created_at": "2025-05-05T14:19:39Z",
-        "cancelled_at": null
-      }
-    ]
-  },
-  "errors": []
+    "success": true,
+    "request_id": "HMI8jfzAIiuGH8bB2J1F",
+    "data": {
+        "subscriptions": [
+            {
+                "id": "0",
+                "plan_id": "0",
+                "user_id": "my_test_user_1",
+                "status": "subscription_status_active",
+                "consumption": {
+                    "execution_credits": {
+                        "total": "1"
+                    },
+                    "plug_and_play_credits": null
+                },
+                "created_at": "2025-05-05T14:19:39Z",
+                "cancelled_at": null
+            }
+        ]
+    },
+    "errors": []
 }
 ```
 
@@ -1106,20 +1111,20 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/subscriptions?A
 
 ```json
 {
-  "success": true,
-  "request_id": "VbCf0CMPIJ8m3pc4u9vI",
-  "errors": [],
-  "data": {
-    "subscription": {
-      "id": "0",
-      "plan_id": "0",
-      "user_id": "my_test_user_1",
-      "status": "subscription_status_active",
-      "consumption": null,
-      "created_at": "2025-05-05T15:26:10.320Z",
-      "cancelled_at": null
+    "success": true,
+    "request_id": "VbCf0CMPIJ8m3pc4u9vI",
+    "errors": [],
+    "data": {
+        "subscription": {
+            "id": "0",
+            "plan_id": "0",
+            "user_id": "my_test_user_1",
+            "status": "subscription_status_active",
+            "consumption": null,
+            "created_at": "2025-05-05T15:26:10.320Z",
+            "cancelled_at": null
+        }
     }
-  }
 }
 ```
 
@@ -1165,10 +1170,10 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/subscriptions/c
 
 ```json
 {
-  "success": true,
-  "request_id": "J9KWRLlKIlP0tTPQOj6B",
-  "errors": [],
-  "data": {}
+    "success": true,
+    "request_id": "J9KWRLlKIlP0tTPQOj6B",
+    "errors": [],
+    "data": {}
 }
 ```
 
@@ -1316,41 +1321,41 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/users/list?AUTH
 
 ```json
 {
-  "success": true,
-  "request_id": "iPl0JoZDJmQZnjkxoJXU",
-  "data": {
-    "users": [
-      {
-        "user_id": "my_test_user_1",
-        "subscriptions": [
-          {
-            "id": "0",
-            "plan_id": "0",
-            "user_id": "my_test_user_1",
-            "status": "subscription_status_active",
-            "consumption": {
-              "execution_credits": {
-                "total": "1"
-              },
-              "plug_and_play_credits": null
-            },
-            "created_at": "2025-05-05T14:19:39Z",
-            "cancelled_at": null
-          },
-          {
-            "id": "0",
-            "plan_id": "0",
-            "user_id": "my_test_user_1",
-            "status": "subscription_status_cancelled",
-            "consumption": null,
-            "created_at": "2025-05-05T15:26:10Z",
-            "cancelled_at": null
-          }
+    "success": true,
+    "request_id": "iPl0JoZDJmQZnjkxoJXU",
+    "data": {
+        "users": [
+            {
+                "user_id": "my_test_user_1",
+                "subscriptions": [
+                    {
+                        "id": "0",
+                        "plan_id": "0",
+                        "user_id": "my_test_user_1",
+                        "status": "subscription_status_active",
+                        "consumption": {
+                            "execution_credits": {
+                                "total": "1"
+                            },
+                            "plug_and_play_credits": null
+                        },
+                        "created_at": "2025-05-05T14:19:39Z",
+                        "cancelled_at": null
+                    },
+                    {
+                        "id": "0",
+                        "plan_id": "0",
+                        "user_id": "my_test_user_1",
+                        "status": "subscription_status_cancelled",
+                        "consumption": null,
+                        "created_at": "2025-05-05T15:26:10Z",
+                        "cancelled_at": null
+                    }
+                ]
+            }
         ]
-      }
-    ]
-  },
-  "errors": []
+    },
+    "errors": []
 }
 ```
 
@@ -1492,30 +1497,30 @@ curl --location 'https://api.latenode.com/latenode/v1/whitelabel/reports/consump
 
 ```json
 {
-  "success": true,
-  "request_id": "Vwauyaa7L4lOjn4ZK2Xy",
-  "data": {
-    "total": {
-      "execution_credits": {
-        "total": "1"
-      },
-      "plug_and_play_credits": null
+    "success": true,
+    "request_id": "Vwauyaa7L4lOjn4ZK2Xy",
+    "data": {
+        "total": {
+            "execution_credits": {
+                "total": "1"
+            },
+            "plug_and_play_credits": null
+        },
+        "users": [
+            {
+                "user_id": "my_test_user_1",
+                "consumption": {
+                    "execution_credits": {
+                        "total": "1"
+                    },
+                    "plug_and_play_credits": null
+                }
+            }
+        ],
+        "start": "2025-05-01T15:00:00Z",
+        "end": "2025-05-06T15:00:00Z"
     },
-    "users": [
-      {
-        "user_id": "my_test_user_1",
-        "consumption": {
-          "execution_credits": {
-            "total": "1"
-          },
-          "plug_and_play_credits": null
-        }
-      }
-    ],
-    "start": "2025-05-01T15:00:00Z",
-    "end": "2025-05-06T15:00:00Z"
-  },
-  "errors": []
+    "errors": []
 }
 ```
 
@@ -1571,10 +1576,10 @@ curl --location 'http://api.latenode.com/latenode/v1/whitelabel/billing/resource
 
 ```json
 {
-  "success": true,
-  "request_id": "Spawv468Km4877fGR",
-  "data": {},
-  "errors": []
+    "success": true,
+    "request_id": "Spawv468Km4877fGR",
+    "data": {},
+    "errors": []
 }
 ```
 
@@ -1624,10 +1629,10 @@ curl --location 'http://api.latenode.com/latenode/v1/whitelabel/space/access/gra
 
 ```json
 {
-  "success": true,
-  "request_id": "Spawakhdfm4877fGR",
-  "data": {},
-  "errors": []
+    "success": true,
+    "request_id": "Spawakhdfm4877fGR",
+    "data": {},
+    "errors": []
 }
 ```
 
@@ -1677,9 +1682,9 @@ curl --location 'http://api.latenode.com/latenode/v1/whitelabel/space/access/rev
 
 ```json
 {
-  "success": true,
-  "request_id": "Spa78377hfwakhdfm48GR",
-  "data": {},
-  "errors": []
+    "success": true,
+    "request_id": "Spa78377hfwakhdfm48GR",
+    "data": {},
+    "errors": []
 }
 ```
