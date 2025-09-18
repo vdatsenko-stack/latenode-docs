@@ -5,9 +5,6 @@ on:
     branches:
       - main
 
-# --- ДОБАВЛЕННЫЙ БЛОК ---
-# Явно предоставляем воркфлоу права на запись в репозиторий.
-# Это необходимо для того, чтобы экшен auto-commit мог сделать push.
 permissions:
   contents: write
 
@@ -56,4 +53,5 @@ jobs:
       - name: Connect and run the deploy script
         run: |
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "bash /var/www/my-datsaurus-site/deploy.sh"
+          # --- ИСПРАВЛЕНА ОПЕЧАТКА В ПУТИ ---
+          ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "bash /var/www/my-docusaurus-site/deploy.sh"
