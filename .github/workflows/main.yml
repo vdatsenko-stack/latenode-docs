@@ -25,13 +25,14 @@ jobs:
           node-version: '18'
 
       # --- ИЗМЕНЕНО ---
-      - name: Install Linting and Scripting Tools
-        # Устанавливаем glob, который нужен нашему скрипту
-        run: npm install -g prettier markdownlint-cli glob
+      - name: Install Tools and Dependencies
+        run: |
+          # Устанавливаем командные утилиты глобально
+          npm install -g prettier markdownlint-cli
+          # Устанавливаем 'glob' локально, чтобы скрипт мог его найти через require()
+          npm install glob
 
-      # --- НОВЫЙ ШАГ ---
       - name: Fix Missing Front Matter
-        # Запускаем наш кастомный скрипт перед стандартными инструментами
         run: node .github/scripts/fix-frontmatter.js
 
       - name: Auto-fix and Format Markdown Files
