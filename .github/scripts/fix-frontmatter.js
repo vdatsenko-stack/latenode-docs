@@ -1,58 +1,65 @@
-// .github/scripts/fix-frontmatter.js
 const fs = require('fs');
 const path = require('path');
 const { globSync } = require('glob');
 
-// --- НАСТРОЙКИ ---
-// Ищем все Markdown файлы во всех подпапках
 const files = globSync('**/*.md', { ignore: 'node_modules/**' });
-
 let filesFixed = 0;
 
-console.log(`Проверка ${files.length} Markdown файлов...`);
+console.log(`Проверка ${files.length} Markdown файлов на корректность front matter...`);
 
 files.forEach(file => {
   const filePath = path.resolve(file);
   let content = fs.readFileSync(filePath, 'utf8');
 
-  // Убираем BOM (Byte Order Mark), если он есть
+  // Убираем BOM, если он есть
   if (content.charCodeAt(0) === 0xFEFF) {
     content = content.slice(1);
   }
-  
-  // Обрезаем пробелы в начале и конце
-  const trimmedContent = content.trim();
 
-  // --- ЛОГИКА ИСПРАВЛЕНИЯ ---
-  // Проверяем два условия:
-  // 1. Файл начинается с '---'.
-  // 2. В файле ровно один разделитель '---' (т.е. он не закрыт).
-  if (trimmedContent.startsWith('---') && trimmedContent.split('---').length === 2) {
-    // Находим первый пустой абзац (двойной перенос строки) после front matter.
-    // Это самый надежный признак конца метаданных.
-    const parts = trimmedContent.split('\n\n');
+  const lines = content.split('\n');
+
+  // Проверяем, начинается ли файл с front matter
+  if (lines.length > 0 && lines[0].trim() === '---') {
+    let firstDelimiterIndex = 0;
+    let secondDelimiterIndex = -1;
+
+    // Ищем второй разделитель, начиная со второй строки
+    for (let i = 1; i < lines.length; i++) {
+      if (lines[i].trim() === '---') {
+        secondDelimiterIndex = i;
+        break;
+      }
+    }
+
+    // Если второй разделитель не найден или он совпадает с первым,
+    // это может быть старая ошибка (незакрытый блок)
+    if (secondDelimiterIndex <= firstDelimiterIndex) {
+      // Здесь можно оставить старую логику или просто проигнорировать,
+      // так как основная проблема сейчас другая. Для чистоты оставим лог.
+      console.log(`[ПРЕДУПРЕЖДЕНИЕ] Не найден корректный второй разделитель в файле: ${file}`);
+      return; // Переходим к следующему файлу
+    }
+
+    // --- НОВАЯ ЛОГИКА ИСПРАВЛЕНИЯ ---
+    // Проверяем, были ли пробелы в строках с разделителями
+    const firstDelimiterHasError = lines[firstDelimiterIndex] !== '---';
+    const secondDelimiterHasError = lines[secondDelimiterIndex] !== '---';
     
-    // Если есть хотя бы один пустой абзац
-    if (parts.length > 1) {
-      // Первая часть - это наш незакрытый front matter.
-      const frontMatterBlock = parts[0];
-      // Все остальное - основной контент.
-      const mainContent = parts.slice(1).join('\n\n');
+    if (firstDelimiterHasError || secondDelimiterHasError) {
+      // Приводим строки к каноническому виду '---'
+      lines[firstDelimiterIndex] = '---';
+      lines[secondDelimiterIndex] = '---';
 
-      // Собираем исправленный файл
-      const newContent = `${frontMatterBlock.trim()}\n---\n\n${mainContent}`;
-
+      const newContent = lines.join('\n');
       fs.writeFileSync(filePath, newContent, 'utf8');
-      console.log(`[ИСПРАВЛЕНО] Отсутствующий '---' в файле: ${file}`);
+      console.log(`[ИСПРАВЛЕНО] Некорректный разделитель '---' в файле: ${file}`);
       filesFixed++;
-    } else {
-        console.log(`[ПРЕДУПРЕЖДЕНИЕ] Не удалось найти конец front matter в файле: ${file}`);
     }
   }
 });
 
 if (filesFixed > 0) {
-    console.log(`\nИсправлено ${filesFixed} файлов.`);
+  console.log(`\nИсправлено ${filesFixed} файлов.`);
 } else {
-    console.log('\nПроблем с front matter не найдено.');
+  console.log('\nПроблем с форматированием front matter не найдено.');
 }
