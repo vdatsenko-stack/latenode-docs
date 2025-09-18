@@ -13,7 +13,7 @@ Latenode AI Agents are powered by a built-in LLM and driven by two key component
 
 This page explains how to design those components effectively to build reliable, task-oriented agents.
 
-![brave_JMGq4SJCaa.png](Agent%20Design%20Foundations%201f857d45a067804292dbd516b058ffa2/brave_JMGq4SJCaa.png)
+![brave_JMGq4SJCaa.png](./brave_JMGq4SJCaa.png)
 
 ---
 
@@ -28,7 +28,7 @@ Each time the AI Agent node receives a message, it:
 
 The quality of this process depends on how clearly you structure the agent’s instructions and tools.
 
-![brave_CoiQwPMI3S.png](Agent%20Design%20Foundations%201f857d45a067804292dbd516b058ffa2/brave_CoiQwPMI3S.png)
+![brave_CoiQwPMI3S.png](./brave_CoiQwPMI3S.png)
 
 ---
 
@@ -36,7 +36,7 @@ The quality of this process depends on how clearly you structure the agent’s i
 
 Instructions define how the agent should behave. They are written in plain language and describe what the agent is allowed to do, how it should react to user inputs, and how to use the available tools.
 
-![WDADesktopService_6szsCoof3M.png](Agent%20Design%20Foundations%201f857d45a067804292dbd516b058ffa2/WDADesktopService_6szsCoof3M.png)
+![WDADesktopService_6szsCoof3M.png](./WDADesktopService_6szsCoof3M.png)
 
 ---
 
@@ -60,7 +60,7 @@ Instructions define how the agent should behave. They are written in plain langu
 
 Tools are the external actions the agent can take. In Latenode, these are the connected nodes — such as HTTP requests, Notion, or Google Sheets.
 
-![brave_ZHO76IKiB7.png](Agent%20Design%20Foundations%201f857d45a067804292dbd516b058ffa2/brave_ZHO76IKiB7.png)
+![brave_ZHO76IKiB7.png](./brave_ZHO76IKiB7.png)
 
 ---
 
@@ -71,7 +71,7 @@ Tools are the external actions the agent can take. In Latenode, these are the co
 - Design each tool to do one task well
 - Test tools separately before connecting
 
-![brave_uskvi2zwEO.png](Agent%20Design%20Foundations%201f857d45a067804292dbd516b058ffa2/brave_uskvi2zwEO.png)
+![brave_uskvi2zwEO.png](./brave_uskvi2zwEO.png)
 
 ```
 {{fromAIAgent("email"; "Customer email address")}}

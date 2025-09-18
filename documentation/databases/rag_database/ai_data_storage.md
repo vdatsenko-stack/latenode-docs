@@ -4,7 +4,7 @@ description: Store, manage, and index documents with chunking and embedding for 
 sidebar_position: 1
 ---
 
-![brave_gM7qog41yj.png](Using%20AI%20Agent%20with%20RAG%2024657d45a067803fbe6ccd311ef0dd97/brave_gM7qog41yj.png)
+![brave_gM7qog41yj.png](./brave_gM7qog41yj.png)
 
 ### Purpose
 
@@ -26,7 +26,7 @@ Use cases include:
 
 You can access this feature via **Data Storage → AI Data Storage (RAG)** in the left-hand side menu.
 
-![brave_l3S0LYq3WK.png](ru%2024657d45a06780f29205c5d7c7493a2c/brave_l3S0LYq3WK.png)
+![brave_l3S0LYq3WK.png](./brave_l3S0LYq3WK.png)
 
 ---
 
@@ -34,11 +34,11 @@ You can access this feature via **Data Storage → AI Data Storage (RAG)** in th
 
 Click **Create Storage** to open the setup modal:
 
-![brave_awRQKmbKQs.png](ru%2024657d45a06780f29205c5d7c7493a2c/brave_awRQKmbKQs.png)
+![brave_awRQKmbKQs.png](./brave_awRQKmbKQs.png)
 
 Fill in the required fields: **Storage Name, Chunk Size, Chunk Overlap**
 
-![brave_nHbU4QmKzu.png](ru%2024657d45a06780f29205c5d7c7493a2c/brave_nHbU4QmKzu.png)
+![brave_nHbU4QmKzu.png](./brave_nHbU4QmKzu.png)
 
 ---
 
@@ -53,7 +53,7 @@ Fill in the required fields: **Storage Name, Chunk Size, Chunk Overlap**
 
 Created storages are displayed in a table:
 
-![brave_R2vB1tRsYc.png](ru%2024657d45a06780f29205c5d7c7493a2c/brave_R2vB1tRsYc.png)
+![brave_R2vB1tRsYc.png](./brave_R2vB1tRsYc.png)
 
 | Field | Description |
 | --- | --- |
@@ -69,7 +69,7 @@ Created storages are displayed in a table:
 
 Open a storage to access the upload interface. Drag-and-drop is supported.
 
-![brave_B5v1L58izT.png](ru%2024657d45a06780f29205c5d7c7493a2c/brave_B5v1L58izT.png)
+![brave_B5v1L58izT.png](./brave_B5v1L58izT.png)
 
 After uploading:
 
@@ -77,7 +77,7 @@ After uploading:
 - Files are listed with size, upload date, and status
 - Editing or downloading files is currently **not supported**
 
-![brave_5f8Vn9IysJ.png](ru%2024657d45a06780f29205c5d7c7493a2c/brave_5f8Vn9IysJ.png)
+![brave_5f8Vn9IysJ.png](./brave_5f8Vn9IysJ.png)
 
 ---
 

@@ -31,11 +31,11 @@ The function defines global variables **`GlobalVarFromJs_string`**, **`GlobalVar
 2. Run the **JavaScript** node once and wait for its execution.
 3. View the globally created variables **`GlobalVarFromJs_string`**, **`GlobalVarFromJs_obj`**, **`GlobalVarFromJs_number`** on the **Global variables** interface.
 
-![Untitled](./global_variables_in_javascript_node/untitled.png)
+![Untitled](./untitled.png)
 
 4. Check for the presence of new global variables when filling in the parameters of any other node:
 
-![Untitled](./global_variables_in_javascript_node/untitled_1.png)
+![Untitled](./untitled_1.png)
 
 ## Getting Global Variables
 
@@ -62,7 +62,7 @@ This code represents an asynchronous function **`run`**. This function is design
 2. Run the **JavaScript** node once and wait for its execution to complete.
 3. Check the output data of the **JavaScript** node for the values of global variables:
 
-![Untitled](./global_variables_in_javascript_node/untitled_2.png)
+![Untitled](./untitled_2.png)
 
 ## Removing Global Variables
 
@@ -88,7 +88,7 @@ The code represents an asynchronous function **`run`** designed to be executed i
 
 2. Run the **JavaScript** node once and wait for its execution.
 
-![Untitled](./global_variables_in_javascript_node/untitled_3.png)
+![Untitled](./untitled_3.png)
 
 3. Check for the absence of global variables **`GlobalVarFromJs_string`**, **`GlobalVarFromJs_obj`**, **`GlobalVarFromJs_number`** on the Global Variables interface.
 
@@ -115,7 +115,7 @@ The code represents an asynchronous function **`run`** designed to be executed i
 2. Run the **JavaScript** node once and wait for its execution.
 3. Examine the output data of the **JavaScript** node, which will contain an array of global variables. Attributes are provided for each global variable:
 
-![Untitled](./global_variables_in_javascript_node/untitled_4.png)
+![Untitled](./untitled_4.png)
 
 * Name "key";
 * Type "type";

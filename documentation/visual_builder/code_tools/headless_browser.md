@@ -3,7 +3,7 @@ title: Headless browser
 description: Automating web interactions and UI testing using a headless browser
 sidebar_position: 3
 ---
-![Untitled](./headless_browser/untitled.png)
+![Untitled](./untitled.png)
 
 ## **Node Description**
 
@@ -47,7 +47,7 @@ return {
 
 You could get a selector here:
 
-![CleanShot 2024-11-01 at 09.05.35.png](./headless_browser/cleanshot_20241101_at_09.05.35.png)
+![CleanShot 2024-11-01 at 09.05.35.png](./cleanshot_20241101_at_09.05.35.png)
 
 ## **Node Configuration**
 

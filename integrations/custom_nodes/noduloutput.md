@@ -4,7 +4,7 @@ description: Configuring outputs and responses in custom nodes.
 sidebar_position: 1
 ---
 
-![Untitled](./noduloutput/untitled.png)
+![Untitled](./untitled.png)
 
 ## **Node Description**
 
@@ -19,7 +19,7 @@ sidebar_position: 1
 
 To configure the **NodulOutput** node, it is necessary to fill in the optional fields.
 
-![Untitled](./noduloutput/untitled_1.png)
+![Untitled](./untitled_1.png)
 
 ### Output Type
 

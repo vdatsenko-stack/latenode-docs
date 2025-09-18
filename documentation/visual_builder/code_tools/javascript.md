@@ -4,7 +4,7 @@ description: Executing JavaScript code inside automation scenarios
 sidebar_position: 1
 ---
 
-![Untitled](./javascript/untitled.png)
+![Untitled](./untitled.png)
 
 ## **Node Description**
 
@@ -16,7 +16,7 @@ sidebar_position: 1
 
 To configure a **JavaScript** node, you need to generate code within the **Code** window in accordance with the data processing requirements.
 
-![Untitled](./javascript/untitled_1.png)
+![Untitled](./untitled_1.png)
 
 The available parameters from previous nodes are displayed in the **Data** window. For more information on using data from previous nodes, please refer to the documentation under [Autofill](../../Quick%20Start%20&%20Basics%2019157d45a06780aebdfbed616028bd95/%F0%9F%9A%80%20Quick%20start%2019157d45a06781ccaa0ac9a4d3ccfa5c/Helper%20Widget%2019157d45a067805397e9f52716216f2a.md).
 

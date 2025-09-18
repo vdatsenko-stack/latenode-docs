@@ -32,7 +32,7 @@ The function defines the variable **`VarFromJs`** and saves it using the **`stor
 2. Run the **JavaScript** node once and wait for its execution.
 3. Check for the existence of the new variable when populating parameters for any other node.
 
-![Untitled](./variables_in_javascript_node/untitled.png)
+![Untitled](./untitled.png)
 
 ## Getting Variables
 
@@ -59,5 +59,5 @@ The code extracts the values of the variable using the **`store.getVariable`** m
 2. Run the **JavaScript** node once and wait for its execution.
 3. Check the output data of the **JavaScript** node for the variable values:
 
-![Untitled](./variables_in_javascript_node/untitled_1.png)
+![Untitled](./untitled_1.png)
 

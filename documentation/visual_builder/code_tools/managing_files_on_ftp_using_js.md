@@ -66,7 +66,7 @@ This code contains a function to connect to the FTP server with specified creden
 
 3. Examine the **JavaScript** node's output data for file attributes, including its content:
 
-![Untitled](./managing_files_on_ftp_using_js/untitled.png)
+![Untitled](./untitled.png)
 
 ## **Retrieving a list of files**
 
@@ -134,7 +134,7 @@ This code connects to the FTP server, changes the working directory to **`/htdoc
 }
 ```
 
-![Untitled](./managing_files_on_ftp_using_js/untitled_1.png)
+![Untitled](./untitled_1.png)
 
 ## **Uploading a file**
 
@@ -187,7 +187,7 @@ This code is designed to connect to the FTP server, upload a file with HTML cont
 
 3. Examine the **JavaScript** node's output data for a successful upload message with the file location:
 
-![Untitled](./managing_files_on_ftp_using_js/untitled_2.png)
+![Untitled](./untitled_2.png)
 
 ## **Deleting a file**
 
@@ -234,4 +234,4 @@ This code is designed to connect to an FTP server and delete a file located at t
 
 3. Examine the **JavaScript** node's output data for a successful file deletion message:
 
-![Untitled](./managing_files_on_ftp_using_js/untitled_3.png)
+![Untitled](./untitled_3.png)

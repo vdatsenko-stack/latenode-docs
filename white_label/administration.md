@@ -75,29 +75,29 @@ Below is an interactive video showing how to create a plan.
 
 To view the list of existing subscriptions, go to the “Subscriptions” section:
 
-![image.png](./administration/image.png)
+![image.png](./image.png)
 
 Here, you can see total credit and plug&play token usage for the current billing period:
 
-![image.png](./administration/image_1.png)
+![image.png](./image_1.png)
 
 You’ll also see a table of usage per subscription for each user, with an option to cancel subscriptions:
 
-![image.png](./administration/image_2.png)
+![image.png](./image_2.png)
 
 To add a subscription for a user, click the “Add Subscription” button:
 
-![image.png](./administration/image_3.png)
+![image.png](./image_3.png)
 
 In the modal window, select the user and the subscription plan to assign:
 
-![image.png](./administration/image_4.png)
+![image.png](./image_4.png)
 
 ## Managing the User List
 
 To view the user list, go to the “Users” section. On this page, you can see the list of users along with their assigned subscriptions. The subscription assignment functionality is also available here:
 
-![image.png](./administration/image_5.png)
+![image.png](./image_5.png)
 
 :::tip[Tip]
 Users are not limited in the number of subscriptions.  

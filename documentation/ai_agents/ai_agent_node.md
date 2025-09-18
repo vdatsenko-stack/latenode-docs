@@ -4,7 +4,7 @@ description: Core component for building LLM-based automations using instruction
 sidebar_position: 1
 ---
 
-![CleanShot 2025-05-16 at 18.38.18.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/CleanShot_2025-05-16_at_18.38.18.png)
+![CleanShot 2025-05-16 at 18.38.18.png](./CleanShot_2025-05-16_at_18.38.18.png)
 
 **AI Agent** is a component of the Latenode platform designed to build intelligent scenarios based on large language models (LLMs). It allows you to integrate external functions, conduct contextual dialogues, and perform sequential actions based on user input.
 
@@ -22,7 +22,7 @@ The AI Agent is used for:
 
 ## AI Agent Interface
 
-![brave_fvEXfL38jp.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_fvEXfL38jp.png)
+![brave_fvEXfL38jp.png](./brave_fvEXfL38jp.png)
 
 ### Main Fields
 
@@ -47,7 +47,7 @@ The AI Agent is used for:
 > ℹ️ To explore all available models, their names, prices, and descriptions, you can use the **List Models node**. It returns a structured list of models supported by the AI Agent node.
 > 
 
-![brave_xNNZGPqEGq.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_xNNZGPqEGq.png)
+![brave_xNNZGPqEGq.png](./brave_xNNZGPqEGq.png)
 
 ---
 
@@ -59,13 +59,13 @@ AI Agent implements the concept of Function Calling (as defined by OpenAI) or To
 
 The request includes:
 
-![brave_9uh4VMBrnf.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_9uh4VMBrnf.png)
+![brave_9uh4VMBrnf.png](./brave_9uh4VMBrnf.png)
 
 - `User Prompt` (1) — the user’s request (role: user),
 - `System Message` (2) — the system message (role: system),
 - **Tool metadata** — each connected node must provide:
     
-    ![brave_oShdIMhDhh.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_oShdIMhDhh.png)
+    ![brave_oShdIMhDhh.png](./brave_oShdIMhDhh.png)
     
     - a **name (3)** (taken from the node's title),
     - a **description (4)** (from the `Tool Description` field),
@@ -86,7 +86,7 @@ Each such node is treated as a callable function with a name, arguments, and des
 
 ### AI Chat
 
-![brave_sIdzBuBDiw.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_sIdzBuBDiw.png)
+![brave_sIdzBuBDiw.png](./brave_sIdzBuBDiw.png)
 
 On the right side of the node configuration, there is an **AI Chat** tab. You can use it to talk to the assistant in real-time and test its behavior. This is useful for verifying how the model interprets the prompt, what actions it suggests, and which tools it decides to call.
 
@@ -94,7 +94,7 @@ On the right side of the node configuration, there is an **AI Chat** tab. You ca
 
 ## Connecting Tools to the Agent
 
-![brave_ZlaQrPlTp8.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_ZlaQrPlTp8.png)
+![brave_ZlaQrPlTp8.png](./brave_ZlaQrPlTp8.png)
 
 To make AI Agent use other scenario blocks, they must be **visually connected from the bottom** via the constructor interface.
 
@@ -109,7 +109,7 @@ Once connected, the linked node becomes available as a callable **tool** for the
 
 ## Passing Parameters to Connected Tools
 
-![brave_xiqvZfU4oX.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_xiqvZfU4oX.png)
+![brave_xiqvZfU4oX.png](./brave_xiqvZfU4oX.png)
 
 To pass data from the AI Agent into the connected node, use the `fromAIAgent()` operator. This operator acts as a **placeholder for dynamic input** — the agent will automatically substitute it with relevant values during execution.
 
@@ -130,7 +130,7 @@ This expression defines the expected argument for the tool:
 
 **Example:**
 
-![brave_h72MlkiWPY.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_h72MlkiWPY.png)
+![brave_h72MlkiWPY.png](./brave_h72MlkiWPY.png)
 
 ```
 {{fromAIAgent("Email Body"; "Include an email body as either plain text")}}
@@ -151,7 +151,7 @@ This will register the node as an available function with:
 
 ## Example: Weather Forecast (No Authorization Required)
 
-![brave_dhJzbkPo2S.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_dhJzbkPo2S.png)
+![brave_dhJzbkPo2S.png](./brave_dhJzbkPo2S.png)
 
 Let’s see how AI Agent works using a weather forecast request.
 
@@ -186,7 +186,7 @@ As a result:
 - substitutes the value “London” and makes the HTTP request;
 - receives a brief forecast and sends it back to the user.
 
-![brave_ahtqYMQUqg.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_ahtqYMQUqg.png)
+![brave_ahtqYMQUqg.png](./brave_ahtqYMQUqg.png)
 
 ---
 
@@ -196,7 +196,7 @@ AI Agent also works well in chatbot format. You can connect **multiple nodes** a
 
 For instance, here’s a basic Telegram chatbot:
 
-![brave_kclShZkQHU.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_kclShZkQHU.png)
+![brave_kclShZkQHU.png](./brave_kclShZkQHU.png)
 
 Telegram trigger connected to AI Agent, and from AI Agent to:
 
@@ -208,15 +208,15 @@ In this scenario:
 
 - If the user sends a general message, the agent simply replies with text without calling tools.
 
-![brave_68lN7zAoQd.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_68lN7zAoQd.png)
+![brave_68lN7zAoQd.png](./brave_68lN7zAoQd.png)
 
 - If the user asks to create note, it uses the `Create Note`node.
 
-![brave_cua2kt18nf.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_cua2kt18nf.png)
+![brave_cua2kt18nf.png](./brave_cua2kt18nf.png)
 
 - If the user asks to do something complex, such as getting the weather and searching for information online, two tools - `Web Search` and `Current Weather`  - will be triggered sequentially, and their results will be included in the response.
 
-![brave_lL4T52yY0g.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_lL4T52yY0g.png)
+![brave_lL4T52yY0g.png](./brave_lL4T52yY0g.png)
 
 Each node is registered with `fromAIAgent()` to pass parameters. The model understands which tool to use - and ignores the rest.
 
@@ -228,7 +228,7 @@ This makes the chatbot dynamic and modular.
 
 While basic and modular agents are suitable for most simple and mid-level use cases, **multi-agentic workflows** allow for advanced coordination between multiple agents - each acting independently and fulfilling a specialized role.
 
-![brave_TStf2Ey04h.png](AI%20Agent%20Node%201db57d45a06781388726ce559f3b0087/brave_TStf2Ey04h.png)
+![brave_TStf2Ey04h.png](./brave_TStf2Ey04h.png)
 
 In these scenarios, agents can exchange data, trigger one another conditionally, and take on distinct responsibilities within a single request. For example, one agent may serve as a **copywriter**, another as an **editor**, and a third as a **fact-checker**. This separation of roles helps reduce hallucinations that typically occur when a single agent is overloaded with multiple objectives.
 

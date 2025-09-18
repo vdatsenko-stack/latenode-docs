@@ -67,7 +67,7 @@ Template:
 
 Below is an example code that adds a row to a Google Sheet. The data for the row, including the token for connection, is entered as parameters.
 
-![Untitled](./custom_js_parameters/untitled.png)
+![Untitled](./untitled.png)
 
 ```jsx
 /** @CustomParams
@@ -194,7 +194,7 @@ export default async function run({ execution_id, input, data, store }) {
 }
 ```
 
-![Untitled](./custom_js_parameters/untitled_1.png)
+![Untitled](./untitled_1.png)
 
 ### Integer (int)
 
@@ -261,7 +261,7 @@ export default async function run({ execution_id, input, data, store }) {
 }
 ```
 
-![Untitled](./custom_js_parameters/untitled_2.png)
+![Untitled](./untitled_2.png)
 
 ### String Array (string\_array)
 
@@ -322,7 +322,7 @@ export default async function run({ execution_id, input, data, store }) {
 }
 ```
 
-![Untitled](./custom_js_parameters/untitled_3.png)
+![Untitled](./untitled_3.png)
 
 ### Key-Value (string\_to\_string)
 
@@ -393,7 +393,7 @@ export default async function run({execution_id, input, data}) {
 }
 ```
 
-![Untitled](./custom_js_parameters/untitled_4.png)
+![Untitled](./untitled_4.png)
 
 ### Dropdown List (select)
 
@@ -462,7 +462,7 @@ export default async function run({ execution_id, input, data, store }) {
 }
 ```
 
-![Untitled](./custom_js_parameters/untitled_5.png)
+![Untitled](./untitled_5.png)
 
 ### Boolean (bool)
 
@@ -510,4 +510,4 @@ export default async function run({execution_id, input, data, store}) {
 }
 ```
 
-![Untitled](./custom_js_parameters/untitled_6.png)
+![Untitled](./untitled_6.png)

@@ -4,7 +4,7 @@ description: Automating actions based on predefined time intervals
 sidebar_position: 6
 ---
 
-![Untitled](./trigger_on_schedule/untitled.png)
+![Untitled](./untitled.png)
 
 ## **Node Description**
 
@@ -14,7 +14,7 @@ sidebar_position: 6
 
 To configure the **Trigger on Schedule** node, you need to fill in the mandatory fields.
 
-![Untitled](./trigger_on_schedule/untitled_1.png)
+![Untitled](./untitled_1.png)
 
 ### Schedule
 
@@ -29,7 +29,7 @@ This field is necessary for setting up a schedule. Using dropdown menus, configu
 
 You don't need to fill in all the listed time parameters; it's sufficient to fill in only those parameters that will provide the desired schedule.
 
-![chrome_IqxzxcgogZ.png](./trigger_on_schedule/chrome_iqxzxcgogz.png)
+![chrome_IqxzxcgogZ.png](./chrome_iqxzxcgogz.png)
 
 :::tip
 The CRON expression field is automatically populated in accordance with the configured parameters.

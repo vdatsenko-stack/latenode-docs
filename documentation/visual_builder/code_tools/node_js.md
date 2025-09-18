@@ -13,11 +13,11 @@ To add code to a scenario, follow these steps:
 1. Click on one of the buttons to add a node.
 2. In the application selection window, choose the [JavaScript](../javascript/javascript.md) node.
 
-![Untitled](./node_js/Untitled.png)
+![Untitled](./Untitled.png)
 
 3. Open the added JavaScript node and make changes to the code template manually or with the help of the AI assistant.
 
-![Untitled](./node_js/untitled_1.png)
+![Untitled](./untitled_1.png)
 
 ## Data Exchange Between Nodes
 
@@ -30,7 +30,7 @@ The code generated in the [JavaScript](../javascript/javascript.md) node can uti
 
 By doing so, you can seamlessly integrate and manipulate data across different nodes within your scenario.
 
-![Untitled](./node_js/untitled_2.png)
+![Untitled](./untitled_2.png)
 
 :::warning
 When adding data from other nodes, part of the expression may be wrapped in backticks. For example: `data["{{1.headers.Content-Type}}"]`, even if another node returned the property without them. It is not necessary to remove the backticks, as they will be ignored during code execution. Removing them manually may result in code execution errors.
@@ -42,13 +42,13 @@ The result of the [JavaScript](../javascript/javascript.md) node can be a string
 
 1. In the **SetVariables** node, click on the **Value** field.
 
-![](./node_js/untitled_3.png)
+![](./untitled_3.png)
 
 2. In the auxiliary window, select the parameter generated in the **JavaScript** node.
 
 This way, you can efficiently pass and utilize processed data between nodes in your workflow.
 
-![Untitled](./node_js/untitled_4.png)
+![Untitled](./untitled_4.png)
 
 ### Using Variables
 
@@ -157,19 +157,19 @@ For example, if your code uses an API key, you can generate a separate input fie
 Learn more about all possible custom parameters [here](../custom_js_parameters/custom_js_parameters.md).
 :::
 
-![Untitled](./node_js/untitled_5.png)
+![Untitled](./untitled_5.png)
 
 ## Logging
 
 Logging in the [JavaScript](../javascript/javascript.md) node is available using the `console.log` command. Logged data will be displayed in the **Log** tab.
 
-![Untitled](./node_js/untitled_6.png)
+![Untitled](./untitled_6.png)
 
 ## Using NPM Packages
 
 The [JavaScript](../javascript/javascript.md) node supports the import of **npm** libraries using the `import` statement. For example, importing and using the "lodash" library:
 
-![Untitled](./node_js/untitled_7.png)
+![Untitled](./untitled_7.png)
 
 You can specify the version of the library you want to use with the `@` symbol. For example:
 
@@ -189,7 +189,7 @@ Library installation takes some time. If the user starts the node before the ins
 
 **Node Package Manager (NPM)** is a tool for developers working with Node.js, as it allows them to leverage a vast library of ready-made packages and easily manage project dependencies. Using the **axios** package enables developers to easily fetch data from external APIs or other web services without having to write extensive code for handling HTTP requests and responses.
 
-![Untitled](./node_js/untitled_8.png)
+![Untitled](./untitled_8.png)
 
 An example of such a scenario is fetching a list of current GitHub repositories based on a selected programming language using the **axios** package:
 

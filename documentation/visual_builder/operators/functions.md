@@ -22,7 +22,7 @@ Operators in this group ensure the execution of logical operations with operands
 
 It outputs a specified value when conditions are met or a different value if the conditions are not met.  
 
-![Untitled](./functions/untitled.png)
+![Untitled](./untitled.png)
 
 - **Result of the expression:** Specified value.  
 - **Example:** If 3.ValueSV = 10, then true. If 3.ValueSV = 11, then false.  
@@ -37,7 +37,7 @@ This operator provides logical and mathematical isolation for any expressions.
 
 This operator provides logical negation of specified/received boolean values.  
 
-![Untitled](./functions/untitled_1.png)
+![Untitled](./untitled_1.png)
 
 - **Result of the expression:** Negation of the value.  
 - **Example:** If 3.ValueSV is TRUE, then FALSE.  
@@ -46,7 +46,7 @@ This operator provides logical negation of specified/received boolean values.
 
 It outputs a specified value if the operand is absent (null), and the value of the operand if it is present.  
 
-![Untitled](./functions/untitled_2.png)
+![Untitled](./untitled_2.png)
 
 - **Result of the expression:** The value.  
 - **Example:** If 3.ValueSV is absent (null), then 5. If 3.ValueSV = 50, then 50.  
@@ -55,7 +55,7 @@ It outputs a specified value if the operand is absent (null), and the value of t
 
 This operator checks for the absence of values in the operand.  
 
-![Untitled](./functions/untitled_3.png)
+![Untitled](./untitled_3.png)
 
 - **Result of the expression:** TRUE/FALSE.  
 - **Example:** If 3.ValueSV is absent (null), then TRUE. If 3.ValueSV = "May", then FALSE.  
@@ -64,7 +64,7 @@ This operator checks for the absence of values in the operand.
 
 This operator checks for the presence of selected characters in a string, number, or array (including an array of boolean values), regardless of their location.  
 
-![Untitled](./functions/untitled_4.png)
+![Untitled](./untitled_4.png)
 
 - **Result of the expression:** TRUE/FALSE.  
 - **Example:** If 3.ValueSV = "Hello Latenode", then TRUE. If 3.ValueSV = "Hi Latenode", then FALSE.  
@@ -73,7 +73,7 @@ This operator checks for the presence of selected characters in a string, number
 
 This operator checks for the presence of selected characters at the beginning of a string or number.  
 
-![Untitled](./functions/untitled_5.png)
+![Untitled](./untitled_5.png)
 
 - **Result of the expression:** TRUE/FALSE.  
 - **Example:** If 3.ValueSV = "June", then TRUE. If 3.ValueSV = "May", then FALSE. If 3.ValueSV = "1000", then FALSE.  
@@ -82,7 +82,7 @@ This operator checks for the presence of selected characters at the beginning of
 
 This operator checks for the presence of selected characters at the end of a string or number.  
 
-![Untitled](./functions/untitled_6.png)
+![Untitled](./untitled_6.png)
 
 - **Result of the expression:** TRUE/FALSE.  
 - **Example:** If 3.ValueSV = "June", then TRUE. If 3.ValueSV = "May", then FALSE. If 3.ValueSV = "1000", then FALSE.  
@@ -91,7 +91,7 @@ This operator checks for the presence of selected characters at the end of a str
 
 This operator checks for a match between the operand and a regular expression.  
 
-![Untitled](./functions/untitled_7.png)
+![Untitled](./untitled_7.png)
 
 - **Result of the expression:** TRUE/FALSE.  
 - **Example:** If 3.ValueSV = "Abc", then TRUE. If 3.ValueSV = 2000, then FALSE.  
@@ -100,7 +100,7 @@ This operator checks for a match between the operand and a regular expression.
 
 This operator converts a string to lowercase.  
 
-![Untitled](./functions/untitled_8.png)
+![Untitled](./untitled_8.png)
 
 - **Result of the expression:** Lowercase text.  
 - **Example:** If 3.ValueSV = 'TEST', then test.  
@@ -109,7 +109,7 @@ This operator converts a string to lowercase.
 
 This operator converts a string to uppercase.  
 
-![Untitled](./functions/untitled_9.png)
+![Untitled](./untitled_9.png)
 
 - **Result of the expression:** Uppercase text.  
 - **Example:** If 3.ValueSV = 'test', then TEST.  
@@ -118,7 +118,7 @@ This operator converts a string to uppercase.
 
 This operator outputs the number of characters in a string or the number of values in an array.  
 
-![Untitled](./functions/untitled_10.png)
+![Untitled](./untitled_10.png)
 
 - **Result of the expression:** A number.  
 - **Example:** If 3.ValueSV = 'test', then 4.  
@@ -130,11 +130,11 @@ This operator outputs a JSON parameter or an array element.
 - **Result of the expression:** Parameter.  
 - **Example:** The value of the parameter ValueWH1 from the provided JSON. For example, if ValueWH1 = 15, then 15.  
 
-![Untitled](./functions/untitled_11.png)
+![Untitled](./untitled_11.png)
 
 - **Example:** The value of the element in the provided array ValueWH with index 1. For instance, if ValueWH1 = 15, then 15.  
 
-![Untitled](./functions/untitled_12.png)
+![Untitled](./untitled_12.png)
 
 ## switch
 
@@ -144,7 +144,7 @@ This operator checks if the expression matches the selected operand and outputs 
 💡 The function operator returns the result corresponding to the first matching value.
 :::
 
-![Untitled](./functions/untitled_13.png)
+![Untitled](./untitled_13.png)
 
 - **Result of the expression:** Value.  
 - **Example:** If 3.ValueSV = 'A', then 1. If 3.ValueSV = 'Abc1000', then 2.  
@@ -153,7 +153,7 @@ This operator checks if the expression matches the selected operand and outputs 
 
 This operator replaces selected values in a string or number with specified values.  
 
-![Untitled](./functions/untitled_14.png)
+![Untitled](./untitled_14.png)
 
 - **Result of the expression:** Text or number with character replacement.  
 - **Example:** If 3.ValueSV = 'Hi Latenode', then 'Test Latenode'.  
@@ -162,7 +162,7 @@ This operator replaces selected values in a string or number with specified valu
 
 This operator removes spaces at the beginning and end of a string.  
 
-![Untitled](./functions/untitled_15.png)
+![Untitled](./untitled_15.png)
 
 - **Result of the expression:** Text without spaces.  
 - **Example:** If 3.ValueSV = ' Hi Latenode ', then 'Hi Latenode'.  
@@ -171,7 +171,7 @@ This operator removes spaces at the beginning and end of a string.
 
 This operator outputs a portion of a string or number from a selected starting position not inclusive to a chosen ending position, inclusive.  
 
-![Untitled](./functions/untitled_16.png)
+![Untitled](./untitled_16.png)
 
 - **Result of the expression:** A portion of text.  
 - **Example:** If 3.ValueSV = 'Latenode', then 'a'.  
@@ -184,7 +184,7 @@ This operator provides the position of the first occurrence of a search value in
 💡 This operator returns "-1" if the search value is not found.
 :::
 
-![Untitled](./functions/untitled_17.png)
+![Untitled](./untitled_17.png)
 
 - **Result of the expression:** A portion of text.  
 - **Example:** If 3.ValueSV = 'Latenode', then 4.  
