@@ -4,7 +4,7 @@ description: Storing and retrieving variables within a scenario
 sidebar_position: 10
 ---
 
-![Untitled](./untitled.png)
+![Untitled](./getvariables/untitled.png)
 
 ## **Node Description**
 

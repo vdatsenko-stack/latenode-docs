@@ -4,7 +4,7 @@ description: Introducing delays in scenario execution
 sidebar_position: 5
 ---
 
-![Untitled](./untitled.png)
+![Untitled](./wait/untitled.png)
 
 ## Node Description
 
@@ -29,7 +29,7 @@ The **Wait until** tab is necessary for setting the time until which one must wa
 - **Date and Time** - a field for selecting the date and time in the [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format when the scenario nodes following the **Wait** node should be executed.
 - **Timezone** (mandatory field) - a field for selecting the timezone according to which the pause should be set.
 
-![Untitled](./untitled_1.png)
+![Untitled](./wait//untitled_1.png)
 
 ### **Delay**
 
@@ -47,4 +47,4 @@ When calculating the waiting time, the values entered in the fields are summed u
 - **Minutes** - 32;
 - **Seconds** - 59.
 
-![Untitled](./untitled_2.png)
+![Untitled](./wait//untitled_2.png)
