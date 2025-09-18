@@ -24,8 +24,15 @@ jobs:
         with:
           node-version: '18'
 
-      - name: Install Linting Tools
-        run: npm install -g prettier markdownlint-cli
+      # --- ИЗМЕНЕНО ---
+      - name: Install Linting and Scripting Tools
+        # Устанавливаем glob, который нужен нашему скрипту
+        run: npm install -g prettier markdownlint-cli glob
+
+      # --- НОВЫЙ ШАГ ---
+      - name: Fix Missing Front Matter
+        # Запускаем наш кастомный скрипт перед стандартными инструментами
+        run: node .github/scripts/fix-frontmatter.js
 
       - name: Auto-fix and Format Markdown Files
         run: |
@@ -53,5 +60,4 @@ jobs:
       - name: Connect and run the deploy script
         run: |
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          # --- ИСПРАВЛЕНА ОПЕЧАТКА В ПУТИ ---
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "bash /var/www/my-docusaurus-site/deploy.sh"
