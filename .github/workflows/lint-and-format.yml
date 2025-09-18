@@ -1,0 +1,50 @@
+name: Lint and Format Markdown
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  lint-and-format:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Шаг 1: Получаем код из репозитория
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          # Нужен токен для того, чтобы следующий шаг мог сделать коммит
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Шаг 2: Устанавливаем Node.js, так как инструменты для линтинга написаны на нем
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      # Шаг 3: Устанавливаем Prettier и markdownlint
+      # Prettier - для общего форматирования (отступы, кавычки)
+      # markdownlint-cli - для поиска ошибок, включая проблемы с front matter
+      - name: Install tools
+        run: npm install -g prettier markdownlint-cli
+
+      # Шаг 4: Запускаем автоматическое исправление
+      # markdownlint --fix исправит многие проблемы, включая синтаксис
+      # prettier --write отформатирует код по единому стилю
+      - name: Auto-fix files
+        run: |
+          echo "Running markdownlint auto-fix..."
+          markdownlint --fix ./**/*.md || true # || true чтобы не падать, если есть неисправимые ошибки
+          echo "Running Prettier auto-format..."
+          prettier --write ./**/*.md
+
+      # Шаг 5: Делаем коммит, если были внесены изменения
+      # Этот экшен автоматически проверит, изменились ли файлы, и если да - создаст коммит
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: "chore: auto-format markdown files"
+          commit_user_name: "GitHub Actions Bot"
+          commit_user_email: "actions@github.com"
+          commit_author: "GitHub Actions Bot <actions@github.com>"
