@@ -10,7 +10,7 @@ sidebar_position: 1
 
 Every scenario run (successful or unsuccessful) is recorded in the history. The history table is accessible by clicking the **History** button. The table displays key information about the scenario:
 
-![Untitled](./untitled.png)
+![Untitled](./execution_history/untitled.png)
 
 - **(1)** Scenario start **time;**  
 - **(2)** Branch **(Development or Production)** of the run scenario, including the version, e.g., v.13 Dev;  
@@ -29,7 +29,7 @@ Every scenario run (successful or unsuccessful) is recorded in the history. The 
 
 For each scenario run entry, there is a **View** button. Clicking the **View** button **(1)** displays the nodes **(2)** and their notifications **(3)** for the selected version of the scenario. If the scenario ended with an error, error information is displayed **(4)**.  
 
-![Untitled](./untitled_1.png)
+![Untitled](./execution_history/untitled_1.png)
 
 ### Restarting a Scenario
 
@@ -38,7 +38,7 @@ For each scenario run entry, there is a **Restart** button. Clicking the **Resta
 - Initiates a rerun identical to the selected scenario version and input data  
 - Creates a new history entry  
 
-![Untitled](./untitled_2.png)
+![Untitled](./execution_history/untitled_2.png)
 
 :::tip
 💡 You can also [copy the scenario execution from the history](../../support_analytics/faq/how_to_copy_link_to_scenario_execution.md).

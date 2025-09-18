@@ -30,17 +30,17 @@ The Latenode platform can send requests to multiple third-party services or appl
 
 The mechanism or algorithm that automates a function is called a [scenario](../%F0%9F%8E%AD%20Scenarios%2019157d45a06780589c08cae104a16ea9/Scenario%20Setup%2019157d45a067800a8ac6e3bc441c1828.md). It consists of sequentially arranged [nodes](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/Adding%20and%20configuring%20nodes%2019157d45a067802f9e7fc665c1fd6e6e.md) and [routes](../%F0%9F%97%BA%EF%B8%8F%20Routes%2019157d45a06780959ad6f2420fcb04d7/Adding%20and%20configuring%20routes%2019157d45a06780fbac04dc8b76f21335.md) connecting these nodes. Each node performs a specific action, such as running the scenario, processing or saving data, or sending a request with specified parameters to a third-party service. A node performs its action only after the previous node has completed its task. Additionally, nodes can use data generated or received by the previous nodes.
 
-![Untitled](./untitled.gif)
+![Untitled](./building_scenarios/untitled.gif)
 
 Nodes are categorized into two groups:
 
 - **Trigger** nodes initiate the scenario. Depending on the type of node, it can be triggered by a button, when data is passed to the scenario, or on a schedule.
 
-![Untitled](./untitled_1.gif)
+![Untitled](./building_scenarios/untitled_1.gif)
 
 - **Action** nodes directly perform specific functions, such as storing or processing data or sending API requests to selected services.
 
-![Untitled](./untitled_2.gif)
+![Untitled](./building_scenarios/untitled_2.gif)
 
 ## Trigger Nodes and Data Transfer to the Scenario
 
@@ -50,16 +50,16 @@ The first group includes non-specific trigger nodes:
 
 - The [Trigger on Webhook](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/Trigger%20on%20Webhook%2019757d45a067803b9f5fcbaf09056dcb.md) node allows you to run the scenario by sending requests to this node. The request may contain data for other nodes in the scenario to use. In the example below, the scenario is triggered by [sending JSON](How%20to%20send%20Data%20into%20a%20Scenario%2019157d45a06780fd8949f4f8a844bc17.md) with the Value parameter to the [Trigger on Webhook](Popular%20trigger%20nodes%2019157d45a06780139151e670ad17bc22.md) node. The values of the Value parameter are written to the global variable GlVar using the [SetGlobalVariables](../../Advanced%20Features%2019157d45a0678082b92fec90b6ddf3c5/%F0%9F%8C%8D%20Global%20variables%2019157d45a0678180bb4de76aa71cc50f/Creating%20and%20Editing%20Variables%2019157d45a0678011a13ec9ff38aacb71.md) node. The value of this variable is then returned by the [Webhook Response](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/Webhook%20response%2019757d45a06780c1a04ec689116c3885.md) node as the outcome of the scenario execution. Once the scenario is set to active (by toggling the Active switch at the bottom of the interface), it is possible to send requests without first clicking the **Run Once** button.
 
-![Untitled](./untitled_3.gif)
+![Untitled](./building_scenarios/untitled_3.gif)
 
 - The [Trigger on Run Once](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/Trigger%20on%20Run%20once%2019757d45a06780499768f373f5deecc9.md) node is useful for testing a scenario and allows you to run it by clicking the **Run once** button. Data transfer to the scenario using this node is not available, and it is not necessary to set the scenario to active status.
 
-![Untitled](./untitled_4.gif)
+![Untitled](./building_scenarios/untitled_4.gif)
 
 - The [Trigger on Schedule](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/Trigger%20on%20Schedule%2019757d45a06780648db3d4a65396c36c.md) node allows you to run the scenario on a schedule at the desired time. 
 Data transfer to the scenario using this node is not available. The node settings allow you to define the schedule and timezone. To ensure the scenario runs according to the set schedule, expand the scenario in Prod using the expand button and ensure it is in active status.
 
-![Untitled](./untitled_5.gif)
+![Untitled](./building_scenarios/untitled_5.gif)
 
 The second group consists of application and service trigger nodes. For example, the **New or Modified Files** node triggers a scenario when a file is modified or a new file is added to Google Drive. The **New Message In Channel** node triggers a scenario when a message is sent to a specified Discord channel. These nodes also require authorization settings.
 
@@ -69,15 +69,15 @@ The second group consists of application and service trigger nodes. For example,
 
 - The [JavaScript](../../Advanced%20Features%2019157d45a0678082b92fec90b6ddf3c5/%F0%9F%91%BE%20Code%20Nodes%2019157d45a067815382ffddd9d79286f2/JavaScript%2019757d45a06780e29be7c5f4aadabcff.md) node for processing data or performing other functions using [JavaScript code](../../Advanced%20Features%2019157d45a0678082b92fec90b6ddf3c5/%F0%9F%91%BE%20Code%20Nodes%2019157d45a067815382ffddd9d79286f2/JavaScript%2019757d45a06780e29be7c5f4aadabcff.md). An AI assistant is built into this node to help generate the required code. You can ask the assistant to write or tweak the code and correct it as many times as necessary to achieve the desired result.
 
-![Untitled](./untitled_6.gif)
+![Untitled](./building_scenarios/untitled_6.gif)
 
 - The [SetGlobalVariables](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/SetGlobalVariables%2019757d45a06780cb8bf8fabad09b8518.md), [GetGlobalVariables](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/GetGlobalVariables%2019757d45a06780bfad31d70bfe6e9e40.md), [SetVariables](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/SetVariables%2019757d45a06780cd8977f294d22b57a7.md), and [GetVariables](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/GetVariables%2019757d45a06780948a7fc2267003fe08.md) nodes for saving received or generated data into variables and retrieving them. Any variable created is available for use in the next node and throughout the scenario. Global variables can also be used in other scenarios.
 
-![Untitled](./untitled_7.gif)
+![Untitled](./building_scenarios/untitled_7.gif)
 
 - The [Wait](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/Wait%2019757d45a067803eb59be839e73e503b.md) node allows you to pause scenario execution for a specified period.
 
-![Untitled](./untitled_8.gif)
+![Untitled](./building_scenarios/untitled_8.gif)
 
 - The [Headless Browser](../../Advanced%20Features%2019157d45a0678082b92fec90b6ddf3c5/%F0%9F%91%BE%20Code%20Nodes%2019157d45a067815382ffddd9d79286f2/Headless%20browser%2019757d45a06780feb32ee1142d31c62a.md) node is used for parsing websites and will be discussed further below.
 
@@ -96,15 +96,15 @@ The second is the [Headless Browser](../../Advanced%20Features%2019157d45a067808
 
 To start automating a function, you need to add a new scenario. All created scenarios are available for viewing and managing on a separate interface. Each scenario has a menu that allows you to, for example, activate the scenario without opening it.
 
-![Untitled](./untitled_9.gif)
+![Untitled](./building_scenarios/untitled_9.gif)
 
 Once a scenario is created, nodes can be added by selecting them from the list. Each added node will require customization, and all nodes must be connected via node connection points.
 
-![Untitled](./untitled_10.gif)
+![Untitled](./building_scenarios/untitled_10.gif)
 
 Nodes specific to certain applications and services also require [authorization](../%F0%9F%94%91%20Authorizations%2019157d45a067801a827ed2b96028769c/Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7.md). Authorization can be set up in the node itself or on the authorizations page by selecting the required service from the list.
 
-![Untitled](./untitled_11.gif)
+![Untitled](./building_scenarios/untitled_11.gif)
 
 As an example, let's create a scenario that analyzes a website's exchange rate page, searches for the desired exchange rate based on specified parameters, writes the found value into a variable, and sends the user an email with the required information.
 
@@ -119,7 +119,7 @@ To start any scenario, you must add a trigger node. In our example, we need a [T
 }
 ```
 
-![Untitled](./untitled_12.gif)
+![Untitled](./building_scenarios/untitled_12.gif)
 
 
 ## Headless Browser Node and Site Parsing
@@ -159,7 +159,7 @@ return result;
 
 ```
 
-![Untitled](./untitled_13.gif)
+![Untitled](./building_scenarios/untitled_13.gif)
 
 
 To test the nodes, you can launch them individually. This will execute the node with the specified parameters (including known data from previous nodes) and display an information message with the results in the upper right corner of the node.
@@ -172,7 +172,7 @@ You can manage [variables](../../Advanced%20Features%2019157d45a0678082b92fec90b
 
 For global variables, an [interface](../../Advanced%20Features%2019157d45a0678082b92fec90b6ddf3c5/%F0%9F%8C%8D%20Global%20variables%2019157d45a0678180bb4de76aa71cc50f/Creating%20and%20Editing%20Variables%2019157d45a0678011a13ec9ff38aacb71.md) for creating and editing variables is also available. Let's create global variables `C1` and `C2` and set their initial values. You can update these values with actual data later in the scenario.
 
-![Untitled](./untitled_14.gif)
+![Untitled](./building_scenarios/untitled_14.gif)
 
 
 ## JavaScript Node and Data Processing with Code
@@ -230,21 +230,21 @@ return {
 }
 ```
 
-![Untitled](./untitled_15.gif)
+![Untitled](./building_scenarios/untitled_15.gif)
 
 
 ## Saving Data in Global Variables
 
 We previously created two global variables, `C1` and `C2`, which contain exchange rate data. This data can be updated daily, and our scenario involves comparing the new data with the previous values. Therefore, each time we receive an update, we need to save the values in the `C1` and `C2` variables again. This can be done directly in the scenario using the [SetGlobalVariables](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/SetGlobalVariables%2019757d45a06780cb8bf8fabad09b8518.md) node. This node allows both the creation of new variables and the overwriting of existing variable values.
 
-![Untitled](./untitled_16.gif)
+![Untitled](./building_scenarios/untitled_16.gif)
 
 
 ## Using APP Nodes and Authorization
 
 App nodes can be used to perform specific functions. An example is the **Send Mail** node, which sends an email to a specified address. Often, using these nodes requires setting up [authorization](../%F0%9F%94%91%20Authorizations%2019157d45a067801a827ed2b96028769c/Adding%20and%20configuring%20authorizations%2019157d45a0678007aa93feb28c5509a7.md), allowing the **Latenode** platform to access the necessary functions.
 
-![Untitled](./untitled_17.gif)
+![Untitled](./building_scenarios/untitled_17.gif)
 
 
 ## 3. Run the scenario and view the results
@@ -259,7 +259,7 @@ You can [copy the link to the scenario run](../../Support%20&%20Analytics%201915
 
 The scenario run can be repeated with the same settings and data as the original run.
 
-![Untitled](./untitled_18.gif)
+![Untitled](./building_scenarios/untitled_18.gif)
 
 
 ## Scenario Versions and Publishing to Prod
@@ -268,11 +268,11 @@ Each time you save a scenario, a new Dev [version](../%F0%9F%8E%AD%20Scenarios%2
 
 The scenario version is important when sending a request to the [Trigger on Webhook](../%F0%9F%94%84%20Action%20&%20Trigger%20Nodes%2019157d45a0678059b6a0f0805c542f0a/Trigger%20on%20Webhook%2019757d45a067803b9f5fcbaf09056dcb.md) node, as this node has separate Dev and Prod addresses for sending requests and initiating the scenario.
 
-![Untitled](./untitled_19.gif)
+![Untitled](./building_scenarios/untitled_19.gif)
 
 
 ## Errors During Scenario Execution
 
 Errors can occur during scenario execution. They are displayed on the right side of the node where the error occurred. If the scenario did not complete successfully, the error will also be shown in the scenario run history.
 
-![Untitled](./untitled_20.gif)
+![Untitled](./building_scenarios/untitled_20.gif)
