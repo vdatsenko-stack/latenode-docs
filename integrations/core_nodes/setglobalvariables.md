@@ -4,7 +4,7 @@ description: Managing persistent global variables across workflows
 sidebar_position: 11
 ---
 
-![Untitled](./setglobalvariables/untitled.png)
+![Untitled](./untitled.png)
 
 ## Node Description
 
@@ -23,12 +23,12 @@ To configure the **SetGlobalVariables** node, it is necessary to fill in key-val
 - **(1) Key** - a field for entering the name of the global variable;  
 - **(2) Value** - a field for entering the value of the global variable.  
 
-![Untitled](./setglobalvariables/untitled_1.png)
+![Untitled](./untitled_1.png)
 
 After creation using the **SetGlobalVariables** node, the global variable will be displayed in the table of all existing global variables.
 
-![Untitled](./setglobalvariables/untitled_2.png)
+![Untitled](./untitled_2.png)
 
 If the **SetGlobalVariables** node is connected to a node through the top Iterator connection point and is executed multiple times sequentially, the node's output data is displayed with an indication of **Iterations**. Each iteration corresponds to its output data.
 
-![Untitled](./setglobalvariables/untitled_3.png)
+![Untitled](./untitled_3.png)
