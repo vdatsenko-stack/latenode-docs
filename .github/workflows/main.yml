@@ -7,7 +7,6 @@ on:
 
 jobs:
   # --- ЗАДАЧА 1: Форматирование и проверка кода ---
-  # Эта задача запускается при КАЖДОМ пуше в 'main', чтобы поддерживать код в чистоте.
   lint-and-format:
     # Не запускаем эту задачу для коммитов, которые делает сам бот, чтобы избежать бесконечного цикла
     if: "!contains(github.event.head_commit.message, 'chore: auto-format')"
@@ -39,22 +38,15 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "chore: auto-format markdown files"
-          # Эта опция гарантирует, что если изменений не было, экшен завершится успешно
-          # и не будет пытаться создать пустой коммит.
-          skip_empty_commit: true
+          # -------------------------------------------------------------------
+          # Строка 'skip_empty_commit' была удалена, так как это поведение
+          # теперь является стандартным для v5 этого экшена.
+          # -------------------------------------------------------------------
 
   # --- ЗАДАЧA 2: Развертывание на сервере ---
-  # Эта задача запускается ТОЛЬКО если первая задача ('lint-and-format') успешна
-  # И ТОЛЬКО если в сообщении коммита есть ключевое слово '[deploy]'.
   deploy:
-    # 'needs' гарантирует, что деплой начнется только после успешного завершения линтинга
     needs: lint-and-format
-
-    # Условие для запуска:
-    # 1. Проверяем, что в сообщении коммита есть '[deploy]'
-    # 2. Игнорируем коммиты от бота, чтобы избежать случайного деплоя
     if: "contains(github.event.head_commit.message, '[deploy]') && !contains(github.event.head_commit.message, 'chore: auto-format')"
-
     runs-on: ubuntu-latest
     steps:
       - name: Setup SSH
@@ -65,5 +57,4 @@ jobs:
       - name: Connect and run the deploy script
         run: |
           ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          # Запускаем скрипт деплоя на сервере. Этот скрипт не изменился.
           ssh ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "bash /var/www/my-docusaurus-site/deploy.sh"
