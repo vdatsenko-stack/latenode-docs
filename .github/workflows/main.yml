@@ -1,4 +1,4 @@
-name: Lint, Format, and Deploy Documentation
+name: Build and Deploy Documentation
 
 on:
   push:
@@ -9,53 +9,71 @@ permissions:
   contents: write
 
 jobs:
-  # --- ЗАДАЧА 1: Форматирование и проверка кода ---
-  lint-and-format:
-    if: "!contains(github.event.head_commit.message, 'chore: auto-format')"
+  # --- ЗАДАЧА 1: Сборка проекта ---
+  build:
+    # Эта задача будет выполняться всегда, но деплой - только по условию
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Checkout Docusaurus Project
         uses: actions/checkout@v4
+        # Указываем путь, куда клонировать основной проект Docusaurus
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: 'YOUR_GITHUB_USERNAME/my-docusaurus-site' # <--- ЗАМЕНИТЕ НА ВАШ РЕПОЗИТОРИЙ С КОДОМ
+          token: ${{ secrets.PAT_FOR_CHECKOUT }} # <--- НУЖЕН Personal Access Token
+          path: my-docusaurus-site
+
+      - name: Checkout Content Repository
+        uses: actions/checkout@v4
+        # Указываем путь, куда клонировать репозиторий с контентом
+        with:
+          path: content
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
+          cache: 'npm'
+          cache-dependency-path: 'my-docusaurus-site/package-lock.json'
 
-      - name: Install Tools and Dependencies
+      - name: Sync Content
         run: |
-          npm install -g prettier markdownlint-cli
-          npm install glob
+          # Простая синхронизация контента в папку сборки
+          rsync -a --delete content/documentation/ my-docusaurus-site/platform-documentation/
+          rsync -a --delete content/integrations/ my-docusaurus-site/integrations/
+          # ... и так далее для всех ваших папок
 
-      - name: Fix Missing Front Matter
-        run: node .github/scripts/fix-frontmatter.js
+      - name: Install Dependencies
+        working-directory: ./my-docusaurus-site
+        run: npm install
 
-      - name: Auto-fix and Format Markdown Files
-        run: |
-          markdownlint --fix ./**/*.md || true
-          prettier --write ./**/*.md
+      - name: Build Docusaurus Site
+        working-directory: ./my-docusaurus-site
+        run: npm run build
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      - name: Upload Build Artifact
+        uses: actions/upload-artifact@v4
         with:
-          commit_message: "chore: auto-format markdown files"
+          name: docusaurus-build
+          path: my-docusaurus-site/build
 
-  # --- ЗАДАЧA 2: Развертывание на сервере ---
+  # --- ЗАДАЧА 2: Развертывание артефакта ---
   deploy:
-    needs: lint-and-format
-    if: "contains(github.event.head_commit.message, '[deploy]') && !contains(github.event.head_commit.message, 'chore: auto-format')"
+    needs: build
+    if: "contains(github.event.head_commit.message, '[deploy]')"
     runs-on: ubuntu-latest
     steps:
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.9.0
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v4
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+          name: docusaurus-build
+          path: build
 
-      - name: Connect and run the deploy script
-        run: |
-          ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-          
-          # -T отключает выделение псевдо-терминала, что рекомендуется для автоматизации
-          ssh -T ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "nohup bash /var/www/my-docusaurus-site/deploy.sh > /tmp/deploy.log 2>&1 < /dev/null &"
+      - name: Deploy to Server via rsync
+        uses: easingthemes/ssh-deploy@v5
+        with:
+          SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+          ARGS: "-rlgoDziv --delete"
+          SOURCE: "build/"
+          REMOTE_HOST: ${{ secrets.SSH_HOST }}
+          REMOTE_USER: ${{ secrets.SSH_USER }}
+          TARGET: "/var/www/my-docusaurus-site/current" # <--- Упрощенный деплой
