@@ -25,18 +25,16 @@ You can use the following template for parameter descriptions:
 	  "type": "string",                  // Type of the parameter, required
 	  "title": "Name_parameter1",        // Name of the parameter, required
 	  "required": true,                  // Parameter requirement, optional (but recommended to fill)
-	  "description": "Enter parameter1"  // Parameter description, optional
+	  "description": "Enter parameter1", // Parameter description, optional
 	  "options": {                       // Parameter options, optional
 		  "minLength": 10
 	  }
-	}
-},
-{
+	},
 	"parameter2": {
-	  "type": "int ",
+	  "type": "int",
 	  "title": "Name_parameter2",
 	  "required": true,
-	  "description": "Enter parameter2"
+	  "description": "Enter parameter2",
 	  "options": {
 		  "minLength": 10
 	  }
@@ -53,8 +51,7 @@ The connection type parameter is used for entering a connection by selecting it 
 
 Template:
 
-```jsx
-/** @CustomParams
+```/** @CustomParams
 {
 	"parameter": {
 	  "type": "connection",              
@@ -64,6 +61,7 @@ Template:
 	}
 }
 */
+
 ```
 
 Below is an example code that adds a row to a Google Sheet. The data for the row, including the token for connection, is entered as parameters.
