@@ -2,7 +2,7 @@
 title: Creating and Editing Variables 
 description: Creating and Editing Variables
 sidebar_position: 1
- ---
+---
 
 
 ## Creating a global variable
