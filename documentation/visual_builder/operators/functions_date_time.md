@@ -4,14 +4,13 @@ description: Working with date and time functions for scheduling and time-sensit
 sidebar_position: 1
 ---
 
-<aside>
+:::tip
 💡 You can use our GPT Assistant for help with **Latenode operators**:
 
 👉 [**Latenode Operators Assistant**](https://chatgpt.com/g/g-67d704425c088191b741075e2b0f9815-latenode-operators-assistant)
 
 It can guide you on writing expressions, using variables, filters, and building logic inside your scenarios.
-
-</aside>
+:::
 
 ## Algorithm
 
@@ -23,133 +22,123 @@ Operators in this group ensure the execution of logical operations with operands
 
 This operator generates a new date value:
 
-- adding the specified number of minutes to the current date value, if a positive value is specified;
+- adding the specified number of minutes to the current date value, if a positive value is specified;  
+**Example:** If 3.ValueSV = 2023-01-01T00:**00**:00Z, then 2023-01-01T00:0**5**:00Z.  
 
-**Example:** If 3.ValueSV = 2023-01-01T00:**00**:00Z, then 2023-01-01T00:0**5**:00Z.
+![Untitled](./functions_date_time/untitled.png)
 
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled.png)
+- subtracting the specified number of minutes from the current date value, if a negative value is specified.  
+**Example:** If 3.ValueSV = 2023-01-01T00:**25**:00Z, then 2023-01-01T00:**20**:00Z.  
 
-- subtracting the specified number of minutes from the current date value, if a negative value is specified.
-
-**Example:** If 3.ValueSV = 2023-01-01T00:**25**:00Z, then 2023-01-01T00:**20**:00Z.
-
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%201.png)
+![Untitled](./functions_date_time/untitled_1.png)
 
 ## addHours
 
 This operator generates a new date value:
 
-- adding the specified number of hours to the current date value, if a positive value is specified;
+- adding the specified number of hours to the current date value, if a positive value is specified;  
+**Example:** If 3.ValueSV = 2023-01-01T**00**:00:00Z, then 2023-01-01T**10**:00:00Z.  
 
-**Example:** If 3.ValueSV = 2023-01-01T**00**:00:00Z, then 2023-01-01T**10**:00:00Z. 
+![Untitled](./functions_date_time/untitled_2.png)
 
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%202.png)
+- subtracting the specified number of hours from the current date value, if a negative value is specified.  
+**Example:** If 3.ValueSV = 2023-01-01T**12**:00:00Z, then 2023-01-01T**04**:00:00Z.  
 
-- subtracting the specified number of hours from the current date value, if a negative value is specified.
-
-**Example:** If 3.ValueSV = 2023-01-01T**12**:00:00Z, then 2023-01-01T**04**:00:00Z.  ****
-
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%203.png)
+![Untitled](./functions_date_time/untitled_3.png)
 
 ## addDays
 
 This operator generates a new date value:
 
-- adding the specified number of days to the current date value, if a positive value is specified;
+- adding the specified number of days to the current date value, if a positive value is specified;  
+**Example:** If 3.ValueSV = 2023-01-**01**T00:00:00Z, then 2023-01-**02**T00:00:00Z.  
 
-**Example:** If 3.ValueSV = 2023-01-**01**T00:00:00Z, then 2023-01-**02**T00:00:00Z.
+![Untitled](./functions_date_time/untitled_4.png)
 
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%204.png)
+- subtracting the specified number of days from the current date value, if a negative value is specified.  
+**Example:** If 3.ValueSV = **2023-01-01**T00:00:00Z, then **2022-12-29**T00:00:00Z.  
 
-- subtracting the specified number of days from the current date value, if a negative value is specified.
-
-**Example:** If 3.ValueSV = **2023-01-01**T00:00:00Z, then **2022-12-29**T00:00:00Z.  ****
-
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%205.png)
+![Untitled](./functions_date_time/untitled_5.png)
 
 ## addMonths
 
 This operator generates a new date value:
 
-- adding the specified number of months to the current date value, if a positive value is specified;
+- adding the specified number of months to the current date value, if a positive value is specified.  
 
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%206.png)
+![Untitled](./functions_date_time/untitled_6.png)
 
-**Example:** If 3.ValueSV = 2023-01-01T00:00:00Z, then 2023-**05**-01T00:00:00Z.  ****
+**Example:** If 3.ValueSV = 2023-01-01T00:00:00Z, then 2023-**05**-01T00:00:00Z.  
 
-- subtracting the specified number of months from the current date value, if a negative value is specified.
+- subtracting the specified number of months from the current date value, if a negative value is specified.  
+**Example:** If 3.ValueSV = **2023-01-01**T00:00:00Z, then **2021-12-01**T00:00:00Z.  
 
-**Example:** If 3.ValueSV = **2023-01-01**T00:00:00Z, then **2021-12-01**T00:00:00Z.  ****
-
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%207.png)
+![Untitled](./functions_date_time/untitled_7.png)
 
 ## setMinute
 
-This operator generates a new date value by replacing the minutes of the current date with a specified value.
+This operator generates a new date value by replacing the minutes of the current date with a specified value.  
 
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%208.png)
+![Untitled](./functions_date_time/untitled_8.png)
 
-- **Example:** If 3.ValueSV = 2023-01-31T11:11:00Z, then 2023-01-31T11:**05**:00Z.
+- **Example:** If 3.ValueSV = 2023-01-31T11:11:00Z, then 2023-01-31T11:**05**:00Z.  
 
 ## setHour
 
-This operator generates a new date value by replacing the hours of the current date with a specified value.
+This operator generates a new date value by replacing the hours of the current date with a specified value.  
 
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%209.png)
+![Untitled](./functions_date_time/untitled_9.png)
 
-- **Example:** If 3.ValueSV = 2023-01-31T11:11:00Z, then 2023-01-31T**05**:11:00Z.
+- **Example:** If 3.ValueSV = 2023-01-31T11:11:00Z, then 2023-01-31T**05**:11:00Z.  
 
 ## setDay
 
-This operator generates a new date value by replacing the day of the current date with the specified value. The new day value can be either a number or the name of the day in Latin
+This operator generates a new date value by replacing the day of the current date with the specified value. The new day value can be either a number or the name of the day in Latin.  
 
-<aside>
+:::tip
 💡 If the specified value is in the range from 1 to 7, the resulting date will fall within the current week (from Sunday to Saturday), and the new day will correspond to its ordinal number. If the specified value is outside the range from 1 to 7, the resulting date will belong to the previous or next week.
+:::
 
-</aside>
+- **Example:** If 3.ValueSV = 2023-09-03T00:00:00Z, then 2023-09-**10**T00:00:00Z.  
 
-- **Example:** If 3.ValueSV = 2023-09-03T00:00:00Z, then 2023-09-**10**T00:00:00Z.
+![Untitled](./functions_date_time/untitled_10.png)
 
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%2010.png)
+- **Example:** If 3.ValueSV = 2023-09-03T00:00:00Z, then 2023-09-04T00:00:00Z.  
 
-- **Example:** If 3.ValueSV = 2023-09-03T00:00:00Z, then 2023-09-04T00:00:00Z.
-
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%2011.png)
+![Untitled](./functions_date_time/untitled_11.png)
 
 ## formatDate
 
-This operator returns the date in the requested format and in the specified time zone if provided.
+This operator returns the date in the requested format and in the specified time zone if provided.  
 
-<aside>
+:::tip
 💡 You can find the list of time zones [here](https://en.wikipedia.org/wiki/List_of_tz_database_time_zones#List).
+:::
 
-</aside>
+![Untitled](./functions_date_time/untitled_12.png)
 
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%2012.png)
-
-- **Example:** If 3.ValueSV = 2023-09-03T00:00:00Z, then 03.09.2023 03:00
+- **Example:** If 3.ValueSV = 2023-09-03T00:00:00Z, then 03.09.2023 03:00  
 
 ## parseDate
 
-This operator converts a string into a date in the requested format.
+This operator converts a string into a date in the requested format.  
 
-![Untitled](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/Untitled%2013.png)
+![Untitled](./functions_date_time/untitled_13.png)
 
-- **Example:** If 3.ValueSV = 2023-09-03, then 2023-09-03T00:00:00Z.
+- **Example:** If 3.ValueSV = 2023-09-03, then 2023-09-03T00:00:00Z.  
 
 ## Combination of parseDate and formatDate
 
-In cases where the initial date value is provided as a string, the combination of parseDate and formatDate can be used. This allows you to first convert the string into a date value and then format it into the desired format.
+In cases where the initial date value is provided as a string, the combination of parseDate and formatDate can be used. This allows you to first convert the string into a date value and then format it into the desired format.  
 
-**Example:** If 3.ValueSV = "2030-03-14 08:45:12" (string), to convert it into the format DD.MM.YYYY HH:mm:ss, use the following construction:
+**Example:** If 3.ValueSV = "2030-03-14 08:45:12" (string), to convert it into the format DD.MM.YYYY HH:mm:ss, use the following construction:  
 
-![image.png](Functions%20(date,%20time)%2019157d45a06780588182eebc9e8104d6/image.png)
+![image.png](./functions_date_time/image.png)
 
-Result: 14.03.2030 08:45:12.
+Result: 14.03.2030 08:45:12.  
 
-**Tip:** 
+**Tip:**  
 
-Use this combination if:
-
-- The initial date value is provided as a string.
-- You need to convert the string into a date value and format it into the required format.
+Use this combination if:  
+- The initial date value is provided as a string.  
+- You need to convert the string into a date value and format it into the required format.  
