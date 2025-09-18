@@ -4,6 +4,8 @@ description: Instructions for integrating and configuring the embedded iFrame mo
 sidebar_position: 3
 ---
 
+
+
 This article describes how to integrate the Latenode platform into your project using the SDK.
 
 ### Container Setup Inside the Website
@@ -28,198 +30,196 @@ The method allows rendering an `iframe`. To do this, you need to call the method
 
 ```jsx
 const latenodeSDK = new LatenodeEmbeddedSDK();
-latenodeSDK
-  .configure({
-    token: "USER_JWT_TOKEN",
-    container: "lowCodeDivContainer",
-    ui: {
-      scenarios: {
-        hideEmptyScenariosGreetings: false,
-        hideExploreAppsButton: true,
-        logo: {
-          src: "YOUR_LOGO_URL",
-          style: {
-            width: 150,
-            height: 150,
-            margin: "",
-          },
-        },
-        activeStateFilterStyle: "tabs",
-      },
-      scenario: {
-        showGrid: false,
-        nodeTypeList: {
-          requestNewAppURL: "https://latenode.com/request-new-app",
-        },
-      },
-      main: {
-        hideSideMenu: false,
-      },
-      theme: {
-        primaryColor: "#2394ae",
-        button: {
-          default: {
-            default: {
-              backgroundColor: "white",
-              textColor: "#2394ae",
-              borderColor: "#2394ae",
-            },
-            active: {
-              backgroundColor: "white",
-              textColor: "#1c768b",
-              borderColor: "#1c768b",
-            },
-            hover: {
-              backgroundColor: "white",
-              textColor: "#4fa9be",
-              borderColor: "#4fa9be",
-            },
-            disabled: {
-              backgroundColor: "white",
-              textColor: "#7bbfce",
-              borderColor: "#7bbfce",
-            },
-            borderWidth: "2px",
-            borderRadius: "20px",
-          },
-          primary: {
-            default: {
-              backgroundColor: "#2394ae",
-              textColor: "white",
-              borderColor: "#2394ae",
-            },
-            active: {
-              backgroundColor: "#1c768b",
-              textColor: "white",
-              borderColor: "#1c768b",
-            },
-            hover: {
-              backgroundColor: "#4fa9be",
-              textColor: "white",
-              borderColor: "#4fa9be",
-            },
-            disabled: {
-              backgroundColor: "#7bbfce",
-              textColor: "white",
-              borderColor: "#7bbfce",
-            },
-            borderWidth: "2px",
-            borderRadius: "20px",
-          },
-          action: {
-            default: {
-              backgroundColor: "#233849",
-              textColor: "white",
-              borderColor: "#233849",
-            },
-            active: {
-              backgroundColor: "#1c2d3a",
-              textColor: "white",
-              borderColor: "#1c2d3a",
-            },
-            hover: {
-              backgroundColor: "#4f606d",
-              textColor: "white",
-              borderColor: "#4f606d",
-            },
-            disabled: {
-              backgroundColor: "#7b8892",
-              textColor: "white",
-              borderColor: "#7b8892",
-            },
-            borderWidth: "2px",
-            borderRadius: "20px",
-          },
-          success: {
-            default: {
-              backgroundColor: "#233849",
-              textColor: "white",
-              borderColor: "#233849",
-            },
-            active: {
-              backgroundColor: "#1c2d3a",
-              textColor: "white",
-              borderColor: "#1c2d3a",
-            },
-            hover: {
-              backgroundColor: "#4f606d",
-              textColor: "white",
-              borderColor: "#4f606d",
-            },
-            disabled: {
-              backgroundColor: "#7b8892",
-              textColor: "white",
-              borderColor: "#7b8892",
-            },
-            borderWidth: "2px",
-            borderRadius: "20px",
-          },
-          danger: {
-            default: {
-              backgroundColor: "#bf161f",
-              textColor: "white",
-              borderColor: "#bf161f",
-            },
-            active: {
-              backgroundColor: "#991219",
-              textColor: "white",
-              borderColor: "#991219",
-            },
-            hover: {
-              backgroundColor: "#cc454c",
-              textColor: "white",
-              borderColor: "#cc454c",
-            },
-            disabled: {
-              backgroundColor: "#d97379",
-              textColor: "white",
-              borderColor: "#d97379",
-            },
-            borderWidth: "2px",
-            borderRadius: "20px",
-          },
-          subtle: {
-            default: {
-              backgroundColor: "white",
-              textColor: "#2394ae",
-              borderColor: "#2394ae",
-            },
-            active: {
-              backgroundColor: "white",
-              textColor: "#1c768b",
-              borderColor: "#1c768b",
-            },
-            hover: {
-              backgroundColor: "white",
-              textColor: "#4fa9be",
-              borderColor: "#4fa9be",
-            },
-            disabled: {
-              backgroundColor: "white",
-              textColor: "#7bbfce",
-              borderColor: "#7bbfce",
-            },
-            borderWidth: "2px",
-            borderRadius: "20px",
-          },
-        },
-        input: {
-          borderRadius: "20px",
-        },
-        scenario: {
-          backgroundColor: "#f1f1f1",
-        },
-      },
+latenodeSDK.configure({
+  token: 'USER_JWT_TOKEN',
+  container: 'lowCodeDivContainer',
+  ui: {
+  "scenarios": {
+    "hideEmptyScenariosGreetings": false,
+    "hideExploreAppsButton": true,
+    "logo": {
+      "src": "YOUR_LOGO_URL",
+      "style": {
+        "width": 150,
+        "height": 150,
+        "margin": ""
+      }
     },
-    navigation: {
-      handler: ({ route }) => {
-        console.log("user navigated to " + route);
+    "activeStateFilterStyle": "tabs"
+  },
+  "scenario": {
+    "showGrid": false,
+    "nodeTypeList": {
+	    "requestNewAppURL": "https://latenode.com/request-new-app"
+	    }
+  },
+  "main": {
+    "hideSideMenu": false 
+  },
+  "theme": {
+    "primaryColor": "#2394ae",
+    "button": {
+      "default": {
+        "default": {
+          "backgroundColor": "white",
+          "textColor": "#2394ae",
+          "borderColor": "#2394ae"
+        },
+        "active": {
+          "backgroundColor": "white",
+          "textColor": "#1c768b",
+          "borderColor": "#1c768b"
+        },
+        "hover": {
+          "backgroundColor": "white",
+          "textColor": "#4fa9be",
+          "borderColor": "#4fa9be"
+        },
+        "disabled": {
+          "backgroundColor": "white",
+          "textColor": "#7bbfce",
+          "borderColor": "#7bbfce"
+        },
+        "borderWidth": "2px",
+        "borderRadius": "20px"
       },
+      "primary": {
+        "default": {
+          "backgroundColor": "#2394ae",
+          "textColor": "white",
+          "borderColor": "#2394ae"
+        },
+        "active": {
+          "backgroundColor": "#1c768b",
+          "textColor": "white",
+          "borderColor": "#1c768b"
+        },
+        "hover": {
+          "backgroundColor": "#4fa9be",
+          "textColor": "white",
+          "borderColor": "#4fa9be"
+        },
+        "disabled": {
+          "backgroundColor": "#7bbfce",
+          "textColor": "white",
+          "borderColor": "#7bbfce"
+        },
+        "borderWidth": "2px",
+        "borderRadius": "20px"
+      },
+      "action": {
+        "default": {
+          "backgroundColor": "#233849",
+          "textColor": "white",
+          "borderColor": "#233849"
+        },
+        "active": {
+          "backgroundColor": "#1c2d3a",
+          "textColor": "white",
+          "borderColor": "#1c2d3a"
+        },
+        "hover": {
+          "backgroundColor": "#4f606d",
+          "textColor": "white",
+          "borderColor": "#4f606d"
+        },
+        "disabled": {
+          "backgroundColor": "#7b8892",
+          "textColor": "white",
+          "borderColor": "#7b8892"
+        },
+        "borderWidth": "2px",
+        "borderRadius": "20px"
+      },
+      "success": {
+        "default": {
+          "backgroundColor": "#233849",
+          "textColor": "white",
+          "borderColor": "#233849"
+        },
+        "active": {
+          "backgroundColor": "#1c2d3a",
+          "textColor": "white",
+          "borderColor": "#1c2d3a"
+        },
+        "hover": {
+          "backgroundColor": "#4f606d",
+          "textColor": "white",
+          "borderColor": "#4f606d"
+        },
+        "disabled": {
+          "backgroundColor": "#7b8892",
+          "textColor": "white",
+          "borderColor": "#7b8892"
+        },
+        "borderWidth": "2px",
+        "borderRadius": "20px"
+      },
+      "danger": {
+        "default": {
+          "backgroundColor": "#bf161f",
+          "textColor": "white",
+          "borderColor": "#bf161f"
+        },
+        "active": {
+          "backgroundColor": "#991219",
+          "textColor": "white",
+          "borderColor": "#991219"
+        },
+        "hover": {
+          "backgroundColor": "#cc454c",
+          "textColor": "white",
+          "borderColor": "#cc454c"
+        },
+        "disabled": {
+          "backgroundColor": "#d97379",
+          "textColor": "white",
+          "borderColor": "#d97379"
+        },
+        "borderWidth": "2px",
+        "borderRadius": "20px"
+      },
+      "subtle": {
+        "default": {
+          "backgroundColor": "white",
+          "textColor": "#2394ae",
+          "borderColor": "#2394ae"
+        },
+        "active": {
+          "backgroundColor": "white",
+          "textColor": "#1c768b",
+          "borderColor": "#1c768b"
+        },
+        "hover": {
+          "backgroundColor": "white",
+          "textColor": "#4fa9be",
+          "borderColor": "#4fa9be"
+        },
+        "disabled": {
+          "backgroundColor": "white",
+          "textColor": "#7bbfce",
+          "borderColor": "#7bbfce"
+        },
+        "borderWidth": "2px",
+        "borderRadius": "20px"
+      }
     },
-  })
-  .then(() => {
-    console.log("iframe rendered");
-  });
+    "input": {
+      "borderRadius": "20px"
+    },
+    "scenario": {
+      "backgroundColor": "#f1f1f1"
+    }
+  }
+},
+  navigation: {
+    handler: ({ route }) => {
+      console.log('user navigated to ' + route);
+    }
+  }
+}).then(() => {
+ console.log('iframe rendered');
+});
 ```
 
 This method returns a `Promise` that resolves once the `iframe` has been loaded and rendered inside the specified `container`.
@@ -255,7 +255,7 @@ ui:
       type: string
       required: false
       description: URL of a custom logo
-
+      
   scenario:
     - field: ui.scenario.showGrid
       type: boolean
@@ -331,7 +331,7 @@ navigation:
 This method allows navigation within the iframe. For example:
 
 ```jsx
-LatenodeSDK.navigate({ to: "/scenarios" });
+LatenodeSDK.navigate({ to: '/scenarios' });
 ```
 
 ### cleanup
