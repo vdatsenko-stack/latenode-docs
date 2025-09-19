@@ -54,7 +54,7 @@ export default async function run({execution_id, input, data}) {
 
 ## 2. JS Node. Make parallel HTTP requests
 
-You can make parallel HTTP requests using [JS node](JavaScript%2019757d45a06780e29be7c5f4aadabcff.md).
+You can make parallel HTTP requests using [JS node](#broken-link-was-here).
 
 ```jsx
 /*

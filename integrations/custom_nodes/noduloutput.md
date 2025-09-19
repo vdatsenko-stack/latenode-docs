@@ -4,14 +4,14 @@ description: Configuring outputs and responses in custom nodes.
 sidebar_position: 1
 ---
 
-![Untitled](./untitled.png)
+![Untitled](/img/placeholder.webp)
 
 ## **Node Description**
 
 **NodulOutput** - an action type node necessary for creating a **Nodul** type scenario. This node is required to generate a response for a **Nodul** type scenario in response to an incoming request.
 
 <aside>
-💡 See [Utilizing the NodulInput node to create a scenario of the Nodul type](How%20to%20create%20your%20own%20nodes%2019e57d45a067802d94caed9118a7d080.md).
+💡 See [Utilizing the NodulInput node to create a scenario of the Nodul type](#broken-link-was-here).
 
 </aside>
 
@@ -19,7 +19,7 @@ sidebar_position: 1
 
 To configure the **NodulOutput** node, it is necessary to fill in the optional fields.
 
-![Untitled](./untitled_1.png)
+![Untitled](/img/placeholder.webp)
 
 ### Output Type
 

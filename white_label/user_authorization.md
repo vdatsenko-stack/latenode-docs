@@ -52,7 +52,7 @@ The JWT that you generate for the user must have the following properties:
     }
     ```
 
-Creating a JWT token is sufficient to register or authorize a user on the Latenode platform. Use this token in the [`configure`](Installing%20the%20embedded%20SDK%201b657d45a06780a8af8bca11990b981c.md) sdk method. If the user is new, they will be automatically registered and authorized.
+Creating a JWT token is sufficient to register or authorize a user on the Latenode platform. Use this token in the [`configure`](#broken-link-was-here) sdk method. If the user is new, they will be automatically registered and authorized.
 
 ---
 

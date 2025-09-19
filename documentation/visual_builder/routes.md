@@ -39,6 +39,6 @@ In the **route** configuration window, you can:
 ![Untitled](./routes/untitled_3.png)
 
 :::tip
- See also [Scenario example using conditions in routes](../../Examples%20&%20Tutorials%201c257d45a06780a9886cf7408c3a350e/%F0%9F%93%9D%20Scenario%20Examples%2019157d45a0678101a860c354d339b123/Using%20conditional%20filtering%20routes%2019157d45a06780a19c6cff87c38fd751.md)
+ See also [Scenario example using conditions in routes](#broken-link-was-here)
 :::
 

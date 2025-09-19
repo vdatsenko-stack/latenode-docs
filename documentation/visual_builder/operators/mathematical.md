@@ -22,7 +22,7 @@ Operators in this group ensure the execution of mathematical operations between 
 
 The result of the operation can be addition of numbers, concatenation of multiple strings, or concatenation of a string and a number.  
 
-![Untitled](./untitled.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand types are **numbers**, and for example, **3.ValueSV1 = 5** and **3.ValueSV2 = 10**, then **15**;  
 - If the operand types are **strings**, and for example, **3.ValueSV1 = Test** and **3.ValueSV2 = Test**, then **TestTest;**  
@@ -36,7 +36,7 @@ The result of the operation is the difference between numbers.
 💡 The result of the operation can be the conversion of a positive number into a negative one if there is only one operand, and the operator is placed before it.
 :::
 
-![Untitled](./untitled_1.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand types are **numbers**, and for example, **3.ValueSV1 = 20** and **3.ValueSV2 = 3**, then the result is **17.**  
 
@@ -44,7 +44,7 @@ The result of the operation is the difference between numbers.
 
 The result of the operation is the division of numbers.  
 
-![Untitled](./untitled_2.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand types are **numbers**, and for example, **3.ValueSV1 = 20** and **3.ValueSV2 = 2**, then the result is **10.**  
 
@@ -52,7 +52,7 @@ The result of the operation is the division of numbers.
 
 The result of the operation is the multiplication of the numbers by each other.  
 
-![Untitled](./untitled_3.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is a **number**, and, for example, **3.ValueSV1 = 10** and **3.ValueSV2 = 3**, then the result is **30.**  
 
@@ -60,7 +60,7 @@ The result of the operation is the multiplication of the numbers by each other.
 
 The result of the operation is obtaining the remainder from dividing the numbers.  
 
-![Untitled](./untitled_4.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is a **number**, and, for example, **3.ValueSV1 = 5** and **3.ValueSV2 = 2**, then the result is **1.**  
 
@@ -70,17 +70,17 @@ The result of the operation is the average value of numerical values in a specif
 
 - If the operand type is a **number**, and, for example, **3.ValueSV1 = 5** and **3.ValueSV2 = 10**, then the result is **7,5;**  
 
-![Untitled](./untitled_5.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is an **array**, and, for example, **3.ValueSV1 = [5, 10]**, then the result is **7,5.**  
 
-![Untitled](./untitled_6.png)
+![Untitled](/img/placeholder.webp)
 
 ## Сeil
 
 The result of the operation is the smallest integer greater than or equal to the specified number.  
 
-![Untitled](./untitled_7.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is a **number**, and, for example, **3.ValueSV1 = 3,7**, then the result is **4.**  
 
@@ -88,7 +88,7 @@ The result of the operation is the smallest integer greater than or equal to the
 
 The result of the operation is the largest integer less than or equal to the specified number.  
 
-![Untitled](./untitled_8.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is a **number**, and, for example, **3.ValueSV1 = 3,7**, then the result is **3.**  
 
@@ -102,11 +102,11 @@ The result of the operation is the largest number in the specified array or the 
 
 - If the operand type is a **number**, and, for example, **3.ValueSV1 = 15 and 3.ValueSV2 = 20**, then the result is **20;**  
 
-![Untitled](./untitled_9.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is an **array**, and, for example, **3.ValueSV1 = [15, 20]**, then the result is **20.**  
 
-![Untitled](./untitled_10.png)
+![Untitled](/img/placeholder.webp)
 
 ## Min
 
@@ -118,17 +118,17 @@ The result of the operation is the smallest number in the specified array or the
 
 - If the operand type is a **number**, and, for example, **3.ValueSV1 = 15** and **3.ValueSV2 = 20**, then the result is **15;**  
 
-![Untitled](./untitled_11.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is an **array**, and, for example, **3.ValueSV1 = [15, 20]**, then the result is **15.**  
 
-![Untitled](./untitled_12.png)
+![Untitled](/img/placeholder.webp)
 
 ## Round
 
 The result of the operation is rounding the number to the nearest integer.  
 
-![Untitled](./untitled_13.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is a **number**, and, for example, **3.ValueSV1 = 9.5**, then **10**.  
 
@@ -142,11 +142,11 @@ The result of the operation is the sum of values in the specified array or the s
 
 - If the operand types are **numbers**, and, for example, **3.ValueSV1 = 5** and **3.ValueSV2 = 63**, then **68;**  
 
-![Untitled](./untitled_14.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is an **array**, and, for example, **3.ValueSV1 = [5, 10]**, then **15**.  
 
-![Untitled](./untitled_15.png)
+![Untitled](/img/placeholder.webp)
 
 ## ParseNumber
 
@@ -156,7 +156,7 @@ The result is the syntactic parsing of the string and returning a numerical valu
 💡 If the operand is a number, the result of the expression is also a number, and no errors occur. The string analysis is performed considering the specified separator between the integer and decimal parts of the number.
 :::
 
-![Untitled](./untitled_16.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is **number**, and, for example, **3.ValueSV1 = 5**, then **5;**  
 - If the operand type is **string**, and, for example, **3.ValueSV1 = "5; 10"**, then **5,10.**  
@@ -173,6 +173,6 @@ The result is the conversion of a numerical value and returning the value with t
 - Decimal separator, default is ",";  
 - Thousands separator, default is ".".  
 
-![Untitled](./untitled_17.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand type is a **number**, and, for example, **3.ValueSV1 = 185.77**, then **185,7700.**  

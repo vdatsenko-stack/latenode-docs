@@ -28,29 +28,29 @@ A user request can be a text prompt, such as asking to generate an invitation fo
 
 3. Run the scenario once and review the node execution results to verify the presence of the new variable.
 
-![Untitled](./untitled.png)
+![Untitled](/img/placeholder.webp)
 
 ## User Feedback Monitoring
 
 A request can involve identifying the tone or sentiment of incoming text. The text can be the output parameter of a previous node, such as an email or Telegram chat message. For simplicity, generate the text directly within the scenario by adding the following nodes:
 
-![Untitled](./untitled_1.png)
+![Untitled](/img/placeholder.webp)
 
 1. **Trigger on Run once** node to trigger the scenario with the **Run once** button.
 
 2. **SetVariables** node to generate the **Text** variable, containing the product review text.
 
-![Untitled](./untitled_2.png)
+![Untitled](/img/placeholder.webp)
 
 3. **Webhook response** node to return a response upon successful execution of the scenario. In the **Body** field of the **Webhook response** node, add the AI operator with a request using the variable from the **SetVariables** node: **`{{askAI("Determine if the text \"" + _.Text + "\" is a negative review")}}`**
 
-![Untitled](./untitled_3.png)
+![Untitled](/img/placeholder.webp)
 
 The result of this scenario is an AI response:
 
 ***Yes, the text "The packaging is damaged and the courier was late" can be considered a negative review.***
 
-![Untitled](./untitled_4.png)
+![Untitled](/img/placeholder.webp)
 
 ## Text Classification
 
@@ -66,17 +66,17 @@ For simplicity, generate the text directly within the scenario by adding the fol
 
 2. **SetVariables** node to generate the **Value** variable containing the text for classification.
 
-![Untitled](./untitled_5.png)
+![Untitled](/img/placeholder.webp)
 
 3. **Question** route with the condition **`{{askAI("The text contains \"" + $2.Value + "\" is there a question? If so, return one word \"true\", otherwise return one word \"false\"") = "true"}}`**.
 
-![Untitled](./untitled_6.png)
+![Untitled](/img/placeholder.webp)
 
 4. **Webhook response** node for the **Question** route with the response *The text contains a question* upon scenario execution.
 
 5. **Not a question** route with the condition **`{{askAI("The text contains \"" + $2.Value + "\" is there a question? If not, return one word \"true\", otherwise return one word \"false\"") = "true"}}`**.
 
-![Untitled](./untitled_7.png)
+![Untitled](/img/placeholder.webp)
 
 6. **Webhook response** node for the **Not a question** route with the response *The text does not contain a question* upon scenario execution.
 
@@ -84,8 +84,8 @@ The result of the scenario depends on the text in the **Value** variable:
 
 - If the variable contains a question, such as *What is the deadline for completing the task?*, the scenario's result is *The text contains a question*.
 
-![Untitled](./untitled_8.png)
+![Untitled](/img/placeholder.webp)
 
 - If the variable contains a statement, such as *Documentation is an important part of learning*, the scenario's result is *The text does not contain a question*.
 
-![Untitled](./untitled_9.png)
+![Untitled](/img/placeholder.webp)

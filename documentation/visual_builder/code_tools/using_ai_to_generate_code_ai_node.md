@@ -14,11 +14,11 @@ You can launch AI Assistant in two ways:
 
 **1.Via the "AI Node" button** at the bottom of the editor. This opens a dedicated chat window with assistant.
 
-![brave_DaNUFOQFju.png](./brave_danufoqfju.png)
+![brave_DaNUFOQFju.png](/img/placeholder.webp)
 
 **2.Inside any JavaScript node**. Open the node and enter your message to start a conversation.
 
-![brave_cQKGx7lnsr.png](./brave_cqkgx7lnsr.png)
+![brave_cQKGx7lnsr.png](/img/placeholder.webp)
 
 ### Table of contents: What Assistant Can Do
 
@@ -33,7 +33,7 @@ You can launch AI Assistant in two ways:
 
 Assistant can automatically create custom input parameters for your nodes.
 
-![brave_uRQZri9TRV.png](./brave_urqzri9trv.png)
+![brave_uRQZri9TRV.png](/img/placeholder.webp)
 
 Instead of hardcoding a value:
 

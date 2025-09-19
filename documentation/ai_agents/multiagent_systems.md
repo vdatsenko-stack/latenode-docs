@@ -8,7 +8,7 @@ sidebar_position: 1
 
 In advanced scenarios, you can use multiple AI Agents to handle different domains of knowledge or task types. Each agent has its own instructions and set of tools - enabling modular, scalable workflows.
 
-![brave_lbgsJ5Qdvq.png](./brave_lbgsJ5Qdvq.png)
+![brave_lbgsJ5Qdvq.png](/img/placeholder.webp)
 
 This setup improves clarity, separates responsibilities, and allows for more focused instruction design.
 
@@ -53,7 +53,7 @@ This way the main agent acts like a dispatcher, and the sub-agents remain focuse
 
 The `main_agent` can detect intent from the message itself and trigger the right branch of logic.
 
-![brave_23lXXWKGaQ.png](./brave_23lXXWKGaQ.png)
+![brave_23lXXWKGaQ.png](/img/placeholder.webp)
 
 ---
 

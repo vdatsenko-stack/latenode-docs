@@ -32,7 +32,7 @@ If a scenario runs for less than 30 seconds, the number of credits used will dep
 
 Your current tariff plan is displayed in the right widget **(1)**. The payment day is shown just below it **(2)**:
 
-![Untitled](./Untitled.png)
+![Untitled](/img/placeholder.webp)
 
 ## Understanding Credits
 
@@ -49,18 +49,18 @@ Consider the following example of credit consumption:
 
 1. Run the test scenario. In the execution history, the initial run on 07.04.24 **(1)** took eighteen seconds and performed 22 operations **(2)**:
 
-![Untitled](./Untitled 1.png)
+![Untitled](/img/placeholder.webp)
 
 2. On the statistics page, review the total number of credits spent on 07.04.24 and the credits used for running the test scenario.
 
 - The total number of credits is sixteen **(1)**.
 - One credit was spent on the test scenario **(2)**.
 
-![Untitled](./Untitled 2.png)
+![Untitled](/img/placeholder.webp)
 
 3. Run the test scenario again with an increased amount of processed data. In the execution history, the second run on 07.04.24 **(1)** took 1 minute and 24 seconds and performed 271 operations **(2)**:
 
-![Untitled](./Untitled 3.png)
+![Untitled](/img/placeholder.webp)
 
 4. On the statistics page, view the updated total number of credits spent on 07.04.24 and the new credits used for running the test scenario.
 
@@ -69,7 +69,7 @@ Consider the following example of credit consumption:
 
 During the second run, three additional credits were consumed because the scenario ran for about a minute and a half.
 
-![Untitled](./Untitled 4.png)
+![Untitled](/img/placeholder.webp)
 
 ## Statistics of Credit Consumption by Scenarios
 
@@ -79,6 +79,6 @@ The graph **(1)** and the table **(2)** display the scenarios executed during th
 
 Click on a scenario name in the table to view detailed information about that scenario.
 
-![Untitled](./Untitled 5.png)
+![Untitled](/img/placeholder.webp)
 
 ---

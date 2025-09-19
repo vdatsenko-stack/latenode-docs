@@ -4,7 +4,7 @@ description: Webhook response
 sidebar_position: 2
 ---
 
-![Untitled](./untitled.png)
+![Untitled](/img/placeholder.webp)
 
 ## **Node Description**
 
@@ -18,7 +18,7 @@ The only required***** field is:
 
 - **Status**.
 
-![brave_hICYGQL3mf.png](./brave_hicygql3mf.png)
+![brave_hICYGQL3mf.png](/img/placeholder.webp)
 
 ### Status
 
@@ -41,4 +41,4 @@ A section of fields for filling in response headers:
 
 To add a new Key-Value pair, you can use the **Add a header** button (**1**). To remove a Key-Value pair, you can use the **Remove** button (**2**).  
 
-![brave_DyXe7VPN4a.png](./brave_dyxe7vpn4a.png)
+![brave_DyXe7VPN4a.png](/img/placeholder.webp)

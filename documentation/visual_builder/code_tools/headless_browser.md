@@ -3,7 +3,7 @@ title: Headless browser
 description: Automating web interactions and UI testing using a headless browser
 sidebar_position: 3
 ---
-![Untitled](./untitled.png)
+![Untitled](/img/placeholder.webp)
 
 ## **Node Description**
 
@@ -47,7 +47,7 @@ return {
 
 You could get a selector here:
 
-![CleanShot 2024-11-01 at 09.05.35.png](./cleanshot_20241101_at_09.05.35.png)
+![CleanShot 2024-11-01 at 09.05.35.png](/img/placeholder.webp)
 
 ## **Node Configuration**
 
@@ -177,7 +177,7 @@ async function run({execution_id, input, data, page}) {
 ```
 
 :::tip
-💡 An example script using the **Headless Browser** node can be found [here](../../Examples%20&%20Tutorials%201c257d45a06780a9886cf7408c3a350e/%F0%9F%93%9D%20Scenario%20Examples%2019157d45a0678101a860c354d339b123/Using%20the%20Headless%20Browser%20Node%2019157d45a0678078afbae1aa7da8e1ed.md).
+💡 An example script using the **Headless Browser** node can be found [here](#broken-link-was-here).
 :::
 
 ## Possible problems

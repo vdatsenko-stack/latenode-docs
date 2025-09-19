@@ -4,7 +4,7 @@ description: Introducing delays in scenario execution
 sidebar_position: 5
 ---
 
-![Untitled](./untitled.png)
+![Untitled](/img/placeholder.webp)
 
 ## Node Description
 
@@ -15,7 +15,7 @@ sidebar_position: 5
 
 :::tip
 The **Wait** node can be placed between scenario nodes. This allows for a temporal gap in the execution of scenario nodes before the **Wait** node and those after the **Wait** node.  
-See **[the example of using the Wait node](../../Examples%20&%20Tutorials%201c257d45a06780a9886cf7408c3a350e/%F0%9F%93%9D%20Scenario%20Examples%2019157d45a0678101a860c354d339b123/Using%20a%20Wait%20node%2019157d45a06780be94e4d49463fa5871.md)**
+See **[the example of using the Wait node](#broken-link-was-here)**
 :::
 
 ## Node Configuration
@@ -29,7 +29,7 @@ The **Wait until** tab is necessary for setting the time until which one must wa
 - **Date and Time** - a field for selecting the date and time in the [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format when the scenario nodes following the **Wait** node should be executed.
 - **Timezone** (mandatory field) - a field for selecting the timezone according to which the pause should be set.
 
-![Untitled](./untitled_1.png)
+![Untitled](/img/placeholder.webp)
 
 ### **Delay**
 
@@ -47,4 +47,4 @@ When calculating the waiting time, the values entered in the fields are summed u
 - **Minutes** - 32;
 - **Seconds** - 59.
 
-![Untitled](./untitled_2.png)
+![Untitled](/img/placeholder.webp)

@@ -24,7 +24,7 @@ Operators in this group provide the ability to perform operations on arrays and 
 
 ## add
 
-This operator adds a value to the specified variable to create an array. See  [Scenario Example Using SetVariables](../../Examples%20&%20Tutorials%201c257d45a06780a9886cf7408c3a350e/%F0%9F%93%9D%20Scenario%20Examples%2019157d45a0678101a860c354d339b123/Using%20SetVariables%20node%20and%20the%20add%20operator%2019157d45a06780fdb9eafe03d5b22af2.md)[**.**](https://www.notion.so/1ebd5701a8824deab3e17ab1415e50d0?pvs=21)
+This operator adds a value to the specified variable to create an array. See  [Scenario Example Using SetVariables](#broken-link-was-here)[**.**](https://www.notion.so/1ebd5701a8824deab3e17ab1415e50d0?pvs=21)
 
 - **Result of the expression:** Value in the array.
 
@@ -32,7 +32,7 @@ This operator adds a value to the specified variable to create an array. See  [S
 
 It concatenates all the array elements into a string, adding the specified delimiter between each array element.
 
-![Untitled](./untitled.png)
+![Untitled](/img/placeholder.webp)
 
 - **Execution Result:** text with the specified delimiter.
 - **Example:** If _.Array = [1,2,3,4,5], then "1.2.3.4.5".
@@ -45,7 +45,7 @@ Returns a modified array containing the specified elements from the provided arr
 💡 The specified numbers are the ordinal numbers of the array elements. In the example below, it returns elements from the zeroth (exclusive) to the first (inclusive) element. The ending number may be omitted, in which case, it will return all elements of the array after the initial number.
 :::
 
-![Untitled](./untitled_1.png)
+![Untitled](/img/placeholder.webp)
 
 - **Execution Result:** an array of values.
 - **Example:** If 1.Body = [{"Value": "Hi"}, {"Value": "Latenode"}], then [{"Value": "Hi"}].
@@ -54,7 +54,7 @@ Returns a modified array containing the specified elements from the provided arr
 
 Merges two or more passed arrays into one array. 
 
-![Untitled](./untitled_2.png)
+![Untitled](/img/placeholder.webp)
 
 - **Execution Result:** an array of values.
 - **Example:** If 1.Body[0] = [{"Value": 5}, {"Value": 10}] and 1.Body[1] = [{"Value": 15}, {"Value": 20}], then [{"Value": 5}, {"Value": 10}, {"Value": 15}, {"Value": 20}].
@@ -63,9 +63,9 @@ Merges two or more passed arrays into one array.
 
 Returns an array containing the desired values of the given complex array. Can be used for filtering values.
 
-![Untitled](./untitled_3.png)
+![Untitled](/img/placeholder.webp)
 
-![Untitled](./untitled_4.png)
+![Untitled](/img/placeholder.webp)
 
 - **Execution Result:** an array of found values.
 - **Example:**
@@ -111,7 +111,7 @@ Returns an array containing values of the given array sorted in the desired orde
 * **asc ci** - in ascending order, case-insensitive;
 * **desc ci** - in descending order, case-insensitive.
 
-![Untitled](./untitled_5.png)
+![Untitled](/img/placeholder.webp)
 
 * **Execution result:** an array of sorted values.
 * **Example:** If 1.Body = \[{ "Value": 5}, {"Value": 10},{ "Value": 15}, {"Value": 20}], then \[{ "Value": 20}, {"Value": 15},{ "Value": 10}, {"Value": 5}]
@@ -122,7 +122,7 @@ Removes duplicate values from the given array and returns an array with unique v
 
 * **Execution result:** an array of unique values.
 
-![Untitled](./untitled_6.png)
+![Untitled](/img/placeholder.webp)
 
 * **Example:**
 
@@ -183,7 +183,7 @@ Removes duplicates from the given array and returns an array with unique values.
 * **Execution result:** an array of unique values.
 * **Example 1:**
 
-![Untitled](./untitled_7.png)
+![Untitled](/img/placeholder.webp)
 
 Input data:
 
@@ -229,7 +229,7 @@ Result:
 
 * **Example 2:**
 
-![Untitled](./untitled_8.png)
+![Untitled](/img/placeholder.webp)
 
 Input data:
 
