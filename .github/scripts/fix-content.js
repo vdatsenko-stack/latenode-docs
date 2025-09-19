@@ -1,36 +1,82 @@
-function fixPaths(filePath, content) {
-    const fileDir = path.dirname(filePath);
-    let changed = false;
+// .github/scripts/fix-content.js
+const fs = require('fs');
+const path = require('path');
+const { globSync } = require('glob');
 
-    // --- Картинки ---
-    content = content.replace(/!\[(.*?)\]\((.*?)\)/g, (match, altText, imagePath) => {
-        if (imagePath.startsWith('http://') || imagePath.startsWith('https://')) return match;
+function fixContent() {
+    const files = globSync('**/*.md', { ignore: 'node_modules/**' });
+    let totalFixes = 0;
 
-        const decoded = decodeURIComponent(imagePath);
-        const absPath = path.resolve(fileDir, decoded);
+    console.log(`Проверка и исправление ${files.length} Markdown файлов...`);
 
-        if (!fs.existsSync(absPath)) {
-            changed = true;
-            console.warn(`[ЗАМЕНА] Битая картинка в ${filePath}: ${imagePath} -> /placeholder.png`);
-            return `![${altText}](/placeholder.png)`; // ← заглушка в корне
+    files.forEach(file => {
+        const filePath = path.resolve(file);
+        const fileDir = path.dirname(filePath);
+        let content = fs.readFileSync(filePath, 'utf8');
+        const originalContent = content;
+
+        // --- ЭТАП 1: Попытка активного исправления путей (логика из моего скрипта) ---
+        content = content.replace(/!\[(.*?)\]\((.*?)\)/g, (match, altText, imagePath) => {
+            if (imagePath.startsWith('http')) return match;
+            try {
+                let decodedPath = decodeURIComponent(imagePath);
+                // Удаляем хеш, который Notion добавляет к папкам с изображениями
+                let cleanedPath = decodedPath.replace(/ ([a-f0-9]{32})\//, '/');
+                if (!cleanedPath.startsWith('./') && cleanedPath.includes('/')) {
+                    cleanedPath = `./${cleanedPath}`;
+                }
+                if (cleanedPath !== decodedPath) {
+                    console.log(`[REPAIR ATTEMPT] в ${file}: "${imagePath}" -> "${cleanedPath}"`);
+                    return `![${altText}](${cleanedPath})`;
+                }
+            } catch (e) { /* Игнорируем ошибки декодирования */ }
+            return match;
+        });
+
+        // --- ЭТАП 2: Замена оставшихся битых ссылок на заглушки (ваша логика) ---
+        // Картинки
+        content = content.replace(/!\[(.*?)\]\((.*?)\)/g, (match, altText, imagePath) => {
+            if (imagePath.startsWith('http')) return match;
+            try {
+                const decodedPath = decodeURIComponent(imagePath);
+                const absPath = path.resolve(fileDir, decodedPath);
+                if (!fs.existsSync(absPath)) {
+                    totalFixes++;
+                    console.warn(`[PLACEHOLDER] Битая картинка в ${file}: "${imagePath}" -> "/placeholder.webp"`);
+                    return `![${altText}](/img/placeholder.webp)`; // Ссылка на заглушку в static/img
+                }
+            } catch (e) { /* Игнорируем ошибки */ }
+            return match;
+        });
+
+        // Ссылки на другие .md файлы
+        content = content.replace(/\[(.*?)\]\((.*?\.md.*?)\)/g, (match, text, linkPath) => {
+            if (linkPath.startsWith('http')) return match;
+            try {
+                // Убираем якоря из пути для проверки файла
+                const pathWithoutAnchor = linkPath.split('#')[0];
+                const decodedPath = decodeURIComponent(pathWithoutAnchor);
+                const absPath = path.resolve(fileDir, decodedPath);
+                if (pathWithoutAnchor && !fs.existsSync(absPath)) {
+                    totalFixes++;
+                    console.warn(`[PLACEHOLDER] Битая ссылка в ${file}: "${linkPath}" -> "#"`);
+                    return `[${text}](#broken-link-was-here)`;
+                }
+            } catch (e) { /* Игнорируем ошибки */ }
+            return match;
+        });
+
+        // Сохраняем файл, только если были изменения
+        if (content !== originalContent) {
+            fs.writeFileSync(filePath, content, 'utf8');
         }
-
-        return match;
     });
 
-    // --- Ссылки на md ---
-    content = content.replace(/\[(.*?)\]\((.*?\.md)\)/g, (match, text, linkPath) => {
-        const decoded = decodeURIComponent(linkPath);
-        const absPath = path.resolve(fileDir, decoded);
-
-        if (!fs.existsSync(absPath)) {
-            changed = true;
-            console.warn(`[ЗАМЕНА] Битая ссылка в ${filePath}: ${linkPath} -> #`);
-            return `[${text}](#)`; // ← заглушка для ссылок
-        }
-
-        return match;
-    });
-
-    return changed ? content : content;
+    if (totalFixes > 0) {
+        console.log(`\nЗаменено на заглушки ${totalFixes} битых ссылок.`);
+    }
+    console.log('Проверка и исправление завершены.');
 }
+
+// Запускаем
+fixContent();
