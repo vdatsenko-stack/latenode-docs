@@ -32,7 +32,7 @@ This operator adds a value to the specified variable to create an array.
 
 It concatenates all the array elements into a string, adding the specified delimiter between each array element.
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - **Execution Result:** text with the specified delimiter.
 - **Example:** If `_.Array = [1,2,3,4,5]`, then the result is `"1.2.3.4.5"`.
@@ -45,7 +45,7 @@ Returns a modified array containing the specified elements from the provided arr
 💡 The specified numbers are the ordinal numbers of the array elements. In the example below, it returns elements from the zeroth (exclusive) to the first (inclusive) element. The ending number may be omitted, in which case, it will return all elements of the array after the initial number.
 :::
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - **Execution Result:** an array of values.
 - **Example:** If `1.Body = [\{"Value": "Hi"\}, \{"Value": "Latenode"\}]`, then the result is `[\{"Value": "Hi"\}]`.
@@ -54,7 +54,7 @@ Returns a modified array containing the specified elements from the provided arr
 
 Merges two or more passed arrays into one array.
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - **Execution Result:** an array of values.
 - **Example:** If `1.Body[0] = [\{"Value": 5\}, \{"Value": 10\}]` and `1.Body[1] = [\{"Value": 15\}, \{"Value": 20\}]`, then the result is `[\{"Value": 5\}, \{"Value": 10\}, \{"Value": 15\}, \{"Value": 20\}]`.
@@ -63,9 +63,9 @@ Merges two or more passed arrays into one array.
 
 Returns an array containing the desired values of the given complex array. Can be used for filtering values.
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - **Execution Result:** an array of found values.
 - **Example:**
@@ -111,7 +111,7 @@ Returns an array containing values of the given array sorted in the desired orde
 -   **asc ci** - in ascending order, case-insensitive;
 -   **desc ci** - in descending order, case-insensitive.
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 -   **Execution result:** an array of sorted values.
 -   **Example:** If `1.Body = [\{ "Value": 5\}, \{"Value": 10\}, \{ "Value": 15\}, \{"Value": 20\}]`, then the result is `[\{ "Value": 20\}, \{"Value": 15\}, \{ "Value": 10\}, \{"Value": 5\}]`.
@@ -122,7 +122,7 @@ Removes duplicate values from the given array and returns an array with unique v
 
 -   **Execution result:** an array of unique values.
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 -   **Example:**
 
@@ -183,7 +183,7 @@ Removes duplicates from the given array and returns an array with unique values.
 -   **Execution result:** an array of unique values.
 -   **Example 1:**
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 Input data:
 
@@ -229,7 +229,7 @@ Result:
 
 -   **Example 2:**
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 Input data:
 
