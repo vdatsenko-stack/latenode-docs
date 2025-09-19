@@ -31,7 +31,7 @@ The result of the expression is a Boolean value, either TRUE or FALSE.
 
 ### Operator `<` (Less than)
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 45` and `3.ValueSV2 = 100`, then it's **TRUE**.
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 125` and `3.ValueSV2 = 125`, then it's **FALSE**.
@@ -40,7 +40,7 @@ The result of the expression is a Boolean value, either TRUE or FALSE.
 
 ### Operator `≤` (Less than or equal to)
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 5` and `3.ValueSV2 = 5`, then it's **TRUE**.
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 5` and `3.ValueSV2 = 1`, then it's **FALSE**.
@@ -49,7 +49,7 @@ The result of the expression is a Boolean value, either TRUE or FALSE.
 
 ### Operator `=` (Equal)
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 15` and `3.ValueSV2 = 15`, then it's **TRUE**.
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 15` and `3.ValueSV2 = 20`, then it's **FALSE**.
@@ -58,7 +58,7 @@ The result of the expression is a Boolean value, either TRUE or FALSE.
 
 ### Operator `≠` (Not equal)
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 50` and `3.ValueSV2 = 51`, then it's **TRUE**.
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 50` and `3.ValueSV2 = 50`, then it's **FALSE**.
@@ -67,7 +67,7 @@ The result of the expression is a Boolean value, either TRUE or FALSE.
 
 ### Operator `≥` (Greater than or equal to)
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 125` and `3.ValueSV2 = 100`, then it's **TRUE**.
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 45` and `3.ValueSV2 = 100`, then it's **FALSE**.
@@ -76,7 +76,7 @@ The result of the expression is a Boolean value, either TRUE or FALSE.
 
 ### Operator `>` (Greater than)
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 125` and `3.ValueSV2 = 100`, then it's **TRUE**.
 - If the operand types are **numbers**, and for example, `3.ValueSV1 = 45` and `3.ValueSV2 = 100`, then it's **FALSE**.
@@ -87,7 +87,7 @@ The result of the expression is a Boolean value, either TRUE or FALSE.
 
 The AND operator evaluates all of its operands. If the result of the evaluation is FALSE for at least one operand, the expression's result is also FALSE.
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - If `1.body.ValueWH = 71` AND `3.ValueSV = 100`, then **TRUE**;
 - If `1.body.ValueWH = 70` AND `3.ValueSV = 100`, then **FALSE**.
@@ -96,7 +96,7 @@ The AND operator evaluates all of its operands. If the result of the evaluation 
 
 The OR operator evaluates all of its operands. If the result of the evaluation is TRUE for at least one operand, the expression's result is also TRUE.
 
-![Untitled](/img/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 - If `1.body.ValueWH = 70` OR `3.ValueSV = 100`, then **TRUE**;
 - If `1.body.ValueWH = 70` OR `3.ValueSV = 99`, then **FALSE**.
