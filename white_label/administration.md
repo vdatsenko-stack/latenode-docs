@@ -45,7 +45,7 @@ List of configurable characteristics and quotas for your organization:
   height="600"
   frameBorder="0"
   allowFullScreen
-></iframe>
+>
 
 ### Creating a Plan
 
@@ -69,7 +69,7 @@ Below is an interactive video showing how to create a plan.
   height="600"
   frameBorder="0"
   allowFullScreen
-></iframe>
+>
 
 ## Subscription Management and Resource Usage Monitoring
 
