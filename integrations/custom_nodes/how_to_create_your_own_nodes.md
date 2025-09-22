@@ -44,7 +44,7 @@ To achieve this, you need to:
 
 ![QuickLook](/img/placeholder.webp)
 
-```````````<aside>```````````
+````````````<aside>````````````
 💡
 
 You can add XML code for the icon in the "Icon (svg)" field to make the scenario easier to identify.
@@ -57,7 +57,7 @@ You can add XML code for the icon in the "Icon (svg)" field to make the scenario
 
 ![Brave](/img/placeholder.webp)
 
-```````````<aside>```````````
+````````````<aside>````````````
 💡 The "Al Tools/Actions" part of the name is necessary for storing the scenario as an **Action** node in the Al Tools folder.
 
 
@@ -66,7 +66,7 @@ You can add XML code for the icon in the "Icon (svg)" field to make the scenario
 
 ![Untitled 5](/img/placeholder.webp)
 
-```````````<aside>```````````
+````````````<aside>````````````
 💡 Next to the scenario name, after changing the type, icons are used to denote "Nodul" (a sign of a **Nodul** type scenario) and "Private" (indicating no public access to the scenario).
 
 
