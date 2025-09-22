@@ -8,11 +8,7 @@ sidebar_position: 1
 
 Tools are nodes connected to the AI Agent that perform specific actions or return data. They must be well-defined so the agent can use them reliably.
 
-<<<<<<< HEAD
 ![brave_UIHvrbBbf0.png](/img/placeholder.webp)
-=======
-![brave_UIHvrbBbf0.png](/img/placeholder.webp)
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---
 
@@ -33,7 +29,6 @@ Agents refer to tools by their node names. Use clear, descriptive names that dir
 - `doStuff`
 
 > 🧠 Tool names are a key part of the agent's reasoning. If the name doesn’t convey the purpose, the agent may ignore or misuse the tool.
-> 
 
 ---
 
@@ -49,30 +44,21 @@ Agents refer to tools by their node names. Use clear, descriptive names that dir
 
 Each tool should include a short description that explains its function. This is used by the agent to decide when (and if) to use it.
 
-<<<<<<< HEAD
 ![brave_6HRDochjbQ.png](/img/placeholder.webp)
-=======
-![brave_6HRDochjbQ.png](/img/placeholder.webp)
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 > 📌 The tool description is not just for documentation — it is also passed via API and directly affects how the agent reasons about and chooses to call the tool. A vague or missing description can lead to the tool being ignored or misused.
-> 
 
 ### ✅ Good:
 
 > create_event_tool: "Creates a new calendar event using title, time, and participant list."
-> 
 
 ### ❌ Poor:
 
 > "Does stuff with the calendar"
-> 
-> 
+>
 > `"Test tool"`
-> 
 
 > 🔍 Keep descriptions short, specific, and action-oriented. Write them for the agent — not just for humans.
-> 
 
 ---
 
