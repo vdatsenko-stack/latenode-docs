@@ -177,11 +177,7 @@ async function run({execution_id, input, data, page}) {
 ```
 
 :::tip
-<<<<<<< HEAD
-💡 An example script using the **Headless Browser** node can be found [here](/introduction).
-=======
 💡 An example script using the **Headless Browser** node can be found [here](#broken-link-was-here).
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 :::
 
 ## Possible problems
