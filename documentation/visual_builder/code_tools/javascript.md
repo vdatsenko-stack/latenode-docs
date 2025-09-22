@@ -18,11 +18,7 @@ To configure a **JavaScript** node, you need to generate code within the **Code*
 
 ![Untitled](/img/placeholder.webp)
 
-<<<<<<< HEAD
-The available parameters from previous nodes are displayed in the **Data** window. For more information on using data from previous nodes, please refer to the documentation under [Autofill](/introduction).
-=======
 The available parameters from previous nodes are displayed in the **Data** window. For more information on using data from previous nodes, please refer to the documentation under [Autofill](#broken-link-was-here).
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ### **Data Processing Result**
 
