@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: Routes
 description: Routes
@@ -88,4 +87,3 @@ In the **route** configuration window, you can:
  See also [Scenario example using conditions in routes](#broken-link-was-here)
 :::
 
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
