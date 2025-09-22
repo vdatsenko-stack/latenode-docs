@@ -15,7 +15,7 @@ sidebar_position: 5
 
 :::tip
 The **Wait** node can be placed between scenario nodes. This allows for a temporal gap in the execution of scenario nodes before the **Wait** node and those after the **Wait** node.  
-See **[the example of using the Wait node](../../Examples%20&%20Tutorials%201c257d45a06780a9886cf7408c3a350e/%F0%9F%93%9D%20Scenario%20Examples%2019157d45a0678101a860c354d339b123/Using%20a%20Wait%20node%2019157d45a06780be94e4d49463fa5871.md)**
+See **[the example of using the Wait node](/introduction.md)**
 :::
 
 ## Node Configuration

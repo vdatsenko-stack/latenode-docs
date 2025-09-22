@@ -4,14 +4,14 @@ Article Description: Running Node.js scripts within Latenode for extended functi
 Published: Yes  
 Suggested: No
 
-The [JavaScript](../javascript/javascript.md) node allows you to write and execute JavaScript code, import npm libraries, and handle various data processing tasks. This node provides robust support for integrating custom code into workflows, enhancing the flexibility and functionality of your scenarios.
+The [JavaScript](/introduction.md) node allows you to write and execute JavaScript code, import npm libraries, and handle various data processing tasks. This node provides robust support for integrating custom code into workflows, enhancing the flexibility and functionality of your scenarios.
 
 ## Adding Code to a Scenario
 
 To add code to a scenario, follow these steps:
 
 1. Click on one of the buttons to add a node.
-2. In the application selection window, choose the [JavaScript](../javascript/javascript.md) node.
+2. In the application selection window, choose the [JavaScript](/introduction.md) node.
 
 ![Untitled](./node_js/Untitled.png)
 
@@ -23,7 +23,7 @@ To add code to a scenario, follow these steps:
 
 ### Using Data from Previous Nodes in Code
 
-The code generated in the [JavaScript](../javascript/javascript.md) node can utilize the output data from previous nodes in the scenario. For example, in a JavaScript node, you can reference a parameter passed to the **Trigger on Webhook** node via an HTTP request. To do this, follow these steps:
+The code generated in the [JavaScript](/introduction.md) node can utilize the output data from previous nodes in the scenario. For example, in a JavaScript node, you can reference a parameter passed to the **Trigger on Webhook** node via an HTTP request. To do this, follow these steps:
 
 - Write an expression to define a constant using `const =`.
 - Select the necessary parameter from the previous nodes.
@@ -38,7 +38,7 @@ When adding data from other nodes, part of the expression may be wrapped in back
 
 ### Passing Processed Data to Subsequent Nodes
 
-The result of the [JavaScript](../javascript/javascript.md) node can be a string, numerical value, JSON object, etc. The output data from the **JavaScript** node can also be used in other nodes within the scenario. For example, a parameter generated in the **JavaScript** node can be recorded as a variable. To do this:
+The result of the [JavaScript](/introduction.md) node can be a string, numerical value, JSON object, etc. The output data from the **JavaScript** node can also be used in other nodes within the scenario. For example, a parameter generated in the **JavaScript** node can be recorded as a variable. To do this:
 
 1. In the **SetVariables** node, click on the **Value** field.
 
@@ -52,15 +52,15 @@ This way, you can efficiently pass and utilize processed data between nodes in y
 
 ### Using Variables
 
-Variables created within the scenario or global variables can also be used in the [JavaScript](../javascript/javascript.md) node.
+Variables created within the scenario or global variables can also be used in the [JavaScript](/introduction.md) node.
 
 :::tip
-Learn more about using variables in the JavaScript node [here](../variables_in_javascript_node/variables_in_javascript_node.md). Learn more about using global variables in the **JavaScript** node [here](../global_variables_in_javascript_node/global_variables_in_javascript_node.md).
+Learn more about using variables in the JavaScript node [here](/introduction.md). Learn more about using global variables in the **JavaScript** node [here](/introduction.md).
 :::
 
 ### Processing Files or Arrays of Files
 
-The [JavaScript](../javascript/javascript.md) node can be used to process files or arrays of files sent to the scenario, for example, by sending a request to the **Trigger on Webhook** node.
+The [JavaScript](/introduction.md) node can be used to process files or arrays of files sent to the scenario, for example, by sending a request to the **Trigger on Webhook** node.
 
 ```jsx
 async function run({execution_id, input, data, page}) {
@@ -149,25 +149,25 @@ export default async function run({execution_id, input, data, store, db}) {
 
 ## Custom Parameters in JavaScript
 
-Custom parameters in the [JavaScript](../javascript/javascript.md) node allow you to externalize certain parts of the code into special input fields, eliminating the need to edit the code itself.
+Custom parameters in the [JavaScript](/introduction.md) node allow you to externalize certain parts of the code into special input fields, eliminating the need to edit the code itself.
 
 For example, if your code uses an API key, you can generate a separate input field for this parameter in the JavaScript node. This way, you only need to change the value in the designated field rather than modifying the code directly when updating the API key.
 
 :::tip
-Learn more about all possible custom parameters [here](../custom_js_parameters/custom_js_parameters.md).
+Learn more about all possible custom parameters [here](/introduction.md).
 :::
 
 ![Untitled](./node_js/untitled_5.png)
 
 ## Logging
 
-Logging in the [JavaScript](../javascript/javascript.md) node is available using the `console.log` command. Logged data will be displayed in the **Log** tab.
+Logging in the [JavaScript](/introduction.md) node is available using the `console.log` command. Logged data will be displayed in the **Log** tab.
 
 ![Untitled](./node_js/untitled_6.png)
 
 ## Using NPM Packages
 
-The [JavaScript](../javascript/javascript.md) node supports the import of **npm** libraries using the `import` statement. For example, importing and using the "lodash" library:
+The [JavaScript](/introduction.md) node supports the import of **npm** libraries using the `import` statement. For example, importing and using the "lodash" library:
 
 ![Untitled](./node_js/untitled_7.png)
 
@@ -246,7 +246,7 @@ export default async function run({ execution_id, input, data }) {
 
 ## JavaScript Node Limitations
 
-The maximum execution time for the [JavaScript](../javascript/javascript.md) node is **2 minutes**.
+The maximum execution time for the [JavaScript](/introduction.md) node is **2 minutes**.
 
 :::tip
 You can add multiple JavaScript nodes to a scenario for sequential execution to handle more complex tasks.

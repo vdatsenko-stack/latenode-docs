@@ -24,7 +24,7 @@ Operators in this group provide the ability to perform operations on arrays and 
 
 ## add
 
-This operator adds a value to the specified variable to create an array. See  [Scenario Example Using SetVariables](../../Examples%20&%20Tutorials%201c257d45a06780a9886cf7408c3a350e/%F0%9F%93%9D%20Scenario%20Examples%2019157d45a0678101a860c354d339b123/Using%20SetVariables%20node%20and%20the%20add%20operator%2019157d45a06780fdb9eafe03d5b22af2.md)[**.**](https://www.notion.so/1ebd5701a8824deab3e17ab1415e50d0?pvs=21)
+This operator adds a value to the specified variable to create an array. See  [Scenario Example Using SetVariables](/introduction.md)[**.**](https://www.notion.so/1ebd5701a8824deab3e17ab1415e50d0?pvs=21)
 
 - **Result of the expression:** Value in the array.
 
