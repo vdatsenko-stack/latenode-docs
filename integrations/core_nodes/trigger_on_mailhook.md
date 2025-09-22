@@ -62,7 +62,7 @@ The Mailhook node returns a structured JSON object containing the full details o
     },
     {
       "key": "from",
-      "value": "Sender Name ```````````````<sender@example.com>```````````````"
+      "value": "Sender Name ````````````````<sender@example.com>````````````````"
     }
     // ...
   ],
@@ -77,7 +77,7 @@ The Mailhook node returns a structured JSON object containing the full details o
     }
   ],
   "subject": "Example Subject",
-  "messageId": "```````````````<unique-message-id@example.com>```````````````",
+  "messageId": "````````````````<unique-message-id@example.com>````````````````",
   "date": "2025-05-19T09:26:58.000Z",
   "html": "```<div>```Hello</div>",
   "text": "Hello",
@@ -87,7 +87,7 @@ The Mailhook node returns a structured JSON object containing the full details o
       "mimeType": "application/pdf",
       "disposition": "attachment",
       "related": true,
-      "contentId": "```````````````<unique-content-id>```````````````",
+      "contentId": "````````````````<unique-content-id>````````````````",
       "content": {}
     }
   ]
@@ -112,7 +112,7 @@ The Mailhook node returns a structured JSON object containing the full details o
 * `mimeType` — MIME type of the file.
 * `disposition` — usually `"attachment"`, may also be `"inline"`.
 * `related` — `true` if it's part of the email content (e.g., embedded image).
-* `contentId` — identifier for inline referencing (e.g. ````````````````<image1@cid>````````````````).
+* `contentId` — identifier for inline referencing (e.g. `````````````````<image1@cid>`````````````````).
 * `content` — file content
 
 ---
