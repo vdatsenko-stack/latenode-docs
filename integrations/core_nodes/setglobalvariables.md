@@ -3,7 +3,6 @@ title: SetGlobalVariables
 description: Managing persistent global variables across workflows
 sidebar_position: 11
 ---
-<<<<<<< HEAD
 
 ![Untitled](./setglobalvariables/untitled.png)
 
@@ -63,4 +62,3 @@ After creation using the **SetGlobalVariables** node, the global variable will b
 If the **SetGlobalVariables** node is connected to a node through the top Iterator connection point and is executed multiple times sequentially, the node's output data is displayed with an indication of **Iterations**. Each iteration corresponds to its output data.
 
 ![Untitled](/img/placeholder.webp)
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
