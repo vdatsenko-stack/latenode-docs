@@ -31,7 +31,7 @@ If a **SetVariables** node is connected to an **Iterator** node and is executed 
 ![Untitled](./setvariables/untitled_1.png)
 =======
 
-![Untitled](/img/placeholder.webp)
+![Untitled](.//img/placeholder.webp)
 
 ## **Node Description**
 
@@ -50,9 +50,9 @@ To configure the **SetVariables** node, you need to fill in pairs of Key-Value f
 - **(1) Key** - the field for entering the variable name;  
 - **(2) Value** - the field for entering the variable's value.  
 
-![chrome_fMOSSV3jL6.png](/img/placeholder.webp)
+![chrome_fMOSSV3jL6.png](.//img/placeholder.webp)
 
 If a **SetVariables** node is connected to an **Iterator** node and is executed multiple times sequentially, the node's output is displayed with an indication of **Iterations**. Each iteration corresponds to its own output data.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](.//img/placeholder.webp)
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50

@@ -5,9 +5,9 @@ sidebar_position: 1
 ---
 
 <<<<<<< HEAD
-![brave_gM7qog41yj.png](/img/placeholder.webp)
+![brave_gM7qog41yj.png](.//img/placeholder.webp)
 =======
-![brave_gM7qog41yj.png](/img/placeholder.webp)
+![brave_gM7qog41yj.png](.//img/placeholder.webp)
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ### Purpose
@@ -31,9 +31,9 @@ Use cases include:
 You can access this feature via **Data Storage → AI Data Storage (RAG)** in the left-hand side menu.
 
 <<<<<<< HEAD
-![brave_l3S0LYq3WK.png](/img/placeholder.webp)
+![brave_l3S0LYq3WK.png](.//img/placeholder.webp)
 =======
-![brave_l3S0LYq3WK.png](/img/placeholder.webp)
+![brave_l3S0LYq3WK.png](.//img/placeholder.webp)
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---
@@ -43,17 +43,17 @@ You can access this feature via **Data Storage → AI Data Storage (RAG)** in th
 Click **Create Storage** to open the setup modal:
 
 <<<<<<< HEAD
-![brave_awRQKmbKQs.png](/img/placeholder.webp)
+![brave_awRQKmbKQs.png](.//img/placeholder.webp)
 
 Fill in the required fields: **Storage Name, Chunk Size, Chunk Overlap**
 
-![brave_nHbU4QmKzu.png](/img/placeholder.webp)
+![brave_nHbU4QmKzu.png](.//img/placeholder.webp)
 =======
-![brave_awRQKmbKQs.png](/img/placeholder.webp)
+![brave_awRQKmbKQs.png](.//img/placeholder.webp)
 
 Fill in the required fields: **Storage Name, Chunk Size, Chunk Overlap**
 
-![brave_nHbU4QmKzu.png](/img/placeholder.webp)
+![brave_nHbU4QmKzu.png](.//img/placeholder.webp)
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---
@@ -70,9 +70,9 @@ Fill in the required fields: **Storage Name, Chunk Size, Chunk Overlap**
 Created storages are displayed in a table:
 
 <<<<<<< HEAD
-![brave_R2vB1tRsYc.png](/img/placeholder.webp)
+![brave_R2vB1tRsYc.png](.//img/placeholder.webp)
 =======
-![brave_R2vB1tRsYc.png](/img/placeholder.webp)
+![brave_R2vB1tRsYc.png](.//img/placeholder.webp)
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 | Field | Description |
@@ -90,9 +90,9 @@ Created storages are displayed in a table:
 Open a storage to access the upload interface. Drag-and-drop is supported.
 
 <<<<<<< HEAD
-![brave_B5v1L58izT.png](/img/placeholder.webp)
+![brave_B5v1L58izT.png](.//img/placeholder.webp)
 =======
-![brave_B5v1L58izT.png](/img/placeholder.webp)
+![brave_B5v1L58izT.png](.//img/placeholder.webp)
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 After uploading:
@@ -102,9 +102,9 @@ After uploading:
 - Editing or downloading files is currently **not supported**
 
 <<<<<<< HEAD
-![brave_5f8Vn9IysJ.png](/img/placeholder.webp)
+![brave_5f8Vn9IysJ.png](.//img/placeholder.webp)
 =======
-![brave_5f8Vn9IysJ.png](/img/placeholder.webp)
+![brave_5f8Vn9IysJ.png](.//img/placeholder.webp)
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---

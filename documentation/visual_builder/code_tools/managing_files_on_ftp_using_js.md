@@ -66,7 +66,7 @@ This code contains a function to connect to the FTP server with specified creden
 
 3. Examine the **JavaScript** node's output data for file attributes, including its content:
 
-![Untitled](/img/placeholder.webp)
+![Untitled](.//img/placeholder.webp)
 
 ## **Retrieving a list of files**
 
@@ -134,7 +134,7 @@ This code connects to the FTP server, changes the working directory to **`/htdoc
 }
 ```
 
-![Untitled](/img/placeholder.webp)
+![Untitled](.//img/placeholder.webp)
 
 ## **Uploading a file**
 
@@ -155,7 +155,7 @@ export default async function uploadFile({ execution_id, input, data, store }) {
     });
 
     // Example: HTML content to upload
-    const htmlContent = "<html>...</html>"; // Replace this with your actual HTML content
+    const htmlContent = "`<html>`...</html>"; // Replace this with your actual HTML content
 
     // Convert the HTML content to a buffer
     const buffer = Buffer.from(htmlContent, 'utf-8');
@@ -187,7 +187,7 @@ This code is designed to connect to the FTP server, upload a file with HTML cont
 
 3. Examine the **JavaScript** node's output data for a successful upload message with the file location:
 
-![Untitled](/img/placeholder.webp)
+![Untitled](.//img/placeholder.webp)
 
 ## **Deleting a file**
 
@@ -234,4 +234,4 @@ This code is designed to connect to an FTP server and delete a file located at t
 
 3. Examine the **JavaScript** node's output data for a successful file deletion message:
 
-![Untitled](/img/placeholder.webp)
+![Untitled](.//img/placeholder.webp)

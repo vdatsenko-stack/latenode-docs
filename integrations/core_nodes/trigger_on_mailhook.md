@@ -4,13 +4,13 @@ description: Configuring a mailhook trigger to initiate automation
 sidebar_position: 7
 ---
 
-![brave_lIUpzZvnKA.png](/img/placeholder.webp)
+![brave_lIUpzZvnKA.png](.//img/placeholder.webp)
 
 ## Node Description
 
 Mailhook is a trigger node that launches a scenario when an email is received at a unique, automatically generated email address. It's used to automate processes based on incoming emails - such as handling notifications, client messages, or system alerts.
 
-![brave_VO9YoUWYup.png](/img/placeholder.webp)
+![brave_VO9YoUWYup.png](.//img/placeholder.webp)
 
 ---
 
@@ -18,7 +18,7 @@ Mailhook is a trigger node that launches a scenario when an email is received at
 
 Once the Mailhook node is added, two email addresses are automatically generated:
 
-![brave_Wv5zPto3w4.png](/img/placeholder.webp)
+![brave_Wv5zPto3w4.png](.//img/placeholder.webp)
 
 - **Production Email** — used in a published scenario. The scenario is triggered every time an email is received. It remains active as long as the scenario is running.  
 - **Development Email** — used for testing. The scenario is triggered once upon receiving an email, and then it automatically stops.  
@@ -49,7 +49,7 @@ Mailhook does not accept data from upstream nodes. It triggers the scenario base
 
 The Mailhook node returns a structured JSON object containing the full details of the received email, including metadata, headers, message content, and attachments.
 
-![brave_kjEeUU6NTB.png](/img/placeholder.webp)
+![brave_kjEeUU6NTB.png](.//img/placeholder.webp)
 
 ### Example output:
 
@@ -62,7 +62,7 @@ The Mailhook node returns a structured JSON object containing the full details o
     },
     {
       "key": "from",
-      "value": "Sender Name <sender@example.com>"
+      "value": "Sender Name `<sender@example.com>`"
     }
     // ...
   ],
@@ -77,7 +77,7 @@ The Mailhook node returns a structured JSON object containing the full details o
     }
   ],
   "subject": "Example Subject",
-  "messageId": "<unique-message-id@example.com>",
+  "messageId": "`<unique-message-id@example.com>`",
   "date": "2025-05-19T09:26:58.000Z",
   "html": "<div>Hello</div>",
   "text": "Hello",
@@ -87,7 +87,7 @@ The Mailhook node returns a structured JSON object containing the full details o
       "mimeType": "application/pdf",
       "disposition": "attachment",
       "related": true,
-      "contentId": "<unique-content-id>",
+      "contentId": "`<unique-content-id>`",
       "content": {}
     }
   ]
@@ -112,7 +112,7 @@ The Mailhook node returns a structured JSON object containing the full details o
 * `mimeType` — MIME type of the file.
 * `disposition` — usually `"attachment"`, may also be `"inline"`.
 * `related` — `true` if it's part of the email content (e.g., embedded image).
-* `contentId` — identifier for inline referencing (e.g. `<image1@cid>`).
+* `contentId` — identifier for inline referencing (e.g. ``<image1@cid>``).
 * `content` — file content
 
 ---

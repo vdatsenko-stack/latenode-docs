@@ -3,7 +3,7 @@ title: Headless browser
 description: Automating web interactions and UI testing using a headless browser
 sidebar_position: 3
 ---
-![Untitled](/img/placeholder.webp)
+![Untitled](.//img/placeholder.webp)
 
 ## **Node Description**
 
@@ -16,7 +16,7 @@ A **Headless browser** - an action-type node that is required to configure inter
 ## Basic Example - Get the body content of a web page
 
 ```jsx
-// Open web page and return the content of <body> element
+// Open web page and return the content of `<body>` element
 await page.goto('https://latenode.com');
 const bodyContent = await page.evaluate(() => document.body.innerHTML);
 return { bodyContent };
@@ -33,7 +33,7 @@ Some web pages load content dynamically using JavaScript. In these cases, you ne
 * AI assistant to write code for Headless Browser: https://latenode.com/help/headless_browser_assistant
 */
 
-// Basic example: Open web page and return the content of <body> element
+// Basic example: Open web page and return the content of `<body>` element
 await page.goto('https://latenode.com');
 await page.waitForSelector('#termly-consent-preferences');
 
@@ -47,7 +47,7 @@ return {
 
 You could get a selector here:
 
-![CleanShot 2024-11-01 at 09.05.35.png](/img/placeholder.webp)
+![CleanShot 2024-11-01 at 09.05.35.png](.//img/placeholder.webp)
 
 ## **Node Configuration**
 
