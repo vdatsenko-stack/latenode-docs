@@ -16,7 +16,7 @@ A **Headless browser** - an action-type node that is required to configure inter
 ## Basic Example - Get the body content of a web page
 
 ```jsx
-// Open web page and return the content of ``````````````<body>`````````````` element
+// Open web page and return the content of ```````````````<body>``````````````` element
 await page.goto('https://latenode.com');
 const bodyContent = await page.evaluate(() => document.body.innerHTML);
 return { bodyContent };
@@ -33,7 +33,7 @@ Some web pages load content dynamically using JavaScript. In these cases, you ne
 * AI assistant to write code for Headless Browser: https://latenode.com/help/headless_browser_assistant
 */
 
-// Basic example: Open web page and return the content of ``````````````<body>`````````````` element
+// Basic example: Open web page and return the content of ```````````````<body>``````````````` element
 await page.goto('https://latenode.com');
 await page.waitForSelector('#termly-consent-preferences');
 
