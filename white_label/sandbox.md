@@ -34,7 +34,7 @@ Below is an interactive video showing token generation
   height="600"
   frameBorder="0"
   allowFullScreen
->
+></iframe>
 
 ### Using token
 
@@ -51,12 +51,6 @@ Once the JWT token is generated, go to the “White Label” section. Paste the 
 }
 ```
 
-<<<<<<< HEAD
-
-# Then click the “Init” button. After that, an embedded version of the Latenode platform will appear on the right side of the screen, with the new user already authorized, in this case with ID = `tu_2`
-
-Then click the “Init” button. After that, an embedded version of the Latenode platform will appear on the right side of the screen, with the new user already authorized, in this case with ID = `tu_2`
-
-> > > > > > > 61c02578c222cfc13f406aedd8bc847fdf67cd50
+Then click the “Init” button. After that, an embedded version of the Latenode platform will appear on the right side of the screen, with the new user already authorized, in this case with ID = `tu_2`.
 
 ![image.png](./sandbox/15edf138346d44a9ac12f812928c4a2d.png)
