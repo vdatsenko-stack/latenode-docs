@@ -81,7 +81,7 @@ To add a new Key-Value pair, use the **Add a header** button (**1**). To delete 
 
 ![brave_YPKF70KhOm](/img/placeholder.webp)
 
-> 💡 When authorizing via a Bearer token, one of the request headers should be the pair with the Key `Authorization` and the Value `Bearer ````<token>`````.
+> 💡 When authorizing via a Bearer token, one of the request headers should be the pair with the Key `Authorization` and the Value `Bearer `````<token>``````.
 
 ### **Authorization**
 
