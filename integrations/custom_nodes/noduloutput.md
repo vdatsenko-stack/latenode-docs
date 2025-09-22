@@ -52,7 +52,7 @@ Any value other than Ok will be interpreted as an error, similar to the Error va
 </aside>
 =======
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 ## **Node Description**
 
@@ -67,7 +67,7 @@ Any value other than Ok will be interpreted as an error, similar to the Error va
 
 To configure the **NodulOutput** node, it is necessary to fill in the optional fields.
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 ### Output Type
 

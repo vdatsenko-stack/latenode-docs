@@ -21,11 +21,11 @@ To add code to a scenario, follow these steps:
 2. In the application selection window, choose the [JavaScript](#broken-link-was-here) node.
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 3. Open the added JavaScript node and make changes to the code template manually or with the help of the AI assistant.
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 ## Data Exchange Between Nodes
 
@@ -42,7 +42,7 @@ The code generated in the [JavaScript](#broken-link-was-here) node can utilize t
 
 By doing so, you can seamlessly integrate and manipulate data across different nodes within your scenario.
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 :::warning
 When adding data from other nodes, part of the expression may be wrapped in backticks. For example: `data["{{1.headers.Content-Type}}"]`, even if another node returned the property without them. It is not necessary to remove the backticks, as they will be ignored during code execution. Removing them manually may result in code execution errors.
@@ -58,13 +58,13 @@ The result of the [JavaScript](#broken-link-was-here) node can be a string, nume
 
 1. In the **SetVariables** node, click on the **Value** field.
 
-![](/placeholder.png)
+![](/img/placeholder.webp)
 
 2. In the auxiliary window, select the parameter generated in the **JavaScript** node.
 
 This way, you can efficiently pass and utilize processed data between nodes in your workflow.
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 ### Using Variables
 
@@ -192,7 +192,7 @@ Learn more about all possible custom parameters [here](#broken-link-was-here).
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 :::
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 ## Logging
 
@@ -202,7 +202,7 @@ Logging in the [JavaScript](/introduction) node is available using the `console.
 Logging in the [JavaScript](#broken-link-was-here) node is available using the `console.log` command. Logged data will be displayed in the **Log** tab.
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 ## Using NPM Packages
 
@@ -212,7 +212,7 @@ The [JavaScript](/introduction) node supports the import of **npm** libraries us
 The [JavaScript](#broken-link-was-here) node supports the import of **npm** libraries using the `import` statement. For example, importing and using the "lodash" library:
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 You can specify the version of the library you want to use with the `@` symbol. For example:
 
@@ -232,7 +232,7 @@ Library installation takes some time. If the user starts the node before the ins
 
 **Node Package Manager (NPM)** is a tool for developers working with Node.js, as it allows them to leverage a vast library of ready-made packages and easily manage project dependencies. Using the **axios** package enables developers to easily fetch data from external APIs or other web services without having to write extensive code for handling HTTP requests and responses.
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 An example of such a scenario is fetching a list of current GitHub repositories based on a selected programming language using the **axios** package:
 

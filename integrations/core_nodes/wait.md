@@ -51,7 +51,7 @@ When calculating the waiting time, the values entered in the fields are summed u
 ![Untitled](./wait//untitled_2.png)
 =======
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 ## Node Description
 
@@ -76,7 +76,7 @@ The **Wait until** tab is necessary for setting the time until which one must wa
 - **Date and Time** - a field for selecting the date and time in the [ISO-8601](https://en.wikipedia.org/wiki/ISO_8601) format when the scenario nodes following the **Wait** node should be executed.
 - **Timezone** (mandatory field) - a field for selecting the timezone according to which the pause should be set.
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 ### **Delay**
 
@@ -94,5 +94,5 @@ When calculating the waiting time, the values entered in the fields are summed u
 - **Minutes** - 32;
 - **Seconds** - 59.
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50

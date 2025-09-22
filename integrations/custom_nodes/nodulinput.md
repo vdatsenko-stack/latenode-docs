@@ -69,7 +69,7 @@ The icon of such a scenario can be personalized by filling in the fields of the 
 ![Untitled 6](./nodulinput/untitled_6.png)
 =======
 
-![Untitled](/placeholder.png)
+![Untitled](/img/placeholder.webp)
 
 ## **Node Description**
 
@@ -88,20 +88,20 @@ To configure the **NodulInput** node, it is necessary to fill in optional fields
 
 Adding parameters to the node is available by clicking the **Add parameter** button.
 
-![Untitled 1](/placeholder.png)
+![Untitled 1](/img/placeholder.webp)
 
 When adding a parameter, it is necessary to specify the **Parameter type** (e.g., string) and the **Parameter key** (e.g., Value) and then click the **Add** button.
 
-![Untitled 2](/placeholder.png)
+![Untitled 2](/img/placeholder.webp)
 
 After adding the parameter, it is necessary to define its **Name** in the respective field and, if needed, fill in optional parameters:
 
-![Untitled 3](/placeholder.png)
+![Untitled 3](/img/placeholder.webp)
 
 - Determine the requirement attribute by checking the **Required (1)** checkbox;
 - Add a description of the parameter in the **Description (2)** field for subsequent tooltip display;
 
-![Untitled 4](/placeholder.png)
+![Untitled 4](/img/placeholder.webp)
 
 - Add a value in the **Default Value** field to display it in the parameter field when the node is initially opened.
 
@@ -109,7 +109,7 @@ After adding the parameter, it is necessary to define its **Name** in the respec
 
 In the **Options** section, you can define additional characteristics of the parameter:
 
-![Untitled 5](/placeholder.png)
+![Untitled 5](/img/placeholder.webp)
 
 - **Min length** - the minimum allowable number of characters in the parameter's value. If the character count is less than this, the parameter will be highlighted;
 - **Prefix;**
@@ -130,5 +130,5 @@ The icon of such a scenario can be personalized by filling in the fields of the 
 - **Color (HEX) (1)** - color representation in HEX format;
 - **Icon (svg)** **(2)** - icon representation in svg format.
 
-![Untitled 6](/placeholder.png)
+![Untitled 6](/img/placeholder.webp)
 >>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
