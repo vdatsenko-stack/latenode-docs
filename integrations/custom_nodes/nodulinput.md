@@ -11,7 +11,7 @@ sidebar_position: 1
 
 **NodulInput** - a node of the action type, necessary for creating a scenario of the **Nodul** type. This node serves as an entry point into the **Nodul** type scenario and defines the form of the scenario node, i.e., its parameters.
 
-`<aside>```
+``<aside>````
 💡 See [Utilizing the NodulInput node to create a scenario of the Nodul type](/introduction)
 
 </aside>
@@ -75,7 +75,7 @@ The icon of such a scenario can be personalized by filling in the fields of the 
 
 **NodulInput** - a node of the action type, necessary for creating a scenario of the **Nodul** type. This node serves as an entry point into the **Nodul** type scenario and defines the form of the scenario node, i.e., its parameters.
 
-```<aside>```
+````<aside>````
 💡 See [Utilizing the NodulInput node to create a scenario of the Nodul type](#broken-link-was-here)
 
 </aside>
