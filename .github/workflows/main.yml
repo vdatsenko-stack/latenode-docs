@@ -1,84 +1,71 @@
-name: Lint, Format, and Deploy Documentation
+name: Build and Deploy Docusaurus Site
 
+# ЗАПУСКАТЬ ТОЛЬКО ПО ВНЕШНЕЙ КОМАНДЕ
 on:
-  push:
-    branches:
-      - main
-
-permissions:
-  contents: write
+  repository_dispatch:
+    types: [build-command] # Мы будем ждать команду с типом 'build-command'
 
 jobs:
-  lint-and-format:
-    if: "!contains(github.event.head_commit.message, 'chore: auto-format')"
+  build-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      # --- ЭТАП 1: ПОДГОТОВКА ---
+      - name: 1. Checkout Site Code
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: saxtamazer/latenode-docusaurus-site
+          path: main-site # Клонируем код сайта в папку 'main-site'
 
-      - name: Setup Node.js
+      - name: 2. Checkout Content
+        uses: actions/checkout@v4
+        with:
+          repository: vdatsenko-stack/latenode-docs
+          path: content-repo # Клонируем контент в папку 'content-repo'
+
+      - name: 3. Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '18'
 
-      - name: Install Tools and Dependencies
+      # --- ЭТАП 2: СБОРКА САЙТА ---
+      - name: 4. Prepare Site Files
         run: |
-          npm install -g prettier markdownlint-cli
-          npm install glob
+          # Этот шаг имитирует ваш sync_content.sh, но прямо здесь, в Actions
+          echo "Syncing content into the site structure..."
+          # Копируем контент из 'content-repo' в нужные папки 'main-site'
+          # Используйте rsync для надежного копирования
+          rsync -a --delete ./content-repo/documentation/ ./main-site/platform-documentation/
+          rsync -a --delete ./content-repo/integrations/ ./main-site/integrations/
+          rsync -a --delete ./content-repo/white_label/ ./main-site/white-label/
+          rsync -a --delete ./content-repo/changelog/ ./main-site/changelog/
+          cp ./content-repo/introduction.md ./main-site/introduction.md
 
-      - name: Fix Content Issues
-        run: node .github/scripts/fix-content.js # Переименовал для ясности
-
-      - name: Auto-fix and Format Markdown Files
+      - name: 5. Install Dependencies and Build
+        working-directory: ./main-site # Выполняем команды внутри папки с сайтом
         run: |
-          markdownlint --fix ./**/*.md || true
-          prettier --write ./**/*.md
+          npm install
+          npm run build
 
-      - name: Commit changes
-        uses: stefanzweifel/git-auto-commit-action@v5
+      # --- ЭТАП 3: РАЗВЕРТЫВАНИЕ НА СЕРВЕРЕ ---
+      - name: 6. Deploy build to Server
+        uses: appleboy/scp-action@v1.0.1
         with:
-          commit_message: "chore: auto-format markdown files"
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          source: "./main-site/build/" # Что копируем (папка со сборкой)
+          target: "/var/www/my-docusaurus-site/staging" # Куда копируем на сервере (во временную папку)
 
-  deploy:
-    needs: lint-and-format
-    if: "contains(github.event.head_commit.message, '[deploy]') && !contains(github.event.head_commit.message, 'chore: auto-format')"
-    runs-on: ubuntu-latest
-    steps:
-      - name: Setup SSH
-        uses: webfactory/ssh-agent@v0.9.0
+      - name: 7. Activate New Release
+        uses: appleboy/ssh-action@v1.0.3
         with:
-          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
-
-      - name: Add SSH host
-        run: ssh-keyscan -H ${{ secrets.SSH_HOST }} >> ~/.ssh/known_hosts
-
-      - name: Trigger Deploy on Server
-        id: deploy_step
-        # Запускаем скрипт, передавая хеш коммита, и продолжаем даже если он упадет
-        continue-on-error: true
-        run: |
-          ssh -T ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }} "bash /var/www/my-docusaurus-site/deploy.sh ${{ github.sha }}"
-
-      - name: Download Build Log from Server
-        # Этот шаг выполняется всегда
-        if: always()
-        run: |
-          # Скачиваем лог-файл с сервера в текущую директорию Actions
-          scp -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SSH_HOST }}:/var/www/my-docusaurus-site/deploy_logs/build_log_${{ github.sha }}.log ./build_log.log
-
-      - name: Upload Build Log as Artifact
-        # Этот шаг выполняется всегда
-        if: always()
-        uses: actions/upload-artifact@v4
-        with:
-          name: build-log-${{ github.sha }}
-          path: ./build_log.log
-
-      - name: Check Deploy Status
-        # Проверяем, упал ли шаг деплоя, и если да - тоже падаем
-        if: steps.deploy_step.outcome == 'failure'
-        run: |
-          echo "Сборка на сервере не удалась. Смотрите лог в артефактах."
-          exit 1
+          host: ${{ secrets.SSH_HOST }}
+          username: ${{ secrets.SSH_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            # Атомарно заменяем содержимое основной папки на содержимое из временной
+            # Это аналог вашей схемы с релизами, но проще
+            rm -rf /var/www/my-docusaurus-site/current_BACKUP
+            mv /var/www/my-docusaurus-site/current /var/www/my-docusaurus-site/current_BACKUP || true
+            mv /var/www/my-docusaurus-site/staging /var/www/my-docusaurus-site/current
+            echo "Deployment successful!"
