@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 ---
 title: Building Scenarios
 description: Building Scenarios
@@ -485,7 +484,7 @@ export default async function run({execution_id, input, data, store}) {
     
     let messageC1;
     
-    if (globalC1Number - nodeC1Number < 0) {
+    if (globalC1Number - nodeC1Number {'<'} 0) {
         messageC1 = `The currency rate of ${nameC1} has increased by ${diffGlobalC1NodeC1} and is ${nodeC1}.`;
     } else if (globalC1Number - nodeC1Number === 0) {
         messageC1 = `The currency rate of ${nameC1} has not changed and is ${nodeC1}.`;
@@ -495,7 +494,7 @@ export default async function run({execution_id, input, data, store}) {
     
     let messageC2;
     
-    if (globalC2Number - nodeC2Number < 0) {
+    if (globalC2Number - nodeC2Number {'<'} 0) {
         messageC2 = `The currency rate of ${nameC2} has increased by ${diffGlobalC2NodeC2} and is ${nodeC2}.`;
     } else if (globalC2Number - nodeC2Number === 0) {
         messageC2 = `The currency rate of ${nameC2} has not changed and is ${nodeC2}.`;
@@ -556,4 +555,3 @@ The scenario version is important when sending a request to the [Trigger on Webh
 Errors can occur during scenario execution. They are displayed on the right side of the node where the error occurred. If the scenario did not complete successfully, the error will also be shown in the scenario run history.
 
 ![Untitled](./building_scenarios/untitled_20.gif)
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
