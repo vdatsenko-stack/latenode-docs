@@ -49,3 +49,4 @@ jobs:
           token: ${{ secrets.PAT_TRIGGER }} # Используем наш новый токен
           repository: saxtamazer/latenode-docusaurus-site # Репозиторий-"фабрика"
           event-type: build-command # Название команды, которую ждет "фабрика"
+
