@@ -24,11 +24,7 @@ Operators in this group provide the ability to perform operations on arrays and 
 
 ### `add`
 
-<<<<<<< HEAD
-This operator adds a value to the specified variable to create an array. See  [Scenario Example Using SetVariables](/introduction)[**.**](https://www.notion.so/1ebd5701a8824deab3e17ab1415e50d0?pvs=21)
-=======
 This operator adds a value to the specified variable to create an array.
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 - **Result of the expression:** Value in the array.
 
