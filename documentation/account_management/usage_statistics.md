@@ -17,7 +17,7 @@ To ensure your scenarios run smoothly, monitor your current credit balance. If t
 
 The number of available credits depends on your selected pricing plan.
 
-`<aside>`
+``<aside>``
 💡 Running a single node does not require credits, enabling free scenario customization. When executing a scenario that includes a Nodul type scenario, credits will be consumed based on the execution time of the main scenario. The execution time of the Nodul scenario itself is not counted towards credit usage.
 
 </aside>
@@ -40,7 +40,7 @@ A **credit** is a virtual currency used by scenarios during execution. One credi
 
 The number of nodes in a scenario does not directly impact credit consumption. For example, scenarios with 10 nodes and 2 nodes, each running for less than 30 seconds, will consume only one credit during execution.
 
-`<aside>`
+``<aside>``
 💡 Scenarios with many nodes generally take longer to execute than those with fewer nodes. Additionally, scenarios that transform or process large amounts of data also require more time to run.
 
 </aside>
