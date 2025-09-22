@@ -6,7 +6,7 @@ sidebar_position: 1
 
 The **System Message** field in the AI Agent node on **Latenode** defines the agent’s role, behavior, and decision-making. These instructions are written directly inside the **System Message** section in the agent’s settings. This field determines how the agent responds to user input, when it calls tools, and how it handles ambiguity or missing data.
 
-![brave_oGzdrvzjbK.png](.//img/placeholder.webp)
+![brave_oGzdrvzjbK.png](/img/placeholder.webp)
 
 Structured instructions are essential for predictable, helpful, and controlled agent behavior across domains like customer support, onboarding, automation, education, or internal tools. This is especially true for AI agents built and orchestrated on **Latenode**, where clear system logic is crucial to creating scalable automations.
 

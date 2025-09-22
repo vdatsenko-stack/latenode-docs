@@ -12,23 +12,23 @@ Let's create a custom node with dynamic field rendering. To do this, you need to
 
 1. Create a scenario of type **Nodul**:
 
-![QuickLook](.//img/placeholder.webp)
+![QuickLook](/img/placeholder.webp)
 
 - Add a **NodulInput** node with configured parameters:
 
-![QuickLook](.//img/placeholder.webp)
+![QuickLook](/img/placeholder.webp)
 
 **URL** - a mandatory parameter of type String;
 
-![URL Param](.//img/placeholder.webp)
+![URL Param](/img/placeholder.webp)
 
 **Method** - a mandatory parameter of type Select with the option for a single choice and a list of values to choose from: GET, POST, PUT, DELETE. You can choose GET as the default value;
 
-![Method Param](.//img/placeholder.webp)
+![Method Param](/img/placeholder.webp)
 
 **Body type** - an optional parameter of type Select with the option for a single choice and a list of values to choose from: Raw, form-data, x-www-form-urlencoded. Fill in the **Fetch events** characteristic with the value **Change** to trigger the update of the entire node form when selecting a parameter value.
 
-![Body Type Param](.//img/placeholder.webp)
+![Body Type Param](/img/placeholder.webp)
 
 - Add a node to perform the scenario function, for example, an **Java Script** node to send requests to an external application.
 - Add a **NodulOutput** node to receive the response from the Nodul type scenario.
@@ -37,7 +37,7 @@ Let's create a custom node with dynamic field rendering. To do this, you need to
 
 3. On the same page, create a scenario using the **Nodul Form Input** and **Nodul Form Output** nodes. This scenario will ensure dynamic display of a **Nodul** type scenario form based on the selected parameters:
 
-![QuickLook](.//img/placeholder.webp)
+![QuickLook](/img/placeholder.webp)
 
 - Add a **Nodul Form Input** node to retrieve parameters from the **Nodul** type scenario form;
 - Add a **JavaScript** node with the following code:
@@ -121,20 +121,20 @@ To check the result of the created scenarios, you need to:
 
 For example, if the scenario name is **Al Tools/Action/Nodul3** then the node will be placed in the **Al Tools** group, under the **Action** subgroup, and named **Nodul3**.
 
-![Untitled](.//img/placeholder.webp)
+![Untitled](/img/placeholder.webp)
 
 3. The added node will display fields corresponding to the parameters of the **NodulInput** node**:**
 
-![Untitled](.//img/placeholder.webp)
+![Untitled](/img/placeholder.webp)
 
 - When selecting the "Raw" parameter in the **Body type** field, the node's form will be updated, and a mandatory **Row** field will be added to the existing fields**;**
 
-![Untitled](.//img/placeholder.webp)
+![Untitled](/img/placeholder.webp)
 
 - When selecting the "form-data" or "x-www-form-urlencoded" parameter in the **Body type** field, the node's form will be updated, and pairs of Key-Value fields will be added to the existing fields.
 
-![Untitled](.//img/placeholder.webp)
+![Untitled](/img/placeholder.webp)
 
 4. Each time the node is updated, an auxiliary scenario is triggered. The history and results of the execution are displayed in the **History** section on the scenario page.
 
-![Untitled](.//img/placeholder.webp)
+![Untitled](/img/placeholder.webp)

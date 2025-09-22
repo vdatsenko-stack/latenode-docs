@@ -5,13 +5,13 @@ sidebar_position: 1
 ---
 
 
-![image.png](.//img/placeholder.webp)
+![image.png](/img/placeholder.webp)
 
 ### Node: RAG Search
 
 To use stored data inside a scenario, connect the **RAG Search** node from the **AI Agent → Actions** category.
 
-![brave_oaJlOzWTyP.png](.//img/placeholder.webp)
+![brave_oaJlOzWTyP.png](/img/placeholder.webp)
 ---
 
 ### Main Fields (RAG Search Node)
@@ -37,6 +37,6 @@ To use stored data inside a scenario, connect the **RAG Search** node from the *
 
 A natural language query is passed into the node, which returns a list of matching chunks based on the specified `top_k`.
 
-![brave_KuSh6PXIlW.png](.//img/placeholder.webp)
+![brave_KuSh6PXIlW.png](/img/placeholder.webp)
 
 ---

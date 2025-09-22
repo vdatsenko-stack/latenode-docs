@@ -14,11 +14,11 @@ You can launch AI Assistant in two ways:
 
 **1.Via the "AI Node" button** at the bottom of the editor. This opens a dedicated chat window with assistant.
 
-![brave_DaNUFOQFju.png](.//img/placeholder.webp)
+![brave_DaNUFOQFju.png](/img/placeholder.webp)
 
 **2.Inside any JavaScript node**. Open the node and enter your message to start a conversation.
 
-![brave_cQKGx7lnsr.png](.//img/placeholder.webp)
+![brave_cQKGx7lnsr.png](/img/placeholder.webp)
 
 ### Table of contents: What Assistant Can Do
 
@@ -33,7 +33,7 @@ You can launch AI Assistant in two ways:
 
 Assistant can automatically create custom input parameters for your nodes.
 
-![brave_uRQZri9TRV.png](.//img/placeholder.webp)
+![brave_uRQZri9TRV.png](/img/placeholder.webp)
 
 Instead of hardcoding a value:
 
@@ -53,7 +53,7 @@ More info: [Custom JS Parameters](https://help.latenode.com/advanced-features/46
 
 ## 2. Request to process data from other nodes
 
-``<aside>``
+```<aside>```
 ❓ *Generate code to process data from the Trigger on Webhook node so that based on the Name and Count parameters, text is generated based on the following pattern: Hi, Name! Count of your scenarios has been executed in X on the Latenode platform! Instead of X, substitute the name of the current month.*
 
 </aside>
@@ -93,12 +93,12 @@ Explanation:
 
 ## 3. Request for processing global variables
 
-``<aside>``
+```<aside>```
 💡 It is assumed that global variables GlobalVar_number1 and GlobalVar_number2 exist in the account. See the section on global variables.
 
 </aside>
 
-``<aside>``
+```<aside>```
 ❓ *Generate code that adds up the values of two global variables GlobalVar_number1 and GlobalVar_number2 and return an array of the values: sum of variables, GlobalVar_number1, GlobalVar_number2. Get global variables using store.getGlobalVariable*
 
 </aside>
@@ -138,7 +138,7 @@ Ensure that the global variables **`GlobalVar_number1`** and **`GlobalVar_num
 
 ## **4. Request to connect to Telegram to send messages (example of creating custom api calls)**
 
-``<aside>``
+```<aside>```
 ❓ *Generate a code with a Telegram connection to send a message to the desired chat room with a given ID*
 
 </aside>

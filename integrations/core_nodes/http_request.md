@@ -5,7 +5,7 @@ sidebar_position: 3
 ---
 
 
-![Untitled](.//img/placeholder.webp)
+![Untitled](/img/placeholder.webp)
 
 ## **Node Description**
 
@@ -22,7 +22,7 @@ The required **fields** are:
 - **URL;**
 - **Method.**
 
-![brave_qmd1FjaegH](.//img/placeholder.webp)
+![brave_qmd1FjaegH](/img/placeholder.webp)
 
 ### **URL**
 
@@ -37,7 +37,7 @@ Variables and parameters from other nodes can be inserted into the URL using the
 
 The field is used to enter the name of the method used in the request (GET/POST/PUT/PATCH/DELETE).  
 
-![brave_9UDYz3uyVB](.//img/placeholder.webp)
+![brave_9UDYz3uyVB](/img/placeholder.webp)
 
 ### **Proxy**
 
@@ -49,13 +49,13 @@ The configuration block with fields includes:
 
 These fields are filled in when access to the external application's API is restricted to the local network.  
 
-![brave_DrFvMPYCCL](.//img/placeholder.webp)
+![brave_DrFvMPYCCL](/img/placeholder.webp)
 
 ### **Body**
 
 The block of fields for configuring and filling in the request body includes:  
 
-![brave_KSVXnu8vRP](.//img/placeholder.webp)
+![brave_KSVXnu8vRP](/img/placeholder.webp)
 
 Before filling in the field, you need to select the format in which the request body will be transmitted (you can see a more detailed description [here](https://developer.mozilla.org/ru/docs/Web/HTTP/Methods/POST)):
 
@@ -68,7 +68,7 @@ When selecting the **form-data** and **x-www-form-urlencoded** options, you have
 - The **Add a param** button (**1**) for adding a new Key-Value pair;  
 - The **Delete** button (**2**) for removing a Key-Value pair.  
 
-![brave_uTnyCtlTeV](.//img/placeholder.webp)
+![brave_uTnyCtlTeV](/img/placeholder.webp)
 
 ### **Headers**
 
@@ -79,9 +79,9 @@ The block of fields for filling in request headers:
 
 To add a new Key-Value pair, use the **Add a header** button (**1**). To delete a Key-Value pair, use the **Delete** button (**2**).  
 
-![brave_YPKF70KhOm](.//img/placeholder.webp)
+![brave_YPKF70KhOm](/img/placeholder.webp)
 
-> 💡 When authorizing via a Bearer token, one of the request headers should be the pair with the Key `Authorization` and the Value `Bearer ``<token>```.
+> 💡 When authorizing via a Bearer token, one of the request headers should be the pair with the Key `Authorization` and the Value `Bearer ```<token>````.
 
 ### **Authorization**
 
@@ -96,7 +96,7 @@ The following authentication methods are available for selection:
 When choosing the authentication methods **Basic auth/Digest auth**, you need to enter credentials, which include a username and password.  
 In the case of selecting the **NTLM auth** method, you must input a username, password, and domain.  
 
-![brave_lHFn9bRWCs](.//img/placeholder.webp)
+![brave_lHFn9bRWCs](/img/placeholder.webp)
 
 ### **Hiding data in history**
 
@@ -117,14 +117,14 @@ To quickly configure an **HTTP Request** node, follow these steps:
 
 1. Click on **Create from Example (CURL)**.
 
-![brave\_Jo9NUba3JO](.//img/placeholder.webp)
+![brave\_Jo9NUba3JO](/img/placeholder.webp)
 
 2. Copy the example request and paste it into the modal window. Then, click the **Create** button:
 
-![Untitled 1](.//img/placeholder.webp)
+![Untitled 1](/img/placeholder.webp)
 
 3. Review the filled fields for the **HTTP Request** node.
 
-![Untitled 2](.//img/placeholder.webp)
+![Untitled 2](/img/placeholder.webp)
 
 
