@@ -9,7 +9,9 @@ When you want to modify data in a collection, you need to select objects and app
 ### There are two ways to select objects:
 
 - specify the identifier of a specific object
-<<<<<<< HEAD
+### There are two ways to select objects:
+
+- specify the identifier of a specific object
 - apply a set of filters to select multiple objects (see [querrying collection](/introduction))
 
 
