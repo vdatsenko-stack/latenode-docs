@@ -79,9 +79,12 @@ def collect_broken(repo_root: Path):
                     if not resolved.exists():
                         broken.append((str(file_path), "image", m.group(0), href))
                     continue
+                # Accept extensionless links if a corresponding .md or .mdx exists
                 resolved = resolve_path(file_path, href, repo_root)
                 if not resolved.exists():
-                    broken.append((str(file_path), "link", m.group(0), href))
+                    # Try with .md or .mdx appended
+                    if not (resolved.with_suffix(".md").exists() or resolved.with_suffix(".mdx").exists()):
+                        broken.append((str(file_path), "link", m.group(0), href))
 
             # HTML <img>
             for m in RE_HTML_IMG.finditer(text):

@@ -4,7 +4,11 @@ description: Store, manage, and index documents with chunking and embedding for 
 sidebar_position: 1
 ---
 
+<<<<<<< HEAD
 ![brave_gM7qog41yj.png](/placeholder.png)
+=======
+![brave_gM7qog41yj.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ### Purpose
 
@@ -26,7 +30,11 @@ Use cases include:
 
 You can access this feature via **Data Storage → AI Data Storage (RAG)** in the left-hand side menu.
 
+<<<<<<< HEAD
 ![brave_l3S0LYq3WK.png](/placeholder.png)
+=======
+![brave_l3S0LYq3WK.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---
 
@@ -34,11 +42,19 @@ You can access this feature via **Data Storage → AI Data Storage (RAG)** in th
 
 Click **Create Storage** to open the setup modal:
 
+<<<<<<< HEAD
 ![brave_awRQKmbKQs.png](/placeholder.png)
 
 Fill in the required fields: **Storage Name, Chunk Size, Chunk Overlap**
 
 ![brave_nHbU4QmKzu.png](/placeholder.png)
+=======
+![brave_awRQKmbKQs.png](/placeholder.png)
+
+Fill in the required fields: **Storage Name, Chunk Size, Chunk Overlap**
+
+![brave_nHbU4QmKzu.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---
 
@@ -53,7 +69,11 @@ Fill in the required fields: **Storage Name, Chunk Size, Chunk Overlap**
 
 Created storages are displayed in a table:
 
+<<<<<<< HEAD
 ![brave_R2vB1tRsYc.png](/placeholder.png)
+=======
+![brave_R2vB1tRsYc.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 | Field | Description |
 | --- | --- |
@@ -69,7 +89,11 @@ Created storages are displayed in a table:
 
 Open a storage to access the upload interface. Drag-and-drop is supported.
 
+<<<<<<< HEAD
 ![brave_B5v1L58izT.png](/placeholder.png)
+=======
+![brave_B5v1L58izT.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 After uploading:
 
@@ -77,7 +101,11 @@ After uploading:
 - Files are listed with size, upload date, and status
 - Editing or downloading files is currently **not supported**
 
+<<<<<<< HEAD
 ![brave_5f8Vn9IysJ.png](/placeholder.png)
+=======
+![brave_5f8Vn9IysJ.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---
 

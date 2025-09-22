@@ -70,6 +70,11 @@ def replace_in_text_md(file_path: Path, text: str, repo_root: Path):
         link_text, href = match.group(1), match.group(2)
         if is_external_or_anchor(href):
             return match.group(0)
+        # Normalize explicit intro links to extensionless route for Docusaurus
+        if href in {"/introduction.md", "introduction.md"}:
+            if href != "/introduction":
+                replacements += 1
+            return f"[{link_text}](/introduction)"
         # If it actually points to an image by extension, treat as image
         if is_image_path(href, is_markdown_image=False):
             resolved = resolve_path(file_path, href, repo_root)
@@ -81,7 +86,7 @@ def replace_in_text_md(file_path: Path, text: str, repo_root: Path):
         if target_exists(resolved):
             return match.group(0)
         replacements += 1
-        return f"[{link_text}](/introduction.md)"
+        return f"[{link_text}](/introduction)"
 
     text = RE_MD_LINK.sub(_repl_link, text)
 

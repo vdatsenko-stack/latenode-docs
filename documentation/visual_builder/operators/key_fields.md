@@ -22,24 +22,24 @@ Operators in this group ensure the presence of certain values in a field, variab
 
 The result of the execution is the presence of a boolean value **TRUE**.  
 
-![Untitled](./key_fields/untitled.png)
+![Untitled](/placeholder.png)
 
 ## false
 
 The result of the execution is the presence of a boolean value **FALSE**.  
 
-![Untitled](./key_fields/untitled_1.png)
+![Untitled](/placeholder.png)
 
 ## null
 
 The result of the execution is the presence of **null**.  
 
-![Untitled](./key_fields/untitled_2.png)
+![Untitled](/placeholder.png)
 
 ## space
 
 The result of the execution is the presence of a **space**.  
 
-![Untitled](./key_fields/untitled_3.png)
+![Untitled](/placeholder.png)
 
 - **Example:** If 3.ValueSV = "Hello" and 3.ValueSV = "Latenode", then "Hello Latenode".  

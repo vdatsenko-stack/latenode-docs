@@ -10,8 +10,8 @@ This documentation is your comprehensive guide to mastering Latenode. Here, you'
 
 ## Where to Start?
 
-*   **New to Latenode?** Jump into our **[Get Started Guide](/introduction.md)** to learn the fundamentals and build your first scenario.
-*   **Looking for specific services?** Explore our extensive list of **[Integrations](/introduction.md)** to see how you can connect your favorite apps.
-*   **Ready for advanced features?** Discover how to use our **[AI Agents](/introduction.md)** or build custom solutions with the **[Headless Browser](/introduction.md)**.
+*   **New to Latenode?** Jump into our **[Get Started Guide](/introduction)** to learn the fundamentals and build your first scenario.
+*   **Looking for specific services?** Explore our extensive list of **[Integrations](/introduction)** to see how you can connect your favorite apps.
+*   **Ready for advanced features?** Discover how to use our **[AI Agents](/introduction)** or build custom solutions with the **[Headless Browser](/introduction)**.
 
 We're constantly improving our platform and updating this documentation. If you have any questions, feel free to join our community.

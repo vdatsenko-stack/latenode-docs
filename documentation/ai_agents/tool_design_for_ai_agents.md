@@ -8,7 +8,11 @@ sidebar_position: 1
 
 Tools are nodes connected to the AI Agent that perform specific actions or return data. They must be well-defined so the agent can use them reliably.
 
+<<<<<<< HEAD
 ![brave_UIHvrbBbf0.png](/placeholder.png)
+=======
+![brave_UIHvrbBbf0.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---
 
@@ -45,7 +49,11 @@ Agents refer to tools by their node names. Use clear, descriptive names that dir
 
 Each tool should include a short description that explains its function. This is used by the agent to decide when (and if) to use it.
 
+<<<<<<< HEAD
 ![brave_6HRDochjbQ.png](/placeholder.png)
+=======
+![brave_6HRDochjbQ.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 > 📌 The tool description is not just for documentation — it is also passed via API and directly affects how the agent reasons about and chooses to call the tool. A vague or missing description can lead to the tool being ignored or misused.
 > 

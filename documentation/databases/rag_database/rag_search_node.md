@@ -4,13 +4,21 @@ description: Search documents via vector similarity using natural language queri
 sidebar_position: 1
 ---
 
+<<<<<<< HEAD
 ![image.png](/placeholder.png)
+=======
+![image.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ### Node: RAG Search
 
 To use stored data inside a scenario, connect the **RAG Search** node from the **AI Agent → Actions** category.
 
+<<<<<<< HEAD
 ![brave_oaJlOzWTyP.png](/placeholder.png)
+=======
+![brave_oaJlOzWTyP.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---
 
@@ -37,6 +45,10 @@ To use stored data inside a scenario, connect the **RAG Search** node from the *
 
 A natural language query is passed into the node, which returns a list of matching chunks based on the specified `top_k`.
 
+<<<<<<< HEAD
 ![brave_KuSh6PXIlW.png](/placeholder.png)
+=======
+![brave_KuSh6PXIlW.png](/placeholder.png)
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ---

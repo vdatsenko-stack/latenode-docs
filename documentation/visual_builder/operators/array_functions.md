@@ -20,24 +20,28 @@ Operators in this group provide the ability to perform operations on arrays and 
 💡 Elements of the array can be strings, numbers, or boolean values.
 :::
 
-## Result
+## Operators
 
-## add
+### `add`
 
-This operator adds a value to the specified variable to create an array. See  [Scenario Example Using SetVariables](/introduction.md)[**.**](https://www.notion.so/1ebd5701a8824deab3e17ab1415e50d0?pvs=21)
+<<<<<<< HEAD
+This operator adds a value to the specified variable to create an array. See  [Scenario Example Using SetVariables](/introduction)[**.**](https://www.notion.so/1ebd5701a8824deab3e17ab1415e50d0?pvs=21)
+=======
+This operator adds a value to the specified variable to create an array.
+>>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 - **Result of the expression:** Value in the array.
 
-## join
+### `join`
 
 It concatenates all the array elements into a string, adding the specified delimiter between each array element.
 
-![Untitled](./array_functions/untitled.png)
+![Untitled](/placeholder.png)
 
 - **Execution Result:** text with the specified delimiter.
-- **Example:** If _.Array = [1,2,3,4,5], then "1.2.3.4.5".
+- **Example:** If `_.Array = [1,2,3,4,5]`, then the result is `"1.2.3.4.5"`.
 
-## slice
+### `slice`
 
 Returns a modified array containing the specified elements from the provided array.
 
@@ -45,34 +49,34 @@ Returns a modified array containing the specified elements from the provided arr
 💡 The specified numbers are the ordinal numbers of the array elements. In the example below, it returns elements from the zeroth (exclusive) to the first (inclusive) element. The ending number may be omitted, in which case, it will return all elements of the array after the initial number.
 :::
 
-![Untitled](./array_functions/untitled_1.png)
+![Untitled](/placeholder.png)
 
 - **Execution Result:** an array of values.
-- **Example:** If 1.Body = [{"Value": "Hi"}, {"Value": "Latenode"}], then [{"Value": "Hi"}].
+- **Example:** If `1.Body = [\{"Value": "Hi"\}, \{"Value": "Latenode"\}]`, then the result is `[\{"Value": "Hi"\}]`.
 
-## merge
+### `merge`
 
-Merges two or more passed arrays into one array. 
+Merges two or more passed arrays into one array.
 
-![Untitled](./array_functions/untitled_2.png)
+![Untitled](/placeholder.png)
 
 - **Execution Result:** an array of values.
-- **Example:** If 1.Body[0] = [{"Value": 5}, {"Value": 10}] and 1.Body[1] = [{"Value": 15}, {"Value": 20}], then [{"Value": 5}, {"Value": 10}, {"Value": 15}, {"Value": 20}].
+- **Example:** If `1.Body[0] = [\{"Value": 5\}, \{"Value": 10\}]` and `1.Body[1] = [\{"Value": 15\}, \{"Value": 20\}]`, then the result is `[\{"Value": 5\}, \{"Value": 10\}, \{"Value": 15\}, \{"Value": 20\}]`.
 
-## map
+### `map`
 
 Returns an array containing the desired values of the given complex array. Can be used for filtering values.
 
-![Untitled](./array_functions/untitled_3.png)
+![Untitled](/placeholder.png)
 
-![Untitled](./array_functions/untitled_4.png)
+![Untitled](/placeholder.png)
 
 - **Execution Result:** an array of found values.
 - **Example:**
 
 Input data:
 
-```jsx
+```json
 [
 	{
 		"Name": "Kate",
@@ -94,7 +98,7 @@ Input data:
 
 Result:
 
-```jsx
+```json
 [
 	25,
 	35,
@@ -102,33 +106,33 @@ Result:
 ]
 ```
 
-## sort
+### `sort`
 
 Returns an array containing values of the given array sorted in the desired order. Sorting options available:
 
-* **asc** - in ascending order;
-* **desc** - in descending order;
-* **asc ci** - in ascending order, case-insensitive;
-* **desc ci** - in descending order, case-insensitive.
+-   **asc** - in ascending order;
+-   **desc** - in descending order;
+-   **asc ci** - in ascending order, case-insensitive;
+-   **desc ci** - in descending order, case-insensitive.
 
-![Untitled](./array_functions/untitled_5.png)
+![Untitled](/placeholder.png)
 
-* **Execution result:** an array of sorted values.
-* **Example:** If 1.Body = \[{ "Value": 5}, {"Value": 10},{ "Value": 15}, {"Value": 20}], then \[{ "Value": 20}, {"Value": 15},{ "Value": 10}, {"Value": 5}]
+-   **Execution result:** an array of sorted values.
+-   **Example:** If `1.Body = [\{ "Value": 5\}, \{"Value": 10\}, \{ "Value": 15\}, \{"Value": 20\}]`, then the result is `[\{ "Value": 20\}, \{"Value": 15\}, \{ "Value": 10\}, \{"Value": 5\}]`.
 
-## deduplicate
+### `deduplicate`
 
 Removes duplicate values from the given array and returns an array with unique values.
 
-* **Execution result:** an array of unique values.
+-   **Execution result:** an array of unique values.
 
-![Untitled](./array_functions/untitled_6.png)
+![Untitled](/placeholder.png)
 
-* **Example:**
+-   **Example:**
 
 Input data:
 
-```jsx
+```json
 [
 	{
 		"Name": "Kate",
@@ -155,7 +159,7 @@ Input data:
 
 Result:
 
-```jsx
+```json
 [
 	{
 		"Age": 45,
@@ -176,18 +180,18 @@ Result:
 ]
 ```
 
-## distinct
+### `distinct`
 
 Removes duplicates from the given array and returns an array with unique values. All duplicates are removed based on the specified key, except for the first found value.
 
-* **Execution result:** an array of unique values.
-* **Example 1:**
+-   **Execution result:** an array of unique values.
+-   **Example 1:**
 
-![Untitled](./array_functions/untitled_7.png)
+![Untitled](/placeholder.png)
 
 Input data:
 
-```jsx
+```json
 [
 	{
 		"Name": "Kate",
@@ -214,7 +218,7 @@ Input data:
 
 Result:
 
-```jsx
+```json
 [
 	{
 		"Age": 45,
@@ -227,13 +231,13 @@ Result:
 ]
 ```
 
-* **Example 2:**
+-   **Example 2:**
 
-![Untitled](./array_functions/untitled_8.png)
+![Untitled](/placeholder.png)
 
 Input data:
 
-```jsx
+```json
 [
 	{
 		"Name": "Kate",
@@ -260,7 +264,7 @@ Input data:
 
 Result:
 
-```jsx
+```json
 [
 	{
 		"Age": 45,
@@ -276,4 +280,3 @@ Result:
 	}
 ]
 ```
-

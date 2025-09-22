@@ -21,29 +21,29 @@ Initially, your organization will be provided with defined maximum and minimum v
 List of configurable characteristics and quotas for your organization:
 
 - **Execution Microcredits**
-    
-    A 1 platform credit equals 1 million microcredits. Depending on the minimum execution fee (see corresponding section), users may spend less than 1 credit per scenario execution.
-    
+
+  A 1 platform credit equals 1 million microcredits. Depending on the minimum execution fee (see corresponding section), users may spend less than 1 credit per scenario execution.
+
 - **Plug&Play Microtokens**
-    
-    1 token equals 1 million microtokens. Used for Plug&Play nodes (e.g., AI nodes without connection setup), as well as for some integrations.
-    
+
+  1 token equals 1 million microtokens. Used for Plug&Play nodes (e.g., AI nodes without connection setup), as well as for some integrations.
+
 - **Active Scenarios Limit**
 - **Parallel Executions Limit**
 - **Min Execution Charging Period (Microseconds)**
-    
-    1 second equals 1 million microseconds. By default, 1 credit (1 million microcredits) is charged for every 30 seconds of scenario execution. You can reduce the charging interval. For example, setting it to “3000000” will charge 0.1 credit (or 100,000 microcredits) every 3 seconds of execution.
-    
+
+  1 second equals 1 million microseconds. By default, 1 credit (1 million microcredits) is charged for every 30 seconds of scenario execution. You can reduce the charging interval. For example, setting it to “3000000” will charge 0.1 credit (or 100,000 microcredits) every 3 seconds of execution.
+
 - **AI Assistant Requests Limit**
 - **Connected Accounts Limit**
 - **Minimum Trigger Interval (Seconds)**
 - **Execution History Availability Period (Minutes)**
 
-<iframe 
-  src="https://app.arcade.software/share/BCAAvZfetsHHgBzDsxaX" 
-  width="100%" 
-  height="600" 
-  frameBorder="0" 
+<iframe
+  src="https://app.arcade.software/share/BCAAvZfetsHHgBzDsxaX"
+  width="100%"
+  height="600"
+  frameBorder="0"
   allowFullScreen
 ></iframe>
 
@@ -63,11 +63,11 @@ You will need the ID of the created plan later. Its value can be found in the "I
 
 Below is an interactive video showing how to create a plan.
 
-<iframe 
-  src="https://app.arcade.software/share/1z23Oq8QAglI8kmnWUOp" 
-  width="100%" 
-  height="600" 
-  frameBorder="0" 
+<iframe
+  src="https://app.arcade.software/share/1z23Oq8QAglI8kmnWUOp"
+  width="100%"
+  height="600"
+  frameBorder="0"
   allowFullScreen
 ></iframe>
 
