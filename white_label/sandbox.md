@@ -34,7 +34,7 @@ Below is an interactive video showing token generation
   height="600"
   frameBorder="0"
   allowFullScreen
-></iframe>
+>
 
 ### Using token
 
