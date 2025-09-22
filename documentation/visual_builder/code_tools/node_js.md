@@ -4,22 +4,14 @@ Article Description: Running Node.js scripts within Latenode for extended functi
 Published: Yes  
 Suggested: No
 
-<<<<<<< HEAD
-The [JavaScript](/introduction) node allows you to write and execute JavaScript code, import npm libraries, and handle various data processing tasks. This node provides robust support for integrating custom code into workflows, enhancing the flexibility and functionality of your scenarios.
-=======
 The [JavaScript](#broken-link-was-here) node allows you to write and execute JavaScript code, import npm libraries, and handle various data processing tasks. This node provides robust support for integrating custom code into workflows, enhancing the flexibility and functionality of your scenarios.
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ## Adding Code to a Scenario
 
 To add code to a scenario, follow these steps:
 
 1. Click on one of the buttons to add a node.
-<<<<<<< HEAD
-2. In the application selection window, choose the [JavaScript](/introduction) node.
-=======
 2. In the application selection window, choose the [JavaScript](#broken-link-was-here) node.
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ![Untitled](/img/placeholder.webp)
 
@@ -31,11 +23,7 @@ To add code to a scenario, follow these steps:
 
 ### Using Data from Previous Nodes in Code
 
-<<<<<<< HEAD
-The code generated in the [JavaScript](/introduction) node can utilize the output data from previous nodes in the scenario. For example, in a JavaScript node, you can reference a parameter passed to the **Trigger on Webhook** node via an HTTP request. To do this, follow these steps:
-=======
 The code generated in the [JavaScript](#broken-link-was-here) node can utilize the output data from previous nodes in the scenario. For example, in a JavaScript node, you can reference a parameter passed to the **Trigger on Webhook** node via an HTTP request. To do this, follow these steps:
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 - Write an expression to define a constant using `const =`.
 - Select the necessary parameter from the previous nodes.
@@ -50,11 +38,7 @@ When adding data from other nodes, part of the expression may be wrapped in back
 
 ### Passing Processed Data to Subsequent Nodes
 
-<<<<<<< HEAD
-The result of the [JavaScript](/introduction) node can be a string, numerical value, JSON object, etc. The output data from the **JavaScript** node can also be used in other nodes within the scenario. For example, a parameter generated in the **JavaScript** node can be recorded as a variable. To do this:
-=======
 The result of the [JavaScript](#broken-link-was-here) node can be a string, numerical value, JSON object, etc. The output data from the **JavaScript** node can also be used in other nodes within the scenario. For example, a parameter generated in the **JavaScript** node can be recorded as a variable. To do this:
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 1. In the **SetVariables** node, click on the **Value** field.
 
@@ -68,26 +52,18 @@ This way, you can efficiently pass and utilize processed data between nodes in y
 
 ### Using Variables
 
-<<<<<<< HEAD
 Variables created within the scenario or global variables can also be used in the [JavaScript](/introduction) node.
 
 :::tip
-Learn more about using variables in the JavaScript node [here](/introduction). Learn more about using global variables in the **JavaScript** node [here](/introduction).
-=======
 Variables created within the scenario or global variables can also be used in the [JavaScript](#broken-link-was-here) node.
 
 :::tip
 Learn more about using variables in the JavaScript node [here](#broken-link-was-here). Learn more about using global variables in the **JavaScript** node [here](#broken-link-was-here).
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 :::
 
 ### Processing Files or Arrays of Files
 
-<<<<<<< HEAD
-The [JavaScript](/introduction) node can be used to process files or arrays of files sent to the scenario, for example, by sending a request to the **Trigger on Webhook** node.
-=======
 The [JavaScript](#broken-link-was-here) node can be used to process files or arrays of files sent to the scenario, for example, by sending a request to the **Trigger on Webhook** node.
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ```jsx
 async function run({execution_id, input, data, page}) {
@@ -176,41 +152,25 @@ export default async function run({execution_id, input, data, store, db}) {
 
 ## Custom Parameters in JavaScript
 
-<<<<<<< HEAD
-Custom parameters in the [JavaScript](/introduction) node allow you to externalize certain parts of the code into special input fields, eliminating the need to edit the code itself.
-=======
 Custom parameters in the [JavaScript](#broken-link-was-here) node allow you to externalize certain parts of the code into special input fields, eliminating the need to edit the code itself.
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 For example, if your code uses an API key, you can generate a separate input field for this parameter in the JavaScript node. This way, you only need to change the value in the designated field rather than modifying the code directly when updating the API key.
 
 :::tip
-<<<<<<< HEAD
-Learn more about all possible custom parameters [here](/introduction).
-=======
 Learn more about all possible custom parameters [here](#broken-link-was-here).
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 :::
 
 ![Untitled](/img/placeholder.webp)
 
 ## Logging
 
-<<<<<<< HEAD
-Logging in the [JavaScript](/introduction) node is available using the `console.log` command. Logged data will be displayed in the **Log** tab.
-=======
 Logging in the [JavaScript](#broken-link-was-here) node is available using the `console.log` command. Logged data will be displayed in the **Log** tab.
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ![Untitled](/img/placeholder.webp)
 
 ## Using NPM Packages
 
-<<<<<<< HEAD
-The [JavaScript](/introduction) node supports the import of **npm** libraries using the `import` statement. For example, importing and using the "lodash" library:
-=======
 The [JavaScript](#broken-link-was-here) node supports the import of **npm** libraries using the `import` statement. For example, importing and using the "lodash" library:
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 ![Untitled](/img/placeholder.webp)
 
@@ -289,11 +249,7 @@ export default async function run({ execution_id, input, data }) {
 
 ## JavaScript Node Limitations
 
-<<<<<<< HEAD
-The maximum execution time for the [JavaScript](/introduction) node is **2 minutes**.
-=======
 The maximum execution time for the [JavaScript](#broken-link-was-here) node is **2 minutes**.
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
 
 :::tip
 You can add multiple JavaScript nodes to a scenario for sequential execution to handle more complex tasks.
