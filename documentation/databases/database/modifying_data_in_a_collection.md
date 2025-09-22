@@ -11,9 +11,7 @@ When you want to modify data in a collection, you need to select objects and app
 - specify the identifier of a specific object
 <<<<<<< HEAD
 - apply a set of filters to select multiple objects (see [querrying collection](/introduction))
-=======
-- apply a set of filters to select multiple objects (see [querrying collection](#broken-link-was-here))
->>>>>>> 61c02578c222cfc13f406aedd8bc847fdf67cd50
+
 
 ## Modifiers
 
