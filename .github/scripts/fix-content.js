@@ -15,46 +15,77 @@ function fixContent() {
         let content = fs.readFileSync(filePath, 'utf8');
         const originalContent = content;
 
-        // --- ЭТАП 1: Умное исправление синтаксиса MDX (<...>) ---
-        content = content.replace(/<([^>/\s]+)>/g, (match, innerContent) => {
-            // Это регулярное выражение ищет <слово> но игнорирует <слово с пробелом> или </слово>
-            // Это безопасный способ исправить только плейсхолдеры.
-            console.log(`[FIX MDX] в ${file}: исправлена конструкция "${match}"`);
+        // --- ЭТАП 1: Умное исправление синтаксиса MDX ---
+        content = content.replace(/<([^>]+)>/g, (match, innerContent) => {
+            const tagName = innerContent.split(/[\s>]/)[0];
+            // Игнорируем валидные HTML/JSX теги, чтобы не сломать их
+            if (innerContent.startsWith('/') || innerContent.endsWith('/') || innerContent.includes('=')) return match;
+            if (/^[A-Z]/.test(tagName)) return match; // React-компоненты
+            const knownHtmlTags = new Set(['br', 'hr', 'img', 'div', 'p', 'span', 'a', 'b', 'i', 'strong', 'em', 'code', 'pre', 'details', 'summary']);
+            if (knownHtmlTags.has(tagName)) return match;
+
+            console.log(`[FIX MDX <...>] в ${file}: исправлена конструкция "${match}"`);
             totalFixes++;
             return `\`${match}\``;
         });
 
+        // --- ЭТАП 2: Удаление лишних закрывающих тегов ---
+        // Ищет одинокий </...> на строке, где нет открывающего тега
+        content = content.split('\n').map(line => {
+            const closingTagMatch = line.match(/<\/([a-zA-Z]+)>/);
+            if (closingTagMatch) {
+                const tagName = closingTagMatch[1];
+                const openingTagRegex = new RegExp(`<${tagName}`);
+                if (!line.match(openingTagRegex)) {
+                    console.log(`[FIX MDX /] в ${file}: удален лишний закрывающий тег "${closingTagMatch[0]}"`);
+                    totalFixes++;
+                    return line.replace(closingTagMatch[0], '');
+                }
+            }
+            return line;
+        }).join('\n');
 
-        // --- ЭТАП 2: Исправление путей изображений и замена битых ссылок ---
+        // --- ЭТАП 3: Исправление путей изображений и замена битых ссылок ---
         content = content.replace(/!\[(.*?)\]\((.*?)\)/g, (match, altText, imagePath) => {
-            if (imagePath.startsWith('http')) return match; // Игнорируем внешние ссылки
-
+            if (imagePath.startsWith('http')) return match;
             try {
                 let decodedPath = decodeURIComponent(imagePath);
-                // Удаляем хеш, который Notion добавляет к папкам с изображениями
                 let cleanedPath = decodedPath.replace(/ ([a-f0-9]{32})\//, '/');
-
-                // Проверяем, существует ли файл по очищенному пути
                 const absPath = path.resolve(fileDir, cleanedPath);
                 if (!fs.existsSync(absPath)) {
-                    // Если файла нет, заменяем на универсальную заглушку
                     console.warn(`[PLACEHOLDER] Битая картинка в ${file}: "${imagePath}" -> "/img/placeholder.webp"`);
                     totalFixes++;
-                    // ВАЖНО: Docusaurus поймет этот путь как static/img/placeholder.webp
                     return `![${altText}](/img/placeholder.webp)`;
                 }
-
                 if (cleanedPath !== decodedPath) {
                     console.log(`[REPAIR PATH] в ${file}: "${imagePath}" -> "${cleanedPath}"`);
                     totalFixes++;
                     return `![${altText}](${cleanedPath})`;
                 }
-
-            } catch (e) { /* Игнорируем ошибки */ }
+            } catch (e) {}
             return match;
         });
 
-        // Сохраняем файл, только если были изменения
+        // --- ЭТАП 4: Конвертация нестандартных <aside> в Admonitions ---
+        content = content.replace(/````<aside>````\s*([\s\S]*?)\s*<\/aside>/g, (match, innerContent) => {
+            let admonitionType = 'note';
+            let title = '';
+            let cleanedContent = innerContent.trim();
+            if (cleanedContent.startsWith('❓')) {
+                admonitionType = 'note';
+                title = 'Question';
+                cleanedContent = cleanedContent.replace('❓', '').trim();
+            } else if (cleanedContent.startsWith('💡')) {
+                admonitionType = 'tip';
+                title = 'Hint';
+                cleanedContent = cleanedContent.replace('💡', '').trim();
+            }
+            console.log(`[CONVERT ASIDE] в ${file}: конвертирован блок <aside> в :::${admonitionType}`);
+            totalFixes++;
+            if (title) return `:::${admonitionType}[${title}]\n\n${cleanedContent}\n\n:::`;
+            return `:::${admonitionType}\n\n${cleanedContent}\n\n:::`;
+        });
+
         if (content !== originalContent) {
             fs.writeFileSync(filePath, content, 'utf8');
         }
