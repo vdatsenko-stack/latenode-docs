@@ -80,7 +80,7 @@ To add a new Key-Value pair, use the **Add a header** button (**1**). To delete 
 
 ![brave_YPKF70KhOm.png](./http_request/brave_ypkf70khom.png)
 
-> 💡 When authorizing via a Bearer token, one of the request headers should be the pair with the Key `Authorization` and the Value `Bearer ```````````<token>```````````.
+> 💡 When authorizing via a Bearer token, one of the request headers should be the pair with the Key `Authorization` and the Value `Bearer ````````````<token>````````````.
 
 ### **Authorization**
 
