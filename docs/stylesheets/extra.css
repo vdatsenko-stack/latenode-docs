@@ -1,56 +1,11 @@
 :root {
+  /* Задаем основной фирменный цвет Latenode */
   --md-primary-fg-color:        #6345F5;
   --md-primary-fg-color--light: #8A72F7;
   --md-primary-fg-color--dark:  #4B32D3;
 }
 
-/* ========== Светлая тема ========== */
-:root {
-  --md-default-bg-color: #ffffff;
-  --md-default-fg-color: #1c1c1c;
-}
-
-/* ========== Тёмная тема ========== */
+/* Опционально: делаем цвет текста в темной теме чуть мягче */
 [data-md-color-scheme="slate"] {
-  --md-default-bg-color: #181820;
   --md-default-fg-color: rgba(255, 255, 255, 0.87);
-}
-
-/* === Mintlify hover bubble effect === */
-.md-nav__link {
-  border-radius: 8px;
-  transition: background-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-}
-
-.md-nav__link:hover {
-  background-color: rgba(99, 69, 245, 0.15);
-  box-shadow: 0 2px 6px rgba(99, 69, 245, 0.25);
-  transform: translateX(2px);
-  color: var(--md-primary-fg-color);
-}
-
-/* Активный элемент меню */
-.md-nav__link--active {
-  background-color: rgba(99, 69, 245, 0.25);
-  color: #fff !important;
-  font-weight: 600;
-}
-
-/* Акцент для текущей секции */
-.md-nav__item--active > .md-nav__link {
-  color: var(--md-primary-fg-color);
-}
-
-/* Немного мягче текст бокового меню */
-.md-nav__link {
-  color: rgba(255, 255, 255, 0.85);
-}
-
-/* Поддержка светлой темы */
-[data-md-color-scheme="default"] .md-nav__link {
-  color: #2b2b2b;
-}
-[data-md-color-scheme="default"] .md-nav__link:hover {
-  background-color: rgba(99, 69, 245, 0.1);
-  color: #6345F5;
 }
