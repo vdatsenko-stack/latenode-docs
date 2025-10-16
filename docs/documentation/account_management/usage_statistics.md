@@ -16,7 +16,7 @@ Access a dedicated page to:
 To ensure your scenarios run smoothly, monitor your current credit balance. If there are no available credits, the scenario will not execute.
 
 The number of available credits depends on your selected pricing plan.
-
+ 
 :::tip
 Running a single node does not require credits, enabling free scenario customization. When executing a scenario that includes a Nodul type scenario, credits will be consumed based on the execution time of the main scenario. The execution time of the Nodul scenario itself is not counted towards credit usage.
 :::
