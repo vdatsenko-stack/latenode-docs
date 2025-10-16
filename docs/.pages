@@ -1,0 +1,7 @@
+# Этот файл определяет порядок разделов верхнего уровня
+nav:
+  - "Introduction": introduction.md
+  - "Documentation": documentation # <-- Просто ссылка на папку
+  - "Integrations": integrations   # <-- Просто ссылка на папку
+  - "White Label": white_label     # <-- Просто ссылка на папку
+  - "Changelog": changelog         # <-- Просто ссылка на папку

@@ -1,0 +1,10 @@
+# Этот файл управляет порядком внутри раздела "Documentation"
+# Пути здесь указываются относительно папки 'documentation'
+nav:
+  - introduction.md
+  - get_started
+  - visual_builder
+  - ai_agents
+  - databases
+  - account_management
+  - faq

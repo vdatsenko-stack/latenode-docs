@@ -1,0 +1,9 @@
+# Этот файл управляет порядком внутри раздела "White Label"
+nav:
+  - index.md
+  - overview.md
+  - api_usage.md
+  - installing_the_embedded_sdk.md
+  - user_authorization.md
+  - administration.md
+  - sandbox.md
