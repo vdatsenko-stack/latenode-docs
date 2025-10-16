@@ -2,6 +2,8 @@
 # === ФАЙЛ 1: mkdocs.yml (в корне проекта) ===
 # ============================================
 
+site_url: http://146.190.122.174/
+
 site_name: Latenode Documentation
 
 theme:
