@@ -1,6 +1,6 @@
-# ============================================
-# === ФАЙЛ 1: mkdocs.yml (в корне проекта) ===
-# ============================================
+# =======================================================
+# === FINAL mkdocs.yml WITH ENGLISH FOOTER NAVIGATION ===
+# =======================================================
 
 site_url: http://146.190.122.174/
 
@@ -33,6 +33,27 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+  
+  # --- START OF THE UPDATED FOOTER SECTION ---
+
+  # Copyright notice in English
+  copyright: Copyright &copy; 2025 Latenode
+
+  # Footer navigation in English, mirroring the main site navigation
+  footer:
+    links:
+      - name: "Introduction"
+        link: /introduction/
+      - name: "Documentation"
+        link: /documentation/
+      - name: "Integrations"
+        link: /integrations/
+      - name: "White Label"
+        link: /white_label/
+      - name: "Changelog"
+        link: /changelog/
+
+  # --- END OF THE UPDATED FOOTER SECTION ---
 
 plugins:
   - search
@@ -40,5 +61,3 @@ plugins:
 
 extra_css:
   - stylesheets/extra.css
-
-# В ЭТОМ ФАЙЛЕ НЕ ДОЛЖНО БЫТЬ СЕКЦИИ 'nav:'
