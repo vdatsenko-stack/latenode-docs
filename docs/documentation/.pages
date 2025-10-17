@@ -1,27 +1,28 @@
 nav:
   - 🚀 Get Started:
       - Introduction: get_started/introduction.md
-      - Creating your first scenario (reference make n8n): get_started/creating_your_first_scenario_референс_make_n8n.md
       - How to get Support: get_started/how_to_get_support.md
 
   - 🛠️ Visual builder:
       - Interface: visual_builder/interface.md
       - Building Scenarios: visual_builder/building_scenarios.md
+      - Passing Data!! - Helper widget: visual_builder/passing_data.md
+      - Publishing Scenarios: visual_builder/publishing_scenarios.md
       - Debugging Scenarios: visual_builder/debugging_scenarios.md
       - Execution History: visual_builder/execution_history.md
-      - Passing Data!! - Helper widget: visual_builder/passing_data.md
       - Routes: visual_builder/routes.md
+      - Version History: visual_builder/version_history.md
 
       - Variables:
-          - Local Variables: visual_builder/variables/creating_and_editing_variables.md
-          - Global Variables: visual_builder/variables/global_variables_in_javascript_node.md
+          - Creating and Editing Variables: visual_builder/variables/creating_and_editing_variables.md
           - Variables in JavaScript Node: visual_builder/variables/variables_in_javascript_node.md
+          - Global Variables in JavaScript Node: visual_builder/variables/global_variables_in_javascript_node.md
 
       - Code tools:
           - Code examples: visual_builder/code_tools/code_examples.md
           - Custom JS Parameters: visual_builder/code_tools/custom_js_parameters.md
           - Headless browser: visual_builder/code_tools/headless_browser.md
-          - JavaScript - Node.js: visual_builder/code_tools/javascript.md
+          - JavaScript: visual_builder/code_tools/javascript.md
           - Managing files on FTP using JS: visual_builder/code_tools/managing_files_on_ftp_using_js.md
           - Node.js: visual_builder/code_tools/node_js.md
           - Using AI to Generate Code (AI Node): visual_builder/code_tools/using_ai_to_generate_code_ai_node.md
@@ -39,16 +40,13 @@ nav:
           - Operators in Helper Widget: visual_builder/operators/operators_in_helper_widget.md
           - Variables: visual_builder/operators/variables.md
 
-      - Publishing Scenarios: visual_builder/publishing_scenarios.md
-      - Version History: visual_builder/version_history.md
-
   - 🦾 AI Agents:
       - AI Agent Node: ai_agents/ai_agent_node.md
+      - AI Agent Examples: ai_agents/ai_agent_examples.md
       - Agent Design Foundations: ai_agents/agent_design_foundations.md
       - Writing Effective Instructions (Prompting guide): ai_agents/writing_effective_instructions_prompting_guide.md
-      - AI Agent Examples: ai_agents/ai_agent_examples.md
       - Tool Design for AI Agents: ai_agents/tool_design_for_ai_agents.md
-      - Multi-Agent: ai_agents/multiagent_systems.md
+      - Multi-Agent Systems: ai_agents/multiagent_systems.md
       - Guardrails for AI Agents: ai_agents/guardrails_for_ai_agents.md
 
   - 🗃️ Databases:
@@ -56,6 +54,7 @@ nav:
           - AI Data Storage: databases/rag_database/ai_data_storage.md
           - RAG Search Node: databases/rag_database/rag_search_node.md
           - Using AI Agent with RAG: databases/rag_database/using_ai_agent_with_rag.md
+
       - Database:
           - Querying Collection: databases/database/querying_collection.md
           - Modifying Data in a Collection: databases/database/modifying_data_in_a_collection.md
@@ -68,7 +67,7 @@ nav:
 
   - ❓ FAQ:
       - What is Credits: faq/what_is_credits.md
-      - What is Plug n Play tokens: faq/what_is_pnp_tokens.md
-      - What is Plug n Play nodes: faq/what_is_pnp_nodes.md
+      - What is Plug n Play Tokens: faq/what_is_pnp_tokens.md
+      - What is Plug n Play Nodes: faq/what_is_pnp_nodes.md
       - Platform Limits: faq/platform_limits.md
       - Possible Errors: faq/possible_errors.md
