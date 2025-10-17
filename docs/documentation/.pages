@@ -1,63 +1,11 @@
-title: "📘 Documentation"
+# Этот файл управляет порядком и отображением внутри раздела "Documentation"
+# Пути здесь указываются относительно папки 'documentation'
+# Используются только существующие папки, все ссылки генерируются MkDocs автоматически
+
 nav:
-  - "🚀 Get Started":
-      - get_started/introduction.md
-      - get_started/how_to_get_support.md
-
-  - "🧩 Visual Builder":
-      - visual_builder/interface.md
-      - visual_builder/building_scenarios.md
-      - visual_builder/passing_data.md
-      - visual_builder/publishing_scenarios.md
-      - visual_builder/routes.md
-      - visual_builder/variables/creating_and_editing_variables.md
-      - visual_builder/variables/global_variables_in_javascript_node.md
-      - visual_builder/variables/variables_in_javascript_node.md
-      - visual_builder/code_tools/code_examples.md
-      - visual_builder/code_tools/custom_js_parameters.md
-      - visual_builder/code_tools/headless_browser.md
-      - visual_builder/code_tools/javascript.md
-      - visual_builder/code_tools/managing_files_on_ftp_using_js.md
-      - visual_builder/code_tools/node_js.md
-      - visual_builder/code_tools/using_ai_to_generate_code_ai_node.md
-      - visual_builder/code_tools/write_js_code_on_your_ai_ide_cursor_windsurf_gi.md
-      - visual_builder/operators/ai.md
-      - visual_builder/operators/array_functions.md
-      - visual_builder/operators/comparisons.md
-      - visual_builder/operators/functions.md
-      - visual_builder/operators/functions_2.md
-      - visual_builder/operators/key_fields.md
-      - visual_builder/operators/mathematical.md
-      - visual_builder/operators/variables.md
-      - visual_builder/execution_history.md
-      - visual_builder/debugging_scenarios.md
-      - visual_builder/version_history.md
-
-  - "🦾 AI Agents":
-      - ai_agents/ai_agent_node.md
-      - ai_agents/ai_agent_examples.md
-      - ai_agents/writing_effective_instructions_prompting_guide.md
-      - ai_agents/tool_design_for_ai_agents.md
-      - ai_agents/multiagent_systems.md
-      - ai_agents/guardrails_for_ai_agents.md
-      - ai_agents/agent_design_foundations.md
-
-  - "🗃️ Databases":
-      - databases/database/querying_collection.md
-      - databases/database/modifying_data_in_a_collection.md
-      - databases/database/using_databases_from_js_code.md
-      - databases/rag_database/ai_data_storage.md
-      - databases/rag_database/rag_search_node.md
-      - databases/rag_database/using_ai_agent_with_rag.md
-
-  - "👤 Account Management":
-      - account_management/plans_overview.md
-      - account_management/billing_page_and_managing_subscription.md
-      - account_management/usage_statistics.md
-
-  - "❓ FAQ":
-      - faq/what_is_credits.md
-      - faq/what_is_pnp_tokens.md
-      - faq/what_is_pnp_nodes.md
-      - faq/platform_limits.md
-      - faq/possible_errors.md
+  - "🚀 Get Started": get_started
+  - "🧩 Visual Builder": visual_builder
+  - "🦾 AI Agents": ai_agents
+  - "🗃️ Databases": databases
+  - "👤 Account Management": account_management
+  - "❓ FAQ": faq
