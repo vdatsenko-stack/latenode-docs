@@ -18,9 +18,6 @@ theme:
     - navigation.tabs       # Вкладки сверху
     - navigation.sections   # Боковые секции
     - navigation.expand     # Раскрывающиеся подразделы
-    - navigation.top
-    - navigation.tracking
-    - toc.integrate
 
   palette:
     - scheme: slate
@@ -40,6 +37,8 @@ theme:
   copyright: Copyright &copy; 2025 Latenode
   footer:
     links:
+      - name: "🏠 Home"
+        link: /
       - name: "📚 Documentation"
         link: /documentation/
       - name: "🧩 Integrations"
@@ -61,42 +60,8 @@ extra:
 
 # --- MAIN NAVIGATION ---
 nav:
-  - Introduction: index.md
-  - 📚 Documentation:
-      - Overview: documentation/index.md
-      - 🚀 Get Started:
-          - Introduction: documentation/get-started/introduction.md
-          - Installation: documentation/get-started/installation.md
-          - Quickstart: documentation/get-started/quickstart.md
-      - 🛠️ Visual Builder:
-          - Overview: documentation/visual-builder/index.md
-          - Nodes:
-              - Basic Nodes: documentation/visual-builder/nodes/basic.md
-              - Advanced Nodes: documentation/visual-builder/nodes/advanced.md
-          - Workflows:
-              - Create & Run: documentation/visual-builder/workflows/create-run.md
-              - Export & Import: documentation/visual-builder/workflows/export-import.md
-      - 🦾 AI Agents:
-          - Overview: documentation/ai-agents/index.md
-          - Build Agent: documentation/ai-agents/build.md
-          - Integrations: documentation/ai-agents/integrations.md
-          - Prompts:
-              - System Prompts: documentation/ai-agents/prompts/system.md
-              - User Prompts: documentation/ai-agents/prompts/user.md
-      - 🗃️ Databases:
-          - Overview: documentation/databases/index.md
-          - Connections: documentation/databases/connections.md
-          - Query Examples: documentation/databases/queries.md
-      - 👤 Account Management:
-          - Overview: documentation/account/index.md
-          - Profile Settings: documentation/account/profile.md
-          - API Keys: documentation/account/api-keys.md
-          - Team Management:
-              - Add Members: documentation/account/team/add.md
-              - Permissions: documentation/account/team/permissions.md
-      - ❓ FAQ:
-          - General: documentation/faq/general.md
-          - Troubleshooting: documentation/faq/troubleshooting.md
+  - 🏠 Home: index.md
+  - 📚 Documentation: documentation/index.md
   - 🧩 Integrations: integrations/index.md
   - 🎨 White Label: white_label/index.md
   - 📝 Changelog: changelog/index.md
