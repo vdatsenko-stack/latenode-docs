@@ -1,23 +1,24 @@
-# ===============================================
-# === LATENODE DOCUMENTATION CONFIG (UPDATED) ===
-# ===============================================
+# =======================================================
+# === FINAL mkdocs.yml WITH ENGLISH FOOTER NAVIGATION ===
+# =======================================================
+
+site_url: http://146.190.122.174/
 
 site_name: Latenode Documentation
-site_url: http://146.190.122.174/
 
 theme:
   name: material
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+
   logo: assets/svg1000transparent.svg
   favicon: assets/svg1000transparent.svg
 
   font:
     text: Inter
     code: Roboto Mono
-
-  features:
-    - navigation.tabs       # Вкладки сверху
-    - navigation.sections   # Боковые секции
-    - navigation.expand     # Раскрывающиеся подразделы
 
   palette:
     - scheme: slate
@@ -32,13 +33,17 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
+  
+  # --- START OF THE UPDATED FOOTER SECTION ---
 
-  # --- FOOTER ---
+  # Copyright notice in English
   copyright: Copyright &copy; 2025 Latenode
+
+  # Footer navigation in English, mirroring the main site navigation
   footer:
     links:
       - name: "🏠 Home"
-        link: /
+        link: /introduction/
       - name: "📚 Documentation"
         link: /documentation/
       - name: "🧩 Integrations"
@@ -47,6 +52,8 @@ theme:
         link: /white_label/
       - name: "📝 Changelog"
         link: /changelog/
+
+  # --- END OF THE UPDATED FOOTER SECTION ---
 
 plugins:
   - search
@@ -57,11 +64,3 @@ extra_css:
 
 extra:
   generator: false
-
-# --- MAIN NAVIGATION ---
-nav:
-  - 🏠 Home: index.md
-  - 📚 Documentation: documentation/index.md
-  - 🧩 Integrations: integrations/index.md
-  - 🎨 White Label: white_label/index.md
-  - 📝 Changelog: changelog/index.md
