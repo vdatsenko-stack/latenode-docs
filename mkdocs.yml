@@ -1,24 +1,26 @@
-# =======================================================
-# === FINAL mkdocs.yml WITH ENGLISH FOOTER NAVIGATION ===
-# =======================================================
-
-site_url: http://146.190.122.174/
+# ===============================================
+# === LATENODE DOCUMENTATION CONFIG (UPDATED) ===
+# ===============================================
 
 site_name: Latenode Documentation
+site_url: http://146.190.122.174/
 
 theme:
   name: material
-  features:
-    - navigation.tabs
-    - navigation.sections
-    - navigation.expand
-
   logo: assets/svg1000transparent.svg
   favicon: assets/svg1000transparent.svg
 
   font:
     text: Inter
     code: Roboto Mono
+
+  features:
+    - navigation.tabs       # Вкладки сверху
+    - navigation.sections   # Боковые секции
+    - navigation.expand     # Раскрывающиеся подразделы
+    - navigation.top
+    - navigation.tracking
+    - toc.integrate
 
   palette:
     - scheme: slate
@@ -33,27 +35,19 @@ theme:
       toggle:
         icon: material/weather-night
         name: Switch to dark mode
-  
-  # --- START OF THE UPDATED FOOTER SECTION ---
 
-  # Copyright notice in English
+  # --- FOOTER ---
   copyright: Copyright &copy; 2025 Latenode
-
-  # Footer navigation in English, mirroring the main site navigation
   footer:
     links:
-      - name: "Introduction"
-        link: /introduction/
-      - name: "Documentation"
+      - name: "📚 Documentation"
         link: /documentation/
-      - name: "Integrations"
+      - name: "🧩 Integrations"
         link: /integrations/
-      - name: "White Label"
+      - name: "🎨 White Label"
         link: /white_label/
-      - name: "Changelog"
+      - name: "📝 Changelog"
         link: /changelog/
-
-  # --- END OF THE UPDATED FOOTER SECTION ---
 
 plugins:
   - search
@@ -64,3 +58,45 @@ extra_css:
 
 extra:
   generator: false
+
+# --- MAIN NAVIGATION ---
+nav:
+  - Introduction: index.md
+  - 📚 Documentation:
+      - Overview: documentation/index.md
+      - 🚀 Get Started:
+          - Introduction: documentation/get-started/introduction.md
+          - Installation: documentation/get-started/installation.md
+          - Quickstart: documentation/get-started/quickstart.md
+      - 🛠️ Visual Builder:
+          - Overview: documentation/visual-builder/index.md
+          - Nodes:
+              - Basic Nodes: documentation/visual-builder/nodes/basic.md
+              - Advanced Nodes: documentation/visual-builder/nodes/advanced.md
+          - Workflows:
+              - Create & Run: documentation/visual-builder/workflows/create-run.md
+              - Export & Import: documentation/visual-builder/workflows/export-import.md
+      - 🦾 AI Agents:
+          - Overview: documentation/ai-agents/index.md
+          - Build Agent: documentation/ai-agents/build.md
+          - Integrations: documentation/ai-agents/integrations.md
+          - Prompts:
+              - System Prompts: documentation/ai-agents/prompts/system.md
+              - User Prompts: documentation/ai-agents/prompts/user.md
+      - 🗃️ Databases:
+          - Overview: documentation/databases/index.md
+          - Connections: documentation/databases/connections.md
+          - Query Examples: documentation/databases/queries.md
+      - 👤 Account Management:
+          - Overview: documentation/account/index.md
+          - Profile Settings: documentation/account/profile.md
+          - API Keys: documentation/account/api-keys.md
+          - Team Management:
+              - Add Members: documentation/account/team/add.md
+              - Permissions: documentation/account/team/permissions.md
+      - ❓ FAQ:
+          - General: documentation/faq/general.md
+          - Troubleshooting: documentation/faq/troubleshooting.md
+  - 🧩 Integrations: integrations/index.md
+  - 🎨 White Label: white_label/index.md
+  - 📝 Changelog: changelog/index.md
