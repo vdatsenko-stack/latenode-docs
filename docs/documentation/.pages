@@ -1,73 +1,73 @@
 nav:
   - 🚀 Get Started:
-      - Introduction: get_started/introduction.md
-      - How to get Support: get_started/how_to_get_support.md
+      - Introduction: get_started/introduction
+      - How to get Support: get_started/how_to_get_support
 
   - 🛠️ Visual builder:
-      - Interface: visual_builder/interface.md
-      - Building Scenarios: visual_builder/building_scenarios.md
-      - Passing Data!! - Helper widget: visual_builder/passing_data.md
-      - Publishing Scenarios: visual_builder/publishing_scenarios.md
-      - Debugging Scenarios: visual_builder/debugging_scenarios.md
-      - Execution History: visual_builder/execution_history.md
-      - Routes: visual_builder/routes.md
-      - Version History: visual_builder/version_history.md
+      - Interface: visual_builder/interface
+      - Building Scenarios: visual_builder/building_scenarios
+      - Passing Data!! - Helper widget: visual_builder/passing_data
+      - Publishing Scenarios: visual_builder/publishing_scenarios
+      - Debugging Scenarios: visual_builder/debugging_scenarios
+      - Execution History: visual_builder/execution_history
+      - Routes: visual_builder/routes
+      - Version History: visual_builder/version_history
 
       - Variables:
-          - Creating and Editing Variables: visual_builder/variables/creating_and_editing_variables.md
-          - Variables in JavaScript Node: visual_builder/variables/variables_in_javascript_node.md
-          - Global Variables in JavaScript Node: visual_builder/variables/global_variables_in_javascript_node.md
+          - Creating and Editing Variables: visual_builder/variables/creating_and_editing_variables
+          - Variables in JavaScript Node: visual_builder/variables/variables_in_javascript_node
+          - Global Variables in JavaScript Node: visual_builder/variables/global_variables_in_javascript_node
 
       - Code tools:
-          - Code examples: visual_builder/code_tools/code_examples.md
-          - Custom JS Parameters: visual_builder/code_tools/custom_js_parameters.md
-          - Headless browser: visual_builder/code_tools/headless_browser.md
-          - JavaScript: visual_builder/code_tools/javascript.md
-          - Managing files on FTP using JS: visual_builder/code_tools/managing_files_on_ftp_using_js.md
-          - Node.js: visual_builder/code_tools/node_js.md
-          - Using AI to Generate Code (AI Node): visual_builder/code_tools/using_ai_to_generate_code_ai_node.md
-          - Write JS code on your AI IDE (Cursor, Windsurf, GitHub Copilot etc.): visual_builder/code_tools/write_js_code_on_your_ai_ide_cursor_windsurf_gi.md
+          - Code examples: visual_builder/code_tools/code_examples
+          - Custom JS Parameters: visual_builder/code_tools/custom_js_parameters
+          - Headless browser: visual_builder/code_tools/headless_browser
+          - JavaScript: visual_builder/code_tools/javascript
+          - Managing files on FTP using JS: visual_builder/code_tools/managing_files_on_ftp_using_js
+          - Node.js: visual_builder/code_tools/node_js
+          - Using AI to Generate Code (AI Node): visual_builder/code_tools/using_ai_to_generate_code_ai_node
+          - Write JS code on your AI IDE (Cursor, Windsurf, GitHub Copilot etc.): visual_builder/code_tools/write_js_code_on_your_ai_ide_cursor_windsurf_gi
 
       - Operators:
-          - AI: visual_builder/operators/ai.md
-          - Array Functions: visual_builder/operators/array_functions.md
-          - Comparisons: visual_builder/operators/comparisons.md
-          - Mathematical: visual_builder/operators/mathematical.md
-          - Key Fields: visual_builder/operators/key_fields.md
-          - Functions: visual_builder/operators/functions.md
-          - Functions 2: visual_builder/operators/functions_2.md
-          - Functions Date/Time: visual_builder/operators/functions_date_time.md
-          - Operators in Helper Widget: visual_builder/operators/operators_in_helper_widget.md
-          - Variables: visual_builder/operators/variables.md
+          - AI: visual_builder/operators/ai
+          - Array Functions: visual_builder/operators/array_functions
+          - Comparisons: visual_builder/operators/comparisons
+          - Mathematical: visual_builder/operators/mathematical
+          - Key Fields: visual_builder/operators/key_fields
+          - Functions: visual_builder/operators/functions
+          - Functions 2: visual_builder/operators/functions_2
+          - Functions Date/Time: visual_builder/operators/functions_date_time
+          - Operators in Helper Widget: visual_builder/operators/operators_in_helper_widget
+          - Variables: visual_builder/operators/variables
 
   - 🦾 AI Agents:
-      - AI Agent Node: ai_agents/ai_agent_node.md
-      - AI Agent Examples: ai_agents/ai_agent_examples.md
-      - Agent Design Foundations: ai_agents/agent_design_foundations.md
-      - Writing Effective Instructions (Prompting guide): ai_agents/writing_effective_instructions_prompting_guide.md
-      - Tool Design for AI Agents: ai_agents/tool_design_for_ai_agents.md
-      - Multi-Agent Systems: ai_agents/multiagent_systems.md
-      - Guardrails for AI Agents: ai_agents/guardrails_for_ai_agents.md
+      - AI Agent Node: ai_agents/ai_agent_node
+      - AI Agent Examples: ai_agents/ai_agent_examples
+      - Agent Design Foundations: ai_agents/agent_design_foundations
+      - Writing Effective Instructions (Prompting guide): ai_agents/writing_effective_instructions_prompting_guide
+      - Tool Design for AI Agents: ai_agents/tool_design_for_ai_agents
+      - Multi-Agent Systems: ai_agents/multiagent_systems
+      - Guardrails for AI Agents: ai_agents/guardrails_for_ai_agents
 
   - 🗃️ Databases:
       - RAG Database:
-          - AI Data Storage: databases/rag_database/ai_data_storage.md
-          - RAG Search Node: databases/rag_database/rag_search_node.md
-          - Using AI Agent with RAG: databases/rag_database/using_ai_agent_with_rag.md
+          - AI Data Storage: databases/rag_database/ai_data_storage
+          - RAG Search Node: databases/rag_database/rag_search_node
+          - Using AI Agent with RAG: databases/rag_database/using_ai_agent_with_rag
 
       - Database:
-          - Querying Collection: databases/database/querying_collection.md
-          - Modifying Data in a Collection: databases/database/modifying_data_in_a_collection.md
-          - Using Databases from JS Code: databases/database/using_databases_from_js_code.md
+          - Querying Collection: databases/database/querying_collection
+          - Modifying Data in a Collection: databases/database/modifying_data_in_a_collection
+          - Using Databases from JS Code: databases/database/using_databases_from_js_code
 
   - 👤 Account Management:
-      - Plans Overview: account_management/plans_overview.md
-      - Managing Subscription: account_management/billing_page_and_managing_subscription.md
-      - Usage Statistics: account_management/usage_statistics.md
+      - Plans Overview: account_management/plans_overview
+      - Managing Subscription: account_management/billing_page_and_managing_subscription
+      - Usage Statistics: account_management/usage_statistics
 
   - ❓ FAQ:
-      - What is Credits: faq/what_is_credits.md
-      - What is Plug n Play Tokens: faq/what_is_pnp_tokens.md
-      - What is Plug n Play Nodes: faq/what_is_pnp_nodes.md
-      - Platform Limits: faq/platform_limits.md
-      - Possible Errors: faq/possible_errors.md
+      - What is Credits: faq/what_is_credits
+      - What is Plug n Play Tokens: faq/what_is_pnp_tokens
+      - What is Plug n Play Nodes: faq/what_is_pnp_nodes
+      - Platform Limits: faq/platform_limits
+      - Possible Errors: faq/possible_errors
