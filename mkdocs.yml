@@ -11,7 +11,6 @@ theme:
   features:
     - navigation.tabs
     - navigation.sections
-    - navigation.expand
 
   logo: assets/svg1000transparent.svg
   favicon: assets/svg1000transparent.svg
