@@ -1,7 +1,52 @@
-/* ==== брендовые переменные ==== */
+/* =========================
+   1) УБРАТЬ ЛИНИИ/ПОЛОСЫ
+   ========================= */
+
+/* Удаляем вертикальную линию слева от контента */
+.md-sidebar--primary + .md-content .md-content__inner {
+  border-left: none !important;
+}
+
+/* Убираем “полоску” внутри открытых групп в меню */
+.md-nav__item--nested > nav.md-nav {
+  border-left: none !important;
+  padding-left: .2rem;   /* лёгкий, почти незаметный сдвиг */
+  margin-left: 0;
+}
+
+/* =========================
+   2) БАЛАНС ШИРИНЫ/ОТСТУПОВ
+   ========================= */
+
+/* Общая ширина контейнера страницы (контента + сайдбаров) */
+.md-grid { 
+  max-width: 1200px;           /* было узко — делаем шире */
+}
+
+/* Карточка контента более “плоская” и аккуратная */
+.md-content { padding: 0 0 3rem; }
+.md-content__inner {
+  max-width: 920px;            /* оптимально для чтения */
+  padding: 1.6rem 2rem;        /* меньше воздуха */
+  margin: 0 auto;
+  background: var(--md-default-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+
+/* На очень широких экранах слегка расширяем */
+@media (min-width: 1400px) {
+  .md-grid { max-width: 1320px; }
+  .md-content__inner { max-width: 980px; }
+}
+
+/* =========================
+   3) ПИЛЮЛИ + РАЗДЕЛЫ
+   ========================= */
+
 :root {
-  --brand: #ff6ea8;                             /* твой цвет */
-  --pill-hover-bg: rgba(0,0,0,.06);             /* серый hover */
+  --brand: #ff6ea8;                         /* твой цвет */
+  --pill-hover-bg: rgba(0,0,0,.06);
   --pill-active-bg: color-mix(in srgb, var(--brand) 18%, transparent);
 }
 [data-md-color-scheme="slate"] {
@@ -9,28 +54,28 @@
   --pill-active-bg: color-mix(in srgb, var(--brand) 22%, transparent);
 }
 
-/* ==== разделы (группы) жирным ==== */
+/* Разделы жирным */
 .md-nav__item--nested > .md-nav__link {
   font-weight: 700;
   font-size: .8rem;
   color: var(--md-default-fg-color--lighter);
-  margin: .8rem 0 .25rem;
+  margin: .9rem 0 .25rem;
 }
 
-/* ==== базовый вид пункта + “пилюля” ==== */
+/* Пункты меню — “пилюли” */
 .md-nav__link {
   border-radius: 12px;
   padding: 6px 10px;
-  font-size: .88rem;
+  font-size: .9rem;
   transition: background .15s ease, color .15s ease;
 }
 
-/* hover — серая пилюля (только для неактивных) */
+/* Hover — серая пилюля */
 .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover {
   background: var(--pill-hover-bg);
 }
 
-/* активный пункт — заливка брендовым цветом */
+/* Активная — заливка брендовым и яркий текст */
 .md-nav__link--active,
 .md-nav__item .md-nav__link[aria-current="page"] {
   background: var(--pill-active-bg);
@@ -38,13 +83,6 @@
   font-weight: 600;
 }
 
-/* ==== лёгкое смещение содержимого у открытой папки ==== */
-/* Material кладёт дочернюю навигацию в <nav class="md-nav"> */
-.md-nav__item--nested > nav.md-nav {
-  margin-left: .25rem;          /* небольшой сдвиг */
-  border-left: 1px solid rgba(0,0,0,.06);
-  padding-left: .4rem;
-}
-[data-md-color-scheme="slate"] .md-nav__item--nested > nav.md-nav {
-  border-left: 1px solid rgba(255,255,255,.08);
-}
+/* Чуть компактнее оглавление справа */
+.md-sidebar--secondary .md-nav { font-size: .86rem; }
+.md-sidebar--secondary .md-nav__link--active { color: var(--brand); }
