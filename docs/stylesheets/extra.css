@@ -1,42 +1,94 @@
-/* ===== 1) МАСШТАБ КАК В РЕФЕ ===== */
-.md-typeset { font-size: 0.88rem; }                               /* основной текст меньше */
+/* ========== BRAND ========== */
+:root{
+  /* Latenode фирменный цвет */
+  --brand: #6345F5;
+  --brand-light: #8A72F7;
+  --brand-dark:  #4B32D3;
+
+  /* Material-переменные под наш бренд */
+  --md-primary-fg-color:        var(--brand);
+  --md-primary-fg-color--light: var(--brand-light);
+  --md-primary-fg-color--dark:  var(--brand-dark);
+  --md-accent-fg-color:         var(--brand);
+  --md-typeset-a-color:         var(--brand);
+
+  /* Пилюли */
+  --pill-hover-bg: rgba(0,0,0,.06);
+  --pill-active-bg: color-mix(in srgb, var(--brand) 18%, transparent);
+}
+[data-md-color-scheme="slate"]{
+  --md-default-fg-color: rgba(255,255,255,.87);
+  --md-primary-fg-color: var(--brand);
+  --md-accent-fg-color:  var(--brand);
+  --md-typeset-a-color:  var(--brand);
+
+  --pill-hover-bg: rgba(255,255,255,.08);
+  --pill-active-bg: color-mix(in srgb, var(--brand) 22%, transparent);
+}
+
+/* ========== ШРИФТЫ / МАСШТАБ / СЕТКА ========== */
+/* компактнее, как в референсе */
+.md-typeset{ font-size: 0.88rem !important; }  /* основной текст */
 .md-sidebar--primary .md-nav,
-.md-sidebar--secondary .md-nav { font-size: 0.84rem; }            /* оба сайдбара ещё компактнее */
-.md-nav__link { line-height: 1.2; }
+.md-sidebar--secondary .md-nav{ font-size: 0.84rem !important; } /* сайдбары */
+.md-nav__link{ line-height: 1.2 !important; }
 
-/* ===== 2) ИЕРАРХИЯ САЙДБАРА ===== */
-/* Секции ВЕРХНЕГО уровня: ЧЁРНЫЕ, ЖИРНЫЕ, ТОГО ЖЕ РАЗМЕРА */
-.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link{
-  color: var(--md-default-fg-color);   /* чёрный */
-  font-weight: 700;
-  font-size: inherit;                  /* тот же размер, что и пункты */
-  margin: .7rem 0 .25rem;
-}
-
-/* ВСЕ раскрывашки и обычные пункты — СЕРЫЕ */
-.md-sidebar--primary .md-nav__item .md-nav__link{
-  color: var(--md-default-fg-color--light);
-  font-weight: 400;
+/* ширины и «воздух» */
+.md-grid{ max-width: 1180px; }
+.md-content__inner{
+  max-width: 900px;
+  padding: 1.2rem 1.6rem;
+  margin: 0 auto;
+  background: var(--md-default-bg-color);
   border-radius: 12px;
-  padding: 6px 10px;
-  transition: background .15s ease, color .15s ease;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+@media (min-width: 1400px){
+  .md-grid{ max-width: 1280px; }
+  .md-content__inner{ max-width: 940px; }
 }
 
-/* Hover — серая пилюля (только неактивные) */
+/* убрать любые левые линии/полосы */
+.md-sidebar--primary + .md-content .md-content__inner,
+.md-nav__item--nested > nav.md-nav{ border-left: none !important; }
+
+/* ========== ЛЕВЫЙ САЙДБАР: ИЕРАРХИЯ И ЦВЕТА ========== */
+/* 1) СЕКЦИИ ВЕРХНЕГО УРОВНЯ — ЧЁРНЫЕ, ЖИРНЫЕ, ТОГО ЖЕ РАЗМЕРА */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link{
+  color: var(--md-default-fg-color) !important;     /* чёрный/основной */
+  font-weight: 700 !important;
+  font-size: inherit !important;                    /* тот же размер, что и пункты */
+  margin: .7rem 0 .25rem !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 2) ВСЕ ПРОЧИЕ ПУНКТЫ и раскрывашки — СЕРЫЕ */
+.md-sidebar--primary .md-nav__item .md-nav__link{
+  color: var(--md-default-fg-color--light) !important;
+  font-weight: 400 !important;
+  border-radius: 12px !important;
+  padding: 6px 10px !important;
+  transition: background .15s ease, color .15s ease !important;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+/* 3) Hover — СЕРАЯ «ПИЛЮЛЯ» (только неактивные) */
 .md-sidebar--primary .md-nav__item .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover{
-  background: var(--pill-hover-bg);
+  background: var(--pill-hover-bg) !important;
 }
 
-/* Активная — фирменная пилюля и текст */
+/* 4) Active — ФИОЛЕТОВАЯ «ПИЛЮЛЯ» + фиолетовый текст */
 .md-sidebar--primary .md-nav__item .md-nav__link--active,
 .md-sidebar--primary .md-nav__item .md-nav__link[aria-current="page"]{
-  background: var(--pill-active-bg);
-  color: var(--brand);
-  font-weight: 600;
+  background: var(--pill-active-bg) !important;
+  color: var(--brand) !important;
+  font-weight: 600 !important;
 }
 
-/* Правый TOC компактнее */
-.md-sidebar--secondary .md-nav { font-size: 0.82rem; }
-.md-sidebar--secondary .md-nav__link { color: var(--md-default-fg-color--light); }
+/* ========== ПРАВЫЙ TOC ========== */
+.md-sidebar--secondary .md-nav{ font-size: 0.82rem !important; }
+.md-sidebar--secondary .md-nav__link{ color: var(--md-default-fg-color--light) !important; }
 .md-sidebar--secondary .md-nav__link--active,
-.md-sidebar--secondary .md-nav__link[aria-current="true"] { color: var(--brand); }
+.md-sidebar--secondary .md-nav__link[aria-current="true"]{ color: var(--brand) !important; }
