@@ -1,23 +1,64 @@
-/* оттенки  для пилюли из бренда */
+/* ===== ШРИФТЫ И МАСШТАБ (чуть меньше) ===== */
+.md-typeset { font-size: 0.90rem; }                      /* базовый текст страницы */
+.md-sidebar--primary .md-nav,
+.md-sidebar--secondary .md-nav { font-size: 0.88rem; }   /* лев/прав сайдбар ещё компактнее */
+.md-nav__link { line-height: 1.22; }                     /* плотнее строки */
+
+/* убираем любые левые линии/полосы */
+.md-sidebar--primary + .md-content .md-content__inner,
+.md-nav__item--nested > nav.md-nav { border-left: none !important; }
+
+/* чуть уменьшаем «воздух» в контенте */
+.md-content__inner {
+  max-width: 900px;
+  padding: 1.2rem 1.6rem;
+  margin: 0 auto;
+  background: var(--md-default-bg-color);
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,.04);
+}
+.md-grid { max-width: 1180px; }
+@media (min-width: 1400px) {
+  .md-grid { max-width: 1280px; }
+  .md-content__inner { max-width: 940px; }
+}
+
+/* ===== ЦВЕТА (твой бренд) ===== */
 :root {
+  --brand: #6345F5;                                      /* Latenode фиолетовый */
+  --brand-light: #8A72F7;
+  --brand-dark:  #4B32D3;
+
+  --md-primary-fg-color:        var(--brand);
+  --md-primary-fg-color--light: var(--brand-light);
+  --md-primary-fg-color--dark:  var(--brand-dark);
+  --md-accent-fg-color:         var(--brand);
+  --md-typeset-a-color:         var(--brand);
+
   --pill-hover-bg: rgba(0,0,0,.06);
   --pill-active-bg: color-mix(in srgb, var(--brand) 18%, transparent);
 }
 [data-md-color-scheme="slate"] {
+  --md-default-fg-color: rgba(255,255,255,.87);
+  --md-primary-fg-color: var(--brand);
+  --md-accent-fg-color:  var(--brand);
+  --md-typeset-a-color:  var(--brand);
+
   --pill-hover-bg: rgba(255,255,255,.08);
   --pill-active-bg: color-mix(in srgb, var(--brand) 22%, transparent);
 }
 
-/* разделы (заголовки групп) — чёрные и жирные */
-.md-sidebar--primary .md-nav__item--nested > .md-nav__link{
-  color: var(--md-default-fg-color);
+/* ===== ИЕРАРХИЯ НАВИГАЦИИ ===== */
+/* 1) СЕКЦИИ ВЕРХНЕГО УРОВНЯ (в левом сайдбаре) — чёрные и жирные */
+.md-sidebar--primary .md-nav--primary > .md-nav__list > .md-nav__item--nested > .md-nav__link {
+  color: var(--md-default-fg-color);   /* чёрный/основной */
   font-weight: 700;
-  font-size: .82rem;
+  font-size: 0.82rem;
   margin: .8rem 0 .3rem;
 }
 
-/* пункты/раскрывашки — серые */
-.md-sidebar--primary .md-nav__item .md-nav__link{
+/* 2) ВСЕ ПРОЧИЕ раскрывашки И обычные пункты — СЕРЫЕ (как в рефе) */
+.md-sidebar--primary .md-nav__item .md-nav__link {
   color: var(--md-default-fg-color--light);
   font-weight: 400;
   border-radius: 12px;
@@ -25,20 +66,21 @@
   transition: background .15s ease, color .15s ease;
 }
 
-/* hover: серая пилюля */
-.md-sidebar--primary .md-nav__item .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover{
+/* Hover — серая «пилюля» (только неактивные) */
+.md-nav__item .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover {
   background: var(--pill-hover-bg);
 }
 
-/* active: пилюля и текст строго в фирменном */
-.md-sidebar--primary .md-nav__item .md-nav__link--active,
-.md-sidebar--primary .md-nav__item .md-nav__link[aria-current="page"]{
+/* Активная — пилюля и текст строго в фирменном фиолетовом */
+.md-nav__item .md-nav__link--active,
+.md-nav__item .md-nav__link[aria-current="page"] {
   background: var(--pill-active-bg);
   color: var(--brand);
   font-weight: 600;
 }
 
-/* правый TOC серый, активный — фирменный */
+/* Правый TOC компактнее и серее; активный — фиолетовый */
+.md-sidebar--secondary .md-nav { font-size: 0.86rem; }
 .md-sidebar--secondary .md-nav__link { color: var(--md-default-fg-color--light); }
 .md-sidebar--secondary .md-nav__link--active,
 .md-sidebar--secondary .md-nav__link[aria-current="true"] { color: var(--brand); }
