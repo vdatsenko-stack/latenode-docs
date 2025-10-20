@@ -1,4 +1,4 @@
-/* оттенки для пилюли из бренда */
+/* оттенки  для пилюли из бренда */
 :root {
   --pill-hover-bg: rgba(0,0,0,.06);
   --pill-active-bg: color-mix(in srgb, var(--brand) 18%, transparent);
