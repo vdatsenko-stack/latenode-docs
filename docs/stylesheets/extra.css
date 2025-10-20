@@ -19,12 +19,28 @@
   --pill-hover-bg: rgba(255,255,255,.08);
   --pill-active-bg: color-mix(in srgb, var(--brand) 22%, transparent);
 }
-
 /* ===== TYPE SCALE ===== */
 .md-typeset{ font-size: 0.86rem !important; }
 .md-sidebar--primary .md-nav,
 .md-sidebar--secondary .md-nav{ font-size: 0.75rem !important; }
 .md-nav__link{ line-height: 1.2 !important; }
+
+/* ===== ЗАГОЛОВКИ В КОНТЕНТЕ ===== */
+.md-typeset h1 {
+  font-weight: 700 !important;
+  font-size: 2.2rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.md-typeset h2 {
+  font-weight: 700 !important;
+  font-size: 1.6rem !important;
+  margin-top: 2.5rem !important;
+  margin-bottom: 1rem !important;
+}
+.md-typeset h3 {
+  font-weight: 600 !important;
+  font-size: 1.3rem !important;
+}
 
 /* сетка/отступы - шире */
 .md-grid{ max-width: 1400px; }
@@ -40,13 +56,10 @@
   .md-grid{ max-width: 1500px; }
   .md-content__inner{ max-width: 1200px; }
 }
-
 /* убрать лев. линии */
 .md-sidebar--primary + .md-content .md-content__inner,
 .md-nav__item--nested > nav.md-nav{ border-left: none !important; }
-
 /* ===== LEFT SIDEBAR ===== */
-
 /* ВСЕ элементы навигации по умолчанию - серые, обычные, с padding и border-radius */
 .md-sidebar--primary .md-nav__link {
   color: var(--md-default-fg-color--light) !important;
@@ -56,19 +69,16 @@
   transition: background .15s ease, color .15s ease !important;
   background: transparent !important;
 }
-
 /* Hover для обычных элементов */
 .md-sidebar--primary .md-nav__link:hover {
   background: var(--pill-hover-bg) !important;
 }
-
 /* АКТИВНАЯ страница - фиолетовая пилюля */
 .md-sidebar--primary .md-nav__link--active {
   background: var(--pill-active-bg) !important;
   color: var(--brand) !important;
   font-weight: 600 !important;
 }
-
 /* РАЗДЕЛЫ СО СМАЙЛИКАМИ (section) - ЧЁРНЫЕ и ЖИРНЫЕ */
 .md-sidebar--primary .md-nav__item--section > .md-nav__link {
   color: #000000 !important;
@@ -77,31 +87,26 @@
   padding: 6px 10px !important;
   margin: .6rem 0 .25rem !important;
 }
-
 /* Для темной темы - разделы белые */
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__item--section > .md-nav__link {
   color: #ffffff !important;
 }
-
 /* Если раздел активный - он фиолетовый (приоритет выше) */
 .md-sidebar--primary .md-nav__item--section > .md-nav__link--active {
   color: var(--brand) !important;
   font-weight: 600 !important;
   background: var(--pill-active-bg) !important;
 }
-
 /* РАСКРЫВАШКИ (nested без section) - обычные серые */
 .md-sidebar--primary .md-nav__item--nested:not(.md-nav__item--section) > .md-nav__link {
   color: var(--md-default-fg-color--light) !important;
   font-weight: 400 !important;
   background: transparent !important;
 }
-
 /* Hover для раскрывашек */
 .md-sidebar--primary .md-nav__item--nested:not(.md-nav__item--section) > .md-nav__link:hover {
   background: var(--pill-hover-bg) !important;
 }
-
 /* ===== RIGHT TOC ===== */
 .md-sidebar--secondary .md-nav{ font-size: 0.75rem !important; }
 .md-sidebar--secondary .md-nav__link{ color: var(--md-default-fg-color--light) !important; }
