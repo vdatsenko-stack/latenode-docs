@@ -27,19 +27,26 @@
 
 /* ===== ЗАГОЛОВКИ В КОНТЕНТЕ ===== */
 .md-typeset h1 {
-  font-weight: 700 !important;
-  font-size: 2.2rem !important;
-  margin-bottom: 1.5rem !important;
+  font-weight: 600 !important;
+  font-size: 2rem !important;
+  color: #000000 !important;
+  margin-bottom: 1.2rem !important;
 }
 .md-typeset h2 {
-  font-weight: 700 !important;
-  font-size: 1.6rem !important;
-  margin-top: 2.5rem !important;
-  margin-bottom: 1rem !important;
+  font-weight: 600 !important;
+  font-size: 1.5rem !important;
+  color: #000000 !important;
+  margin-top: 2rem !important;
+  margin-bottom: 0.8rem !important;
 }
 .md-typeset h3 {
   font-weight: 600 !important;
-  font-size: 1.3rem !important;
+  font-size: 1.2rem !important;
+}
+/* Для темной темы */
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2 {
+  color: rgba(255,255,255,.87) !important;
 }
 
 /* сетка/отступы - шире */
