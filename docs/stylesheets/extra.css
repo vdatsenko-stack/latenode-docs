@@ -1,32 +1,5 @@
-/* ===== ШРИФТЫ И МАСШТАБ ===== */
-/* делаем сайдбары компактнее и согласованнее с контентом */
-.md-typeset { font-size: 0.95rem; }                     /* базовый текст страницы */
-.md-sidebar--primary .md-nav,
-.md-sidebar--secondary .md-nav { font-size: 0.92rem; }  /* лев/прав сайдбар чуть меньше */
-.md-nav__link { line-height: 1.25; }                    /* плотнее строки */
-
-/* убираем любые левые линии/полосы */
-.md-sidebar--primary + .md-content .md-content__inner,
-.md-nav__item--nested > nav.md-nav { border-left: none !important; }
-
-/* чуть уменьшаем «воздух» в контенте */
-.md-content__inner {
-  max-width: 900px;
-  padding: 1.4rem 1.8rem;
-  margin: 0 auto;
-  background: var(--md-default-bg-color);
-  border-radius: 12px;
-  box-shadow: 0 1px 3px rgba(0,0,0,.04);
-}
-.md-grid { max-width: 1200px; }
-@media (min-width: 1400px) {
-  .md-grid { max-width: 1320px; }
-  .md-content__inner { max-width: 960px; }
-}
-
-/* ===== ЦВЕТА И ИЕРАРХИЯ ===== */
+/* оттенки для пилюли из бренда */
 :root {
-  --brand: #ff6ea8;                                      /* твой брендовый */
   --pill-hover-bg: rgba(0,0,0,.06);
   --pill-active-bg: color-mix(in srgb, var(--brand) 18%, transparent);
 }
@@ -35,16 +8,16 @@
   --pill-active-bg: color-mix(in srgb, var(--brand) 22%, transparent);
 }
 
-/* Разделы (группы) — чёрные и жирные */
-.md-sidebar--primary .md-nav__item--nested > .md-nav__link {
-  color: var(--md-default-fg-color);      /* чёрный/основной */
+/* разделы (заголовки групп) — чёрные и жирные */
+.md-sidebar--primary .md-nav__item--nested > .md-nav__link{
+  color: var(--md-default-fg-color);
   font-weight: 700;
-  font-size: 0.85rem;
-  margin: .85rem 0 .3rem;
+  font-size: .82rem;
+  margin: .8rem 0 .3rem;
 }
 
-/* Пункты страниц — серые */
-.md-sidebar--primary .md-nav__item .md-nav__link:not(.md-nav__item--nested > .md-nav__link) {
+/* пункты/раскрывашки — серые */
+.md-sidebar--primary .md-nav__item .md-nav__link{
   color: var(--md-default-fg-color--light);
   font-weight: 400;
   border-radius: 12px;
@@ -52,21 +25,20 @@
   transition: background .15s ease, color .15s ease;
 }
 
-/* Hover — серая «пилюля» (только неактивные) */
-.md-nav__item .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover {
+/* hover: серая пилюля */
+.md-sidebar--primary .md-nav__item .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover{
   background: var(--pill-hover-bg);
 }
 
-/* Активная — заливка брендом и яркий текст */
-.md-nav__item .md-nav__link--active,
-.md-nav__item .md-nav__link[aria-current="page"] {
+/* active: пилюля и текст строго в фирменном */
+.md-sidebar--primary .md-nav__item .md-nav__link--active,
+.md-sidebar--primary .md-nav__item .md-nav__link[aria-current="page"]{
   background: var(--pill-active-bg);
   color: var(--brand);
   font-weight: 600;
 }
 
-/* Правый TOC компактнее и серее, активный — брендом */
-.md-sidebar--secondary .md-nav { font-size: 0.9rem; }
+/* правый TOC серый, активный — фирменный */
 .md-sidebar--secondary .md-nav__link { color: var(--md-default-fg-color--light); }
 .md-sidebar--secondary .md-nav__link--active,
 .md-sidebar--secondary .md-nav__link[aria-current="true"] { color: var(--brand); }
