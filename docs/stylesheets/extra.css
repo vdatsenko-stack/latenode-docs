@@ -26,35 +26,37 @@
 .md-nav__link{ line-height: 1.2 !important; }
 
 /* ===== ЗАГОЛОВКИ В КОНТЕНТЕ ===== */
-.md-typeset h1:not(.md-search-result__title) {
+/* Только для основного контента, НЕ для поиска */
+.md-content .md-typeset h1 {
   font-weight: 600 !important;
   font-size: 2rem !important;
   color: #000000 !important;
   margin-bottom: 1.2rem !important;
 }
-.md-typeset h2 {
+.md-content .md-typeset h2 {
   font-weight: 600 !important;
   font-size: 1.5rem !important;
   color: #000000 !important;
   margin-top: 2rem !important;
   margin-bottom: 0.8rem !important;
 }
-.md-typeset h3 {
+.md-content .md-typeset h3 {
   font-weight: 600 !important;
   font-size: 1.2rem !important;
 }
-/* Исключаем заголовки в результатах поиска */
-.md-search-result h1,
-.md-search-result h2,
-.md-search-result h3 {
-  font-weight: 500 !important;
-  font-size: inherit !important;
-  margin: 0 !important;
-}
 /* Для темной темы */
-[data-md-color-scheme="slate"] .md-typeset h1,
-[data-md-color-scheme="slate"] .md-typeset h2 {
+[data-md-color-scheme="slate"] .md-content .md-typeset h1,
+[data-md-color-scheme="slate"] .md-content .md-typeset h2 {
   color: rgba(255,255,255,.87) !important;
+}
+
+/* Сброс стилей для заголовков в поиске */
+.md-search__output h1,
+.md-search__output h2,
+.md-search__output h3 {
+  font-weight: 700 !important;
+  font-size: 1.125rem !important;
+  margin: 0.5rem 0 !important;
 }
 
 /* сетка/отступы - шире */
