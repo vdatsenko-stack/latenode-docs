@@ -3,13 +3,11 @@
   --brand: #6345F5;
   --brand-light: #8A72F7;
   --brand-dark:  #4B32D3;
-
   --md-primary-fg-color:        var(--brand);
   --md-primary-fg-color--light: var(--brand-light);
   --md-primary-fg-color--dark:  var(--brand-dark);
   --md-accent-fg-color:         var(--brand);
   --md-typeset-a-color:         var(--brand);
-
   --pill-hover-bg: rgba(0,0,0,.06);
   --pill-active-bg: color-mix(in srgb, var(--brand) 18%, transparent);
 }
@@ -18,17 +16,15 @@
   --md-primary-fg-color: var(--brand);
   --md-accent-fg-color:  var(--brand);
   --md-typeset-a-color:  var(--brand);
-
   --pill-hover-bg: rgba(255,255,255,.08);
   --pill-active-bg: color-mix(in srgb, var(--brand) 22%, transparent);
 }
-
 /* ===== TYPE SCALE (как в шапке, компактно) ===== */
-.md-typeset{ font-size: 0.86rem !important; }                 /* основной текст */
+.md-typeset{ font-size: 0.86rem !important; }
+/* Уменьшаем шрифт в сайдбарах еще больше */
 .md-sidebar--primary .md-nav,
-.md-sidebar--secondary .md-nav{ font-size: 0.82rem !important; } /* оба сайдбара ≈ шапка */
+.md-sidebar--secondary .md-nav{ font-size: 0.75rem !important; } /* было 0.82rem */
 .md-nav__link{ line-height: 1.2 !important; }
-
 /* сетка/отступы лаконичнее */
 .md-grid{ max-width: 1180px; }
 .md-content__inner{
@@ -43,20 +39,26 @@
   .md-grid{ max-width: 1280px; }
   .md-content__inner{ max-width: 940px; }
 }
-
 /* убрать любые лев. линии */
 .md-sidebar--primary + .md-content .md-content__inner,
 .md-nav__item--nested > nav.md-nav{ border-left: none !important; }
 
 /* ===== LEFT SIDEBAR: ИЕРАРХИЯ ===== */
-/* Папки/раскрывашки ЛЮБОГО уровня — ЧЁРНЫЕ и ЖИРНЫЕ, ТОГО ЖЕ РАЗМЕРА */
-.md-sidebar--primary .md-nav__item--nested > .md-nav__link{
-  color: var(--md-default-fg-color) !important;   /* чёрный */
+/* Папки/раскрывашки ЛЮБОГО уровня — ЧЁРНЫЕ и ЖИРНЫЕ */
+.md-sidebar--primary .md-nav__item--nested > .md-nav__link,
+.md-sidebar--primary .md-nav__item--section > .md-nav__link{
+  color: #000000 !important;   /* полностью черный */
   font-weight: 700 !important;
-  font-size: inherit !important;                  /* тот же размер, что и пункты */
+  font-size: 0.75rem !important; /* соответствует общему размеру сайдбара */
   margin: .6rem 0 .25rem !important;
   background: transparent !important;
   box-shadow: none !important;
+}
+
+/* Для темной темы - белый цвет для папок */
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__item--nested > .md-nav__link,
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__item--section > .md-nav__link{
+  color: #ffffff !important;
 }
 
 /* Обычные пункты (и сами кликабельные строки) — СЕРЫЕ */
@@ -84,7 +86,7 @@
 }
 
 /* ===== RIGHT TOC ===== */
-.md-sidebar--secondary .md-nav{ font-size: 0.80rem !important; }
+.md-sidebar--secondary .md-nav{ font-size: 0.75rem !important; } /* уменьшено с 0.80rem */
 .md-sidebar--secondary .md-nav__link{ color: var(--md-default-fg-color--light) !important; }
 .md-sidebar--secondary .md-nav__link--active,
 .md-sidebar--secondary .md-nav__link[aria-current="true"]{ color: var(--brand) !important; }
