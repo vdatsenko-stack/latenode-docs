@@ -27,9 +27,9 @@
 .md-nav__link{ line-height: 1.2 !important; }
 
 /* сетка/отступы - делаем шире как в референсе */
-.md-grid{ max-width: 1400px; } /* было 1180px */
+.md-grid{ max-width: 1400px; }
 .md-content__inner{
-  max-width: 1100px; /* было 900px */
+  max-width: 1100px;
   padding: 1.2rem 1.6rem;
   margin: 0 auto;
   background: var(--md-default-bg-color);
@@ -37,8 +37,8 @@
   box-shadow: 0 1px 3px rgba(0,0,0,.04);
 }
 @media (min-width: 1400px){
-  .md-grid{ max-width: 1500px; } /* было 1280px */
-  .md-content__inner{ max-width: 1200px; } /* было 940px */
+  .md-grid{ max-width: 1500px; }
+  .md-content__inner{ max-width: 1200px; }
 }
 
 /* убрать любые лев. линии */
@@ -56,6 +56,7 @@
   background: transparent !important;
   box-shadow: none !important;
   padding: 6px 10px !important;
+  border-radius: 12px !important;
 }
 
 /* Для темной темы */
@@ -63,24 +64,26 @@
   color: #ffffff !important;
 }
 
-/* Вложенные папки (раскрывашки) — тоже ЧЁРНЫЕ и ЖИРНЫЕ */
+/* ВЛОЖЕННЫЕ РАСКРЫВАШКИ (Code tools, Operators, Variables) — обычные, НЕ жирные */
 .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
-  color: #000000 !important;
-  font-weight: 700 !important;
+  color: var(--md-default-fg-color--light) !important;
+  font-weight: 400 !important; /* обычный вес */
   font-size: 0.75rem !important;
-  margin: .6rem 0 .25rem !important;
+  margin: 0 !important;
   background: transparent !important;
   box-shadow: none !important;
   padding: 6px 10px !important;
+  border-radius: 12px !important;
+  transition: background .15s ease, color .15s ease !important;
 }
 
-/* Для темной темы - вложенные папки */
-[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__item--nested > .md-nav__link {
-  color: #ffffff !important;
+/* Hover для раскрывашек */
+.md-sidebar--primary .md-nav__item--nested > .md-nav__link:hover {
+  background: var(--pill-hover-bg) !important;
 }
 
 /* Обычные пункты меню — СЕРЫЕ */
-.md-sidebar--primary .md-nav__item:not(.md-nav__item--section):not(.md-nav__item--nested) > .md-nav__link {
+.md-sidebar--primary .md-nav__link {
   color: var(--md-default-fg-color--light) !important;
   font-weight: 400 !important;
   border-radius: 12px !important;
@@ -91,24 +94,35 @@
 }
 
 /* Hover — серая пилюля (только для неактивных) */
-.md-sidebar--primary .md-nav__item .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover {
+.md-sidebar--primary .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover {
   background: var(--pill-hover-bg) !important;
 }
 
 /* Active — фиолетовая пилюля и фиолетовый текст */
-.md-sidebar--primary .md-nav__item .md-nav__link--active,
-.md-sidebar--primary .md-nav__item .md-nav__link[aria-current="page"] {
+.md-sidebar--primary .md-nav__link--active,
+.md-sidebar--primary .md-nav__link[aria-current="page"] {
   background: var(--pill-active-bg) !important;
   color: var(--brand) !important;
   font-weight: 600 !important;
 }
 
-/* Убираем жирность и черный цвет у активных папок, если они кликабельные */
-.md-sidebar--primary .md-nav__item--section > .md-nav__link.md-nav__link--active,
-.md-sidebar--primary .md-nav__item--nested > .md-nav__link.md-nav__link--active {
+/* Главные разделы со смайликами остаются черными и жирными (переопределяем выше) */
+.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link {
+  color: #000000 !important;
+  font-weight: 700 !important;
+}
+
+/* Если главный раздел активен - он становится фиолетовым */
+.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link--active,
+.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link[aria-current="page"] {
+  background: var(--pill-active-bg) !important;
   color: var(--brand) !important;
   font-weight: 600 !important;
-  background: var(--pill-active-bg) !important;
+}
+
+/* Темная тема для главных разделов */
+[data-md-color-scheme="slate"] .md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link {
+  color: #ffffff !important;
 }
 
 /* ===== RIGHT TOC ===== */
