@@ -1,51 +1,32 @@
-/* =========================
-   1) УБРАТЬ ЛИНИИ/ПОЛОСЫ
-   ========================= */
+/* ===== ШРИФТЫ И МАСШТАБ ===== */
+/* делаем сайдбары компактнее и согласованнее с контентом */
+.md-typeset { font-size: 0.95rem; }                     /* базовый текст страницы */
+.md-sidebar--primary .md-nav,
+.md-sidebar--secondary .md-nav { font-size: 0.92rem; }  /* лев/прав сайдбар чуть меньше */
+.md-nav__link { line-height: 1.25; }                    /* плотнее строки */
 
-/* Удаляем вертикальную линию слева от контента */
-.md-sidebar--primary + .md-content .md-content__inner {
-  border-left: none !important;
-}
+/* убираем любые левые линии/полосы */
+.md-sidebar--primary + .md-content .md-content__inner,
+.md-nav__item--nested > nav.md-nav { border-left: none !important; }
 
-/* Убираем “полоску” внутри открытых групп в меню */
-.md-nav__item--nested > nav.md-nav {
-  border-left: none !important;
-  padding-left: .2rem;   /* лёгкий, почти незаметный сдвиг */
-  margin-left: 0;
-}
-
-/* =========================
-   2) БАЛАНС ШИРИНЫ/ОТСТУПОВ
-   ========================= */
-
-/* Общая ширина контейнера страницы (контента + сайдбаров) */
-.md-grid { 
-  max-width: 1200px;           /* было узко — делаем шире */
-}
-
-/* Карточка контента более “плоская” и аккуратная */
-.md-content { padding: 0 0 3rem; }
+/* чуть уменьшаем «воздух» в контенте */
 .md-content__inner {
-  max-width: 920px;            /* оптимально для чтения */
-  padding: 1.6rem 2rem;        /* меньше воздуха */
+  max-width: 900px;
+  padding: 1.4rem 1.8rem;
   margin: 0 auto;
   background: var(--md-default-bg-color);
   border-radius: 12px;
   box-shadow: 0 1px 3px rgba(0,0,0,.04);
 }
-
-/* На очень широких экранах слегка расширяем */
+.md-grid { max-width: 1200px; }
 @media (min-width: 1400px) {
   .md-grid { max-width: 1320px; }
-  .md-content__inner { max-width: 980px; }
+  .md-content__inner { max-width: 960px; }
 }
 
-/* =========================
-   3) ПИЛЮЛИ + РАЗДЕЛЫ
-   ========================= */
-
+/* ===== ЦВЕТА И ИЕРАРХИЯ ===== */
 :root {
-  --brand: #ff6ea8;                         /* твой цвет */
+  --brand: #ff6ea8;                                      /* твой брендовый */
   --pill-hover-bg: rgba(0,0,0,.06);
   --pill-active-bg: color-mix(in srgb, var(--brand) 18%, transparent);
 }
@@ -54,35 +35,38 @@
   --pill-active-bg: color-mix(in srgb, var(--brand) 22%, transparent);
 }
 
-/* Разделы жирным */
-.md-nav__item--nested > .md-nav__link {
+/* Разделы (группы) — чёрные и жирные */
+.md-sidebar--primary .md-nav__item--nested > .md-nav__link {
+  color: var(--md-default-fg-color);      /* чёрный/основной */
   font-weight: 700;
-  font-size: .8rem;
-  color: var(--md-default-fg-color--lighter);
-  margin: .9rem 0 .25rem;
+  font-size: 0.85rem;
+  margin: .85rem 0 .3rem;
 }
 
-/* Пункты меню — “пилюли” */
-.md-nav__link {
+/* Пункты страниц — серые */
+.md-sidebar--primary .md-nav__item .md-nav__link:not(.md-nav__item--nested > .md-nav__link) {
+  color: var(--md-default-fg-color--light);
+  font-weight: 400;
   border-radius: 12px;
   padding: 6px 10px;
-  font-size: .9rem;
   transition: background .15s ease, color .15s ease;
 }
 
-/* Hover — серая пилюля */
-.md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover {
+/* Hover — серая «пилюля» (только неактивные) */
+.md-nav__item .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover {
   background: var(--pill-hover-bg);
 }
 
-/* Активная — заливка брендовым и яркий текст */
-.md-nav__link--active,
+/* Активная — заливка брендом и яркий текст */
+.md-nav__item .md-nav__link--active,
 .md-nav__item .md-nav__link[aria-current="page"] {
   background: var(--pill-active-bg);
   color: var(--brand);
   font-weight: 600;
 }
 
-/* Чуть компактнее оглавление справа */
-.md-sidebar--secondary .md-nav { font-size: .86rem; }
-.md-sidebar--secondary .md-nav__link--active { color: var(--brand); }
+/* Правый TOC компактнее и серее, активный — брендом */
+.md-sidebar--secondary .md-nav { font-size: 0.9rem; }
+.md-sidebar--secondary .md-nav__link { color: var(--md-default-fg-color--light); }
+.md-sidebar--secondary .md-nav__link--active,
+.md-sidebar--secondary .md-nav__link[aria-current="true"] { color: var(--brand); }
