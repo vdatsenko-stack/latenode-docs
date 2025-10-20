@@ -25,27 +25,35 @@
 .md-sidebar--secondary .md-nav{ font-size: 0.75rem !important; }
 .md-nav__link{ line-height: 1.2 !important; }
 
-/* ===== ЗАГОЛОВКИ В КОНТЕНТЕ (только основной контент, НЕ поиск) ===== */
-.md-content__inner .md-typeset h1 {
+/* ===== ЗАГОЛОВКИ В КОНТЕНТЕ ===== */
+.md-typeset h1:not(.md-search-result__title) {
   font-weight: 600 !important;
   font-size: 2rem !important;
   color: #000000 !important;
   margin-bottom: 1.2rem !important;
 }
-.md-content__inner .md-typeset h2 {
+.md-typeset h2 {
   font-weight: 600 !important;
   font-size: 1.5rem !important;
   color: #000000 !important;
   margin-top: 2rem !important;
   margin-bottom: 0.8rem !important;
 }
-.md-content__inner .md-typeset h3 {
+.md-typeset h3 {
   font-weight: 600 !important;
   font-size: 1.2rem !important;
 }
+/* Исключаем заголовки в результатах поиска */
+.md-search-result h1,
+.md-search-result h2,
+.md-search-result h3 {
+  font-weight: 500 !important;
+  font-size: inherit !important;
+  margin: 0 !important;
+}
 /* Для темной темы */
-[data-md-color-scheme="slate"] .md-content__inner .md-typeset h1,
-[data-md-color-scheme="slate"] .md-content__inner .md-typeset h2 {
+[data-md-color-scheme="slate"] .md-typeset h1,
+[data-md-color-scheme="slate"] .md-typeset h2 {
   color: rgba(255,255,255,.87) !important;
 }
 
