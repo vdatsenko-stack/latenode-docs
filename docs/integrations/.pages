@@ -1,7 +1,6 @@
 # Этот файл управляет порядком внутри раздела "Integrations"
 nav:
-  - index.md
-  - app_nodes
-  - authorizations
   - core_nodes
+  - authorizations
+  - app_nodes
   - custom_nodes
