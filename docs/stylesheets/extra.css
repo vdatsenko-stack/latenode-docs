@@ -19,14 +19,14 @@
   --pill-hover-bg: rgba(255,255,255,.08);
   --pill-active-bg: color-mix(in srgb, var(--brand) 22%, transparent);
 }
-/* ===== TYPE SCALE (как в шапке, компактно) ===== */
+
+/* ===== TYPE SCALE ===== */
 .md-typeset{ font-size: 0.86rem !important; }
-/* Уменьшаем шрифт в сайдбарах */
 .md-sidebar--primary .md-nav,
 .md-sidebar--secondary .md-nav{ font-size: 0.75rem !important; }
 .md-nav__link{ line-height: 1.2 !important; }
 
-/* сетка/отступы - делаем шире как в референсе */
+/* сетка/отступы - шире */
 .md-grid{ max-width: 1400px; }
 .md-content__inner{
   max-width: 1100px;
@@ -41,88 +41,65 @@
   .md-content__inner{ max-width: 1200px; }
 }
 
-/* убрать любые лев. линии */
+/* убрать лев. линии */
 .md-sidebar--primary + .md-content .md-content__inner,
 .md-nav__item--nested > nav.md-nav{ border-left: none !important; }
 
-/* ===== LEFT SIDEBAR: ИЕРАРХИЯ ===== */
+/* ===== LEFT SIDEBAR ===== */
 
-/* ГЛАВНЫЕ РАЗДЕЛЫ со смайликами (верхний уровень) — ЧЁРНЫЕ и ЖИРНЫЕ */
-.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link {
-  color: #000000 !important;
-  font-weight: 700 !important;
-  font-size: 0.75rem !important;
-  margin: .6rem 0 .25rem !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 6px 10px !important;
-  border-radius: 12px !important;
-}
-
-/* Для темной темы */
-[data-md-color-scheme="slate"] .md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link {
-  color: #ffffff !important;
-}
-
-/* ВЛОЖЕННЫЕ РАСКРЫВАШКИ (Code tools, Operators, Variables) — обычные, НЕ жирные */
-.md-sidebar--primary .md-nav__item--nested > .md-nav__link {
-  color: var(--md-default-fg-color--light) !important;
-  font-weight: 400 !important; /* обычный вес */
-  font-size: 0.75rem !important;
-  margin: 0 !important;
-  background: transparent !important;
-  box-shadow: none !important;
-  padding: 6px 10px !important;
-  border-radius: 12px !important;
-  transition: background .15s ease, color .15s ease !important;
-}
-
-/* Hover для раскрывашек */
-.md-sidebar--primary .md-nav__item--nested > .md-nav__link:hover {
-  background: var(--pill-hover-bg) !important;
-}
-
-/* Обычные пункты меню — СЕРЫЕ */
+/* ВСЕ элементы навигации по умолчанию - серые, обычные, с padding и border-radius */
 .md-sidebar--primary .md-nav__link {
   color: var(--md-default-fg-color--light) !important;
   font-weight: 400 !important;
-  border-radius: 12px !important;
   padding: 6px 10px !important;
+  border-radius: 12px !important;
   transition: background .15s ease, color .15s ease !important;
   background: transparent !important;
-  box-shadow: none !important;
 }
 
-/* Hover — серая пилюля (только для неактивных) */
-.md-sidebar--primary .md-nav__link:not(.md-nav__link--active):not([aria-current="page"]):hover {
+/* Hover для обычных элементов */
+.md-sidebar--primary .md-nav__link:hover {
   background: var(--pill-hover-bg) !important;
 }
 
-/* Active — фиолетовая пилюля и фиолетовый текст */
-.md-sidebar--primary .md-nav__link--active,
-.md-sidebar--primary .md-nav__link[aria-current="page"] {
+/* АКТИВНАЯ страница - фиолетовая пилюля */
+.md-sidebar--primary .md-nav__link--active {
   background: var(--pill-active-bg) !important;
   color: var(--brand) !important;
   font-weight: 600 !important;
 }
 
-/* Главные разделы со смайликами остаются черными и жирными (переопределяем выше) */
-.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link {
+/* РАЗДЕЛЫ СО СМАЙЛИКАМИ (section) - ЧЁРНЫЕ и ЖИРНЫЕ */
+.md-sidebar--primary .md-nav__item--section > .md-nav__link {
   color: #000000 !important;
   font-weight: 700 !important;
+  background: transparent !important;
+  padding: 6px 10px !important;
+  margin: .6rem 0 .25rem !important;
 }
 
-/* Если главный раздел активен - он становится фиолетовым */
-.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link--active,
-.md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link[aria-current="page"] {
-  background: var(--pill-active-bg) !important;
+/* Для темной темы - разделы белые */
+[data-md-color-scheme="slate"] .md-sidebar--primary .md-nav__item--section > .md-nav__link {
+  color: #ffffff !important;
+}
+
+/* Если раздел активный - он фиолетовый (приоритет выше) */
+.md-sidebar--primary .md-nav__item--section > .md-nav__link--active {
   color: var(--brand) !important;
   font-weight: 600 !important;
+  background: var(--pill-active-bg) !important;
 }
 
-/* Темная тема для главных разделов */
-[data-md-color-scheme="slate"] .md-sidebar--primary > .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav > .md-nav__list > .md-nav__item--section > .md-nav__link {
-  color: #ffffff !important;
+/* РАСКРЫВАШКИ (nested без section) - обычные серые */
+.md-sidebar--primary .md-nav__item--nested:not(.md-nav__item--section) > .md-nav__link {
+  color: var(--md-default-fg-color--light) !important;
+  font-weight: 400 !important;
+  background: transparent !important;
+}
+
+/* Hover для раскрывашек */
+.md-sidebar--primary .md-nav__item--nested:not(.md-nav__item--section) > .md-nav__link:hover {
+  background: var(--pill-hover-bg) !important;
 }
 
 /* ===== RIGHT TOC ===== */
