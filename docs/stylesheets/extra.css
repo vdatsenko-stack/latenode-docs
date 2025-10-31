@@ -19,6 +19,17 @@
   --pill-hover-bg: rgba(255,255,255,.08);
   --pill-active-bg: color-mix(in srgb, var(--brand) 22%, transparent);
 }
+
+/* ===== ФИОЛЕТОВАЯ ШАПКА В ТЕМНОЙ ТЕМЕ ===== */
+[data-md-color-scheme="slate"] .md-header {
+  background-color: var(--brand) !important;
+}
+
+/* ===== СКРЫТЬ ДУБЛИРУЮЩИЙ ЗАГОЛОВОК ВКЛАДКИ ===== */
+.md-sidebar--primary .md-nav__title {
+  display: none !important;
+}
+
 /* ===== TYPE SCALE ===== */
 .md-typeset{ font-size: 0.86rem !important; }
 .md-sidebar--primary .md-nav,
@@ -76,6 +87,7 @@
 /* убрать лев. линии */
 .md-sidebar--primary + .md-content .md-content__inner,
 .md-nav__item--nested > nav.md-nav{ border-left: none !important; }
+
 /* ===== LEFT SIDEBAR ===== */
 /* ВСЕ элементы навигации по умолчанию - серые, обычные, с padding и border-radius */
 .md-sidebar--primary .md-nav__link {
