@@ -51,7 +51,7 @@ This way, you can efficiently pass and utilize processed data between nodes in y
 
 ### Using Variables
 
-Variables created within the scenario or global variables can also be used in the [JavaScript](../../../introduction.md) node.
+Variables created within the scenario or global variables can also be used in the [JavaScript](./javascript.md) node.
 
 !!! tip
     Variables created within the scenario or global variables can also be used in the [JavaScript](./javascript.md) node.

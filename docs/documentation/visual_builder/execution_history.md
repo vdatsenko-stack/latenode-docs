@@ -5,7 +5,7 @@ sidebar_position: 1
 ---
 
 !!! tip
-    If the history table is empty, you need to run the scenario. For more details on running a scenario once, see the [Run once Scenario Execution](../../introduction.md) section.
+    If the history table is empty, you need to run the scenario. For more details on running a scenario once, see the [Run once Scenario Execution](../../../integrations/core_nodes/trigger_on_run_once.md) section.
 
 Every scenario run (successful or unsuccessful) is recorded in the history. The history table is accessible by clicking the **History** button. The table displays key information about the scenario:
 
@@ -40,4 +40,4 @@ For each scenario run entry, there is a **Restart** button. Clicking the **Resta
 ![Untitled](./execution_history/untitled_2.png)
 
 !!! tip
-    You can also [copy the scenario execution from the history](../../introduction.md).
+    You can also copy the scenario execution from the history.

@@ -28,7 +28,7 @@ The Latenode platform can send requests to multiple third-party services or appl
 
 ## Scenario as a Method of Automation
 
-The mechanism or algorithm that automates a function is called a [scenario](../../introduction.md). It consists of sequentially arranged [nodes](../../introduction.md) and [routes](../../introduction.md) connecting these nodes. Each node performs a specific action, such as running the scenario, processing or saving data, or sending a request with specified parameters to a third-party service. A node performs its action only after the previous node has completed its task. Additionally, nodes can use data generated or received by the previous nodes.
+The mechanism or algorithm that automates a function is called a [scenario](../../introduction.md). It consists of sequentially arranged [nodes](../../introduction.md) and [routes](./routes.md) connecting these nodes. Each node performs a specific action, such as running the scenario, processing or saving data, or sending a request with specified parameters to a third-party service. A node performs its action only after the previous node has completed its task. Additionally, nodes can use data generated or received by the previous nodes.
 
 ![Untitled](./building_scenarios/untitled.gif)
 
@@ -48,15 +48,15 @@ Trigger nodes can be divided into two groups, but all are used to start a scenar
 
 The first group includes non-specific trigger nodes:
 
-- The [Trigger on Webhook](../../introduction.md) node allows you to run the scenario by sending requests to this node. The request may contain data for other nodes in the scenario to use. In the example below, the scenario is triggered by [sending JSON](../../introduction.md) with the Value parameter to the [Trigger on Webhook](../../introduction.md) node. The values of the Value parameter are written to the global variable GlVar using the [SetGlobalVariables](../../introduction.md) node. The value of this variable is then returned by the [Webhook Response](../../introduction.md) node as the outcome of the scenario execution. Once the scenario is set to active (by toggling the Active switch at the bottom of the interface), it is possible to send requests without first clicking the **Run Once** button.
+- The [Trigger on Webhook](../../integrations/core_nodes/trigger_on_webhook.md) node allows you to run the scenario by sending requests to this node. The request may contain data for other nodes in the scenario to use. In the example below, the scenario is triggered by [sending JSON](../../introduction.md) with the Value parameter to the [Trigger on Webhook](../../integrations/core_nodes/trigger_on_webhook.md) node. The values of the Value parameter are written to the global variable GlVar using the [SetGlobalVariables](../../integrations/core_nodes/setglobalvariables.md) node. The value of this variable is then returned by the [Webhook Response](../../integrations/core_nodes/webhook_response.md) node as the outcome of the scenario execution. Once the scenario is set to active (by toggling the Active switch at the bottom of the interface), it is possible to send requests without first clicking the **Run Once** button.
 
 ![Untitled](./building_scenarios/untitled_3.gif)
 
-- The [Trigger on Run Once](../../introduction.md) node is useful for testing a scenario and allows you to run it by clicking the **Run once** button. Data transfer to the scenario using this node is not available, and it is not necessary to set the scenario to active status.
+- The [Trigger on Run Once](../../integrations/core_nodes/trigger_on_run_once.md) node is useful for testing a scenario and allows you to run it by clicking the **Run once** button. Data transfer to the scenario using this node is not available, and it is not necessary to set the scenario to active status.
 
 ![Untitled](./building_scenarios/untitled_4.gif)
 
-- The [Trigger on Schedule](../../introduction.md) node allows you to run the scenario on a schedule at the desired time. 
+- The [Trigger on Schedule](../../integrations/core_nodes/trigger_on_schedule.md) node allows you to run the scenario on a schedule at the desired time. 
 Data transfer to the scenario using this node is not available. The node settings allow you to define the schedule and timezone. To ensure the scenario runs according to the set schedule, expand the scenario in Prod using the expand button and ensure it is in active status.
 
 ![Untitled](./building_scenarios/untitled_5.gif)
@@ -67,28 +67,28 @@ The second group consists of application and service trigger nodes. For example,
 
 **Action** nodes are further divided into two groups. The first group includes system nodes that perform standard actions. Examples of such nodes include:
 
-- The [JavaScript](../../introduction.md) node for processing data or performing other functions using [JavaScript code](../../introduction.md). An AI assistant is built into this node to help generate the required code. You can ask the assistant to write or tweak the code and correct it as many times as necessary to achieve the desired result.
+- The [JavaScript](../code_tools/javascript.md) node for processing data or performing other functions using [JavaScript code](../code_tools/javascript.md). An AI assistant is built into this node to help generate the required code. You can ask the assistant to write or tweak the code and correct it as many times as necessary to achieve the desired result.
 
 ![Untitled](./building_scenarios/untitled_6.gif)
 
-- The [SetGlobalVariables](../../introduction.md), [GetGlobalVariables](../../introduction.md), [SetVariables](../../introduction.md), and [GetVariables](../../introduction.md) nodes for saving received or generated data into variables and retrieving them. Any variable created is available for use in the next node and throughout the scenario. Global variables can also be used in other scenarios.
+- The [SetGlobalVariables](../../integrations/core_nodes/setglobalvariables.md), [GetGlobalVariables](../../integrations/core_nodes/getglobalvariables.md), [SetVariables](../../integrations/core_nodes/setvariables.md), and [GetVariables](../../integrations/core_nodes/getvariables.md) nodes for saving received or generated data into variables and retrieving them. Any variable created is available for use in the next node and throughout the scenario. Global variables can also be used in other scenarios.
 
 ![Untitled](./building_scenarios/untitled_7.gif)
 
-- The [Wait](../../introduction.md) node allows you to pause scenario execution for a specified period.
+- The [Wait](../../integrations/core_nodes/wait.md) node allows you to pause scenario execution for a specified period.
 
 ![Untitled](./building_scenarios/untitled_8.gif)
 
-- The [Headless Browser](../../introduction.md) node is used for parsing websites and will be discussed further below.
+- The [Headless Browser](../code_tools/headless_browser.md) node is used for parsing websites and will be discussed further below.
 
 The second group of nodes consists of specific nodes tailored to particular applications or services, each providing a distinct function. Typically, configuring these nodes requires filling in a few simple 
 parameters. For example, the **Send Mail** node sends an email with the specified content to a given address, while the **Create Single Record or Update** node writes or updates a row in the desired AirTable. These nodes often require authorization setup.
 
 ## Using Code in Nodes
 
-The **Latenode** platform supports executing functions using JavaScript code. Several nodes allow you to input or generate the code you need. The first is the [JavaScript](../../introduction.md) node, which includes an AI assistant. You can write code in this node yourself or with the assistant's help. By asking the assistant a question, you can get the code that performs a specific function and store it in the node.
+The **Latenode** platform supports executing functions using JavaScript code. Several nodes allow you to input or generate the code you need. The first is the [JavaScript](../code_tools/javascript.md) node, which includes an AI assistant. You can write code in this node yourself or with the assistant's help. By asking the assistant a question, you can get the code that performs a specific function and store it in the node.
 
-The second is the [Headless Browser](../../introduction.md) node, which allows you to analyze website data according to the node's code.
+The second is the [Headless Browser](../code_tools/headless_browser.md) node, which allows you to analyze website data according to the node's code.
 
 ## 2. Creating a scenario
 
@@ -102,7 +102,7 @@ Once a scenario is created, nodes can be added by selecting them from the list. 
 
 ![Untitled](./building_scenarios/untitled_10.gif)
 
-Nodes specific to certain applications and services also require [authorization](../../introduction.md). Authorization can be set up in the node itself or on the authorizations page by selecting the required service from the list.
+Nodes specific to certain applications and services also require [authorization](../../integrations/authorizations/adding_and_configuring_authorizations.md). Authorization can be set up in the node itself or on the authorizations page by selecting the required service from the list.
 
 ![Untitled](./building_scenarios/untitled_11.gif)
 
@@ -110,7 +110,7 @@ As an example, let's create a scenario that analyzes a website's exchange rate p
 
 ## **Passing JSON to a Scenario: Trigger on Webhook Node with Postman/Insomnia**
 
-To start any scenario, you must add a trigger node. In our example, we need a [Trigger on Webhook](../../introduction.md) node because the scenario requires passing data. The data will consist of two currency names, `C1` and `C2`. The scenario can transfer files or JSON objects. [Postman or Insomnia](../../introduction.md) can be used for data transfer. The address of the [Trigger on Webhook](../../introduction.md) node should be specified as the request address.
+To start any scenario, you must add a trigger node. In our example, we need a [Trigger on Webhook](../../integrations/core_nodes/trigger_on_webhook.md) node because the scenario requires passing data. The data will consist of two currency names, `C1` and `C2`. The scenario can transfer files or JSON objects. [Postman or Insomnia](../../introduction.md) can be used for data transfer. The address of the [Trigger on Webhook](../../integrations/core_nodes/trigger_on_webhook.md) node should be specified as the request address.
 
 ```jsx
 {
@@ -124,7 +124,7 @@ To start any scenario, you must add a trigger node. In our example, we need a [T
 
 ## Headless Browser Node and Site Parsing
 
-To process a website page, you need to add a [Headless Browser](../../introduction.md) node and include code in the node. The result of this node's execution will be the current exchange rate for the specified currencies. The code will process the web page using the data passed to the [Trigger on Webhook](../../introduction.md) node**:**
+To process a website page, you need to add a [Headless Browser](../code_tools/headless_browser.md) node and include code in the node. The result of this node's execution will be the current exchange rate for the specified currencies. The code will process the web page using the data passed to the [Trigger on Webhook](../../integrations/core_nodes/trigger_on_webhook.md) node**:**
 
 ```jsx
 // Get currency codes from the data transmitted by node 1
@@ -166,18 +166,18 @@ To test the nodes, you can launch them individually. This will execute the node 
 
 ## Creating Global Variables
 
-Often, the data received in nodes needs to be saved. The **Latenode** platform allows you to save data in two types of variables. The first type, [global variables](../../introduction.md), allows data to be used by other scenarios. The second type, [local variables](../../introduction.md), restricts the use of data to the scenario in which it was obtained.
+Often, the data received in nodes needs to be saved. The **Latenode** platform allows you to save data in two types of variables. The first type, [global variables](../variables/creating_and_editing_variables.md), allows data to be used by other scenarios. The second type, [local variables](../variables/creating_and_editing_variables.md), restricts the use of data to the scenario in which it was obtained.
 
-You can manage [variables](../../introduction.md) or [global variables](../../introduction.md) using special nodes or JavaScript code in the [Headless Browser](../../introduction.md) or [JavaScript](../../introduction.md) nodes.
+You can manage [variables](../variables/creating_and_editing_variables.md) or [global variables](../variables/creating_and_editing_variables.md) using special nodes or JavaScript code in the [Headless Browser](../code_tools/headless_browser.md) or [JavaScript](../code_tools/javascript.md) nodes.
 
-For global variables, an [interface](../../introduction.md) for creating and editing variables is also available. Let's create global variables `C1` and `C2` and set their initial values. You can update these values with actual data later in the scenario.
+For global variables, an [interface](../variables/creating_and_editing_variables.md) for creating and editing variables is also available. Let's create global variables `C1` and `C2` and set their initial values. You can update these values with actual data later in the scenario.
 
 ![Untitled](./building_scenarios/untitled_14.gif)
 
 
 ## JavaScript Node and Data Processing with Code
 
-The [JavaScript](../../introduction.md) node can be used to process data. For example, you can compare the values obtained from the [Headless Browser](../../introduction.md) node with the values of the global variables you created. Calculate the difference and generate a message based on the results. The message text will vary depending on whether the exchange rate has risen or fallen. You can use the following code:
+The [JavaScript](../code_tools/javascript.md) node can be used to process data. For example, you can compare the values obtained from the [Headless Browser](../code_tools/headless_browser.md) node with the values of the global variables you created. Calculate the difference and generate a message based on the results. The message text will vary depending on whether the exchange rate has risen or fallen. You can use the following code:
 
 ```jsx
 export default async function run({execution_id, input, data, store}) {
@@ -235,14 +235,14 @@ return {
 
 ## Saving Data in Global Variables
 
-We previously created two global variables, `C1` and `C2`, which contain exchange rate data. This data can be updated daily, and our scenario involves comparing the new data with the previous values. Therefore, each time we receive an update, we need to save the values in the `C1` and `C2` variables again. This can be done directly in the scenario using the [SetGlobalVariables](../../introduction.md) node. This node allows both the creation of new variables and the overwriting of existing variable values.
+We previously created two global variables, `C1` and `C2`, which contain exchange rate data. This data can be updated daily, and our scenario involves comparing the new data with the previous values. Therefore, each time we receive an update, we need to save the values in the `C1` and `C2` variables again. This can be done directly in the scenario using the [SetGlobalVariables](../../integrations/core_nodes/setglobalvariables.md) node. This node allows both the creation of new variables and the overwriting of existing variable values.
 
 ![Untitled](./building_scenarios/untitled_16.gif)
 
 
 ## Using APP Nodes and Authorization
 
-App nodes can be used to perform specific functions. An example is the **Send Mail** node, which sends an email to a specified address. Often, using these nodes requires setting up [authorization](../../introduction.md), allowing the **Latenode** platform to access the necessary functions.
+App nodes can be used to perform specific functions. An example is the **Send Mail** node, which sends an email to a specified address. Often, using these nodes requires setting up [authorization](../../integrations/authorizations/adding_and_configuring_authorizations.md), allowing the **Latenode** platform to access the necessary functions.
 
 ![Untitled](./building_scenarios/untitled_17.gif)
 
@@ -251,11 +251,11 @@ App nodes can be used to perform specific functions. An example is the **Send Ma
 
 ## Single Scenario Run and Run History
 
-When developing a scenario, you can run it once to test the node settings. In this case, the scenario will execute once and then terminate. The [Trigger on Run Once](../../introduction.md) node can be helpful for this, initiating scenario execution with the **Run once** button.
+When developing a scenario, you can run it once to test the node settings. In this case, the scenario will execute once and then terminate. The [Trigger on Run Once](../../integrations/core_nodes/trigger_on_run_once.md) node can be helpful for this, initiating scenario execution with the **Run once** button.
 
-Each scenario run is saved in the [history](../../introduction.md). The history table shows the status of the run, the number of operations performed, and the run time. In addition to basic scenario information, you can view the nodes, their settings, and connections used during the run. This includes the data used or generated by the nodes.
+Each scenario run is saved in the [history](./execution_history.md). The history table shows the status of the run, the number of operations performed, and the run time. In addition to basic scenario information, you can view the nodes, their settings, and connections used during the run. This includes the data used or generated by the nodes.
 
-You can [copy the link to the scenario run](../../introduction.md), for example, to share it with the **Latenode** community for consultation.
+You can [copy the link to the scenario run](./execution_history.md), for example, to share it with the **Latenode** community for consultation.
 
 The scenario run can be repeated with the same settings and data as the original run.
 
@@ -264,9 +264,9 @@ The scenario run can be repeated with the same settings and data as the original
 
 ## Scenario Versions and Publishing to Prod
 
-Each time you save a scenario, a new Dev [version](../../introduction.md) is created. Any Dev version can be published to Prod. Scenario versions are independent, allowing you to continue development while keeping the Prod version up-to-date.
+Each time you save a scenario, a new Dev [version](./version_history.md) is created. Any Dev version can be published to Prod. Scenario versions are independent, allowing you to continue development while keeping the Prod version up-to-date.
 
-The scenario version is important when sending a request to the [Trigger on Webhook](../../introduction.md) node, as this node has separate Dev and Prod addresses for sending requests and initiating the scenario.
+The scenario version is important when sending a request to the [Trigger on Webhook](../../integrations/core_nodes/trigger_on_webhook.md) node, as this node has separate Dev and Prod addresses for sending requests and initiating the scenario.
 
 ![Untitled](./building_scenarios/untitled_19.gif)
 

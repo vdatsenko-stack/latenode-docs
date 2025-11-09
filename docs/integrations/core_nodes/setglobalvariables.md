@@ -13,7 +13,7 @@ sidebar_position: 11
 !!! tip
     The added global variable can be modified during the execution of nodes. If two **SetGlobalVariables** nodes are placed consecutively and both define the value of the same variable, the final value for the variable will be set by the last **SetGlobalVariables** node.
 
-For more information about global variables, see [Global Variables](../../introduction.md).
+For more information about global variables, see [Global Variables](../../documentation/visual_builder/variables/creating_and_editing_variables.md).
 
 ## Node Configuration
 

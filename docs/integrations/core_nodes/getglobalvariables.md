@@ -10,7 +10,7 @@ sidebar_position: 12
 
 **GetGlobalVariables** - an action-type node, necessary for obtaining and further using a global variable set in the **SetGlobalVariables** node.
 
-For more information about global variables, see [Global Variables](../../introduction.md).
+For more information about global variables, see [Global Variables](../../documentation/visual_builder/variables/creating_and_editing_variables.md).
 
 ## Node Configuration
 
