@@ -14,4 +14,4 @@ This documentation is your comprehensive guide to mastering Latenode. Here, you'
 *   **Looking for specific services?** Explore our extensive list of **[Integrations](./integrations/index.md)** to see how you can connect your favorite apps.
 *   **Ready for advanced features?** Discover how to use our **[AI Agents](./documentation/ai_agents/)** or build custom solutions with the **[Headless Browser](./documentation/visual_builder/code_tools/headless_browser.md)**.
 
-We're constantly improving our platform and updating this documentation. If you have any questions, feel free to join our community.
+We're constantly improving our platform and updating this documentation. If you have any questions, feel free to join our community. 
