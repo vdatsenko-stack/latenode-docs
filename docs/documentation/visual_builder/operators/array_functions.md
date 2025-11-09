@@ -4,21 +4,19 @@ description: Processing and modifying arrays dynamically within workflows.
 sidebar_position: 1
 ---
 
-:::tip
-💡 You can use our GPT Assistant for help with **Latenode operators**:
+!!! tip
+    You can use our GPT Assistant for help with **Latenode operators**:
 
-👉 [**Latenode Operators Assistant**](https://chatgpt.com/g/g-67d704425c088191b741075e2b0f9815-latenode-operators-assistant)
+    👉 [**Latenode Operators Assistant**](https://chatgpt.com/g/g-67d704425c088191b741075e2b0f9815-latenode-operators-assistant)
 
-It can guide you on writing expressions, using variables, filters, and building logic inside your scenarios.
-:::
+    It can guide you on writing expressions, using variables, filters, and building logic inside your scenarios.
 
 ## Algorithm
 
 Operators in this group provide the ability to perform operations on arrays and array elements.
 
-:::tip
-💡 Elements of the array can be strings, numbers, or boolean values.
-:::
+!!! tip
+    Elements of the array can be strings, numbers, or boolean values.
 
 ## Operators
 
@@ -32,7 +30,7 @@ This operator adds a value to the specified variable to create an array.
 
 It concatenates all the array elements into a string, adding the specified delimiter between each array element.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./array_functions/untitled.png)
 
 - **Execution Result:** text with the specified delimiter.
 - **Example:** If `_.Array = [1,2,3,4,5]`, then the result is `"1.2.3.4.5"`.
@@ -41,11 +39,10 @@ It concatenates all the array elements into a string, adding the specified delim
 
 Returns a modified array containing the specified elements from the provided array.
 
-:::tip
-💡 The specified numbers are the ordinal numbers of the array elements. In the example below, it returns elements from the zeroth (exclusive) to the first (inclusive) element. The ending number may be omitted, in which case, it will return all elements of the array after the initial number.
-:::
+!!! tip
+    The specified numbers are the ordinal numbers of the array elements. In the example below, it returns elements from the zeroth (exclusive) to the first (inclusive) element. The ending number may be omitted, in which case, it will return all elements of the array after the initial number.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./array_functions/untitled.png)
 
 - **Execution Result:** an array of values.
 - **Example:** If `1.Body = [\{"Value": "Hi"\}, \{"Value": "Latenode"\}]`, then the result is `[\{"Value": "Hi"\}]`.
@@ -54,7 +51,7 @@ Returns a modified array containing the specified elements from the provided arr
 
 Merges two or more passed arrays into one array.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./array_functions/untitled.png)
 
 - **Execution Result:** an array of values.
 - **Example:** If `1.Body[0] = [\{"Value": 5\}, \{"Value": 10\}]` and `1.Body[1] = [\{"Value": 15\}, \{"Value": 20\}]`, then the result is `[\{"Value": 5\}, \{"Value": 10\}, \{"Value": 15\}, \{"Value": 20\}]`.
@@ -63,9 +60,9 @@ Merges two or more passed arrays into one array.
 
 Returns an array containing the desired values of the given complex array. Can be used for filtering values.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./array_functions/untitled.png)
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./array_functions/untitled.png)
 
 - **Execution Result:** an array of found values.
 - **Example:**
@@ -111,7 +108,7 @@ Returns an array containing values of the given array sorted in the desired orde
 -   **asc ci** - in ascending order, case-insensitive;
 -   **desc ci** - in descending order, case-insensitive.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./array_functions/untitled.png)
 
 -   **Execution result:** an array of sorted values.
 -   **Example:** If `1.Body = [\{ "Value": 5\}, \{"Value": 10\}, \{ "Value": 15\}, \{"Value": 20\}]`, then the result is `[\{ "Value": 20\}, \{"Value": 15\}, \{ "Value": 10\}, \{"Value": 5\}]`.
@@ -122,7 +119,7 @@ Removes duplicate values from the given array and returns an array with unique v
 
 -   **Execution result:** an array of unique values.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./array_functions/untitled.png)
 
 -   **Example:**
 
@@ -183,7 +180,7 @@ Removes duplicates from the given array and returns an array with unique values.
 -   **Execution result:** an array of unique values.
 -   **Example 1:**
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./array_functions/untitled.png)
 
 Input data:
 
@@ -229,7 +226,7 @@ Result:
 
 -   **Example 2:**
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./array_functions/untitled.png)
 
 Input data:
 

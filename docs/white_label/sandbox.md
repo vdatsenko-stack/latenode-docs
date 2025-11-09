@@ -22,9 +22,8 @@ A [sandbox repository](https://github.com/garkavenko-latenode/whitelabel-example
 
 4. Click the “Generate Token” button to create a new JWT token, which you can copy using the “Copy” button.
 
-:::tip
-Token generation is done locally without network requests. This ensures your private key is not sent to the Latenode platform or any third parties.
-:::
+!!! tip
+    Token generation is done locally without network requests. This ensures your private key is not sent to the Latenode platform or any third parties.
 
 Below is an interactive video showing token generation
 

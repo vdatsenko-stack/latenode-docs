@@ -13,7 +13,7 @@ Latenode AI Agents are powered by a built-in LLM and driven by two key component
 
 This page explains how to design those components effectively to build reliable, task-oriented agents.
 
-![brave_JMGq4SJCaa.png](/img/placeholder.webp)
+![brave_JMGq4SJCaa.png](./agent_design_foundations/brave_coiqwpmi3s.png)
 
 ---
 
@@ -28,7 +28,7 @@ Each time the AI Agent node receives a message, it:
 
 The quality of this process depends on how clearly you structure the agent’s instructions and tools.
 
-![brave_CoiQwPMI3S.png](/img/placeholder.webp)
+![brave_CoiQwPMI3S.png](./agent_design_foundations/brave_coiqwpmi3s.png)
 
 ---
 
@@ -36,7 +36,7 @@ The quality of this process depends on how clearly you structure the agent’s i
 
 Instructions define how the agent should behave. They are written in plain language and describe what the agent is allowed to do, how it should react to user inputs, and how to use the available tools.
 
-![WDADesktopService_6szsCoof3M.png](/img/placeholder.webp)
+![WDADesktopService_6szsCoof3M.png](./agent_design_foundations/wdadesktopservice_6szscoof3m.png)
 
 ---
 
@@ -51,8 +51,8 @@ Instructions define how the agent should behave. They are written in plain langu
 - **Clearly describe each tool’s purpose** — the agent relies on these descriptions to decide which tool to call.
 - **Avoid vague tool labels or descriptions** — instead of “get info”, say “fetch current weather data” or “retrieve currency exchange rate”.
 
-> 🧠 The more accurately you define what each tool does, the better the agent can reason and choose the right one for the task.
-> 
+!!! tip
+    The more accurately you define what each tool does, the better the agent can reason and choose the right one for the task.
 
 ---
 
@@ -60,7 +60,7 @@ Instructions define how the agent should behave. They are written in plain langu
 
 Tools are the external actions the agent can take. In Latenode, these are the connected nodes — such as HTTP requests, Notion, or Google Sheets.
 
-![brave_ZHO76IKiB7.png](/img/placeholder.webp)
+![brave_ZHO76IKiB7.png](./agent_design_foundations/brave_coiqwpmi3s.png)
 
 ---
 
@@ -71,7 +71,7 @@ Tools are the external actions the agent can take. In Latenode, these are the co
 - Design each tool to do one task well
 - Test tools separately before connecting
 
-![brave_uskvi2zwEO.png](/img/placeholder.webp)
+![brave_uskvi2zwEO.png](./agent_design_foundations/brave_coiqwpmi3s.png)
 
 ```
 {{fromAIAgent("email"; "Customer email address")}}

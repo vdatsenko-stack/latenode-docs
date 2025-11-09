@@ -12,9 +12,8 @@ sidebar_position: 9
 
 See [Example scenario using SetVariables and the add operator](../../introduction.md)
 
-:::tip
-The added variable is unique within the script and can be changed during the execution of script nodes. If two **SetVariables** nodes are placed in sequence and both define the value of the same variable, the final value for the variable will be set by the last **SetVariables** node.
-:::
+!!! tip
+    The added variable is unique within the script and can be changed during the execution of script nodes. If two **SetVariables** nodes are placed in sequence and both define the value of the same variable, the final value for the variable will be set by the last **SetVariables** node.
 
 ## **Node Configuration**
 

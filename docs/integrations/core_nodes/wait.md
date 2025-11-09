@@ -13,10 +13,9 @@ sidebar_position: 5
 - setting a delay time, for example, 30 minutes;
 - setting a specific time until which the wait is required, for example, 2024-01-01T00:00:00Z.
 
-:::tip
-The **Wait** node can be placed between scenario nodes. This allows for a temporal gap in the execution of scenario nodes before the **Wait** node and those after the **Wait** node.  
-See **[the example of using the Wait node](../../introduction.md)**
-:::
+!!! tip
+    The **Wait** node can be placed between scenario nodes. This allows for a temporal gap in the execution of scenario nodes before the **Wait** node and those after the **Wait** node.  
+    See **[the example of using the Wait node](../../introduction.md)**
 
 ## Node Configuration
 

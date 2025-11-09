@@ -27,9 +27,8 @@ The required **fields** are:
 
 The **URL** field is where you input the URL of the external application's API that you want to send a request to.  
 
-:::tip
-Variables and parameters from other nodes can be inserted into the URL using the "?" symbol
-:::
+!!! tip
+    Variables and parameters from other nodes can be inserted into the URL using the "?" symbol
 
 
 ### **Method**
@@ -80,7 +79,8 @@ To add a new Key-Value pair, use the **Add a header** button (**1**). To delete 
 
 ![brave_YPKF70KhOm.png](./http_request/brave_ypkf70khom.png)
 
-> 💡 When authorizing via a Bearer token, one of the request headers should be the pair with the Key `Authorization` and the Value `Bearer `````````````<token>`````````````.
+!!! tip
+    When authorizing via a Bearer token, one of the request headers should be the pair with the Key `Authorization` and the Value `Bearer `````````````<token>`````````````.
 
 ### **Authorization**
 

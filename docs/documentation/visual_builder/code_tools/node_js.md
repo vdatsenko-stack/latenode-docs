@@ -4,66 +4,64 @@ Article Description: Running Node.js scripts within Latenode for extended functi
 Published: Yes  
 Suggested: No
 
-The [JavaScript](#broken-link-was-here) node allows you to write and execute JavaScript code, import npm libraries, and handle various data processing tasks. This node provides robust support for integrating custom code into workflows, enhancing the flexibility and functionality of your scenarios.
+The [JavaScript](./javascript.md) node allows you to write and execute JavaScript code, import npm libraries, and handle various data processing tasks. This node provides robust support for integrating custom code into workflows, enhancing the flexibility and functionality of your scenarios.
 
 ## Adding Code to a Scenario
 
 To add code to a scenario, follow these steps:
 
 1. Click on one of the buttons to add a node.
-2. In the application selection window, choose the [JavaScript](#broken-link-was-here) node.
+2. In the application selection window, choose the [JavaScript](./javascript.md) node.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./node_js/untitled.png)
 
 3. Open the added JavaScript node and make changes to the code template manually or with the help of the AI assistant.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./node_js/untitled.png)
 
 ## Data Exchange Between Nodes
 
 ### Using Data from Previous Nodes in Code
 
-The code generated in the [JavaScript](#broken-link-was-here) node can utilize the output data from previous nodes in the scenario. For example, in a JavaScript node, you can reference a parameter passed to the **Trigger on Webhook** node via an HTTP request. To do this, follow these steps:
+The code generated in the [JavaScript](./javascript.md) node can utilize the output data from previous nodes in the scenario. For example, in a JavaScript node, you can reference a parameter passed to the **Trigger on Webhook** node via an HTTP request. To do this, follow these steps:
 
 - Write an expression to define a constant using `const =`.
 - Select the necessary parameter from the previous nodes.
 
 By doing so, you can seamlessly integrate and manipulate data across different nodes within your scenario.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./node_js/untitled.png)
 
-:::warning
-When adding data from other nodes, part of the expression may be wrapped in backticks. For example: `data["{{1.headers.Content-Type}}"]`, even if another node returned the property without them. It is not necessary to remove the backticks, as they will be ignored during code execution. Removing them manually may result in code execution errors.
-:::
+!!! warning
+    When adding data from other nodes, part of the expression may be wrapped in backticks. For example: `data["{{1.headers.Content-Type}}"]`, even if another node returned the property without them. It is not necessary to remove the backticks, as they will be ignored during code execution. Removing them manually may result in code execution errors.
 
 ### Passing Processed Data to Subsequent Nodes
 
-The result of the [JavaScript](#broken-link-was-here) node can be a string, numerical value, JSON object, etc. The output data from the **JavaScript** node can also be used in other nodes within the scenario. For example, a parameter generated in the **JavaScript** node can be recorded as a variable. To do this:
+The result of the [JavaScript](./javascript.md) node can be a string, numerical value, JSON object, etc. The output data from the **JavaScript** node can also be used in other nodes within the scenario. For example, a parameter generated in the **JavaScript** node can be recorded as a variable. To do this:
 
 1. In the **SetVariables** node, click on the **Value** field.
 
-![](/img/placeholder.webp)
+![Untitled](./node_js/untitled_1.png)
 
 2. In the auxiliary window, select the parameter generated in the **JavaScript** node.
 
 This way, you can efficiently pass and utilize processed data between nodes in your workflow.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./node_js/untitled.png)
 
 ### Using Variables
 
 Variables created within the scenario or global variables can also be used in the [JavaScript](../../../introduction.md) node.
 
-:::tip
-Variables created within the scenario or global variables can also be used in the [JavaScript](#broken-link-was-here) node.
+!!! tip
+    Variables created within the scenario or global variables can also be used in the [JavaScript](./javascript.md) node.
 
-:::tip
-Learn more about using variables in the JavaScript node [here](#broken-link-was-here). Learn more about using global variables in the **JavaScript** node [here](#broken-link-was-here).
-:::
+!!! tip
+    Learn more about using variables in the JavaScript node [here](../variables/variables_in_javascript_node.md). Learn more about using global variables in the **JavaScript** node [here](../variables/global_variables_in_javascript_node.md).
 
 ### Processing Files or Arrays of Files
 
-The [JavaScript](#broken-link-was-here) node can be used to process files or arrays of files sent to the scenario, for example, by sending a request to the **Trigger on Webhook** node.
+The [JavaScript](./javascript.md) node can be used to process files or arrays of files sent to the scenario, for example, by sending a request to the **Trigger on Webhook** node.
 
 ```jsx
 async function run({execution_id, input, data, page}) {
@@ -114,9 +112,8 @@ In a JavaScript node, you can create and edit files in the filesystem using, for
 - `file(filePath)` — returns a single file from the specified path. The filePath parameter must be a string.
 - `files(filePaths)` — returns an array of files from the specified paths. The filePaths parameter must be an array of strings.
 
-:::tip
-**Important:** These functions only work at the first level of nesting in the returned data from the node.
-:::
+!!! tip
+    **Important:** These functions only work at the first level of nesting in the returned data from the node.
 
 Example code:
 
@@ -152,27 +149,26 @@ export default async function run({execution_id, input, data, store, db}) {
 
 ## Custom Parameters in JavaScript
 
-Custom parameters in the [JavaScript](#broken-link-was-here) node allow you to externalize certain parts of the code into special input fields, eliminating the need to edit the code itself.
+Custom parameters in the [JavaScript](./javascript.md) node allow you to externalize certain parts of the code into special input fields, eliminating the need to edit the code itself.
 
 For example, if your code uses an API key, you can generate a separate input field for this parameter in the JavaScript node. This way, you only need to change the value in the designated field rather than modifying the code directly when updating the API key.
 
-:::tip
-Learn more about all possible custom parameters [here](#broken-link-was-here).
-:::
+!!! tip
+    Learn more about all possible custom parameters [here](./custom_js_parameters.md).
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./node_js/untitled.png)
 
 ## Logging
 
-Logging in the [JavaScript](#broken-link-was-here) node is available using the `console.log` command. Logged data will be displayed in the **Log** tab.
+Logging in the [JavaScript](./javascript.md) node is available using the `console.log` command. Logged data will be displayed in the **Log** tab.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./node_js/untitled.png)
 
 ## Using NPM Packages
 
-The [JavaScript](#broken-link-was-here) node supports the import of **npm** libraries using the `import` statement. For example, importing and using the "lodash" library:
+The [JavaScript](./javascript.md) node supports the import of **npm** libraries using the `import` statement. For example, importing and using the "lodash" library:
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./node_js/untitled.png)
 
 You can specify the version of the library you want to use with the `@` symbol. For example:
 
@@ -186,13 +182,12 @@ After each scenario with a **JavaScript** node is saved, a check is performed to
 - If there are changes, the libraries are installed.
 - If there are no changes, the saved libraries and versions are used.
 
-:::warning
-Library installation takes some time. If the user starts the node before the installation is complete, an error message will appear: "Dependency installation is not yet completed. Please try again in a few seconds." In this case, simply wait a short while before proceeding.
-:::
+!!! warning
+    Library installation takes some time. If the user starts the node before the installation is complete, an error message will appear: "Dependency installation is not yet completed. Please try again in a few seconds." In this case, simply wait a short while before proceeding.
 
 **Node Package Manager (NPM)** is a tool for developers working with Node.js, as it allows them to leverage a vast library of ready-made packages and easily manage project dependencies. Using the **axios** package enables developers to easily fetch data from external APIs or other web services without having to write extensive code for handling HTTP requests and responses.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./node_js/untitled.png)
 
 An example of such a scenario is fetching a list of current GitHub repositories based on a selected programming language using the **axios** package:
 
@@ -249,8 +244,7 @@ export default async function run({ execution_id, input, data }) {
 
 ## JavaScript Node Limitations
 
-The maximum execution time for the [JavaScript](#broken-link-was-here) node is **2 minutes**.
+The maximum execution time for the [JavaScript](./javascript.md) node is **2 minutes**.
 
-:::tip
-You can add multiple JavaScript nodes to a scenario for sequential execution to handle more complex tasks.
-:::
+!!! tip
+    You can add multiple JavaScript nodes to a scenario for sequential execution to handle more complex tasks.

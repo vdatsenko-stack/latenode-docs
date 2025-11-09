@@ -15,7 +15,7 @@ A single AI Agent receives user prompts and decides which tools to use, if any. 
 
 ### Scenario Structure
 
-![brave_ox4ExaprKc.png](/img/placeholder.webp)
+![brave_ox4ExaprKc.png](./ai_agent_examples/brave_4bqrry4sok.png)
 
 - One central `AI Agent`
 - Connected to:
@@ -37,7 +37,7 @@ A single AI Agent receives user prompts and decides which tools to use, if any. 
     - `exchangerate_tool` for EUR to USD
 - Skips unrelated tools
 
-![brave_pVlu6L7Qpm.png](/img/placeholder.webp)
+![brave_pVlu6L7Qpm.png](./ai_agent_examples/brave_4bqrry4sok.png)
 
 **Expected output:**
 
@@ -56,7 +56,7 @@ It's currently 17°C in Berlin. 100 EUR is about 108 USD.
 - Agent skips weather and currency
 - Only triggers `web_search_tool`
 
-![brave_WHvrQ9Gm7U.png](/img/placeholder.webp)
+![brave_WHvrQ9Gm7U.png](./ai_agent_examples/brave_4bqrry4sok.png)
 
 **Expected output:**
 
@@ -76,7 +76,7 @@ This approach uses a **main agent** to break down user requests and forward sub-
 
 ### Scenario Structure
 
-![brave_YsvXfPjJun.png](/img/placeholder.webp)
+![brave_YsvXfPjJun.png](./ai_agent_examples/brave_4bqrry4sok.png)
 
 - `main_agent` controls the overall logic
 - Delegates to:
@@ -97,7 +97,7 @@ This approach uses a **main agent** to break down user requests and forward sub-
     - Weather part → `weather_agent`
     - Bitcoin price part → `finance_agent`
     
-    ![brave_Jx7QglHbem.png](/img/placeholder.webp)
+    ![brave_Jx7QglHbem.png](./ai_agent_examples/brave_4bqrry4sok.png)
     
 
 **Expected output:**
@@ -118,7 +118,7 @@ The current weather in Tokyo is 27°C and sunny. The current price of Bitcoin (B
     - Apple HQ location → via `web_search_tool`
     - Weather in that location → via `weather_agent`
     
-    ![brave_DWImZg8xtM.png](/img/placeholder.webp)
+    ![brave_DWImZg8xtM.png](./ai_agent_examples/brave_4bqrry4sok.png)
     
 
 **Expected output:**
@@ -143,22 +143,22 @@ Integrate an AI Agent with [Cloudflare AutoRAG](https://developers.cloudflare.co
 
 ### Scenario Structure
 
-![brave_hY65yK91HG.png](/img/placeholder.webp)
+![brave_hY65yK91HG.png](./ai_agent_examples/brave_4bqrry4sok.png)
 
 - `cloudflare_rag_agent` handles free-form prompts
 - Two HTTP tools connected:
     - `rag_database_docs` — deep semantic retrieval
     - `raw_data` — fast, factual lookups
 
-> ⚠️ Before using this scenario, you must:
-> 
-> - [Create an account](https://developers.cloudflare.com/autorag/get-started/) on Cloudflare AutoRAG
-> - Create a **database instance**
-> - Upload your own documents via the dashboard or API
-> - **Replace all placeholders** (`YOUR_ACCOUNT_ID`, `YOUR_RAG_ID`, `YOUR_API_TOKEN`) in the scenario’s HTTP request blocks with your actual values from the Cloudflare dashboard
+!!! warning
+    Before using this scenario, you must:
+    - [Create an account](https://developers.cloudflare.com/autorag/get-started/) on Cloudflare AutoRAG
+    - Create a **database instance**
+    - Upload your own documents via the dashboard or API
+    - **Replace all placeholders** (`YOUR_ACCOUNT_ID`, `YOUR_RAG_ID`, `YOUR_API_TOKEN`) in the scenario’s HTTP request blocks with your actual values from the Cloudflare dashboard
 
-> ✅ Most modern RAG platforms - including AutoRAG - automatically generate embeddings server-side. You don’t need to preprocess documents or manage vectors manually.
-> 
+!!! success
+    Most modern RAG platforms - including AutoRAG - automatically generate embeddings server-side. You don’t need to preprocess documents or manage vectors manually.
 
 ---
 
@@ -172,7 +172,7 @@ Integrate an AI Agent with [Cloudflare AutoRAG](https://developers.cloudflare.co
 - Selects `rag_database_docs` to retrieve semantic context
 - Responds based on indexed content
 
-![brave_56vDQEGkPX.png](/img/placeholder.webp)
+![brave_56vDQEGkPX.png](./ai_agent_examples/brave_4bqrry4sok.png)
 
 **Expected output:**
 
@@ -191,7 +191,7 @@ Cloudflare's billing system uses a monthly subscription model with pro-rated cha
 - The agent determines it's a factual request
 - Selects `raw_data` for direct value retrieval
 
-![brave_4BqRRY4SOk.png](/img/placeholder.webp)
+![brave_4BqRRY4SOk.png](./ai_agent_examples/brave_4bqrry4sok.png)
 
 **Expected output:**
 

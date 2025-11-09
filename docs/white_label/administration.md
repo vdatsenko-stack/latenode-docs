@@ -56,10 +56,9 @@ To create a plan:
 3. Click the "Create Plan" button
 4. Fill in the plan name, its quotas, and click the "OK" button
 
-:::tip[Tip]
-After clicking the "OK" button, a new entry will appear in the plans table.  
-You will need the ID of the created plan later. Its value can be found in the "ID" column.
-:::
+!!! tip "Tip"
+    After clicking the "OK" button, a new entry will appear in the plans table.  
+    You will need the ID of the created plan later. Its value can be found in the "ID" column.
 
 Below is an interactive video showing how to create a plan.
 
@@ -99,7 +98,6 @@ To view the user list, go to the “Users” section. On this page, you can see 
 
 ![image.png](./administration/image_5.png)
 
-:::tip[Tip]
-Users are not limited in the number of subscriptions.  
-When a user has more than one subscription, the best quotas will be applied.
-:::
+!!! tip "Tip"
+    Users are not limited in the number of subscriptions.  
+    When a user has more than one subscription, the best quotas will be applied.

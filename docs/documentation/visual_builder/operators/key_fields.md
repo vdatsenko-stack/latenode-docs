@@ -4,13 +4,12 @@ description: Understanding key fields and how they impact automation logic.
 sidebar_position: 1
 ---
 
-:::tip
-💡 You can use our GPT Assistant for help with **Latenode operators**:
+!!! tip
+    You can use our GPT Assistant for help with **Latenode operators**:
 
-👉 [**Latenode Operators Assistant**](https://chatgpt.com/g/g-67d704425c088191b741075e2b0f9815-latenode-operators-assistant)
+    👉 [**Latenode Operators Assistant**](https://chatgpt.com/g/g-67d704425c088191b741075e2b0f9815-latenode-operators-assistant)
 
-It can guide you on writing expressions, using variables, filters, and building logic inside your scenarios.
-:::
+    It can guide you on writing expressions, using variables, filters, and building logic inside your scenarios.
 
 ## Algorithm
 
@@ -22,24 +21,24 @@ Operators in this group ensure the presence of certain values in a field, variab
 
 The result of the execution is the presence of a boolean value **TRUE**.  
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./key_fields/untitled.png)
 
 ## false
 
 The result of the execution is the presence of a boolean value **FALSE**.  
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./key_fields/untitled.png)
 
 ## null
 
 The result of the execution is the presence of **null**.  
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./key_fields/untitled.png)
 
 ## space
 
 The result of the execution is the presence of a **space**.  
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./key_fields/untitled.png)
 
 - **Example:** If 3.ValueSV = "Hello" and 3.ValueSV = "Latenode", then "Hello Latenode".  

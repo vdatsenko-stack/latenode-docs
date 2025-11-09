@@ -8,7 +8,7 @@ Suggested: No
 
 When a paid plan or trial is active, the **Billing** section becomes available in your account's left menu. On this page, you can see your current plan, the number of available credits, a **Manage payments** button, and tabs for **Extra Credits**, **Boosts**, and **Plug&Play Tokens**.
 
-![vivaldi_gOlPINdrop.png](/img/placeholder.webp)
+![vivaldi_gOlPINdrop.png](./billing_page_and_managing_subscription/vivaldi_golpindrop.png)
 
 Below, you’ll find all available plans: **Micro**, **Starter**, **Grow**, and **Prime**. Each plan card displays:
 
@@ -18,7 +18,7 @@ Below, you’ll find all available plans: **Micro**, **Starter**, **Grow**, and 
 
 The current balance is also always visible in the left menu on any Latenode page:
 
-![vivaldi_jn17OX1S4k.png](/img/placeholder.webp)
+![vivaldi_jn17OX1S4k.png](./billing_page_and_managing_subscription/vivaldi_jn17ox1s4k.png)
 
 ---
 
@@ -35,13 +35,13 @@ The current balance is also always visible in the left menu on any Latenode page
 
 1. Click **Manage payments**
     
-    ![vivaldi_LbWeQCHOCY.png](/img/placeholder.webp)
+    ![vivaldi_LbWeQCHOCY.png](./billing_page_and_managing_subscription/vivaldi_lbweqchocy.png)
     
 2. The Stripe interface will open
 3. Find the active subscription
 4. Disable auto-renew or cancel the subscription completely
 
-![vivaldi_Jn73O5V5lo.png](/img/placeholder.webp)
+![vivaldi_Jn73O5V5lo.png](./billing_page_and_managing_subscription/vivaldi_jn73o5v5lo.png)
 
 Alternatively, you can cancel the subscription from the active plan menu by clicking **Cancel subscription**
 

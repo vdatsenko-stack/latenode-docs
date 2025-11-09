@@ -8,13 +8,11 @@ The AI operators include a single operator - **askAI()**. The operand should be 
 
 In addition to text, the request can use existing variables or global variables or output parameters of previous nodes, enclosed in symbols according to the pattern **`"+Variable/Data+"` .**
 
-:::tip
-💡 The operator can be used to configure nodes by adding it to node fields or to set conditions in the **Condition** field.
-:::
+!!! tip
+    The operator can be used to configure nodes by adding it to node fields or to set conditions in the **Condition** field.
 
-:::warning
-⚠️ When using artificial intelligence (AI), follow these precautions. Provide clear and understandable instructions to AI to avoid misunderstandings and incorrect results. Verify the accuracy of the AI's responses, especially if they have serious consequences or are critical for decision-making. Remember that AI responses can vary based on input data, model training, and other factors. Be prepared for different outcomes.
-:::
+!!! warning
+    When using artificial intelligence (AI), follow these precautions. Provide clear and understandable instructions to AI to avoid misunderstandings and incorrect results. Verify the accuracy of the AI's responses, especially if they have serious consequences or are critical for decision-making. Remember that AI responses can vary based on input data, model training, and other factors. Be prepared for different outcomes.
 
 Below are some examples of using the AI operator.
 
@@ -28,37 +26,36 @@ A user request can be a text prompt, such as asking to generate an invitation fo
 
 3. Run the scenario once and review the node execution results to verify the presence of the new variable.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)
 
 ## User Feedback Monitoring
 
 A request can involve identifying the tone or sentiment of incoming text. The text can be the output parameter of a previous node, such as an email or Telegram chat message. For simplicity, generate the text directly within the scenario by adding the following nodes:
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)
 
 1. **Trigger on Run once** node to trigger the scenario with the **Run once** button.
 
 2. **SetVariables** node to generate the **Text** variable, containing the product review text.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)
 
 3. **Webhook response** node to return a response upon successful execution of the scenario. In the **Body** field of the **Webhook response** node, add the AI operator with a request using the variable from the **SetVariables** node: **`{{askAI("Determine if the text \"" + _.Text + "\" is a negative review")}}`**
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)
 
 The result of this scenario is an AI response:
 
 ***Yes, the text "The packaging is damaged and the courier was late" can be considered a negative review.***
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)
 
 ## Text Classification
 
 A request can involve determining if the incoming text is a question. Using the AI operator in routes allows the scenario to follow different branches based on the AI's response.
 
-:::warning
-⚠️ Since the condition for route execution is a boolean **TRUE** in the **Condition** field, you must configure this field correctly. For example, ask the AI to return "true" or "false" and compare the result to "true." The equality true=true will be **TRUE**, triggering the route.
-:::
+!!! warning
+    Since the condition for route execution is a boolean **TRUE** in the **Condition** field, you must configure this field correctly. For example, ask the AI to return "true" or "false" and compare the result to "true." The equality true=true will be **TRUE**, triggering the route.
 
 For simplicity, generate the text directly within the scenario by adding the following nodes:
 
@@ -66,17 +63,17 @@ For simplicity, generate the text directly within the scenario by adding the fol
 
 2. **SetVariables** node to generate the **Value** variable containing the text for classification.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)
 
 3. **Question** route with the condition **`{{askAI("The text contains \"" + $2.Value + "\" is there a question? If so, return one word \"true\", otherwise return one word \"false\"") = "true"}}`**.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)
 
 4. **Webhook response** node for the **Question** route with the response *The text contains a question* upon scenario execution.
 
 5. **Not a question** route with the condition **`{{askAI("The text contains \"" + $2.Value + "\" is there a question? If not, return one word \"true\", otherwise return one word \"false\"") = "true"}}`**.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)
 
 6. **Webhook response** node for the **Not a question** route with the response *The text does not contain a question* upon scenario execution.
 
@@ -84,8 +81,8 @@ The result of the scenario depends on the text in the **Value** variable:
 
 - If the variable contains a question, such as *What is the deadline for completing the task?*, the scenario's result is *The text contains a question*.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)
 
 - If the variable contains a statement, such as *Documentation is an important part of learning*, the scenario's result is *The text does not contain a question*.
 
-![Untitled](/img/placeholder.webp)
+![Untitled](./ai/untitled.png)

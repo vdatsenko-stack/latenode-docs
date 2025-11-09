@@ -21,11 +21,10 @@ To help you get answers quickly and keep moving forward, we’ve put together al
 
 ## Premium Support Plans
 
-:::tip Premium Support
-Get personal guidance, faster resolutions, and workflow design help tailored to your team’s needs.  
+!!! tip "Premium Support"
+    Get personal guidance, faster resolutions, and workflow design help tailored to your team’s needs.  
 
-👉 [Request a Premium Support Plan](https://latenode.com/request/premium-support-plan)  
-:::
+    👉 [Request a Premium Support Plan](https://latenode.com/request/premium-support-plan)  
 
 ---
 

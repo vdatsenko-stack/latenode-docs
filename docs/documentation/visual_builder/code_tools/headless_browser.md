@@ -3,7 +3,7 @@ title: Headless browser
 description: Automating web interactions and UI testing using a headless browser
 sidebar_position: 3
 ---
-![Untitled](/img/placeholder.webp)
+![Untitled](./headless_browser/untitled.png)
 
 ## **Node Description**
 
@@ -47,7 +47,7 @@ return {
 
 You could get a selector here:
 
-![CleanShot 2024-11-01 at 09.05.35.png](/img/placeholder.webp)
+![CleanShot 2024-11-01 at 09.05.35.png](./headless_browser/cleanshot_20241101_at_09.05.35.png)
 
 ## **Node Configuration**
 
@@ -70,9 +70,8 @@ These fields are filled out in case access to the required website is restricted
 
 The output of the **Headless Browser** can be a string, numerical value, JSON object, and so on. The data processing result from the **Headless Browser** node is accessible for configuring parameters of other nodes.
 
-:::tip
-💡 It is recommended to wrap data in string format with quotation marks for further correct processing.
-:::
+!!! tip
+    It is recommended to wrap data in string format with quotation marks for further correct processing.
 
 ## Code
 
@@ -80,9 +79,8 @@ The output of the **Headless Browser** can be a string, numerical value, JSON ob
 
 To interact with the browser using JavaScript, the [Puppeteer](https://pptr.dev/) library is used. 
 
-:::warning
-⚠️ In large JavaScript scripts, it may be necessary to install [Puppeteer](https://pptr.dev/) locally on your computer ([installation information](https://pptr.dev/#installation)). To install JavaScript libraries on your computer, you need to set up [NodeJS](https://nodejs.org/) and [NPM](https://www.npmjs.com/).
-:::
+!!! warning
+    In large JavaScript scripts, it may be necessary to install [Puppeteer](https://pptr.dev/) locally on your computer ([installation information](https://pptr.dev/#installation)). To install JavaScript libraries on your computer, you need to set up [NodeJS](https://nodejs.org/) and [NPM](https://www.npmjs.com/).
 
 ### Inital Function `run`
 
@@ -98,9 +96,8 @@ async function run({execution_id, input, data, page}) {
 
 The "page" parameter is the result of the call to [browser.newPage](https://pptr.dev/api/puppeteer.browsercontext.newpage/) [Puppeteer](https://pptr.dev/) library and has the corresponding [interface](https://pptr.dev/api/puppeteer.page/). All interactions with the browser page are performed using this parameter. There is **no** direct access to the [puppeteer](https://pptr.dev/) library or the browser from within this function.
 
-:::warning
-⚠️ Almost all operations with the `page` object are asynchronous. For convenience, the original `run` function is declared with the `async` keyword, allowing you to write code using [`async/await`](https://learn.javascript.ru/async-await) for better handling of asynchronous operations.
-:::
+!!! warning
+    Almost all operations with the `page` object are asynchronous. For convenience, the original `run` function is declared with the `async` keyword, allowing you to write code using [`async/await`](https://learn.javascript.ru/async-await) for better handling of asynchronous operations.
 
 ### **Using the function** `callWebhook`
 
@@ -108,9 +105,8 @@ In the code of the **Headless Browser** node, there is no direct access to libra
 
 To make asynchronous API calls, you can use the `callWebhook` function. It is based on the [axios](https://axios-http.com/) library but with slightly reduced functionality.
 
-:::warning
-⚠️ With this function, you can make API requests **only to incoming Trigger on Webhook nodes created within the Latenode platform**. Requests to other domains will result in an error.
-:::
+!!! warning
+    With this function, you can make API requests **only to incoming Trigger on Webhook nodes created within the Latenode platform**. Requests to other domains will result in an error.
 
 The interface of the `callWebhook(webhookUrl, options)` function is similar to the interface of [axios request](https://axios-http.com/docs/req_config) and consists of:
 
@@ -176,9 +172,8 @@ async function run({execution_id, input, data, page}) {
 }
 ```
 
-:::tip
-💡 An example script using the **Headless Browser** node can be found [here](#broken-link-was-here).
-:::
+!!! tip
+    An example script using the **Headless Browser** node can be found in the [Building Scenarios](../building_scenarios.md) documentation.
 
 ## Possible problems
 

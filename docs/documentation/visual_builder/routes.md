@@ -15,9 +15,8 @@ If a node is added through the **Add Node** button, you should set up the route 
 
 ## Route Configuration, Conditions
 
-:::tip
- When there are multiple routes through which the scenario can proceed, the route with a value of **TRUE** in the **Condition** field will be chosen.
-:::
+!!! tip
+     When there are multiple routes through which the scenario can proceed, the route with a value of **TRUE** in the **Condition** field will be chosen.
 
 ![Untitled](./routes/untitled_1.png)
 
@@ -38,9 +37,8 @@ In the **route** configuration window, you can:
 
 ![Untitled](./routes/untitled_3.png)
 
-:::tip
- See also [Scenario example using conditions in routes](../../introduction.md)
-:::
+!!! tip
+     See also [Scenario example using conditions in routes](../../introduction.md)
 
 =======
 ---
@@ -60,9 +58,8 @@ If a node is added through the **Add Node** button, you should set up the route 
 
 ## Route Configuration, Conditions
 
-:::tip
- When there are multiple routes through which the scenario can proceed, the route with a value of **TRUE** in the **Condition** field will be chosen.
-:::
+!!! tip
+     When there are multiple routes through which the scenario can proceed, the route with a value of **TRUE** in the **Condition** field will be chosen.
 
 ![Untitled](./routes/untitled_1.png)
 
@@ -83,7 +80,6 @@ In the **route** configuration window, you can:
 
 ![Untitled](./routes/untitled_3.png)
 
-:::tip
- See also [Scenario example using conditions in routes](#broken-link-was-here)
-:::
+!!! tip
+     See also [Building Scenarios](./building_scenarios.md) for scenario examples using conditions in routes
 

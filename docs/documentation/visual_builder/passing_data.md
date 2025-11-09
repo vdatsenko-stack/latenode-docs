@@ -16,8 +16,8 @@ You can manually or automatically fill these node fields.
 
 Existing variables are displayed in a helper window for filling in node or route fields. To make a variable appear in the helper window, it must first be created:
 
-- To create a "regular" variable for use in the scenario, add a [SetVariables](#broken-link-was-here) node and run it.
-- To create a global variable, add a [SetGlobalVariables](#broken-link-was-here) node (in the current or any other scenario) and run it. Another way to create global variables is to add them via a separate interface.
+- To create a "regular" variable for use in the scenario, add a [SetVariables](../../integrations/core_nodes/setvariables.md) node and run it.
+- To create a global variable, add a [SetGlobalVariables](../../integrations/core_nodes/setglobalvariables.md) node (in the current or any other scenario) and run it. Another way to create global variables is to add them via a separate interface.
 
 ![Untitled](./passing_data/untitled.gif)
 
@@ -26,7 +26,7 @@ Existing variables are displayed in a helper window for filling in node or route
 To automatically fill a field with a variable:
 
 - **(1)** Click on the node or route configuration field.
-- **(2)** View the available parameters from previous nodes in the **Variables** window. The **Variables** tab displays both regular variables (added to the scenario using the [SetVariables](#broken-link-was-here) node) and global variables (added to the account using the [SetGlobalVariables](#broken-link-was-here) node or manually).
+- **(2)** View the available parameters from previous nodes in the **Variables** window. The **Variables** tab displays both regular variables (added to the scenario using the [SetVariables](../../integrations/core_nodes/setvariables.md) node) and global variables (added to the account using the [SetGlobalVariables](../../integrations/core_nodes/setglobalvariables.md) node or manually).
 - **(3)** Select the necessary regular or global variables.
 
 ![Untitled](./passing_data/untitled.png)
@@ -88,9 +88,8 @@ In both the **JavaScript** and **Headless Browser** nodes, you can select parame
 
 ![Untitled](./passing_data/untitled_7.png)
 
-:::caution
-When adding data from other nodes, part of the expression might be wrapped in backticks, like this: `data["{{1.headers.Content-Type}}"]`, even though another node returned the property without them. You do not need to remove the backticks, as they will be ignored during code processing. Manually removing them may cause the code to fail.
-:::
+!!! warning
+    When adding data from other nodes, part of the expression might be wrapped in backticks, like this: `data["{{1.headers.Content-Type}}"]`, even though another node returned the property without them. You do not need to remove the backticks, as they will be ignored during code processing. Manually removing them may cause the code to fail.
 
 ## Arrays
 
@@ -177,5 +176,6 @@ Unlike **Select**, which is limited to predefined values, **Map** mode enables:
 - `= true` — condition that checks if the flag is active  
 - Returns `"Active"` if true, `"Inactive"` otherwise  
 
-> ⚠️ This logic is only available in Map mode.  
-> The **Select** mode does not support variables or expressions.
+!!! warning
+    This logic is only available in Map mode.
+    The **Select** mode does not support variables or expressions.
