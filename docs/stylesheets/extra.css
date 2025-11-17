@@ -76,15 +76,6 @@
 /* убрать лев. линии */
 .md-sidebar--primary + .md-content .md-content__inner,
 .md-nav__item--nested > nav.md-nav{ border-left: none !important; }
-
-/* ===== СКРЫТЬ ЗАГОЛОВКИ 2-5 В САЙДБАРЕ ===== */
-.md-sidebar--primary label.md-nav__link[for="__nav_2"],
-.md-sidebar--primary label.md-nav__link[for="__nav_3"],
-.md-sidebar--primary label.md-nav__link[for="__nav_4"],
-.md-sidebar--primary label.md-nav__link[for="__nav_5"] {
-  display: none !important;
-}
-
 /* ===== LEFT SIDEBAR ===== */
 /* ВСЕ элементы навигации по умолчанию - серые, обычные, с padding и border-radius */
 .md-sidebar--primary .md-nav__link {
