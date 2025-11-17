@@ -78,15 +78,23 @@
 .md-nav__item--nested > nav.md-nav{ border-left: none !important; }
 
 /* ===== ФИКС ДЛЯ STICKY ЗАГОЛОВКА В САЙДБАРЕ ===== */
-/* Только для заголовка "Documentation" в левом сайдбаре */
 .md-sidebar--primary .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav--primary > .md-nav__title {
   background: var(--md-default-bg-color) !important;
   z-index: 10 !important;
   position: sticky !important;
   top: 0 !important;
+  padding: 0.6rem 0.6rem !important;
+  margin: 0 !important;
 }
 [data-md-color-scheme="slate"] .md-sidebar--primary .md-sidebar__scrollwrap > .md-sidebar__inner > .md-nav--primary > .md-nav__title {
   background: var(--md-default-bg-color) !important;
+}
+
+/* Убираем лишний отступ у списка навигации */
+.md-sidebar--primary .md-nav--primary > .md-nav__list {
+  margin-top: -0.6rem !important;
+  padding-left: 0.6rem !important;
+  padding-right: 0.6rem !important;
 }
 
 /* ===== LEFT SIDEBAR ===== */
