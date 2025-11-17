@@ -77,8 +77,11 @@
 .md-sidebar--primary + .md-content .md-content__inner,
 .md-nav__item--nested > nav.md-nav{ border-left: none !important; }
 
-/* ===== СКРЫТЬ ВСЕ ЗАГОЛОВКИ ВКЛАДОК В САЙДБАРЕ ===== */
-.md-sidebar--primary label.md-nav__link[for^="__nav_"] {
+/* ===== СКРЫТЬ ЗАГОЛОВКИ 2-5 В САЙДБАРЕ ===== */
+.md-sidebar--primary label.md-nav__link[for="__nav_2"],
+.md-sidebar--primary label.md-nav__link[for="__nav_3"],
+.md-sidebar--primary label.md-nav__link[for="__nav_4"],
+.md-sidebar--primary label.md-nav__link[for="__nav_5"] {
   display: none !important;
 }
 
