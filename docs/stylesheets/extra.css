@@ -77,8 +77,8 @@
 .md-sidebar--primary + .md-content .md-content__inner,
 .md-nav__item--nested > nav.md-nav{ border-left: none !important; }
 
-/* ===== СКРЫТЬ ЗАГОЛОВОК В САЙДБАРЕ ===== */
-label[for="__nav_2"].md-nav__link {
+/* ===== СКРЫТЬ ВСЕ ЗАГОЛОВКИ ВКЛАДОК В САЙДБАРЕ ===== */
+.md-sidebar--primary label.md-nav__link[for^="__nav_"] {
   display: none !important;
 }
 
