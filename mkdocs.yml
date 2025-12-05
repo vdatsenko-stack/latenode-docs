@@ -10,7 +10,6 @@ theme:
   name: material
   features:
     - navigation.tabs
-    - navigation.sections 
 
   logo: assets/svg1000transparent.svg
   favicon: assets/svg1000transparent.svg
